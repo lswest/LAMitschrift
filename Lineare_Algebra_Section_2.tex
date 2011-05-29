@@ -1,0 +1,137 @@
+\section{Lineare Räume}
+\subsection{Algebraische Strukturen}
+Bezeichnet $M\not=\emptyset$ eine Menge und $F(M)$ die Menge aller Selbstabbildungen auf $M$, so kann die Komposition $\circ$ als Abbildung $\circ : F(M)\times F(M) \rightarrow F(M)$ interpretiert werden - man spricht von einer \underline{Verknüpfung}.
+\subsubsection{Definition (Gruppe)}
+Eine \underline{Gruppe} $(G,\cdot)$ ist eine nichtleer Menge $\mathbb{G}$ mit einer Veknüpfung $\cdot:\mathbb{G}\times\mathbb{G} \rightarrow \mathbb{G}$ mit den Eigenschaften:
+$(G_1) \cdot$ ist \underline{Assoziativ}, d.h. $a\cdot(b\cdot c)=(a\cdot b)\cdot c$ für $a,b,c\in \mathbb{G}$\\
+$(G_2)$ es existiert ein \underline{neutrales Element} $e\in\mathbb{G}$ mit $a\cdot e=a=e\cdot a$ für $a\in\mathbb{G}$\\
+$(G_3)$ zu jedem $a\in\mathbb{G}$ existiert ein \underline{inverses Element} $a^{-1}\in \mathbb{G}$ mit $a\cdot a^{-1}=a^{-1}\cdot a=e$ für $a\in \mathbb{G}$\\
+Bei einer kommutativen oder Abel'scher Gruppe gilt ferner $(G_4) a\cdot b=b\cdot a$ für alle $a,b\in \mathbb{G}$.  Für eine \underline{Halbgruppe} müssen nur $(G_1)$ und $(G_2)$ gelten.
+\subsubsection{Bemerkung}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\begin{enumerate}
+\item Das neutrale Element $e\in\mathbb{G}$ ist eindeutig: In der Tat, bezeichnen $e_1,e_2\in\mathbb{G}$ zwei neutrale Elemente, so folgt nach $(G_2)$ ist: $e_2=e_1\cdot e_2$ und $e_1\cdot e_2=e_1$, also $e_1=e_2$
+\item Zu gegebenem $a\in\mathbb{G}$ ist auch das inverse Element $a^{-1}\in\mathbb{G}$ eindeutig.  Für inverse Element $a_1^{-1},a_2^{-1}$ von $a$ gilt nämlich
+\[a_1^{-1}\stackrel{(G_2)}{=}a_1^{-1}\cdot e\stackrel{(G_3)}{=}a_1^{-1}\cdot(a\cdot a_2^{-1})\stackrel{(G_1)}{=}(a_1^{-1}\cdot a)\cdot a_2^{-1}\stackrel{(G_3)}{=}e\cdot a_2^{-1}\stackrel{(G_2)}{=}a_2^{-1}\]
+\item Entsprechend $e=e^{-1}$, $a=(a^{-1})^{-1}$
+\end{enumerate}
+\subsubsection{Bemerkung (Potenzen)}
+Die Potenzen $a^n\in \mathbb{G}$ eines $a\in\mathbb{G}$ (G ist eine multiplikative Halbgruppe) sind rekursiv erklärt durch $a^0:=e, a^{n+1}:=a\cdot a^n$ für alle $n\in\mathbb{N}_0$.  In einer Gruppe setzen wir $a^n:=(a^{-n})^{-1}$ für $n<0$.
+\subsubsection{Beispiel}
+\begin{enumerate}
+\item $(\mathbb{Z},+)$ ist eine kommutative additive Gruppe mit neutralen Element $0$ und dem zu $a\in\mathbb{Z}$ inverses Element $-a$.  Dagegen ist $(\mathbb{Z},\cdot )$ keine Gruppe, denn das multiplikative Inverses lässt sich innerhalb von $\mathbb{Z}$ nicht erklären.  Ebenso ist $(\mathbb{N},+)$ keine (additive) Gruppe.
+\item Es sei $\mathbb{K}\in \{\mathbb{Q},\mathbb{R},\mathbb{C}\}$. Dann ist $(\mathbb{K},+)$ eine kommutative additive Gruppe mit neutralem Element $0$ und $-a$ als zu $a$ Inversen.  Auch $(\mathbb{K}\ \{Q\},\cdot )$ ist eine kommutative multiplikative Gruppe mit neutralem Element $1$ und dem zu $a$ inversen Element $\frac{1}{a}$.
+\item Mit $\mathbb{K}\in\{\mathbb{Z},\mathbb{Q},\mathbb{C}\}$ bilden die Matrizen $(\mathbb{K}^{m\times n},+)$ eine kommutative additive Gruppe mit neutralem Element $0$ und den Inversen $-A$ zu $A$.  Die quadratischen reellen rationalen oder komplexen Matrizen $(\mathbb{K}^{m\times n}\ \{Q\},\cdot)$ bilden keine Gruppe, da etwa diag$(1,0)\not= 0$ kein Inverses besitzt.
+\end{enumerate}
+\addtocounter{subsubsection}{1}
+\subsubsection{Beispiel (modulo)}
+Es sei $p\geq 2$ eine ganze Zahl und $\mathbb{Z}_p:=\{0,\cdots ,p-1\}$.  Für beliebige $a,b\in\mathbb{Z}$ gibt es vermöge der Division mit Rest eindeutige $m\in\mathbb{Z}$ und $k\in\mathbb{Z}_p$ mit $a+b=mp+k$ wir schreiben dann $k=a+b$ mod $p$ oder $k=:a+_p b$.  Dann ist $(\mathbb{Z}_p,+_p)$ eine kommutative Gruppe mit dem neutralem Element $0$.
+\subsubsection{Beispiel (symmetrische Gruppe)}
+Es sei $M$ eine nichtleere Menge und $S(M)$ bezeichnet alle bijektiven Selbstabbildungen $f:M\rightarrow M$.  Dann ist die \underline{symmetrischen Gruppe} $(S(M),\circ )$ eine i.A. nicht-kommutative Gruppe mit id$_m$ als neutralem Element und $f^{-1}:M\rightarrow M$ als inversen Element zu $f$.  Im Fall $M=\{1,\cdots ,n\}$ schreiben wir $S_n:=S(\{1,\cdots ,n\})$.  Die Menge aller nicht-notwendig bijektiven Selbstabbildungen $F(M)$ ist dagegen eine Halbgruppe bezüglich $\circ$.
+\subsubsection{Korollar (Rechnen in Gruppen)}
+Für alle $a,b,c\in\mathbb{G}$ gilt $(a\cdot b)^{-1}=b^{-1}\cdot a^{-1}$, wie auch $a\cdot b=a\cdot c\Rightarrow b=c,a\cdot b=e\Rightarrow a=b^{-1}$.\\
+Beweis:\\
+Es seien $a,b,c\in\mathbb{G}$.  Wir zeigen zunächst, dass $b^{-1}\cdot a^{-1}$ das inverse Element von $a\cdot b$ ist.  Dazu 
+\[(b^{-1}\cdot a^{-1})\cdot(a\cdot b)\stackrel{(G_1)}{=} b^{-1}\cdot(a^{-1}\cdot(a\cdot b\cdot))\stackrel{(G_1)}{=}b^{-1}\cdot((a^{-1}\cdot a)\cdot b)\stackrel{(G_3)}{=} b^{-1}\cdot(e\cdot b)\stackrel{(G_2)}{=}b^{-1}\cdot b\stackrel{(G_3)}{=}e\]
+und entsprechend $(a\cdot b)\cdot(b^{-1}\cdot a^{-1})=e$.  Die erste Implikation ergibt sich nach Voraussetzung durch 
+\[b\stackrel{(G_2)}{=}e\cdot b\stackrel{(G_3)}{=}(a^{-1}\cdot a)\cdot b\stackrel{(G_1)}{=}a^{-1}+(a\cdot b)=a^{-1}\cdot(a\cdot c)\stackrel{(G_1)}{=}(a^{-1}\cdot a)\cdot c\stackrel{(G_3)}{=}e\cdot c\stackrel{(G_2)}{=}c\]
+Die verbleibende Implikation sei den Leser überlassen.
+\subsubsection{Definition (Körper)}
+Ein \underline{Körper} $(\mathbb{K},+,\cdot )$ ist eine Menge $\mathbb{K}$ mit mindestens zwei Elementen versehen.  Mit den \underline{arithmetischen Operationen} $+: \mathbb{K}\times\mathbb{K}\rightarrow \mathbb{K}$ (\underline{Addition}) und $\cdot : \mathbb{K}\times\mathbb{K}\rightarrow \mathbb{K}$(\underline{Multiplikation}).\\
+$(\mathbb{K}_1) (\mathbb{K},+)$ ist eine kommutative Gruppe mit neutralem Element $0$ und den zu $\alpha\in\mathbb{K}$ inversen Element $-\alpha$, d.h. für alle $\alpha ,\beta ,\gamma\in\mathbb{K}$ gilt:\\
+\begin{align*}
+(\mathbb{K}_1^1) & \alpha +(\beta + \gamma )= (\alpha + \beta)+\gamma \\
+(\mathbb{K}_1^2) & \alpha + 0 = 0 + \alpha = \alpha \\
+(\mathbb{K}_1^3) & \alpha \cdot -\alpha = -\alpha \cdot \alpha = 0 \\
+(\mathbb{K}_1^4) & \alpha + \beta = \beta + \alpha
+\end{align*}
+($\mathbb{K}_2$) ($\mathbb{K}\\ \{0\},\cdot$) ist eine kommutative Gruppe mit neutralem Element $1$ und zu $\alpha\in \mathbb{K}$ Inversem $\frac{1}{\alpha}$, d.h. es gilt für $\alpha ,\beta ,\gamma \in \mathbb{K}\\ \{0\}$.
+\begin{align*}
+(\mathbb{K}_2^1) & \alpha \cdot (\beta \cdot \gamma ) = (\alpha \cdot \beta )\cdot \gamma\\
+(\mathbb{K}_2^2) & \alpha \cdot 1 = 1\cdot\alpha = \alpha \\
+(\mathbb{K}_2^3) & \alpha \cdot \frac{1}{\alpha} = \frac{1}{\alpha}\cdot\alpha = 1 \\
+(\mathbb{K}_2^4) & \alpha \cdot \beta = \beta \cdot \alpha
+\end{align*}
+($mathbb{K}_3$) es gelten die Distributivgesetze $\alpha (\beta +\gamma )=\alpha \cdot \beta + \alpha \cdot \gamma$, $(\alpha + \beta ) \cdot \gamma = \alpha\gamma + \beta\gamma$ für alle $\alpha ,\beta ,\gamma \in \mathbb{K}$.  Üblich $\alpha\beta :=\alpha \cdot \gamma$.  Subtraktion als $\alpha - \beta := \alpha + (-\beta )$.  Division $\frac{\alpha}{\beta} := \alpha \cdot \frac{1}{\beta}$.
+\subsubsection{Beispiel}
+$\mathbb{Q},\mathbb{R},\mathbb{C}$ sind Körper bzgl. $+,\cdot$
+\subsubsection{Beispiel (Restklassenkörper modulo $p$)}
+Mit einer gegebenen Primzahl $p\in\mathbb{N}$ definieren wir die Mengen $\mathbb{Z}_p := \{0,\cdots ,p\}$.  Dann gibt für beliebige $\alpha ,\beta \in \mathbb{Z}_p$ eindeutige Zahlen $m,n\in\mathbb{Z}$ und $k,l\in\mathbb{Z}_p$ derart, dass 
+\[\alpha + \beta = m\cdot p+k\]
+\[\alpha\cdot\beta = np+l \text{ Divison mit Rest.}\]
+\[\text{Addition: }\alpha+_p \beta := k\]
+\[\text{Multiplikation: }\alpha \cdot_p \beta := l\]
+$(\mathbb{Z}_p,+_p,\cdot_p)$ ist Körper, der sogenannten Restklassenkörper modulo $p$.
+\[\mathbb{Z}_2: \begin{array}{c|cc}+_2 & 0 & 1\\ \hline\\ 0 & 0 & 1 \\ 1 & 1 & 0\end{array} \]
+\[\begin{array}{c|cc}\cdot_2 & 0 & 1\\ \hline \\ 0 & 0 & 0 \\ 1 & 0 & 1\end{array} \]
+\[\mathbb{Z}_3: \begin{array}{c|ccc}+_3 & 0 & 1 & 2\\ \hline \\ 0 & 0 & 1 & 2\\ 1 & 1 & 2 & 0\\2 & 2 & 0 & 1\end{array} \]
+\[\begin{array}{c|ccc}\cdot_3 & 0 & 1 & 2\\ \hline \\ 0 & 0 & 0 & 0\\ 1 & 0 & 1 & 2\\2 & 0 & 2 & 1\end{array} \]
+\subsubsection{Korollar}
+Ist ($\mathbb{K},+,\cdot $) ein Körper, so gilt für alle $\alpha ,\beta ,\gamma \in \mathbb{K}$, dass
+\begin{align*}
+0\cdot \alpha &= \alpha \cdot 0 = 0, & \beta\cdot (-\alpha ) = -(\beta \cdot \alpha ) = (-\beta )\cdot \alpha &(2.1b)\\
+(-1)\cdot \alpha &= -\alpha , & (-\alpha )\cdot (-\beta ) = \alpha\cdot\beta &(2.1c)
+\end{align*}
+Und ferner die Implikation $\alpha\cdot\beta = 0 \rightarrow \alpha = 0$ oder $\beta = 0$.
+\subsubsection{Bemerkung}
+Es gilt $1\not=0$, da die Annahme $1=0$ folgenden Widerspruch impliziert: Da $\mathbb{K}$ mindestens $2$ Elemente enthält, gibt es ein $\alpha\in\mathbb{K}, \alpha\not= 0$ mit:
+\[\alpha \stackrel{(\mathbb{K}_2^2)}{=} \alpha \cdot 1 = \alpha \cdot 0 \stackrel{(2.1b)}{=} 0\]
+Daher ist der Restklassenkörper modulo $2\ \mathbb{Z}_2$ der kleinste Körper.
+\subsubsection{Beweis}
+Wähle ein $\alpha ,\beta ,\gamma \in\mathbb{K}$. Es gilt $0\cdot \alpha \stackrel{(\mathbb{K}_1^2)}{=} (0+0)\cdot \alpha \stackrel{(\mathbb{K})}{=} 0\alpha + 0\alpha$ mittels Korollar 2.1.8 ($+,a=b=0$ und $c=0$) folgt $0\cdot \alpha = 0$, kommutativ liefert $\alpha 0 = 0$. Aus dieser Behauptung resultiert 
+\[(-\beta )\alpha +\beta\alpha \stackrel{(\mathbb{K}_3)}{=} (-\beta + \beta)\alpha = 0\cdot \alpha = 0\]
+mit Korollar 2.1.8 ($+,a=(-\beta )\alpha ,b=\beta\alpha$).  Dies liefert $-(\beta\alpha )=(-\beta )\alpha$ und $\beta (-\alpha )=-(\beta\alpha )$.  Die Beziehung $(-1)\alpha = -\alpha $ resultiert aus dem eben gezeigten $\beta = 1$ und 
+\[(-1)\alpha = 1\cdot (-\alpha ) \stackrel{\mathbb{K}_2^2)}{=} -\alpha .\]
+$2.1c$ ergibt sich mit Bemerkung $2.1.2(3)$ aus 
+\[(-\alpha ) (-\beta )\stackrel{2.1b}{=}-(\alpha (-\beta )) \stackrel{2.1b}{=} -(-(\alpha\beta )) = \alpha\beta =0 \]
+Annahme: $\alpha \not=0$ und $\beta\not=0$ dann $1\stackrel{\mathbb{K}_2^3)}{=}\frac{1}{\beta} \cdot \frac{1}{\alpha} \cdot \alpha\cdot\beta \stackrel{2.1b}{=} 0$
+\subsection{Vektorräume}
+\subsubsection{Definition (linearer Raum, Vektorraum)}
+Es sei $\mathbb{K}$ ein Körper.  Ein Vektorraum oder linearer Raum $(X,+,\cdot )$ (über $\mathbb{K}$) ist eine nichtleere Menge $X$ mit arithmetische Operationen:
+\begin{enumerate}
+\item Addition $+:\ X\times X\rightarrow X$ derart, dass $(X,+)$ eine kommutative Gruppe mit neutralem Element $0$ oder Nullvektor.
+\item Skalare Multiplikation $\cdot :\mathbb{K}\times X\rightarrow X$ derart, dass für alle $\alpha ,\beta \in \mathbb{K}$ und $x,y\in X$ gilt:
+\begin{align*}
+(V_1)&\ \alpha (x+y) = \alpha x+\alpha y \text{ Distributiv Gesetz}\\
+(V_2)&\ (\alpha +\beta ) \cdot x = \alpha x + \beta x \text{ Distributiv Gesetz} \\
+(V_3)&\ (\alpha\beta )\cdot x = \alpha \cdot (\beta \cdot x) \text{ Assoziativ Gesetz}\\
+(V_4)&\ 1\cdot x = x
+\end{align*}
+Die Elemente aus $\mathbb{K}$ heißen Skalare und $X$ heißen Vektoren.
+\end{enumerate}
+Konventionen: $\alpha x := \alpha\cdot x$  $x-y:=x+(-y)$
+\subsubsection{Beispiel}
+Es sei ($\mathbb{K},+,\cdot $) ein Körper.\\
+($0$) Der triviale Raum $\{0\}$ der nur die $0$ enthält.\\
+($1$) Weiter ist $\mathbb{K}$ ein Vektorraum über sich selbst.\\
+($2$) Die Menge aller $m\times n$-Matrizen $\mathbb{K}^{m\times n}$ ist ein linearer Raum über $\mathbb{K}$ bezüglich\\
+($1.3b$) $\alpha A := \alpha A = (\alpha a_{i,j})_{\substack{1\leq i\leq m\\1\leq j\leq n}}$\\
+($1.3c$) $A+B := (\alpha _{i,j}+\beta _{i,j})_{\substack{1\leq i\leq m\\1\leq j\leq n}}$\\
+Ein $n$-Tupel ($x_1,\cdots ,x_n$)$\in \mathbb{K}^{1\times n}$ bezeichnen wir als Zeilenvektor und eine $m$-Spalte ($1.3a$) als Spaltenvektor.
+\subsubsection{Beispiel}
+Es sei $p\in\mathbb{N}$ eine Primzahl und $n\in\mathbb{N}$.  Dann sind die $n$-Spalten $\mathbb{Z}_p^n$ in $\mathbb{Z}_p$ mit den komponentenweisen Addition $+_p$ und skalaren Multiplikation $\cdot_p$ ein linearer Raum über $\mathbb{Z}_p$.\\
+Insbesondere für $\mathbb{Z}_2^2$
+\[\begin{array}{c|cccc}+_2 & \begin{pmatrix}0\\ 0\end{pmatrix} & \begin{pmatrix} 1 \\ 0 \end{pmatrix} & \begin{pmatrix}0 \\ 1\end{pmatrix} & \begin{pmatrix}1\\ 1\end{pmatrix} \\ \hline \\ \begin{pmatrix}
+0\\ 0\end{pmatrix} &\begin{pmatrix}0 \\ 0\end{pmatrix} &\begin{pmatrix}1\\ 0\end{pmatrix} &\begin{pmatrix}0\\ 1\end{pmatrix} & \begin{pmatrix}1\\ 1\end{pmatrix} \\ \begin{pmatrix}
+1\\ 0\end{pmatrix} &\begin{pmatrix}1 \\ 0\end{pmatrix} &\begin{pmatrix}0\\ 0\end{pmatrix} &\begin{pmatrix}1\\ 1\end{pmatrix} & \begin{pmatrix}0\\ 1\end{pmatrix} \\ \begin{pmatrix}
+0\\ 1\end{pmatrix} & \begin{pmatrix}0 \\ 1\end{pmatrix} & \begin{pmatrix}1\\ 1\end{pmatrix} & \begin{pmatrix}0\\ 0\end{pmatrix} & \begin{pmatrix}1\\ 0 \end{pmatrix} \\ \begin{pmatrix}1\\ 1\end{pmatrix} & \begin{pmatrix}1 \\ 1\end{pmatrix} & \begin{pmatrix}0 \\ 1\end{pmatrix} & \begin{pmatrix}1\\ 0\end{pmatrix} & \begin{pmatrix}0\\ 0\end{pmatrix}\end{array} \]
+
+\[\begin{array}{c|cccc}\cdot _2 & \begin{pmatrix}0\\ 0\end{pmatrix} & \begin{pmatrix} 1 \\ 0 \end{pmatrix} & \begin{pmatrix}0 \\ 1\end{pmatrix} & \begin{pmatrix}1\\ 1\end{pmatrix} \\ \hline \\ 0 &\begin{pmatrix}0 \\ 0\end{pmatrix} &\begin{pmatrix}0\\ 0\end{pmatrix} &\begin{pmatrix}0\\ 0\end{pmatrix} & \begin{pmatrix}0\\ 0\end{pmatrix} \\ 1 &\begin{pmatrix}0 \\ 0\end{pmatrix} &\begin{pmatrix}1\\ 0\end{pmatrix} &\begin{pmatrix}0\\ 1\end{pmatrix} & \begin{pmatrix}1\\ 1\end{pmatrix}\end{array}\]
+\subsubsection{Beispiel (Lösungsmengen)}
+Mit Satz $1.4.3$ ist $L_0$ einer homogenen Gleichung ein Vektorraum über $\mathbb{K}$.  Die Lösungsmenge $L_b$ inhomogener Systeme ist kein linearer Raum über $\mathbb{K}$.
+\subsubsection{Beispiel (Funktionsräume)}
+Es sei $\omega \not= \emptyset$ und $X$ ein linearer Raum über $\mathbb{K}$.  Dann ist $F(\omega ,X):=\{ u:\omega \rightarrow X\}$ ein Vektorraum über $\mathbb{K}$ mit punktweise definierten arithmetischen Operationen $(a+v)(t) := u(t)+v(t),\ (\alpha u)(t):= \alpha u(t)$ für alle $t\in\omega ,\alpha \in\mathbb{K}$.\\
+Die Menge $F(\omega ,X)$ wird als Funktionenraum bezeichnet.  $\omega\in\mathbb{N},\ \omega\in\mathbb{Z}$, dann bezeichnen wir $F(\omega ,X)$ als Folgenraum.
+\subsubsection{Korollar}
+Ist $(X,+,\cdot )$ ein linearer Raum über $\mathbb{K}$ so gilt für alle Skalare $\alpha ,\beta \in\mathbb{K}$ und Vektoren $x,y\in X$:
+\begin{align*}
+(a)& 0_{\mathbb{K}} \cdot x = \alpha \cdot 0_x = 0_x\\
+(b)& \text{Falls }\alpha x = 0_x\text{, so folgt } \alpha = 0\in\mathbb{K} \text{ oder } x\in 0 \in X \\
+(c)& (-\alpha )x = \alpha (-\alpha )=-(\alpha x)\\
+(d)& \alpha (x-y) = \alpha x - \alpha y \text{ und } (\alpha - \beta )x = \alpha x - \beta x
+\end{align*}
+Beweis: Es sei $\alpha \in \mathbb{K}$ und $x\in X$:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item Es gilt $0_{\mathbb{K}} x = (0_{\mathbb{K}}+0_{\mathbb{K}})x = 0_{\mathbb{K}}x + 0_{\mathbb{K}}x$ wegen $V_2$. Nach Definition 2.2.1 (a) existiert zum Vektor $z:=0_{\mathbb{K}} x$ ein Vektor $-z$ mit $0\cdot x + (-z)=0_X$ und wir erhalten $0_X=0\cdot x + (-z) = (0\cdot x + 0\cdot x)+(-z) = 0\cdot x +(0\cdot x + (-z)) = 0\cdot x + 0_x = 0+x$ und die Beziehung $\alpha \cdot 0 = 0$ folge analog.
+\end{enumerate}

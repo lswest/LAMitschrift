@@ -1,0 +1,33 @@
+\documentclass[12pt,a4paper]{article}
+% page counting, header/footer
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\addtolength{\oddsidemargin}{-.525in}
+\addtolength{\evensidemargin}{-.525in}
+\addtolength{\textwidth}{1.5in}
+\hypersetup{unicode=true,pdfborder={0 0 0 [0 0]}, linkcolor=blue}
+\title{Lineare Algebra}
+\author{Lucas Westermann}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L,L]{Lineare Algebra}
+\fancyhead[R,R]{Lucas Westermann}
+\fancyfoot[R,R]{Seite \thepage\ von \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\headheight}{16pt}
+\begin{document}
+\maketitle
+\pagebreak
+\include{Lineare_Algebra_Section_1}
+\include{Lineare_Algebra_Section_2}
+\end{document}

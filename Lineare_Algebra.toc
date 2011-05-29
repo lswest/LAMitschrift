@@ -1,0 +1,65 @@
+\contentsline {section}{Literatur}{4}{section*.3}
+\contentsline {section}{\numberline {1}Grundlegendes}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Mengen}{4}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Definition (Relation)}{4}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Beispiel}{4}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Beispiel}{4}{subsubsection.1.1.3}
+\contentsline {subsubsection}{\numberline {1.1.4}Beispiel}{5}{subsubsection.1.1.4}
+\contentsline {subsubsection}{\numberline {1.1.5}Beispiel}{5}{subsubsection.1.1.5}
+\contentsline {subsubsection}{\numberline {1.1.6}Beschreibung (Gerichtete Graphen)}{5}{subsubsection.1.1.6}
+\contentsline {subsubsection}{\numberline {1.1.7}Beispiel}{6}{subsubsection.1.1.7}
+\contentsline {subsubsection}{\numberline {1.1.8}Definition (\"{A}quivalenzrelation)}{6}{subsubsection.1.1.8}
+\contentsline {subsubsection}{\numberline {1.1.9}Beispiel}{6}{subsubsection.1.1.9}
+\contentsline {subsubsection}{\numberline {1.1.10}Beispiel}{6}{subsubsection.1.1.10}
+\contentsline {subsection}{\numberline {1.2}Abbildungen}{7}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Definition (Abbildungen, Funktion)}{7}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Bemerkung}{7}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Beispiel (identische Abbildung)}{8}{subsubsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.4}Beispiel}{8}{subsubsection.1.2.4}
+\contentsline {subsubsection}{\numberline {1.2.5}Beispiel (ASCII-Code)}{8}{subsubsection.1.2.5}
+\contentsline {subsubsection}{\numberline {1.2.6}Definition (Umkehrabbildung)}{9}{subsubsection.1.2.6}
+\contentsline {subsubsection}{\numberline {1.2.7}Bemerkung}{9}{subsubsection.1.2.7}
+\contentsline {subsubsection}{\numberline {1.2.8}Korollar}{9}{subsubsection.1.2.8}
+\contentsline {subsection}{\numberline {1.3}Matrizen}{9}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Definition (Matrix)}{10}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.2}Beispiel ($n$ Tupeln, $m$-Spalten)}{10}{subsubsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.3}Kronecker-Symbol, Einheits- und Nullmatrixe)}{10}{subsubsection.1.3.3}
+\contentsline {subsubsection}{\numberline {1.3.4}Beispiel (Diagonal- und Dreieckmatrizen)}{11}{subsubsection.1.3.4}
+\contentsline {subsubsection}{\numberline {1.3.5}Bemerkung}{11}{subsubsection.1.3.5}
+\contentsline {subsubsection}{\numberline {1.3.6}Beispiel}{12}{subsubsection.1.3.6}
+\contentsline {subsubsection}{\numberline {1.3.7}Beispiel}{12}{subsubsection.1.3.7}
+\contentsline {subsubsection}{\numberline {1.3.8}Beispiel (RGB - Raum)}{12}{subsubsection.1.3.8}
+\contentsline {subsubsection}{\numberline {1.3.9}Beispiel (Inzedenzmatrix)}{12}{subsubsection.1.3.9}
+\contentsline {subsubsection}{\numberline {1.3.10}Satz (Rechenregeln f\IeC {\"u}r Matrizen)}{13}{subsubsection.1.3.10}
+\contentsline {subsection}{\numberline {1.4}Lineare Gleichungen}{13}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}Definition (lineare Gleichung}{13}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.2}Bemerkung}{14}{subsubsection.1.4.2}
+\contentsline {subsubsection}{\numberline {1.4.3}Satz(Superpositionsprinzip)}{14}{subsubsection.1.4.3}
+\contentsline {subsubsection}{\numberline {1.4.4}Satz}{14}{subsubsection.1.4.4}
+\contentsline {subsubsection}{\numberline {1.4.5}Beispiel}{14}{subsubsection.1.4.5}
+\contentsline {subsubsection}{\numberline {1.4.6}Beispiel (R\IeC {\"u}ckw\IeC {\"a}rts-Substitution)}{15}{subsubsection.1.4.6}
+\contentsline {subsubsection}{\numberline {1.4.7}Beispiel}{16}{subsubsection.1.4.7}
+\contentsline {subsubsection}{\numberline {1.4.8}Satz}{17}{subsubsection.1.4.8}
+\contentsline {subsubsection}{\numberline {1.4.9}Satz}{17}{subsubsection.1.4.9}
+\contentsline {section}{\numberline {2}Lineare R\IeC {\"a}ume}{18}{section.2}
+\contentsline {subsection}{\numberline {2.1}Algebraische Strukturen}{18}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Definition (Gruppe)}{18}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Bemerkung}{18}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Bemerkung (Potenzen)}{18}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Beispiel}{18}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.6}Beispiel (modulo)}{19}{subsubsection.2.1.6}
+\contentsline {subsubsection}{\numberline {2.1.7}Beispiel (symmetrische Gruppe)}{19}{subsubsection.2.1.7}
+\contentsline {subsubsection}{\numberline {2.1.8}Korollar (Rechnen in Gruppen)}{19}{subsubsection.2.1.8}
+\contentsline {subsubsection}{\numberline {2.1.9}Definition (K\IeC {\"o}rper)}{19}{subsubsection.2.1.9}
+\contentsline {subsubsection}{\numberline {2.1.10}Beispiel}{20}{subsubsection.2.1.10}
+\contentsline {subsubsection}{\numberline {2.1.11}Beispiel (Restklassenk\IeC {\"o}rper modulo $p$)}{20}{subsubsection.2.1.11}
+\contentsline {subsubsection}{\numberline {2.1.12}Korollar}{21}{subsubsection.2.1.12}
+\contentsline {subsubsection}{\numberline {2.1.13}Bemerkung}{21}{subsubsection.2.1.13}
+\contentsline {subsubsection}{\numberline {2.1.14}Beweis}{21}{subsubsection.2.1.14}
+\contentsline {subsection}{\numberline {2.2}Vektorr\IeC {\"a}ume}{22}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Definition (linearer Raum, Vektorraum)}{22}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Beispiel}{22}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Beispiel}{23}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Beispiel (L\IeC {\"o}sungsmengen)}{23}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}Beispiel (Funktionsr\IeC {\"a}ume)}{23}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.6}Korollar}{24}{subsubsection.2.2.6}
