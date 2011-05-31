@@ -125,7 +125,7 @@ Mathematische Operationen für Matrizen:
 \begin{itemize}
 \item \underline{Skalare Multiplikation}: $\mathbb{K}\times \mathbb{K}^{m\times n} \rightarrow \mathbb{K}^{m\times n}, \alpha \cdot A= \alpha A=(\alpha a_{i,j})_{\substack{1\leq i\leq m \\ i\leq j\leq n}}$.  Wir schreiben $-A:=(-1)\cdot A$
 \item \underline{Addition}: $+:\mathbb{K}^{m\times n}\times \mathbb{K}^{m\times n} \rightarrow \mathbb{K}^{m\times n},A+B=(a_{i,j}+b_{i,j})_{\substack{1\leq i\leq m \\ 1\leq j\leq n}}$.  Die Subtraktion lautet $A-B=A+(-B)$.
-\item Genau für $m\times n$-Matrizen $A$ und $m\times p$-Matrizen $B$ lässt sich eine \underline{Multiplikation} erklären.  $\cdot : \mathbb{K}^{m\times n}\times \mathbb{K}^{m\times p}\rightarrow \mathbb{K}^{m\times n}$.  $A\cdot B=AB:=(\sum^m_{k=1} a_{i,k}b_{k,j})_{\substack{1\leq i\leq m\\1\leq j\leq p}}$. das Produkt ist also eine $m\times n$-Matrix.
+\item Genau für $m\times n$-Matrizen $A$ und $n\times p$-Matrizen $B$ lässt sich eine \underline{Multiplikation} erklären.  $\cdot : \mathbb{K}^{m\times n}\times \mathbb{K}^{n\times p}\rightarrow \mathbb{K}^{m\times p}$.  $A\cdot B=AB:=(\sum^m_{k=1} a_{i,k}b_{k,j})_{\substack{1\leq i\leq m\\1\leq j\leq p}}$. das Produkt ist also eine $m\times p$-Matrix.
 \end{itemize}
 \underline{Merke}: Das Produkt macht nur Sinn, falls die Spaltenzahl der ersten mit der Zeilenzahl der zweiten Matrix übereinstimmt.
 \subsubsection{Bemerkung}
