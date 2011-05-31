@@ -134,4 +134,41 @@ Beweis: Es sei $\alpha \in \mathbb{K}$ und $x\in X$:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item Es gilt $0_{\mathbb{K}} x = (0_{\mathbb{K}}+0_{\mathbb{K}})x = 0_{\mathbb{K}}x + 0_{\mathbb{K}}x$ wegen $V_2$. Nach Definition 2.2.1 (a) existiert zum Vektor $z:=0_{\mathbb{K}} x$ ein Vektor $-z$ mit $0\cdot x + (-z)=0_X$ und wir erhalten $0_X=0\cdot x + (-z) = (0\cdot x + 0\cdot x)+(-z) = 0\cdot x +(0\cdot x + (-z)) = 0\cdot x + 0_x = 0+x$ und die Beziehung $\alpha \cdot 0 = 0$ folge analog.
+\item (b) Es gelte $\alpha x = 0$ mit $\alpha \neq 0$ und wir zeigen $x=0_x$ $\alpha \neq 0$ existiert $\frac{1}{\alpha}$. Nach (a) folgt ${\frac{1}{\alpha}} (\alpha \cdot x) = \frac{1}{\alpha} \cdot 0=0$ und andererseits $\frac{1}{\alpha} (\alpha x) = (\frac{1}{\alpha} \cdot \alpha) \cdot x=1\cdot x = x$
+\item , (d)
 \end{enumerate}
+\subsubsection{Definition (Unterraum)}
+Eine nicht leere Teilmenge $Y \subseteq X$ eines linearen Raumes $(X,+,\cdot)$ über $\mathbb{K}$ heißt Unterraum von X, falls gilt $\alpha_1 y_1 + \alpha_2 y_2 \in Y$ für alle $\alpha_1, \alpha_2\in\mathbb{K}$ und $y_1, y_2\in Y$
+\subsubsection{Bemerkung}
+Jeder lineare Raum x hat die trivialen Unterräume $\{0\}$ und X.
+\subsubsection{Beispiel (Stetige und stetig-differenzierbare Funktion)}
+Es sei $I\subseteq \mathbb{R}$ ein Inervall. Die Menge der stetigen Funktionen $C(I,\mathbb{R}^n)$ auf $I$ mit Bildern in $\mathbb{R}^n$ ist ein Unterraum von $F(I,\mathbb{R})$. Ebenso sind stetig differenzierbare Funktionen $C^1(I,\mathbb{R})$ ein Unterraum von $C(I,\mathbb{R})$ und $F(I,\mathbb{R}^n)$
+\subsubsection{Beispiel (Polynome)}
+Mit gegebenem Körper $\mathbb{K}$ definieren wir den Raum der Polynome (über $\mathbb{K}$) durch \\$P(\mathbb{K}) := \{p\in F(\mathbb{K},\mathbb{K}) \exists n\in\mathbb{N}_0: \exists a_0, ..., a_n \in \mathbb{K} : p(t)=\sum^{n}_{l=0} a_l \cdot t^l\}$;\\
+seine Elemente heißen Polynome und die $a_k$ deren Koeffizienten. Dann ist $P(\mathbb{K})$ ein Unterraum von $F(\mathbb{K},\mathbb{K})$.\\
+Der Grad $deg\ p$ eines Polynoms $p\in P(\mathbb{K})$ ist der maximale Inde $k\in\mathbb{N}_0$ für den $a_k=0$ ist. Für $m\in\mathbb{N}_0$ sind die Mengen $P_m(\mathbb{K}) := \{p\in P(\mathbb{K}):deg\ p \le m\}$
+
+Unterräume von $P(\mathbb{K})$, wogegen $\{p\in P(\mathbb{K}): deg\ p =m\}$ für $m\neq 0$ kein Unterraum ist. Ferner ist jedes $P_n(\mathbb{K})$ Unterraum von $P_m(\mathbb{K})$ für $0\le n\le m$.
+\subsubsection{Satz (Schnitte und Summen von Unterräumen)}
+Ist $I$ eine nichtleere Indexmenge und und $(Y_i)_{i\in I}$ eine Familie von Unterräumen von X.
+\begin{enumerate}
+\item Der Durchschnitt $\displaystyle\bigcap_{i\in I} Y_i$ ist ein Unterraum von X.
+\item Für endliche $I$ ist die Summe $\displaystyle\sum_{i\in I}Y_i := \{\sum_{i\in I} y_i\in X: y_i\in Y_i \text{ mit } i\in I\}$ der kleinste Unterraum von $X$, der jedes $y_i$ enthält.
+\end{enumerate}
+Für $I=\{1,...,n\}$ schreibt man auch $\displaystyle Y_1+...+Y_m=\sum_{i\in J} Y_i$.
+
+Beweis:
+\begin{enumerate}
+\item Es seien $\alpha,p\in \mathbb{R}$ und $x,y\in \displaystyle\cap_{i\in I} Y_i$. Dann gilt $x,y \in Y_i$ für alle $i\in I$ und da jedes $Y_i$ ein Unterraum von X ist, folgt $\alpha\cdot x+\beta\cdot y \in Y_i$ für jedes $i\in I$. Dies impliziert, dass $\alpha\cdot x+\beta\cdot y \in \displaystyle\cap_{i\in I} Y_i$
+\item Wir zeigen $\displaystyle Y := \sum_{i\in I} Y_i$ ist ein Unterraum von $X$. Dazu sei $\displaystyle x=\sum_{i\in I} x_i$ und $\displaystyle y=\sum_{i\in I} y_i$ mit $x_i,y_i\in Y_i$ und wir erhalten für alle $\alpha,\beta \in \mathbb{R}$:
+
+$\displaystyle\alpha \cdot x+\beta\cdot y=\alpha\sum_{i\in I}x_i+\beta\sum_{i\in I} y_i=\sum_{i\in I}(\underbrace{\alpha x_i+\beta y_i}_{\in Y_i})$
+\end{enumerate}
+Zu zeigen $y$ ist kleinster Unterraum der alle $Y_i$ enthält.\\
+Dazu sei $z\subseteq X$ ein weiterer Unterraum von $X$ der alle $Y_i$ enthält. Für $x_i\in Y_i$ ist dann auch $x_i\in Z$ für alle $i\in I$, da $Y_i$ in $Z$ enthalten sind.\\
+Aus der Unterraumeigenschaft von $Z$ resultiert $\displaystyle\sum_{i\in I} x_i \in Z$ und folglich ist $Y\subseteq Z$
+\subsection{Lineare Abhängigkeiten}
+\subsubsection{Definition (Spann)}
+\subsubsection{Beispiel}
+\subsubsection{Beispiel (Monome)}
+\subsubsection{Beispiel}
