@@ -20,8 +20,8 @@ Die Potenzen $a^n\in \mathbb{G}$ eines $a\in\mathbb{G}$ (G ist eine multiplikati
 \subsubsection{Beispiel}
 \begin{enumerate}
 \item $(\mathbb{Z},+)$ ist eine kommutative additive Gruppe mit neutralen Element $0$ und dem zu $a\in\mathbb{Z}$ inverses Element $-a$.  Dagegen ist $(\mathbb{Z},\cdot )$ keine Gruppe, denn das multiplikative Inverses lässt sich innerhalb von $\mathbb{Z}$ nicht erklären.  Ebenso ist $(\mathbb{N},+)$ keine (additive) Gruppe.
-\item Es sei $\mathbb{K}\in \{\mathbb{Q},\mathbb{R},\mathbb{C}\}$. Dann ist $(\mathbb{K},+)$ eine kommutative additive Gruppe mit neutralem Element $0$ und $-a$ als zu $a$ Inversen.  Auch $(\mathbb{K}\ \{Q\},\cdot )$ ist eine kommutative multiplikative Gruppe mit neutralem Element $1$ und dem zu $a$ inversen Element $\frac{1}{a}$.
-\item Mit $\mathbb{K}\in\{\mathbb{Z},\mathbb{Q},\mathbb{C}\}$ bilden die Matrizen $(\mathbb{K}^{m\times n},+)$ eine kommutative additive Gruppe mit neutralem Element $0$ und den Inversen $-A$ zu $A$.  Die quadratischen reellen rationalen oder komplexen Matrizen $(\mathbb{K}^{m\times n}\ \{Q\},\cdot)$ bilden keine Gruppe, da etwa diag$(1,0)\not= 0$ kein Inverses besitzt.
+\item Es sei $\mathbb{K}\in \{\mathbb{Q},\mathbb{R},\mathbb{C}\}$. Dann ist $(\mathbb{K},+)$ eine kommutative additive Gruppe mit neutralem Element $0$ und $-a$ als zu $a$ Inversen.  Auch $(\mathbb{K}\setminus \{0\},\cdot )$ ist eine kommutative multiplikative Gruppe mit neutralem Element $1$ und dem zu $a$ inversen Element $\frac{1}{a}$.
+\item Mit $\mathbb{K}\in\{\mathbb{Z},\mathbb{Q},\mathbb{C}\}$ bilden die Matrizen $(\mathbb{K}^{m\times n},+)$ eine kommutative additive Gruppe mit neutralem Element $0$ und den Inversen $-A$ zu $A$.  Die quadratischen reellen rationalen oder komplexen Matrizen $(\mathbb{K}^{m\times n}\setminus \{0\},\cdot)$ bilden keine Gruppe, da etwa diag$(1,0)\not= 0$ kein Inverses besitzt.
 \end{enumerate}
 \addtocounter{subsubsection}{1}
 \subsubsection{Beispiel (modulo)}
@@ -45,14 +45,14 @@ $(\mathbb{K}_1) (\mathbb{K},+)$ ist eine kommutative Gruppe mit neutralem Elemen
 (\mathbb{K}_1^3) & \alpha \cdot -\alpha = -\alpha \cdot \alpha = 0 \\
 (\mathbb{K}_1^4) & \alpha + \beta = \beta + \alpha
 \end{align*}
-($\mathbb{K}_2$) ($\mathbb{K}\\ \{0\},\cdot$) ist eine kommutative Gruppe mit neutralem Element $1$ und zu $\alpha\in \mathbb{K}$ Inversem $\frac{1}{\alpha}$, d.h. es gilt für $\alpha ,\beta ,\gamma \in \mathbb{K}\\ \{0\}$.
+($\mathbb{K}_2$) ($\mathbb{K}\setminus \{0\},\cdot$) ist eine kommutative Gruppe mit neutralem Element $1$ und zu $\alpha\in \mathbb{K}$ Inversem $\frac{1}{\alpha}$, d.h. es gilt für $\alpha ,\beta ,\gamma \in \mathbb{K}\setminus \{0\}$.
 \begin{align*}
 (\mathbb{K}_2^1) & \alpha \cdot (\beta \cdot \gamma ) = (\alpha \cdot \beta )\cdot \gamma\\
 (\mathbb{K}_2^2) & \alpha \cdot 1 = 1\cdot\alpha = \alpha \\
 (\mathbb{K}_2^3) & \alpha \cdot \frac{1}{\alpha} = \frac{1}{\alpha}\cdot\alpha = 1 \\
 (\mathbb{K}_2^4) & \alpha \cdot \beta = \beta \cdot \alpha
 \end{align*}
-($mathbb{K}_3$) es gelten die Distributivgesetze $\alpha (\beta +\gamma )=\alpha \cdot \beta + \alpha \cdot \gamma$, $(\alpha + \beta ) \cdot \gamma = \alpha\gamma + \beta\gamma$ für alle $\alpha ,\beta ,\gamma \in \mathbb{K}$.  Üblich $\alpha\beta :=\alpha \cdot \gamma$.  Subtraktion als $\alpha - \beta := \alpha + (-\beta )$.  Division $\frac{\alpha}{\beta} := \alpha \cdot \frac{1}{\beta}$.
+($\mathbb{K}_3$) es gelten die Distributivgesetze $\alpha (\beta +\gamma )=\alpha \cdot \beta + \alpha \cdot \gamma$, $(\alpha + \beta ) \cdot \gamma = \alpha\gamma + \beta\gamma$ für alle $\alpha ,\beta ,\gamma \in \mathbb{K}$.  Üblich $\alpha\beta :=\alpha \cdot \gamma$.  Subtraktion als $\alpha - \beta := \alpha + (-\beta )$.  Division $\frac{\alpha}{\beta} := \alpha \cdot \frac{1}{\beta}$.
 \subsubsection{Beispiel}
 $\mathbb{Q},\mathbb{R},\mathbb{C}$ sind Körper bzgl. $+,\cdot$
 \subsubsection{Beispiel (Restklassenkörper modulo $p$)}
@@ -60,7 +60,7 @@ Mit einer gegebenen Primzahl $p\in\mathbb{N}$ definieren wir die Mengen $\mathbb
 \[\alpha + \beta = m\cdot p+k\]
 \[\alpha\cdot\beta = np+l \text{ Divison mit Rest.}\]
 \[\text{Addition: }\alpha+_p \beta := k\]
-\[\text{Multiplikation: }\alpha \cdot_p \beta := l\]
+\[\text{Multiplikation: }\alpha \cdot_p \beta := l\text{ (2.1a)}\]
 $(\mathbb{Z}_p,+_p,\cdot_p)$ ist Körper, der sogenannten Restklassenkörper modulo $p$.
 \[\mathbb{Z}_2: \begin{array}{c|cc}+_2 & 0 & 1\\ \hline\\ 0 & 0 & 1 \\ 1 & 1 & 0\end{array} \]
 \[\begin{array}{c|cc}\cdot_2 & 0 & 1\\ \hline \\ 0 & 0 & 0 \\ 1 & 0 & 1\end{array} \]
