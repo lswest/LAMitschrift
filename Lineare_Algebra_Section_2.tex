@@ -168,7 +168,16 @@ Zu zeigen $y$ ist kleinster Unterraum der alle $Y_i$ enthält.\\
 Dazu sei $z\subseteq X$ ein weiterer Unterraum von $X$ der alle $Y_i$ enthält. Für $x_i\in Y_i$ ist dann auch $x_i\in Z$ für alle $i\in I$, da $Y_i$ in $Z$ enthalten sind.\\
 Aus der Unterraumeigenschaft von $Z$ resultiert $\displaystyle\sum_{i\in I} x_i \in Z$ und folglich ist $Y\subseteq Z$
 \subsection{Lineare Abhängigkeiten}
+Gegeben sei eine nichtleere Menge $S$ von Vektoren aus einem linearen Raum X über dem Körper $\mathbb{K}$. Existieren zu einem gegebenem $x\in X$ dann endlich viele Koeffizienten $a_i\in\mathbb{R}$ und $x_i\in\mathcal{S}$, $1\leq i\leq n$, mit $\displaystyle x=\sum^{n}_{i=1} a_i \cdot x_i$  so bezeichnen wir $x$ als Linearkombination der Vektoren aus $S$.
 \subsubsection{Definition (Spann)}
+Es sei $\mathcal{S} \leq X$. Der Spann oder die lineare Hülle $span\ \mathcal{S}$ von $\mathcal{S}$ ist die Menge aller Linearkombinationen. Ferner setzt man $span\ \{0\}=\{0\}$.
 \subsubsection{Beispiel}
+Für endliche $\mathcal{S}=\{x_0,...,x_n\}$ ist der $\displaystyle span\ \mathcal{S}=\{\sum^n_{i=1} \alpha_i\cdot x_i\in X: \alpha_i \in \mathbb{K}\}$ $\mathbb{K}=\mathbb{R}$: $e_1=\begin{pmatrix}1\\0\end{pmatrix}$, $e_2=\begin{pmatrix}0\\1\end{pmatrix}$ gilt $span\ \{e_i,e_2\}=\mathbb{R}^2$\\
+$span\ \{x_1,x_2\}$ wenn $x_1=\begin{pmatrix}1\\1\end{pmatrix}$ und $x_2=\begin{pmatrix}1\\-1\end{pmatrix}$ aber $y_1=\begin{pmatrix}1\\1\end{pmatrix}$ und $y_2=\begin{pmatrix}2\\2\end{pmatrix}$ dann $span\ \{y_1,y_2\} = \mathbb{R} \begin{pmatrix}1\\1\end{pmatrix} \in \mathbb{R}^2$ 
 \subsubsection{Beispiel (Monome)}
+Polynome $m_n(l):=t^n$, $n\in\mathbb{N}_0$ heißen Monome. Dann lassen sich die Polynome als lineare Hülle der Monome darstellen, d.h. $span\ \{m_n\}_{n\in\mathbb{N}_0}=P(\mathbb{K})$ insbesondere ist $span\ \{m_0,...,m_n\}=P_n(\mathbb{K}^n)$\\
+$span\ \{m_{2n}\}_{n\in\mathbb{N}_0}=\{p\in P(\mathbb{K}):p(t)=p(-t) \text{ auf } \mathbb{K}\}$\\
+$span\ \{m_{2n-1}\}_{n\in\mathbb{N}_0}=\{p\in P(\mathbb{K}):p(t)=-p(-t) \text{ auf } \mathbb{K}\}$
 \subsubsection{Beispiel}
+Es sei $\mathcal{S}\in X$ nicht leer. Dann ist die lineare Hülle der kleinste $\mathcal{S}$ umfassende Unterraum von $X$\\
+\paragraph{Beweis:} $x,y\in \mathcal{S}$ ist $\alpha x+\beta y$, $\alpha,\beta\in\mathbb{K}$ in $span\ \mathcal{S}$. Also ist $span\ \mathcal{S}$ Unterraum von $X$. $span\ \mathcal{S}$ enthält die Vektoren aus $\mathcal{S}$ und damit ist $\mathcal{S}\subseteq span\ \mathcal{S}$, $Y\subseteq X$ ein Unterraum von $X$ mit $x\in Y$ für sämtliche $x\in\mathcal{S}$. Dann liegen sämtliche Linearkombinationen von Vektoren aus $\mathcal{S}$ in $Y$. Also ist $span\ \mathcal{S}$ in $Y$ enthalten.
