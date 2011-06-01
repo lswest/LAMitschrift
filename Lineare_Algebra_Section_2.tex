@@ -181,3 +181,71 @@ $span\ \{m_{2n-1}\}_{n\in\mathbb{N}_0}=\{p\in P(\mathbb{K}):p(t)=-p(-t) \text{ a
 \subsubsection{Beispiel}
 Es sei $\mathcal{S}\in X$ nicht leer. Dann ist die lineare Hülle der kleinste $\mathcal{S}$ umfassende Unterraum von $X$\\
 \paragraph{Beweis:} $x,y\in \mathcal{S}$ ist $\alpha x+\beta y$, $\alpha,\beta\in\mathbb{K}$ in $span\ \mathcal{S}$. Also ist $span\ \mathcal{S}$ Unterraum von $X$. $span\ \mathcal{S}$ enthält die Vektoren aus $\mathcal{S}$ und damit ist $\mathcal{S}\subseteq span\ \mathcal{S}$, $Y\subseteq X$ ein Unterraum von $X$ mit $x\in Y$ für sämtliche $x\in\mathcal{S}$. Dann liegen sämtliche Linearkombinationen von Vektoren aus $\mathcal{S}$ in $Y$. Also ist $span\ \mathcal{S}$ in $Y$ enthalten.
+\subsubsection{Korollar}
+Ist $x$ eine Linearkombination von Vektoren aus $\mathcal{S}\subseteq X$, so gilt span$\mathcal{S}$=span($\mathcal{S}\cup \{x\}$).\\
+\underline{Beweis}: Wir zeigen die Behauptung durch zwei Inklusionen:\\
+$(\subseteq )$ Es ist klar dass span$\mathcal{S}\subseteq$span($\mathcal{S}\cup\{x\}$)\\
+$(\supseteq )$ Also Linearkombination von Vektoren aus $\mathcal{S}$ liegt $x$ auch in span$\mathcal{S}$.\\
+Demnach ist span$\mathcal{S}$ derjenige Unterraum welcher $\mathcal{S}$ und $\{x\}$ enthält.\\
+Damit folgt aus Prop 2.3.4, dass span($\mathcal{S}\cup\{x\}$)=span$\mathcal{S}$.
+\subsubsection{Definition (lineare Unabhängigkeit)}
+Eine endliche Menge $\{x_1,\cdots ,x_n\}$ von Vektoren aus $X$ heißt linear unabhängig falls gilt:
+\[\sum^n_{k=1} \xi _k x_k = 0 \Rightarrow \xi _k =0 \forall n=1,n\]
+Griechische Buchstaben:
+\[\eta \ - \text{ eta}\]
+\[\xi \ - \text{ xi}\]
+\[\zeta \ - \text{ zeta} \]
+Für beliebige Mengen $\mathcal{S}\subseteq X$ nennt man $\mathcal{S}$ linear unabhängig, wenn jede endliche Teilmenge von $\mathcal{S}$ linear unabhängig ist, die leere Menge $\emptyset$ wird als lineare unabhängig betrachtet.  Eine Teilmenge von $X$ heißt linear abhängig, falls sie nicht linear unabhängig ist.\\
+Man nennt Vektoren $x_1 ,x_2 ,\cdots $ linear unabhängig, wenn $\{x_1,x_2,\cdots \}$ diese Eigenschaft hat.
+\subsubsection{Bemerkung}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\begin{enumerate}
+\item lineare Abhängigkeit einer endlichen Menge $\{x_1,\cdots x_n\}$ bedeutet, dass eine nichttriviale Darstellung der Null aus Vektoren $x_u$ existiert:\\
+Man Kann also
+\[(2.3a) \sum_{k=1}^n \xi _kx_k = 0\]
+schreiben, ohne dass alle $\xi _k$ verschwinden.
+\item Jede Obermenge einer linear abhängigen Menge ist linear abhängig.  Jede Teilmenge einer linear unabhängigen Menge ist linear unabhängig.
+\end{enumerate}
+\subsubsection{Beispiel}
+Die Menge $\{0\}$ ist linear abhängig, dagegen ist $\{x\},x\not= 0$, linear unabhängig.
+\subsubsection{Proposition}:
+Es sei $\mathcal{S}\subseteq X$ nitleer und $x,x_1,\cdots ,x_n \in X$
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item Ist $\mathcal{S}=\{x_1, \cdots ,x_n\}$ linear abhängig, so lässt sich mindestens ein Vektor aus $\mathcal{S}$ als Linearkombination der weiteren Elementen von $\mathcal{S}$ darstellen.
+\item Für jede Linearkombination $x$ aus $\mathcal{S}$ ist $\mathcal{S}\cup \{x\}$ linear abhängig.
+\end{enumerate}
+\underline{Beweis}:
+\begin{enumerate}
+\item Weil $\{x_1,\cdots ,x_n\}$ linear abhängig ist, besitzt $0$ die Darstellung ($2.3a$) in welcher nicht alle $\xi _k$ verschwinden.  Also existiert ein Index $1\leq k^*\leq n$ mit $\xi _{k^*} \not= 0$ und damit
+\[X_{k^*} = -\xi _k^{-1} \sum_{\substack{k=1\\ k\not=k^*}}^n \xi _k x_k =\sum_{\substack{k=1\\ k\not=k^*}}^n (-\xi _k^{-1} \xi _k) x_k\]
+\item Mit $x=\sum_{k=1}^n\xi _k x_k$ ist $x - \sum_{k=1}^n \xi _k x_k$ eine nichttriviale Darstellung der $0$
+\end{enumerate}
+In $X=\mathbb{K}^m$ gilt: Es sei $\mathcal{S}=\{a_1,\cdots ,a_n\}\subseteq \mathbb{K}^m$.  Mit der $m\times n$-Matrize $A:= (a_1,\cdots ,a_n)$ ist die Beziehung $\sum^n_{k=1} \xi _k a_k =0$ (vgl. ($2.3a$)) äquivalent zu:
+\[ (2.3b) Ax=0, x\begin{pmatrix}\xi _1 \\ \vdots \\ \xi_n\end{pmatrix}\]
+Demzufolge ist $\mathcal{S}$ genau dann linear unabhängig, wenn $Ax=0$ nur die triviale Lösung hat.  Aus Satz 1.4.8 (in Verbindung mit Blatt 5, Aufg. 1) erhalten wir daher, dass mehr als $m$ Vektoren stets linear abhängig sind.
+\subsubsection{Beispiel}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\begin{enumerate}
+\item Für die \underline{kanonischen Einheitsvektoren} in $\mathbb{K}^m$
+\[ e_1=\begin{pmatrix}1\\ 0 \\ \vdots \\ 0\end{pmatrix},e_2=\begin{pmatrix}0\\ 1 \\ \vdots \\ 0\end{pmatrix}, \cdots e_m=\begin{pmatrix}0 \\ 0 \\ \vdots \\ 1\end{pmatrix}\]
+gilt in obiger Terminologie $A=I_m$.  Also besitzt $Ax=0$ nur die triviale Lösung und $\{e_1,\cdots ,e_m\}$ ist linear unabhängig.
+\item Es sei $\lambda \in \mathbb{R}$ um die lineare Unabhängigkeit von 
+\[x_1\begin{pmatrix}1\\ 2\\ 3\end{pmatrix}, x_2=\begin{pmatrix}4\\ 5\\ 6\end{pmatrix}, x_3=\begin{pmatrix}7\\ 8\\ \lambda \end{pmatrix}\]
+in $\mathbb{R}^3$ zu untersuchen, betrachten wir die Gleichung $(2.3b)$ mit
+\[A=\begin{pmatrix}1 & 4 & 7\\2 & 5 & 8\\ 3 & 6 & \lambda\end{pmatrix}\]
+und lösen sie mit dem in Beispiel 1.4.6 beschriebenen Schema:
+\[\begin{array}{ccc|c}1 & 4 & 7 & 0\\ 2 & 5 & 6 & 0\\ 3 & 6 & \lambda \end{array}\begin{matrix}\\ 2I-II\\ 3I-II\end{matrix} \Rightarrow \begin{array}{ccc|c}1 & 4 & 7 & 0\\ 0 & 3 & 6 & 0\\ 0 & 6 & 21 - \lambda \end{array}\begin{matrix}\\ :3\\ III-2II\end{matrix} \Leftrightarrow \begin{array}{ccc|c}1 & 4 & 7 & 0\\ 0 & 1 & 2 & 0\\ 0 & 0 & 9 - \lambda \end{array}\begin{matrix}\\ :3\\ III-2II\end{matrix}\]
+Also hat $Ax=0$ für $\lambda \not= 9$ nur die triviale Lösung (lineare Unabhängigkeit von $\{x_1,x_2,x_3\}$ und für $\lambda = 9$ nichttriviale Lösungen (lineare Abhängigkeit).
+\end{enumerate}
+\subsubsection{Satz}
+Eine Menge $\mathcal{S}\subseteq X$ ist genau dann linear unabhängig, wenn jedes $x\in\mathcal{S}$ auf nur eine Art (bis auf Glieder mit Null-Koeffizienten) als Linearkombinationen von Vektoren aus $\mathcal{S}$ dargestellt werden kann.
+\subsection{Basis und Dimensionen}
+Es sei $X$ ein linearer Raum über den Körper $\mathbb{K}$.
+\subsubsection{Definition (Basis)}
+Eine Menge $\mathcal{X}\subseteq X$ heißt \underline{Basis} von X, falls $\mathcal{X}$ linear unabhängig mit $X=$span$\mathcal{X}$ ist:\\
+Eine Menge $\mathcal{X}$ mit $X=$span$\mathcal{X}$ heißt Erzeugendessystem (EZS) von $X$ genannt.  Man nennt $X$ endlich erzeugt, falls er ein endliches EZS hat.
+\subsubsection{Beispiel}
+Die Basis von $\{0\}$ ist die leere Menge.
+\subsubsection{Beispiel (Standardbasis)}
+Die mittels der kanonischen Einheitsvektoren aus Beispiel 2.3.10 (1) gebildete Menge $\mathcal{E}_m:=\{e_1,\cdots ,e_m\}$ ist eine Basis von $\mathbb{K}^m$, die sogenannte Standardbasis, damit ist $\mathbb{K}^m$ endlich erzeugt.
