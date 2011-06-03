@@ -2,6 +2,7 @@
 % page counting, header/footer
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage[ngerman]{babel}
 \usepackage{tikz}
 \usetikzlibrary{decorations.markings}
 \usepackage{amsmath}
@@ -22,6 +23,7 @@
 \fancyhead[L,L]{Lineare Algebra}
 \fancyhead[R,R]{Lucas Westermann}
 \fancyfoot[R,R]{Seite \thepage\ von \pageref{LastPage}}
+\fancyfoot[L,L]{\hyperlink{contents}{Inhaltsverzeichnis}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \setlength{\headheight}{16pt}
