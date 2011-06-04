@@ -208,7 +208,7 @@ schreiben, ohne dass alle $\xi _k$ verschwinden.
 \end{enumerate}
 \subsubsection{Beispiel}
 Die Menge $\{0\}$ ist linear abhängig, dagegen ist $\{x\},x\not= 0$, linear unabhängig.
-\subsubsection{Proposition}:
+\subsubsection{Proposition}
 Es sei $\mathcal{S}\subseteq X$ nichtleer und $x,x_1,\cdots ,x_n \in X$
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
@@ -249,3 +249,53 @@ Eine Menge $\mathcal{X}$ mit $X=$span$\mathcal{X}$ heißt Erzeugendessystem (EZS
 Die Basis von $\{0\}$ ist die leere Menge.
 \subsubsection{Beispiel (Standardbasis)}
 Die mittels der kanonischen Einheitsvektoren aus Beispiel 2.3.10 (1) gebildete Menge $\mathcal{E}_m:=\{e_1,\cdots ,e_m\}$ ist eine Basis von $\mathbb{K}^m$, die sogenannte Standardbasis, damit ist $\mathbb{K}^m$ endlich erzeugt.
+\subsubsection{Beispiel (Polynome)}
+Für $\mathbb{K}=\mathbb{R}$ oder $\mathbb{K}=\mathbb{C}$ sind $\mathcal{M}_n:=\{m_0,\cdots m_n\}$ aus Beispiel 2.3.3 eine Basis der Polynome $\mathcal{P}_n(\mathbb{K})$ von maximalem Grad $n$.  Ebenso ist $\{m_n\}_{n\in\mathbb{N}_0}$ eine Basis von $\mathcal{P}(\mathbb{K})$.  Somit ist jedes $\mathcal{P}_n(\mathbb{K})$ endlich erzeugt, $\mathcal{P}(\mathbb{K})$ dagegen nicht.
+\subsubsection{Lemma}
+Es sei $\mathcal{S}\subseteq X$ linear unabhängig.  Gilt dann $x\not\in$span$\mathcal{S}$, so ist auch $\mathcal{S}\cup\{x\}$ linear unabhängig. \\
+\underline{Beweis}:  Es ist nachzuweisen, dass jede endliche Teilmenge von $\mathcal{S}\cup\{x\}$ linear unabhängig ist.  Dazu sei $\{x_1,\cdots x_n,x\}$ eine solche Menge und $\sum_{k=1}^n \xi _k +x_k +\eta x=0$ eine Darstellung der Null.  Wäre $\eta \not= 0$, so könnte man $x$ als Linearkombination der $x_1,\cdots ,x_n$ darstellen, dies widerspricht $x\not\in$span$\mathcal{S}$.  Also gilt $\eta = 0$.  Da aber $\{x_1,\cdots ,x_n\}$ linear unabhängig ist, folgt $\xi _1 = \cdots = \xi _n = 0$.  In trivialer Weise: ist $X$ ein EZS von $X$.  Unser Interesse besteht aber gerade im "kleinen" EZSen.
+\subsubsection{Satz}
+Mit nicht leerem $\mathcal{X}\subseteq X$ sind äquivalent:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $\mathcal{X}$ ist eine Basis von $X$
+\item Jeder Vektor $x\in X$ lässt sich eindeutig als Linearkombination von Vektoren aus $\mathcal{X}$ darstellen.
+\item $\mathcal{X}$ ist \underline{maximal linear unabhängig}, d.h. $\mathcal{X}$ ist linear unabhängig und für jedes $x\in X\setminus \mathcal{X}$ ist $\mathcal{X}\cup\{x\}$ linear abhängig.
+\item $\mathcal{X}$ ist ein \underline{minimales EZS}, d.h. keine echte Teilmenge von $\mathcal{X}$ ist ein EZS.
+\end{enumerate}
+\subsubsection{Bemerkung (Koordinaten)}
+Besitzt $x\in X$ bzgl. der Basis $\mathcal{X}:=\{x_1,\cdots ,x_n\}$ die nach Satz 2.4.6 (b) eindeutige Darstellung $x=\sum_{k=1}^n \xi _k x_k$ mit Koeffizienten $\xi _k \in \mathbb{K}$ so bezeichnet man das $n$-tupel ($\xi _1,\cdots ,\xi _n$) also \underline{Koordinaten} von $x$ (bzgl. $\mathcal{X}$).  Von nun an sei $X$ endlich erzeugt.
+\subsubsection{Satz}
+Jedes endliche EZS eines Vektorraumes enthält eine Basis.  Insbesondere hat jeder endlich erzeugte lineare Raum eine Basis.\\
+\underline{Beweis}:
+Es sei $\mathcal{X}$ ein endliches EZS.  Ist $\mathcal{X}$ keine Basis, so kann $\mathcal{X}$ nicht minimal sein und es existiert eine echte Teilmenge $\mathcal{X}^1 \stackrel{\subset}{\not=} \mathcal{X}$, die ebenfalls ein EZS ist.  Ist wiederum $\mathcal{X}^1$ keine Basis, so existiert erneut eine echte Teilmenge $\mathcal{X}^2 \stackrel{\subset}{\not=} \mathcal{X}^1$, die $X$ erzeugt.  Durch Iteration erhält man eine echt absteigende Folge von Teilmengen $\cdots \subsetneqq \mathcal{X}^2 \subsetneqq \mathcal{X}^1 \subsetneqq \mathcal{X}$.  Diese Folge bricht nach endlich vielen schritten ab, da $\mathcal{X}$ endlich ist, d.h. es gibt ein minimales $\mathcal{X}^k$.  Dieses $\mathcal{X}^k$ ist nach Satz 2.4.6 eine Basis von $X$.
+\subsubsection{Proposition}
+Ist $X$ endlich erzeugbar und $\mathcal{S}\subseteq X$ linear unabhängig, so existiert eine Basis von $X$, welche $\mathcal{S}$ als Teilmenge enthält.
+\subsubsection{Lemma (Austauschsatz von Steinitz)}
+Ist $\{x_1,\cdots x_p\}$ linear unabhängig und $\{y_1,\cdots ,y_n\}$ ein EZS von $X$, so gilt $p\leq n$ und nach einer Umnummerierung der $y_k$ ist $\{x_1,\cdots ,x_p,y_{p+1},\cdots ,y_n\}$ ein EZS von $X$.
+\subsubsection{Satz (Dimension)}
+Falls $X$ eine Basis von $n$ Elementen besitzt, enthält jede Basis von $X$ genau $n$ Elemente.  Wir bezeichnen $n$ als \underline{Dimension} von $X$ und schreiben $n=$dim$X$.
+\subsubsection{Bemerkung}
+Ein linearer Raum $X$ heißt \underline{unendlich-dimensional} (symbolisch dim$X=\infty$) falls er kein endlichen EZS besitzt, anderenfalls heißt er endlich-dimensional.\\
+\underline{Beweis}: Es seien $\{x_1,\cdots ,x_n\}$ und auch $\{y_1,\cdots ,y_m\}$ Basen von $X$.  Mit Lemma 2.4.10 folgt dann $n\leq m$, wie auch $m\leq n$, und somit $m=n$.
+\subsubsection{Beispiel}
+Für die bislang betrachteten Räume ist dim$\mathbb{K}^n=n$, dim$\mathbb{K}^{m\times n}=m\cdot n$, dim$\mathcal{P}_n(\mathbb{R})=n+1$ und dim$\mathcal{P}(\mathbb{R})=$dim$C^1(\mathbb{R},\mathbb{R})=$dim$C(\mathbb{R},\mathbb{R})=$dim$F(\mathbb{R},\mathbb{R})=\infty$.
+\subsubsection{Beispiel}
+Die komplexen Zahlen $\mathbb{C}$ sind ein 2-dimensionaler Vektorraum über $\mathbb{R}$ und ein 1-dimensionaler Raum über $\mathbb{C}$.
+\subsubsection{Korollar}
+In linearen Räumen $X$ mit $n:=$dim$X$ gilt:
+\begin{enumerate}
+\item Weniger als $n$ Vektoren aus $X$ sind kein EZS.
+\item Mehr als $n$ Vektoren aus $X$ sind linear abhängig.
+\item Jedes EZS mit $n$ Elementen ist eine Basis.
+\item Jede linear unabhängige Menge mit $n$ Elementen ist eine Basis.
+\end{enumerate}
+\underline{Beweis}: 
+\begin{enumerate}
+\item jedes EZS enthält laut Satz 2.4.8 eine Basis.  Für jedes aus weniger als $n$ Vektoren bestehenden EZS gäbe es dann auch eine Basis mit Weniger als $n$ Elementen.  Dies widerspricht Satz 2.4.11.
+\item Laut Proposition 2.4.9 ist jede linear unabhängige Menge Teil einer Basis.  Somit hätte man mit einer linear unabhängigen Familie von mehr als $n$ Vektoren auch eine Basis mit mehr als $n$ Elementen - im Widerspruch zu 2.4.11.
+\item Ein EZS enthält wegen Satz 2.4.8 eine Basis und ist wegen Satz 2.4.11 bereits eine solche.
+\item Mit Proposition 2.4.9 ist eine linear unabhängige Familie Teilmenge einer Basis und mit Satz 2.4.11 eine Basis.
+\end{enumerate}
+\subsubsection{Korollar}
+Für jeden Unterraum $Y$ eines endlich-dimensionalen Raumes $X$ ist dim$Y\leq$dim$X$, Gleichheit gilt genau für $X=Y$.
