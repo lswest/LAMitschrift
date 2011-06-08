@@ -300,8 +300,18 @@ In linearen Räumen $X$ mit $n:=$dim$X$ gilt:
 \subsubsection{Korollar}
 Für jeden Unterraum $Y$ eines endlich-dimensionalen Raumes $X$ ist dim$Y\leq$dim$X$, Gleichheit gilt genau für $X=Y$.
 \subsection{Komplemente und direkte Summen}
+Wieder sei $X$ ein linearer Raum über $\mathbb{K}$.
 \subsubsection{Definition (direkte Summen)}
+Es seien $Y_1,Y_2\subseteq X$ Unterräume. Dann heißt $Y_2$ Komplement von $Y_1$ in $X$, falls gilt $Y_1+Y_2=X$ $Y_1\cap Y=\{0\}$, man schreibt $X=y_1\oplus y_2$ und nennt $X$ direkte Summe von $Y_1$, $Y_2$.\\
+\underline{Beispiele}:\\
+$Y_1\cap Y_2 \neq 0$ $Y_1\oplus Y_2=\mathbb{R}^3$ $Y_1\oplus Y_2\subsetneq \mathbb{R}^3$
 \subsubsection{Beispiel} 
+Im Raum $X=\mathbb{R}^3$ ist die Gerade $Y_2:=\left\{\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}\in X: x_1=x_2=x_3\right\}$ ein Komplement zur Ebene $Y_1:=\{x\in X: x_1-x_2+x_3=0\}$.\\
+In der Tat liegt $x\in Y_1 \cap Y_2$, so erfüllen die Elemente des Durchschnitts\\
+\[x_1-x_2+x_3=0\]
+\[x_1-x_2=0\]
+\[x_2-x_3=0\]
+und folglich $x=0$, dies bedeutet $Y_1\cap Y_2=\{0\}$. Andererseits liegen $y_1=\begin{pmatrix}1\\1\\0\end{pmatrix}$, $y_2=\begin{pmatrix}1\\0\\-1\end{pmatrix}$ in $Y_1$ und $y_3=\begin{pmatrix}1\\1\\1\end{pmatrix}$ in $Y_2$. Da $\{y_1,y_2,y_3\}$ eine Basis von $\mathbb{R}^3=X$ bilden, gilt auch $Y_1+Y_2=X$.
 \subsubsection{Beispiel}
 Wir betrachten den Unterraum $Y_n:=\{p\in P(\mathbb{K})\}:p(0)=0\}$ von $X=P(\mathbb{K})$.  Dann gilt $P(\mathbb{K})=Y_1 \oplus P_0(\mathbb{K})$, d.h. der lineare Raum aller konstanten Polynome ist ein Komplement von $Y_1$.
 \subsubsection{Satz}
