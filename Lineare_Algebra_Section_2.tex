@@ -303,11 +303,12 @@ Für jeden Unterraum $Y$ eines endlich-dimensionalen Raumes $X$ ist dim$Y\leq$di
 \subsubsection{Definition (direkte Summen)}
 \subsubsection{Beispiel} 
 \subsubsection{Beispiel}
-Wir betrachten den Unterraum $Y_n:=\{p\in P(\mathbb{K})\}:p(0)=0\}$ von $X=P(x\mathbb{K})$.  Dann gilt $P(\mathbb{K})=Y_1 \oplus P_0(\mathbb{K})$, d.h. der lineare Raum aller konstanten Polynome ist ein Komplement von $Y_1$.
+Wir betrachten den Unterraum $Y_n:=\{p\in P(\mathbb{K})\}:p(0)=0\}$ von $X=P(\mathbb{K})$.  Dann gilt $P(\mathbb{K})=Y_1 \oplus P_0(\mathbb{K})$, d.h. der lineare Raum aller konstanten Polynome ist ein Komplement von $Y_1$.
 \subsubsection{Satz}
 Es seien $Y_1,Y_2\subseteq X$ Unterräume.  Es ist $X=Y_1\oplus Y_2$ genau dann, wenn es zu jedem $x\in X$ eindeutige $y_1\in Y_1,y_2\in Y_2$ mit $x=y_1+y_2$ gilt.\\
 \underline{Beweis}:\\
-($\Rightarrow$) Es sei $Y_2$ ein Komplement von $Y_1$ und $X$.  Wegen $Y_1+Y_2=X$ lässt sich jedes $x\in X$ darstellen als $x=y_1+y_2$ mit $y_1\in Y_1,y_2\in Y_2$.  Um deren Eindeutigkeit zu Implizieren, sein $\hat{y}_1\in Y_1,\hat{y}_2\in X_2$ zwei weitere Vektoren mit $x=\hat{y}_1+\hat{y}_2$.  Dies impliziert $y_1-\hat{y}_2=\hat{y}_2-y_2$ und $y_1-\hat{y}_1\in Y_1$ für $i=1,2$ und folglich $y_i-\hat{y}_i\in Y_1\cap Y_2$ für $i=1,2$.  Wegen $Y_1\cap Y_2 = \{0\}$ folgt $y_1=\hat{y}_1$ und $y_2=\hat{y}_2$.\\
+($\Rightarrow$) Es sei $Y_2$ ein Komplement von $Y_1$ und $X$.  Wegen $Y_1+Y_2=X$ lässt sich jedes $x\in X$ darstellen als $x=y_1+y_2$ mit $y_1\in Y_1,y_2\in Y_2$.  Um deren Eindeutigkeit zu verifizieren, sein $\hat{y}_1\in Y_1,\hat{y}_2\in X_2$ zwei weitere Vektoren mit $x=\hat{y}_1+\hat{y}_2$.  Dies impliziert $y_1-\hat{y}_2=\hat{y}_2-y_2$ und $y_1-\hat{y}_1\in Y_1$ für $i=1,2$ und folglich $y_i-\hat{y}_i\in Y_1\cap Y_2$ für $i=1,2$.  Wegen $Y_1\cap Y_2 = \{0\}$ folgt $y_1=\hat{y}_1$ und $y_2=\hat{y}_2$.\\
+\\
 ($\Leftarrow$) Umgekehrt seien $Y_1,Y_2\subseteq X$ Unterräume derart, dass sich jedes $x\in X$ eindeutig als Summe $X=y_1+y_2$ mit $y_i\in Y_i,i=1,2$, darstellen lässt.  Dann gilt sicherlich $Y_1+Y_2=X$.  Ist nun $x\in Y_1\cap Y_2$, so gilt $x=x+0=0+x$ und da die Darstellung eindeutig sein muss, resultiert $x=0;$ also $Y_1\cap Y_2=\{0\}$.
 \subsubsection{Satz}
 Jeder Unterraum eines endlich dimensionaler linearer Raumes hat ein Komplement.\\
@@ -325,5 +326,5 @@ $0\leq$rk$A\leq m$
 Der Lösungsraum $L_0\subseteq\mathbb{K}^n$ von ($L_0$) erfüllt dim$L_0=n-$rk$A$.\\
 \underline{Beweis}:\\
 Wir können o.B.d.A (ohne Beschränkung der Allgemeinheit) annehmen, dass $A\in\mathbb{K}^{m\times n}$ in strenger Zeilen-Stufen-Form ist.  Es sei $r$ die Anzahl der Zeilen von $A$, welche mindestens ein Element $\not=\ 0$ besitzen - dies ist der Rang von $A$.  Für $1\leq i\leq r$ sei $j_i$ derjenige Spaltenindex, in welcher das erste Element $\not=\ 0$ der $i$-ten Zeile steht.  Weiter seien $k_1,\cdots ,k_{n-r}$ diejenigen Element von $\{1,\cdots ,n\}$, welche nicht in $\{j_1,\cdots ,j_r\}$ sind.  Dann gilt 
-\[L_0=\begin{cases}x=\begin{pmatrix}\xi _1\\ \vdots \\ \xi_n\end{pmatrix}\in\mathbb{K}^n:\xi _1,\cdots ,\xi _{k_{n-r}} \in\mathbb{K}\ \mathrm{und}\ \xi _{j_i}=-\frac{1}{a_{i,j_i}}\sum_{j=1}^{n-r} a_{i,k_j} \xi _{k_j}\text{ für }1\leq i\leq r\end{cases}\]
+\[L_0=\left\{x=\begin{pmatrix}\xi _1\\ \vdots \\ \xi_n\end{pmatrix}\in\mathbb{K}^n:\xi _1,\cdots ,\xi _{k_{n-r}} \in\mathbb{K}\ \mathrm{und}\ \xi _{j_i}=-\frac{1}{a_{i,j_i}}\sum_{j=1}^{n-r} a_{i,k_j} \xi _{k_j}\text{ für }1\leq i\leq r\right\}\]
 und $x_1,\cdots x_{n-r}\in\mathbb{K}^n$ bezeichne die Vektoren in $L_0$ mit $\xi _{k_j}=1$ und $\xi _{k_i}=0$ für $i\not= j$.  Man überlegt sich nun, dass $\{x_1,\cdots x_{n-r}\}$ eine Basis von $L_0$ und die Behauptung folgt.
