@@ -1,0 +1,114 @@
+\section{Lineare Abbildungen}
+Es seien $X,Y$ lineare Räume über den selben Körper $\mathbb{K}$
+\subsection{Grundlagen}
+\subsubsection{Definition (lineare Abbildung)}
+Eine \underline{lineare Abbildung} $T: X\rightarrow Y$ erfüllt die Eigenschaft
+\[(3.1a)\ T(\alpha _1x_1+\alpha _2x_2)=\alpha _1Tx_1+\alpha _2Tx_2\]
+für alle $\alpha _1,\alpha _2\in\mathbb{K},x_1,x_2\in X$.  Für die Menge aller solchen linearen Abbildungen schreiben wir $L(X,Y)$.\\
+Für lineare Abbildungen schreibt man $Tx:=T(x)$.
+\subsubsection{Bemerkung}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\begin{enumerate}
+\item Für $T\in L(X,Y)$ ist $T0=0$
+\item Die Menge $L(X,Y)$ ist ein Unterraum von $F(X,Y)$; wir kürzen ferner ab $L(X):=L(X,X)$.  Ist $Z$ ein weiterer linearer Raum und $T\in L(X,Y),S\in L(Y,Z)$, so ist auch die Komposition $S\circ T:X\rightarrow Z$ linear. $(L(X),\circ )$ ist eine Halbgruppe mit neutralem Element $id_x$.
+\end{enumerate}
+\subsubsection{Beispiel}
+Die \underline{Nullabbildung} $0:X\rightarrow Y,\ 0x:=0\in Y$ ist linear, wie auch die identische Abbildung $id_x:X\rightarrow X$ aus Beispiel 1.2.3
+\subsubsection{Beispiel (affine Abbildungen)}
+Eine Abbildung von $S:X\rightarrow Y$ heißt \underline{affin}, falls es $T\in L(X,Y)$ und $y\in Y$ derart gibt, dass $S(x)=Tx+y$.  $S$ ist genau dann linear , falls $y=0$.
+\subsubsection{Beispiel (die Abbildung $T_A$)}
+Die wichtigsten linearen Abbildungen dieser Vorlesung sind von der Form $T_A:\mathbb{K}^n\rightarrow \mathbb{K}^m,\ T_Ax=Ax$ mit $A\in\mathbb{K}^{m\times n}$.  Auch die Abbildung $\mathbb{K}^{m\times n}\rightarrow L(\mathbb{K}^n,\mathbb{K}^m),\ A\mapsto T_A$ ist linear.
+\subsubsection{Beispiel}
+\begin{enumerate}
+\item Es sei $\Omega \not= \emptyset$ eine Menge und $x\in \Omega$.  Dann ist die \underline{Auswertung} $ev_x: F(\Omega ,X)\rightarrow X,\ ev_x(u):=u(x)$ linear.
+\item Es sei $I\subseteq \mathbb{R}$ ein Intervall.  Dann ist die \underline{Differenziation} $D:C^1(I,\mathbb{R})\rightarrow C(I,\mathbb{R}),\ Du:=u'$ linear.
+\item Mit einem Intervall $I\subseteq \mathbb{R}$, den fixen $t_0\in I$ und reellen Zahlen $a<b$ definieren auch nachfolgende Integrale lineare Abbildungen:
+\[T_1:C([a,b],\mathbb{R})\rightarrow \mathbb{R}\ T_{1,u}:=\int_a^b u(s)ds\]
+\[T_2:C(I,\mathbb{R})\rightarrow C^1(I,\mathbb{R}),\ (T_{2,u})(t):=\int_{t_0}^t u(s)ds\]
+\end{enumerate}
+\subsubsection{Beispiel (Vorwärts-Shift)}
+Es sei $X$ ein linearer Raum und $\mathbb{I}\in\{\mathbb{N}_0,\mathbb{Z}\}$.  Bezeichnet dann $l(\mathbb{I})$ den linearen Raum aller Folgen $F(\mathbb{I},X)$, so ist der durch $(S\phi )_k:=\phi _{k+1}$ definierte \underline{Vorwärts-Shift} eine Abbildung $S\in L(l(\mathbb{I}))$.
+\subsubsection{Definition (Kern, Bild, Rang)}
+Ist $T\in L(X,Y)$, so bezeichnet $N(T):=\{x\in X:Tx=0\}$ den \underline{Kern}, $R(T):=TX$ das \underline{Bild} und rk$T:=$dim$R(T)$ den \underline{Rang} von $T$.  Eine Verbindung des Begriffes "`Rang einer Matrix"' (Def. 2.6.1) und Def 3.1.8 und in Satz 3.3.8 hergestellt.
+\subsubsection{Proposition}
+Für jedes $T\in L(X,Y)$ ist der Kern $N(T)$ ein Unterraum von $X$.\\
+Beweis: Übungsaufgabe.
+\subsubsection{Satz}
+Für jedes $T\in L(X,Y)$ gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item T ist genau dann injektiv, wenn $N(T)=\{0\}$
+\item T ist genau dann surjektiv, wenn $R(T)=Y$
+\end{enumerate}
+\underline{Beweis}:
+\begin{enumerate}
+\item Die Abbildung $T$ ist genau dann nicht injektiv, wenn es $y\in Y$ und $x_1,x_2\in X$ derart gibt, dass $x_1\not= x_2$ und $Tx_1=y=Tx_2$.  Dies ist äquivalent zu $T(x_1-x_2)=0$, also $0 \not= x_1-x_1 \in N(T)$
+\item ist genau die Definition von Surjektivität.
+\end{enumerate}
+\subsubsection{Beispiel}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\begin{enumerate}
+\item Die Auswertung $ev_x:F(\Omega ,X)\rightarrow X$ aus Beispiel 3.1.6 (1) hat den Kern $N(ev_x):=\{m\in F(\Omega ,X):u(x)=0\}$ und das Bild $R(ev_x)=X$, ein Urbild zu einem beliebigen $y\in X$ ist gerade die konstante $u(x)\equiv y$ auf $\Omega$.
+\item Für die Nullabbildung $0\in L(X,Y)$ ist $N(0)=X$ und $R(0)=\{0\}$, für $X\not= \{0\}$ ist $0$ nicht injektiv.  Für $Y\not= \{0\}$ ist $0$ nicht surjektiv.
+\item Mit einer Matrix $A\in \mathbb{K}^{m\times n}$ ist $T_A\in L(\mathbb{K}^n,\mathbb{K}^m)$ aus Beispiel 3.1.5 genau dann:
+\begin{itemize}
+\item \underline{injektiv}, wenn die linear homogene Gleichung ($L_0$) nur die triviale Lösung hat.
+\item \underline{surjektiv}, wenn es für jede Inhomogenität $b\in\mathbb{K}^m$ mindestens eine Lösung $x\in\mathbb{K}^n$ von ($L_b$) gibt.
+\end{itemize}
+\item Bei der Differenziation $D:C^1([a,b],\mathbb{R})\rightarrow C([a,b],\mathbb{R})$ aus Beispiel 3.1.6 (2) besteht der Kern $N(D)$ aus allen konstanten Funktionen.  Für das Bild $R(D)$ erhalten wir dagegen $C([a,b],\mathbb{R})$, denn für ein beliebiges $v\in C([a,b],\mathbb{R})$ gilt nach dem Hauptsatz der Differential- und Integralrechnung $Du=v$ mit $u(t):=v(a)+\int_a^t v(s)ds$.  Damit ist $D$ nicht injektiv, aber surjektiv.
+\end{enumerate}
+\subsubsection{Satz (Dimensionssatz)}
+Für jede $T\in L(X,Y)$ mit dim$X=\infty$ gilt dim$N(T)+$dim$R(T)=$dim$X$.\\
+\underline{Beweis}: Es sei $\{x_1,\cdots ,x_m\}$ eine Basis von $N(T)$ und $\{y_1,\cdots ,y_n\}$ eine Basis von $R(T)$.  Wir wählen $\hat{x}_1,\cdots ,\hat{x}_n \in X$ damit, dass $T\hat{x}_i=y_i,y\leq i\leq n$ gilt und weisen nach, dass $\mathcal{X}:=\{x_1,\cdots ,x_m,\hat{x}_1,\cdots ,\hat{x}_n\}$ eine Basis von $X$ ist.
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item \underline{$\mathcal{X}$ ist linear unabhängig}: dim$N(T)$+dim$R(T)$=dim$X$
+\item \underline{$\mathcal{X}$ ist ein EZS}: dim$m$+dim$n$=dim$X$
+\end{enumerate}
+\subsubsection{Korollar}
+Sei $T\in L(X,Y)$ ist $\{x_1,\cdots ,x_n\}$ eine Basis von $N(T)$ und $\{x_1,\cdots ,x_n,x_{n-1},\cdots ,x_d\}$ eine basis von $X$ mit $n<d$.  Das Bild $R(T)$ hat folgende Basis:
+\[\{Tx_{n+1},\cdots ,Tx_d\}\]
+\underline{Beweis}:  Sei $d=$dim$X$,$n=$dim$N(T)$.  Nach Satz 3.1.12 gilt:
+dim$R(T)=d-n$.  Wir suchen $d-n$ linear unabhängige Vektoren in $R(T)$.  Die Vektoren $\{Tx_{n+1},\cdots ,Tx_d\}$ sind $d-n$ Vektoren in $R(T)$.  Wir zeigen , dass diese linear unabhängig sind. Hierzu gehen wir indirekt vor.  Wir nehmen an, dass $\{Tx_{n+1},\cdots ,Tx_d\}$ linear abhängig sind.\\
+$\Rightarrow$ Es existiert ein Index $j^*,n<j^*\leq d$, so dass $Tx_{j^*}=\sum_{\substack{j=n+1\\ j\not= j^*}}^d \eta _jTx_j$.  Das heißt $\sum_{j=n+1}^d \eta _jTx_j=0$ mit $\eta _{j^*}=-1 \circledast\circledast$.  Aus der Linearität von $T$ folgt: $T(\sum_{j=n+1}^d \eta _jx_j)=0$, d.h. $\sum_{j=n+1}^d \eta _jx_j \in N(T)$.  Weil $\{ x_1,\cdots ,x_n\}$ Basis von $N(T)$ ist gilt: $\sum_{j=n+1}^d\eta _jx_j=\sum_{j=1}^n\eta _jx_j$ für geeignete $n_1,\cdots ,n_n\in\mathbb{K}$, also: $\sum_{j=1}^n\eta _jx_j-\sum_{j=n+1}^d\eta _jx_j=0 \circledast$\\
+Weil nach Voraussetzung $x_1,\cdots x_d$ Basis von $X$ ist, folgt aus $\circledast$, dass $\eta _j=0\ \forall 1\leq j\leq d$ (Definition der linearen Unabhängigkeit).  Das ist ein Widerspruch zu $\circledast\circledast$.  Das heißt $\{Tx_{n+1},\cdots ,Tx_d\}$ sind linear unabhängig.
+\subsubsection{Satz (Prinzip der linearen Fortsetzung}
+Sei $\{x_1,\cdots ,x_n\}$ ein Basis von $X$ und $\{\hat{y}_1,\cdots ,\hat{y}_n\} \in Y$.
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item Sind $T,S\in L(X,Y)$ zwei linearen Abbildungen mit $Tx_i=Sx_i\ \forall 1\leq i\leq n$.  Dann gilt $T=S$
+\item Es existiert genau eine lineare Abbildung $T\in L(X,Y)$ mit $Tx_i=\hat{y}_i,\ \forall 1\leq i\leq n$
+\end{enumerate}
+\subsubsection{Bemerkung}
+Für gegebenes $x=\sum_{k=1}^n\xi _kx_k,\ \xi _k\in \mathbb{K}\ \forall 1\leq k\leq n$, gilt $Tx=T(\sum_{k=1}^n\xi _kx_k)\stackrel{3.1a}{=}\sum_{k=1}^n\xi _k Tx_k$.  Kenntnis der Koeffizienten $\xi _k$ und der Werte $Tx_i,1\leq i\leq n$ erlaubt uns den Wert von $Tx$ zu bestimmen.\\
+\underline{Beweis} (Satz 3.1.14):
+\begin{enumerate}
+\item Sei $Tx_i=Sx_i;\ \forall 1\leq i\leq n$.  Sei $x\in X$ mit $x=\sum_{i=1}^n\xi _ix_i,\ 1\leq i\leq n\ \xi _i \in \mathbb{K}$.
+\[Tx=\sum_{i=1}^n \xi _iTx_i=\sum_{i=1}^n \xi _i Sx_i=S(\sum_{i=1}^n\xi _i x_i=Sx\].
+\item Wir definieren $T$ wie folgt.  Der Vektor $x$ habe die Darstellung $x=\sum_{i=1}^n \xi _ix_i$ $\xi _i\in\mathbb{K}$.  Wir definieren $Tx:=\sum_{i=1}^n \xi _i \hat{y}_i$.  Dann gilt $Tx_j=\sum_{j=1}^n \xi _{i,j} \hat{y}_i=\hat{y}_j$.  Zeige noch: $T$ ist linear.  Sei $z\in X$ dargestellt als $z=\sum_{i=1}^n\beta _ix_i$ und $\lambda \in \mathbb{K}$.\\
+\underline{zeige}: $T(x+ z)=T(x)+ T(z)$ und $T(\lambda x)=\lambda T(x)$
+\[T(x+z)=T(\sum_{i=1}^n \xi _i x_i +\sum_{i=1}^n \beta _ix_i) = T(\sum_{i=1}^n (\xi _i+\beta _i)x_i)\stackrel{def.}{=} \sum_{i=1}^n(\xi _i+\beta _i)\hat{y}_i=\sum_{i=1}^n\xi _I\hat{y}_i+\sum_{i=1}^n \beta _i \hat{y}_i=Tx+Tz\]
+\[T(\lambda x)=\lambda Tx\ \mathrm{analog}\]
+\end{enumerate}
+\subsection{Isomorphismen}
+\subsubsection{Definition}
+Eine bijektive Abbildung $T\in L(X,Y)$ heißt Isomorphismus, und wir definieren $GL(X,Y)=\{T\in L(X,Y):T\text{ bijektiv}\}$.  Lineare Räume $X, Y$ werden als isomorph bezeichnet, wenn es einen Isomorphismus $T\in L(X,Y)$ gibt.  Schreibweise: $X\cong Y$.
+\subsubsection{Bemerkung}
+\begin{enumerate}
+\item Wenn $Z$ ein weiterer $\mathbb{K}$-Vektorraum ist, und $T\in GL(X,Y)$ und $S\in GL(Y,Z)$, dann ist $S\circ T\in GL(X,Z)$. bildlich: $X\stackrel{T}{\rightarrow}Y\stackrel{S}{\rightarrow}Z$.  Wir schreiben $GL(X)$ für $GL(X,X)$.  Mit neutralem Element id$_x$ wird $GL(X)$ zu einer Gruppe, der sogenannten General Linear Group.  Achtung: $GL(X)$ ist kein Untervektorraum von L(X)!
+\item Durch $A=\{(X,Y): X\text{ und } Y\text{ sind Isopmorph}\}$ wird eine Äquivalenzrelation auf der Menge aller linearen Räume erklärt.
+\end{enumerate}
+\subsubsection{Beispiel (Transponierte)}
+Die Abbildung $\circ ^T:K^{n\times m}\rightarrow K^{m\times n}$
+\[ A=(a_{i,j})_{\substack{1\leq i\leq n\\ 1\leq j\leq m}} \mapsto A^T =(a_{j,i})_{\substack{1\leq i\leq n\\ 1\leq j\leq m}}\]
+\begin{center}
+(Zeilen und Spalten vertauschen!)
+\end{center}
+ist ein Isomorphismus.  Es gilt das Inverse des Transponieren ist das Transponieren selbst, d.h. $((A)^T)^T=A$ (für $n=m$).  Damit ist der Raum der $n$-Spalten isomorph zum Raum der $n$-Zeilen.
+\subsubsection{Beispiel (Polynome)}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\begin{enumerate}
+\item Sei $\mathbb{K}\in \{\mathbb{Q},\mathbb{R},\mathbb{C}\}$ und $P_n(\mathbb{K}$ die Polynome von maximalem Grad $n\in \mathbb{N}_0$. $P_n(\mathbb{K})$ ist isomorph zu $\mathbb{K}^{n+1}$ via den Isomorphismus $T: P_n(\mathbb{K}\rightarrow \mathbb{K}^{n+1}$, $p\rightarrow (\alpha _0,\cdots ,\alpha _n)$, wobei $p(t)=\sum_{k=0}^n\alpha _kt^k$. Zum Beispiel: $p(t)=t^2+t\ p\mapsto (0,1,1, 0,\cdots ,0)$.
+\item $l_{0,0}=\{(\alpha _k)_{k\in \mathbb{N}_0}:\exists n_0\ \forall n\geq n_0\ \alpha _n=0\}$ bezeichnet die Menge aller Folgen, die schließlich $0$ sind.\\
+$l_{0,0}$ ist Isomorph zum Raum der Polynome $P(\mathbb{K}$ via den Isomorphismus $T\cdot C P(\mathbb{K})\rightarrow l_{0,0}$; $p\mapsto (\alpha _0,\cdots ,\alpha _n,0,\cdots 0,\cdots ): p=\sum_{k=0}^n\alpha _kt^k$
+\end{enumerate}
