@@ -126,11 +126,11 @@ Mathematische Operationen für Matrizen:
 \begin{itemize}
 \item \underline{Skalare Multiplikation}: $\mathbb{K}\times \mathbb{K}^{m\times n} \rightarrow \mathbb{K}^{m\times n}, \alpha \cdot A= \alpha A=(\alpha a_{i,j})_{\substack{1\leq i\leq m \\ i\leq j\leq n}}$.  Wir schreiben $-A:=(-1)\cdot A$
 \item \underline{Addition}: $+:\mathbb{K}^{m\times n}\times \mathbb{K}^{m\times n} \rightarrow \mathbb{K}^{m\times n},A+B=(a_{i,j}+b_{i,j})_{\substack{1\leq i\leq m \\ 1\leq j\leq n}}$.  Die Subtraktion lautet $A-B=A+(-B)$.
-\item Genau für $m\times n$-Matrizen $A$ und $n\times p$-Matrizen $B$ lässt sich eine \underline{Multiplikation} erklären.  $\cdot : \mathbb{K}^{m\times n}\times \mathbb{K}^{n\times p}\rightarrow \mathbb{K}^{m\times p}$.  $A\cdot B=AB:=(\sum^m_{k=1} a_{i,k}b_{k,j})_{\substack{1\leq i\leq m\\1\leq j\leq p}}$. das Produkt ist also eine $m\times p$-Matrix.
+\item Genau für $m\times n$-Matrizen $A$ und $n\times p$-Matrizen $B$ lässt sich eine \underline{Multiplikation} erklären.  $\cdot : \mathbb{K}^{m\times n}\times \mathbb{K}^{n\times p}\rightarrow \mathbb{K}^{m\times p}$.  $A\cdot B=AB:=(\sum^n_{k=1} a_{i,k}b_{k,j})_{\substack{1\leq i\leq m\\1\leq j\leq p}}$. das Produkt ist also eine $m\times p$-Matrix.
 \end{itemize}
 \underline{Merke}: Das Produkt macht nur Sinn, falls die Spaltenzahl der ersten mit der Zeilenzahl der zweiten Matrix übereinstimmt.
 \subsubsection{Bemerkung}
-(1) Um Produkte von Matrizen $A\in \mathbb{K}^{m\times n}$ und $B\in \mathbb{K}^{m\times p}$ zum berechnen ergibt sich das Schema $\begin{array}{ccc} & | & B\\A & | & C\end{array} C=(\sum^{m}_{k=1} a_{i,k}b_{k,j})_{\substack{1\leq i\leq m\\1\leq j\leq p}}$\\
+(1) Um Produkte von Matrizen $A\in \mathbb{K}^{m\times n}$ und $B\in \mathbb{K}^{n\times p}$ zum berechnen ergibt sich das Schema $\begin{array}{ccc} & | & B\\A & | & C\end{array} C=(\sum^{n}_{k=1} a_{i,k}b_{k,j})_{\substack{1\leq i\leq m\\1\leq j\leq p}}$\\
 (2) Spezialfall: $A\in \mathbb{K}^{m\times m},x\in \mathbb{K}^m$ $Ax=\sum^{m}_{k=1}\left(\begin{array}{cc}a_{1,k}&x_{1}\\\vdots & \vdots \\ a_{m,k} & x_k\end{array}\right)$.
 \subsubsection{Beispiel}
 Das Produkt von $A=\left(\begin{array}{cc}0 & 1\\ 2 & 3\end{array}\right)$ und $B=\left(\begin{array}{cc}4 & 5 \\ 6 & 7\end{array}\right)$ lautet:

@@ -72,7 +72,7 @@ Sei $T\in L(X,Y)$ ist $\{x_1,\cdots ,x_n\}$ eine Basis von $N(T)$ und $\{x_1,\cd
 dim$R(T)=d-n$.  Wir suchen $d-n$ linear unabhängige Vektoren in $R(T)$.  Die Vektoren $\{Tx_{n+1},\cdots ,Tx_d\}$ sind $d-n$ Vektoren in $R(T)$.  Wir zeigen , dass diese linear unabhängig sind. Hierzu gehen wir indirekt vor.  Wir nehmen an, dass $\{Tx_{n+1},\cdots ,Tx_d\}$ linear abhängig sind.\\
 $\Rightarrow$ Es existiert ein Index $j^*,n<j^*\leq d$, so dass $Tx_{j^*}=\sum_{\substack{j=n+1\\ j\not= j^*}}^d \eta _jTx_j$.  Das heißt $\sum_{j=n+1}^d \eta _jTx_j=0$ mit $\eta _{j^*}=-1 \circledast\circledast$.  Aus der Linearität von $T$ folgt: $T(\sum_{j=n+1}^d \eta _jx_j)=0$, d.h. $\sum_{j=n+1}^d \eta _jx_j \in N(T)$.  Weil $\{ x_1,\cdots ,x_n\}$ Basis von $N(T)$ ist gilt: $\sum_{j=n+1}^d\eta _jx_j=\sum_{j=1}^n\eta _jx_j$ für geeignete $n_1,\cdots ,n_n\in\mathbb{K}$, also: $\sum_{j=1}^n\eta _jx_j-\sum_{j=n+1}^d\eta _jx_j=0 \circledast$\\
 Weil nach Voraussetzung $x_1,\cdots x_d$ Basis von $X$ ist, folgt aus $\circledast$, dass $\eta _j=0\ \forall 1\leq j\leq d$ (Definition der linearen Unabhängigkeit).  Das ist ein Widerspruch zu $\circledast\circledast$.  Das heißt $\{Tx_{n+1},\cdots ,Tx_d\}$ sind linear unabhängig.
-\subsubsection{Satz (Prinzip der linearen Fortsetzung}
+\subsubsection{Satz (Prinzip der linearen Fortsetzung)}
 Sei $\{x_1,\cdots ,x_n\}$ ein Basis von $X$ und $\{\hat{y}_1,\cdots ,\hat{y}_n\} \in Y$.
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
@@ -108,7 +108,7 @@ ist ein Isomorphismus.  Es gilt das Inverse des Transponieren ist das Transponie
 \subsubsection{Beispiel (Polynome)}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
-\item Sei $\mathbb{K}\in \{\mathbb{Q},\mathbb{R},\mathbb{C}\}$ und $P_n(\mathbb{K}$ die Polynome von maximalem Grad $n\in \mathbb{N}_0$. $P_n(\mathbb{K})$ ist isomorph zu $\mathbb{K}^{n+1}$ via den Isomorphismus $T: P_n(\mathbb{K}\rightarrow \mathbb{K}^{n+1}$, $p\rightarrow (\alpha _0,\cdots ,\alpha _n)$, wobei $p(t)=\sum_{k=0}^n\alpha _kt^k$. Zum Beispiel: $p(t)=t^2+t\ p\mapsto (0,1,1, 0,\cdots ,0)$.
+\item Sei $\mathbb{K}\in \{\mathbb{Q},\mathbb{R},\mathbb{C}\}$ und $P_n(\mathbb{K})$ die Polynome von maximalem Grad $n\in \mathbb{N}_0$. $P_n(\mathbb{K})$ ist isomorph zu $\mathbb{K}^{n+1}$ via den Isomorphismus $T: P_n(\mathbb{K})\rightarrow \mathbb{K}^{n+1}$, $p\rightarrow (\alpha _0,\cdots ,\alpha _n)$, wobei $p(t)=\sum_{k=0}^n\alpha _kt^k$. Zum Beispiel: $p(t)=t^2+t\ p\mapsto (0,1,1, 0,\cdots ,0)$.
 \item $l_{0,0}=\{(\alpha _k)_{k\in \mathbb{N}_0}:\exists n_0\ \forall n\geq n_0\ \alpha _n=0\}$ bezeichnet die Menge aller Folgen, die schließlich $0$ sind.\\
-$l_{0,0}$ ist Isomorph zum Raum der Polynome $P(\mathbb{K}$ via den Isomorphismus $T\cdot C P(\mathbb{K})\rightarrow l_{0,0}$; $p\mapsto (\alpha _0,\cdots ,\alpha _n,0,\cdots 0,\cdots ): p=\sum_{k=0}^n\alpha _kt^k$
+$l_{0,0}$ ist Isomorph zum Raum der Polynome $P(\mathbb{K})$ via den Isomorphismus $T\cdot C P(\mathbb{K})\rightarrow l_{0,0}$; $p\mapsto (\alpha _0,\cdots ,\alpha _n,0,\cdots, 0,\cdots ): p=\sum_{k=0}^n\alpha _kt^k$
 \end{enumerate}
