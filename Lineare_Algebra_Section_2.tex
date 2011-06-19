@@ -151,11 +151,11 @@ Es sei $I\subseteq \mathbb{R}$ ein Intervall. Die Menge der stetigen Funktionen 
 \subsubsection{Beispiel (Polynome)}
 Mit gegebenem Körper $\mathbb{K}$ definieren wir den Raum der Polynome (über $\mathbb{K}$) durch \\$P(\mathbb{K}) := \{p\in F(\mathbb{K},\mathbb{K}) \exists n\in\mathbb{N}_0: \exists a_0, ..., a_n \in \mathbb{K} : p(t)=\sum^{n}_{l=0} a_l \cdot t^l\}$;\\
 seine Elemente heißen Polynome und die $a_k$ deren Koeffizienten. Dann ist $P(\mathbb{K})$ ein Unterraum von $F(\mathbb{K},\mathbb{K})$.\\
-Der Grad $deg\ p$ eines Polynoms $p\in P(\mathbb{K})$ ist der maximale Inde $k\in\mathbb{N}_0$ für den $a_k=0$ ist. Für $m\in\mathbb{N}_0$ sind die Mengen $P_m(\mathbb{K}) := \{p\in P(\mathbb{K}):deg\ p \le m\}$
+Der Grad $deg\ p$ eines Polynoms $p\in P(\mathbb{K})$ ist der maximale Index $k\in\mathbb{N}_0$ für den $a_k=0$ ist. Für $m\in\mathbb{N}_0$ sind die Mengen $P_m(\mathbb{K}) := \{p\in P(\mathbb{K}):deg\ p \le m\}$
 
 Unterräume von $P(\mathbb{K})$, wogegen $\{p\in P(\mathbb{K}): deg\ p =m\}$ für $m\neq 0$ kein Unterraum ist. Ferner ist jedes $P_n(\mathbb{K})$ Unterraum von $P_m(\mathbb{K})$ für $0\le n\le m$.
 \subsubsection{Satz (Schnitte und Summen von Unterräumen)}
-Ist $I$ eine nichtleere Indexmenge und und $(Y_i)_{i\in I}$ eine Familie von Unterräumen von X.
+Ist $I$ eine nichtleere Indexmenge und $(Y_i)_{i\in I}$ eine Familie von Unterräumen von X.
 \begin{enumerate}
 \item Der Durchschnitt $\displaystyle\bigcap_{i\in I} Y_i$ ist ein Unterraum von X.
 \item Für endliche $I$ ist die Summe $\displaystyle\sum_{i\in I}Y_i := \{\sum_{i\in I} y_i\in X: y_i\in Y_i \text{ mit } i\in I\}$ der kleinste Unterraum von $X$, der jedes $y_i$ enthält.
@@ -177,10 +177,13 @@ Gegeben sei eine nichtleere Menge $S$ von Vektoren aus einem linearen Raum X üb
 \subsubsection{Definition (Spann)}
 Es sei $\mathcal{S} \leq X$. Der Spann oder die lineare Hülle $span\ \mathcal{S}$ von $\mathcal{S}$ ist die Menge aller Linearkombinationen. Ferner setzt man $span\ \{0\}=\{0\}$.
 \subsubsection{Beispiel}
-Für endliche $\mathcal{S}=\{x_0,...,x_n\}$ ist der $\displaystyle span\ \mathcal{S}=\{\sum^n_{i=1} \alpha_i\cdot x_i\in X: \alpha_i \in \mathbb{K}\}$ $\mathbb{K}=\mathbb{R}$: $e_1=\begin{pmatrix}1\\0\end{pmatrix}$, $e_2=\begin{pmatrix}0\\1\end{pmatrix}$ gilt $span\ \{e_i,e_2\}=\mathbb{R}^2$\\
-$span\ \{x_1,x_2\}$ wenn $x_1=\begin{pmatrix}1\\1\end{pmatrix}$ und $x_2=\begin{pmatrix}1\\-1\end{pmatrix}$ aber $y_1=\begin{pmatrix}1\\1\end{pmatrix}$ und $y_2=\begin{pmatrix}2\\2\end{pmatrix}$ dann $span\ \{y_1,y_2\} = \mathbb{R} \begin{pmatrix}1\\1\end{pmatrix} \in \mathbb{R}^2$ 
+Für endliche $\mathcal{S}=\{x_0,...,x_n\}$ ist der $\displaystyle span\ \mathcal{S}=\{\sum^n_{i=1} \alpha_i\cdot x_i\in X: \alpha_i \in \mathbb{K}\}$\\
+$\mathbb{K}=\mathbb{R}$: $e_1=\begin{pmatrix}1\\0\end{pmatrix}$, $e_2=\begin{pmatrix}0\\1\end{pmatrix}$ gilt $span\ \{e_i,e_2\}=\mathbb{R}^2$\\
+$span\ \{x_1,x_2\}$ wenn $x_1=\begin{pmatrix}1\\1\end{pmatrix}$ und $x_2=\begin{pmatrix}1\\-1\end{pmatrix}$ aber\\
+$y_1=\begin{pmatrix}1\\1\end{pmatrix}$ und $y_2=\begin{pmatrix}2\\2\end{pmatrix}$ dann $span\ \{y_1,y_2\} = \mathbb{R} \begin{pmatrix}1\\1\end{pmatrix} \in \mathbb{R}^2$ 
 \subsubsection{Beispiel (Monome)}
-Polynome $m_n(l):=t^n$, $n\in\mathbb{N}_0$ heißen Monome. Dann lassen sich die Polynome als lineare Hülle der Monome darstellen, d.h. $span\ \{m_n\}_{n\in\mathbb{N}_0}=P(\mathbb{K})$ insbesondere ist $span\ \{m_0,...,m_n\}=P_n(\mathbb{K}^n)$\\
+Polynome $m_n(l):=t^n$, $n\in\mathbb{N}_0$ heißen Monome. Dann lassen sich die Polynome als lineare Hülle der Monome darstellen, d.h. $span\ \{m_n\}_{n\in\mathbb{N}_0}=P(\mathbb{K})$ insbesondere ist\\
+$span\ \{m_0,...,m_n\}=P_n(\mathbb{K}^n)$\\
 $span\ \{m_{2n}\}_{n\in\mathbb{N}_0}=\{p\in P(\mathbb{K}):p(t)=p(-t) \text{ auf } \mathbb{K}\}$\\
 $span\ \{m_{2n-1}\}_{n\in\mathbb{N}_0}=\{p\in P(\mathbb{K}):p(t)=-p(-t) \text{ auf } \mathbb{K}\}$
 \subsubsection{Beispiel}
@@ -206,7 +209,7 @@ Man nennt Vektoren $x_1 ,x_2 ,\cdots $ linear unabhängig, wenn $\{x_1,x_2,\cdot
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
 \item lineare Abhängigkeit einer endlichen Menge $\{x_1,\cdots x_n\}$ bedeutet, dass eine nichttriviale Darstellung der Null aus Vektoren $x_u$ existiert:\\
-Man Kann also
+Man kann also
 \[(2.3a) \sum_{k=1}^n \xi _kx_k = 0\]
 schreiben, ohne dass alle $\xi _k$ verschwinden.
 \item Jede Obermenge einer linear abhängigen Menge ist linear abhängig.  Jede Teilmenge einer linear unabhängigen Menge ist linear unabhängig.
@@ -240,16 +243,16 @@ gilt in obiger Terminologie $A=I_m$.  Also besitzt $Ax=0$ nur die triviale Lösu
 in $\mathbb{R}^3$ zu untersuchen, betrachten wir die Gleichung $(2.3b)$ mit
 \[A=\begin{pmatrix}1 & 4 & 7\\2 & 5 & 8\\ 3 & 6 & \lambda\end{pmatrix}\]
 und lösen sie mit dem in Beispiel 1.4.6 beschriebenen Schema:
-\[\begin{array}{ccc|c}1 & 4 & 7 & 0\\ 2 & 5 & 6 & 0\\ 3 & 6 & \lambda \end{array}\begin{matrix}\\ 2I-II\\ 3I-II\end{matrix} \Rightarrow \begin{array}{ccc|c}1 & 4 & 7 & 0\\ 0 & 3 & 6 & 0\\ 0 & 6 & 21 - \lambda \end{array}\begin{matrix}\\ :3\\ III-2II\end{matrix} \Leftrightarrow \begin{array}{ccc|c}1 & 4 & 7 & 0\\ 0 & 1 & 2 & 0\\ 0 & 0 & 9 - \lambda \end{array}\begin{matrix}\\ :3\\ III-2II\end{matrix}\]
+\[\begin{array}{ccc|c}1 & 4 & 7 & 0\\ 2 & 5 & 6 & 0\\ 3 & 6 & \lambda&0 \end{array}\begin{matrix}\\ 2I-II\\ 3I-II\end{matrix} \Rightarrow \begin{array}{ccc|c}1 & 4 & 7 & 0\\ 0 & 3 & 6 & 0\\ 0 & 6 & 21 - \lambda & 0 \end{array}\begin{matrix}\\ :3\\ III-2II\end{matrix} \Leftrightarrow \begin{array}{ccc|c}1 & 4 & 7 & 0\\ 0 & 1 & 2 & 0\\ 0 & 0 & 9 - \lambda & 0 \end{array}\begin{matrix}\\ :3\\ III-2II\end{matrix}\]
 Also hat $Ax=0$ für $\lambda \not= 9$ nur die triviale Lösung (lineare Unabhängigkeit von $\{x_1,x_2,x_3\}$ und für $\lambda = 9$ nichttriviale Lösungen (lineare Abhängigkeit).
 \end{enumerate}
 \subsubsection{Satz}
 Eine Menge $\mathcal{S}\subseteq X$ ist genau dann linear unabhängig, wenn jedes $x\in\mathcal{S}$ auf nur eine Art (bis auf Glieder mit Null-Koeffizienten) als Linearkombinationen von Vektoren aus $\mathcal{S}$ dargestellt werden kann.
 \subsection{Basis und Dimensionen}
-Es sei $X$ ein linearer Raum über den Körper $\mathbb{K}$.
+Es sei $X$ ein linearer Raum über dem Körper $\mathbb{K}$.
 \subsubsection{Definition (Basis)}
 Eine Menge $\mathcal{X}\subseteq X$ heißt \underline{Basis} von X, falls $\mathcal{X}$ linear unabhängig mit $X=$span$\mathcal{X}$ ist:\\
-Eine Menge $\mathcal{X}$ mit $X=$span$\mathcal{X}$ heißt Erzeugendessystem (EZS) von $X$ genannt.  Man nennt $X$ endlich erzeugt, falls er ein endliches EZS hat.
+Eine Menge $\mathcal{X}$ mit $X=$span$\mathcal{X}$ wird Erzeugendessystem (EZS) von $X$ genannt.  Man nennt $X$ endlich erzeugt, falls er ein endliches EZS hat.
 \subsubsection{Beispiel}
 Die Basis von $\{0\}$ ist die leere Menge.
 \subsubsection{Beispiel (Standardbasis)}
@@ -307,7 +310,7 @@ Für jeden Unterraum $Y$ eines endlich-dimensionalen Raumes $X$ ist dim$Y\leq$di
 \subsection{Komplemente und direkte Summen}
 Wieder sei $X$ ein linearer Raum über $\mathbb{K}$.
 \subsubsection{Definition (direkte Summen)}
-Es seien $Y_1,Y_2\subseteq X$ Unterräume. Dann heißt $Y_2$ Komplement von $Y_1$ in $X$, falls gilt $Y_1+Y_2=X$ $Y_1\cap Y=\{0\}$, man schreibt $X=y_1\oplus y_2$ und nennt $X$ direkte Summe von $Y_1$, $Y_2$.\\
+Es seien $Y_1,Y_2\subseteq X$ Unterräume. Dann heißt $Y_2$ Komplement von $Y_1$ in $X$, falls gilt $Y_1+Y_2=X$ $Y_1\cap Y_2=\{0\}$, man schreibt $X=y_1\oplus y_2$ und nennt $X$ direkte Summe von $Y_1$, $Y_2$.\\
 \underline{Beispiele}:\\
 $Y_1\cap Y_2 \neq 0$ $Y_1\oplus Y_2=\mathbb{R}^3$ $Y_1\oplus Y_2\subsetneq \mathbb{R}^3$
 \subsubsection{Beispiel} 
@@ -318,15 +321,15 @@ In der Tat liegt $x\in Y_1 \cap Y_2$, so erfüllen die Elemente des Durchschnitt
 \[x_2-x_3=0\]
 und folglich $x=0$, dies bedeutet $Y_1\cap Y_2=\{0\}$. Andererseits liegen $y_1=\begin{pmatrix}1\\1\\0\end{pmatrix}$, $y_2=\begin{pmatrix}1\\0\\-1\end{pmatrix}$ in $Y_1$ und $y_3=\begin{pmatrix}1\\1\\1\end{pmatrix}$ in $Y_2$. Da $\{y_1,y_2,y_3\}$ eine Basis von $\mathbb{R}^3=X$ bilden, gilt auch $Y_1+Y_2=X$.
 \subsubsection{Beispiel}
-Wir betrachten den Unterraum $Y_n:=\{p\in P(\mathbb{K})\}:p(0)=0\}$ von $X=P(\mathbb{K})$.  Dann gilt $P(\mathbb{K})=Y_1 \oplus P_0(\mathbb{K})$, d.h. der lineare Raum aller konstanten Polynome ist ein Komplement von $Y_1$.
+Wir betrachten den Unterraum $Y_1:=\{p\in P(\mathbb{K}):p(0)=0\}$ von $X=P(\mathbb{K})$.  Dann gilt $P(\mathbb{K})=Y_1 \oplus P_0(\mathbb{K})$, d.h. der lineare Raum aller konstanten Polynome ist ein Komplement von $Y_1$.
 \subsubsection{Satz}
 Es seien $Y_1,Y_2\subseteq X$ Unterräume.  Es ist $X=Y_1\oplus Y_2$ genau dann, wenn es zu jedem $x\in X$ eindeutige $y_1\in Y_1,y_2\in Y_2$ mit $x=y_1+y_2$ gilt.\\
 \underline{Beweis}:\\
-($\Rightarrow$) Es sei $Y_2$ ein Komplement von $Y_1$ und $X$.  Wegen $Y_1+Y_2=X$ lässt sich jedes $x\in X$ darstellen als $x=y_1+y_2$ mit $y_1\in Y_1,y_2\in Y_2$.  Um deren Eindeutigkeit zu verifizieren, sein $\hat{y}_1\in Y_1,\hat{y}_2\in X_2$ zwei weitere Vektoren mit $x=\hat{y}_1+\hat{y}_2$.  Dies impliziert $y_1-\hat{y}_2=\hat{y}_2-y_2$ und $y_1-\hat{y}_1\in Y_1$ für $i=1,2$ und folglich $y_i-\hat{y}_i\in Y_1\cap Y_2$ für $i=1,2$.  Wegen $Y_1\cap Y_2 = \{0\}$ folgt $y_1=\hat{y}_1$ und $y_2=\hat{y}_2$.\\
+($\Rightarrow$) Es sei $Y_2$ ein Komplement von $Y_1$ in $X$.  Wegen $Y_1+Y_2=X$ lässt sich jedes $x\in X$ darstellen als $x=y_1+y_2$ mit $y_1\in Y_1,y_2\in Y_2$.  Um deren Eindeutigkeit zu verifizieren, sein $\hat{y}_1\in Y_1,\hat{y}_2\in X_2$ zwei weitere Vektoren mit $x=\hat{y}_1+\hat{y}_2$.  Dies impliziert $y_1-\hat{y}_2=\hat{y}_2-y_2$ und $y_1-\hat{y}_1\in Y_1$ für $i=1,2$ und folglich $y_i-\hat{y}_i\in Y_1\cap Y_2$ für $i=1,2$.  Wegen $Y_1\cap Y_2 = \{0\}$ folgt $y_1=\hat{y}_1$ und $y_2=\hat{y}_2$.\\
 \\
 ($\Leftarrow$) Umgekehrt seien $Y_1,Y_2\subseteq X$ Unterräume derart, dass sich jedes $x\in X$ eindeutig als Summe $X=y_1+y_2$ mit $y_i\in Y_i,i=1,2$, darstellen lässt.  Dann gilt sicherlich $Y_1+Y_2=X$.  Ist nun $x\in Y_1\cap Y_2$, so gilt $x=x+0=0+x$ und da die Darstellung eindeutig sein muss, resultiert $x=0;$ also $Y_1\cap Y_2=\{0\}$.
 \subsubsection{Satz}
-Jeder Unterraum eines endlich dimensionaler linearer Raumes hat ein Komplement.\\
+Jeder Unterraum eines endlich dimensionalen linearen Raumes hat ein Komplement.\\
 \underline{Beweis}(-skizze):\\
 Ergänze eine Basis von $Y_1$ zu einer Basis von $X$ gemäß Proposition 2.4.9.
 \subsection{Anwendung: Matrizen und lineare Gleichungen}
