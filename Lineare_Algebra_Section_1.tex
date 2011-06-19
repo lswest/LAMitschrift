@@ -44,7 +44,7 @@ Die Relation $R_2$ aus Beispiel 1.1.4 ist reflexiv, transitiv, aber nicht Symmet
 Eine Relation $A$ auf eine Menge $X$ heißt eine \underline{\"{A}quivalenzrelation}, falls sie reflexiv, transitiv und symmetrisch ist.  F\"{u}r ein Paar $(x,y)\in A$  Schreiben wir $x\mathtt{\sim} y$ und nennen $x$ und $y$ \"{a}quivalent.
 \subsubsection{Beispiel}
 \begin{enumerate}
-\item Sei $X$ eine beliebige Menge.  Dann ist $\{(x,y)\in X\times X:x=y\}$ eine \"{A}quivalenzrelation (\underline{Identit\"{a}tsrelation}.
+\item Sei $X$ eine beliebige Menge.  Dann ist $\{(x,y)\in X\times X:x=y\}$ eine \"{A}quivalenzrelation (\underline{Identit\"{a}tsrelation}).
 \item Ebenso ist das ganze Produkt $X\times X$ eine \"{A}quivalenzrelation (\underline{Allrelation}).
 \item Die Relation $R_3$ aus Beispiel 1.1.5 ist eine \"{A}quivalenzrelation.  Mit ihr lassen sich Computer nach ihrem Hersteller klassifizieren.
 F\"{u}r jedes $[x]:=\{y\in X:x \mathtt{\sim} y\}$ die von $X$ erzeugte \underline{\"{A}quivalenzklasse} und ein Element $y\in [x]$ heißt \underline{Repr\"{a}sentant} von $[x]$.
@@ -95,9 +95,9 @@ Einfache Beispiele (etwa Beispiel 1.2.5) zeigen, dass die Umkehrrelation $F^{-1}
 \subsubsection{Definition (Umkehrabbildung)}
 Eine Abbildung $f:D\rightarrow B$ heißt \underline{umkehrbar}, falls ihre Umkehrrelation $F^{-1}$ wieder eine Abbildung ist.  F\"{u}r letztere schreibt man $f^{-1}:B\rightarrow D$ und nennt sie \underline{Umkehrabbildung} von $f$.
 \subsubsection{Bemerkung}
-Mit einer umkehrbaren Abbildung $f:D\rightarrow B$ ist auch ihre Umkehrfunktion $f^{-1}:B\rightarrow D$ umkehrbar mit $f^{-1}\circ f = id_D$ und $f\circ f^{-1}=id_B$
+Mit einer umkehrbaren Abbildung $f:D\rightarrow B$ ist auch ihre Umkehrfunktion $f^{-1}:B\rightarrow D$ umkehrbar mit $f^{-1}\circ f = id_D$ und $f\circ f^{-1}=id_B$.
 \subsubsection{Korollar}
-Eine Abbildung $f:D\rightarrow B$ ist genau dann umkehrbar, wenn $f$ bijektiv ist.  F\"{u}r umgekehrtes $f$ existiert die Umkehrfunktion nur auf $f(D)$ \\
+Eine Abbildung $f:D\rightarrow B$ ist genau dann umkehrbar, wenn $f$ bijektiv ist.  F\"{u}r umgekehrtes $f$ existiert die Umkehrfunktion nur auf $f(D)$. \\
 \underline{Beweis}: Hausaufgabe
 \subsection{Matrizen}
 Wir führen kurz die komplexen Zahlen $\mathbb{C}$ ein.  Darunter versteht man alle Paare $z=(x,y)$ reeller Zahlen $x,y\in \mathbb{R}$ mit der \underline{Addition}: \[z_1+z_2=(x_1+x_2,y_1+y_2)\] und der \underline{Multiplikation}: \[z_1\cdot z_2:=z_1z_2=(x_1x_2-y_1y_2,x_1y_2+x_2y_1)\] wobei $z_1=(x_1,y_1),z_2=(x_2,y_2)$ \\
@@ -106,22 +106,22 @@ Differenz und Quotient ergeben sich zu:
 \[\dfrac{z_1}{z_2} = \left(\dfrac{x_1x_2+y_1y_2}{x_2^2+y_2^2},\dfrac{x_2y_1-x_1y_2}{x_2^2+y_2^2}\right) \text{ falls } x_2^2+y_2^2\not = 0\]
 Alternative Darstellung:
 \[z=(x,y) = x+iy \text{ mit der Konvention } i^2=-1\]
-Wo $x$ das Realteil ($Rez=x$) ist, und $y$ das Imaginärteil ($Imz=y$).\\
+Wobei $x$ der Realteil ($Rez=x$) ist und $y$ der Imaginärteil ($Imz=y$).\\
 \begin{center}
 \includegraphics[scale=0.4]{1-3.jpg}
 \end{center}
 Im Folgenden stehe $\mathbb{K}$ für eine der drei Mengen $\mathbb{Q}$ (rationalen Zahlen), $\mathbb{R}$ (reelle Zahlen) oder $\mathbb{C}$.
 \subsubsection{Definition (Matrix)}
-Eine $m\times m$-Matrixe ist ein rechteckiges Schema von Zahlen $a_{ij}\in \mathbb{K}$ der Form \[A=(a_{i,j}) 1\leq i\leq m,1\leq j\leq m =\left( \begin{array}{cccc}a_{1,1}& a_{1,2}& \cdots & a_{1,m}\\ a_{2,1}& a_{2,2}& \cdots & a_{2,m} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m,1}& a_{m,2}& \cdots & a_{m,m}\end{array}\right) \]
+Eine $m\times m$-Matrize ist ein rechteckiges Schema von Zahlen $a_{ij}\in \mathbb{K}$ der Form \[A=(a_{i,j}) 1\leq i\leq m,1\leq j\leq m =\left( \begin{array}{cccc}a_{1,1}& a_{1,2}& \cdots & a_{1,m}\\ a_{2,1}& a_{2,2}& \cdots & a_{2,m} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m,1}& a_{m,2}& \cdots & a_{m,m}\end{array}\right) \]
 Der erste Index $i\in\{1,\cdots ,m\}$ nummeriert die $m$ \underline{Zeilen}, der zweite Index $j\in \{1,\cdots ,m\}$ die $m$ Spalten der Matrix $A$, das \underline{Element} $a_{ij}\in \mathbb{K}$ steht daher in der $i$-ten Zeile und der $j$-ten Spalte.  F\"{u}r die Menge aller solchen Matrizen schreiben wir $\mathbb{K}^{m\times m}$. Für eine \underline{quadratische Matrix} A gilt $m = n$ und die $a_{i,i}$ heißen \underline{Diagonalelement}.
 \[A'=\left( \begin{array}{ccc}a_{1,1}& \cdots & a_{1,n}\\\vdots & \ddots & \vdots\\a_{m,1}& \cdots & a_{m,n}\end{array}\right)\]
 \subsubsection{Beispiel ($n$ Tupeln, $m$-Spalten)}
-Ein \underline{$n$-Tupel} $x=(x_1,\cdots ,x_n)$ von Zahlen $X$, aus $\mathbb{K}$ und als $1\times m$-Matrix interpretiert.  Eine \underline{$m$-Spalte} $x=\left(\begin{array}{c}x_1\\\vdots \\x_m\end{array}\right)$
-wird als $m\times 1$-Matrixe verstanden, identifizieren $\mathbb{K}^m=k^{m\times 1}$.
+Ein \underline{$n$-Tupel} $x=(x_1,\cdots ,x_n)$ von Zahlen $X$ aus $\mathbb{K}$ wird als $1\times m$-Matrix interpretiert.  Eine \underline{$m$-Spalte} $x=\left(\begin{array}{c}x_1\\\vdots \\x_m\end{array}\right)$
+wird als $m\times 1$-Matrix verstanden, identifiziert durch $\mathbb{K}^m=k^{m\times 1}$.
 \subsubsection{Kronecker-Symbol, Einheits- und Nullmatrixe)}
-Wir definieren das \underline{Kronecker-Symbol} $S_{i,j}:=\begin{cases}1,i=j\\0,i\not= j\end{cases}$ und $I_m:=(S_{i,j})_{1\leq i,j\leq m}$ ist die \underline{Einheitsmatrixe}.  Bei der Nullmatrixe $0=(0)_{\substack{1\leq i\leq m\\1\leq j\leq n}}$ sind alle Elemente gleich $0\in \mathbb{N}$.
+Wir definieren das \underline{Kronecker-Symbol} $S_{i,j}:=\begin{cases}1,i=j\\0,i\not= j\end{cases}$ und $I_m:=(S_{i,j})_{1\leq i,j\leq m}$ ist die \underline{Einheitsmatrix}.  Bei der Nullmatrix $0=(0)_{\substack{1\leq i\leq m\\1\leq j\leq n}}$ sind alle Elemente gleich $0\in \mathbb{N}$.
 \subsubsection{Beispiel (Diagonal- und Dreieckmatrizen)}
-Man nennt eine quadratische Matrix $A=(a_{i,j})_{1\leq i,j\leq n}$ \underline{diagonal} falls $a_{i,j}=0$ für $i\not=j$.  Wir schreiben dann $A=\left(\begin{array}{cccc}a_{1,1} & 0 & \cdot & 0\\ 0 & a_{2,2} &\cdot & 0\\ 0 &\cdot &\cdot & a_{n,n}\end{array}\right)=\text{diag}(a_1,1,\cdot ,a_{n,n})$.  Eine \underline{obere Dreiecksmatrix} ist quadratisch und erfüllt $a_{i,j}=0$ für $i>j$, wogegen eine \underline{untere Dreiecksmatrix} $a_{i,j}=0$ für $i<j$ erfüllt.  Sie sind von der Form: $A=\left(\begin{array}{cccc}a_{1,1} & a_{1,2} & \cdots & a_{1,n}\\ 0 & a_{2,2} & \cdots & a_{2,n}\\ \vdots & \vdots & \ddots &\vdots \\ 0 & \cdots & 0 & a_{n,n}\end{array}\right)$ bzw. $A=\left(\begin{array}{cccc}a_{1,1} & 0 & \cdots & 0\\a_{2,1} & a_{2,2} & \cdots & 0 \\ \vdots & \vdots & \ddots &\vdots \\ a_{n,1} & a_{n,2}  &\cdots & a_{n,n}\end{array}\right)$.\\
+Man nennt eine quadratische Matrix $A=(a_{i,j})_{1\leq i,j\leq n}$ \underline{diagonal} falls $a_{i,j}=0$ für $i\not=j$.  Wir schreiben dann $A=\left(\begin{array}{cccc}a_{1,1} & 0 & \cdot & 0\\ 0 & a_{2,2} &\cdot & 0\\ 0 &\cdot &\cdot & a_{n,n}\end{array}\right)=\text{diag}(a_{1,1},\cdot,a_{n,n})$.  Eine \underline{obere Dreiecksmatrix} ist quadratisch und erfüllt $a_{i,j}=0$ für $i>j$, wogegen eine \underline{untere Dreiecksmatrix} $a_{i,j}=0$ für $i<j$ erfüllt.  Sie sind von der Form: $A=\left(\begin{array}{cccc}a_{1,1} & a_{1,2} & \cdots & a_{1,n}\\ 0 & a_{2,2} & \cdots & a_{2,n}\\ \vdots & \vdots & \ddots &\vdots \\ 0 & \cdots & 0 & a_{n,n}\end{array}\right)$ bzw. $A=\left(\begin{array}{cccc}a_{1,1} & 0 & \cdots & 0\\a_{2,1} & a_{2,2} & \cdots & 0 \\ \vdots & \vdots & \ddots &\vdots \\ a_{n,1} & a_{n,2}  &\cdots & a_{n,n}\end{array}\right)$.\\
 Mathematische Operationen für Matrizen:
 \begin{itemize}
 \item \underline{Skalare Multiplikation}: $\mathbb{K}\times \mathbb{K}^{m\times n} \rightarrow \mathbb{K}^{m\times n}, \alpha \cdot A= \alpha A=(\alpha a_{i,j})_{\substack{1\leq i\leq m \\ i\leq j\leq n}}$.  Wir schreiben $-A:=(-1)\cdot A$
@@ -135,7 +135,7 @@ Mathematische Operationen für Matrizen:
 \subsubsection{Beispiel}
 Das Produkt von $A=\left(\begin{array}{cc}0 & 1\\ 2 & 3\end{array}\right)$ und $B=\left(\begin{array}{cc}4 & 5 \\ 6 & 7\end{array}\right)$ lautet:
 \[\begin{array}{c|cc} & \begin{matrix}4\\ 6\end{matrix} & \begin{matrix} 5\\ 7\end{matrix} \\ \hline \\0\ 1 & 0\cdot 4+1\cdot 6 & 5\cdot 0 + 1\cdot 7 \\ 2\ 3 & 2\cdot 4+6\cdot 3 & 2\cdot 5+7\cdot 3\end{array}\] also $C=AB=\left(\begin{array}{cc}6 & 7 \\ 26 & 31\end{array}\right)$.\\
-Im Umgekehrter Reihenfolge gilt $BA=\left(\begin{array}{cc} 10 & 19 \\ 14 & 27\end{array}\right)$.  Daher ist das Produkt von Matrizen ist nicht kommutativ $AB\not= BA$.
+Im Umgekehrter Reihenfolge gilt $BA=\left(\begin{array}{cc} 10 & 19 \\ 14 & 27\end{array}\right)$.  Daher ist das Produkt von Matrizen nicht kommutativ $AB\not= BA$.
 \subsubsection{Beispiel}
 (1) Für $A\in \mathbb{K}^{m\times n}$ gilt $I_m A=A=AI_m$\\
 (2) Für $A=\left(\begin{array}{cc}0 & 1\\ 0 & 0\end{array}\right)$ und $B=\left(\begin{array}{cc}1 & 0\\ 0 & 0\end{array}\right)$ gilt $AB=0$, womit das Produkt von Matrizen nicht \underline{nullteilerfrei} ist, d.h. $AB=0$ kann gelten, ohne dass ein Faktor Null ist.\\
@@ -173,15 +173,15 @@ $A=\left(\begin{array}{ccc}1& -1 & 0\\ -1 & 0 & 1\\ 0 & 1 & -1\end{array}\right)
 \draw[decoration={markings,mark=at position 1 with {\arrow[ultra thick]{>}}},postaction={decorate},loop below] (3) to node {4} (3);
 \end{tikzpicture} Nicht schleifen frei!
 \subsubsection{Satz (Rechenregeln für Matrizen)}
-Für Zahlen $\alpha \in \mathbb{K}$ und Matrizen $A\in \mathbb{K}^{m\times n},B\in\mathbb{K}^{m\times p}$ gelten das \underline{Distributiv-Gesetz}.  $A(B+C)=AB+AC$ für alle $C\in \mathbb{K}^{m\times p}$ und die \underline{Assoziativ-Gesetze} $(\alpha A)B=A(\alpha B), A(BC)=(AB)C$ für alle $C\in \mathbb{K}^{p\times q}$.
+Für Zahlen $\alpha \in \mathbb{K}$ und Matrizen $A\in \mathbb{K}^{m\times n},B\in\mathbb{K}^{m\times p}$ gilt das \underline{Distributiv-Gesetz}.  $A(B+C)=AB+AC$ für alle $C\in \mathbb{K}^{m\times p}$ und die \underline{Assoziativ-Gesetze} $(\alpha A)B=A(\alpha B), A(BC)=(AB)C$ für alle $C\in \mathbb{K}^{p\times q}$.
 Beweis: Übung.
 \subsection{Lineare Gleichungen}
 \subsubsection{Definition (lineare Gleichung)}
-Es seien $A\in \mathbb{K}^{m\times n}$ und $b\in \mathbb{K}^{m}$.  Dann bezeichnet man $(L_b)\ Ax=b$ als lineare \underline{Gleichungssystem} mit $m$ Gleichungen für die $n$ Unbekannte $x_m\in \mathbb{K}$ oder kurz also \underline{lineare Gleichung} in $\mathbb{K}^m$.  $A$ heißt \underline{Koeffizientenmatrix} und $b$ \underline{Inhomogenität} von $(L_b)$.  Im Fall $b\not= 0$ nennt man $(L_b)$ \underline{inhomogen} und erhält andernfalls die \underline{homogene Gleichung}: $(L_0)\ Ax=0$.  Eine Lösung von $(L_b)$ ist ein Element $x\in \mathbb{K}^m$ mit $Ax=b$ und $L_b:=\{ x\in \mathbb{K}^m:Ax=b\}$ steht für die \underline{Lösungsmenge} von $(L_b)$.
+Es seien $A\in \mathbb{K}^{m\times n}$ und $b\in \mathbb{K}^{m}$.  Dann bezeichnet man $(L_b)\ Ax=b$ als lineares \underline{Gleichungssystem} mit $m$ Gleichungen für die $n$ unbekannten $x_m\in \mathbb{K}$ oder kurz also \underline{lineare Gleichung} in $\mathbb{K}^m$.  $A$ heißt \underline{Koeffizientenmatrix} und $b$ \underline{Inhomogenität} von $(L_b)$.  Im Fall $b\not= 0$ nennt man $(L_b)$ \underline{inhomogen} und erhält andernfalls die \underline{homogene Gleichung}: $(L_0)\ Ax=0$.  Eine Lösung von $(L_b)$ ist ein Element $x\in \mathbb{K}^m$ mit $Ax=b$ und $L_b:=\{ x\in \mathbb{K}^m:Ax=b\}$ steht für die \underline{Lösungsmenge} von $(L_b)$.
 \subsubsection{Bemerkung}
-(1) Ausgeschrieben lautet $(L_b)$: $a_{1,1}x_1+a_{1,2}x_2+\cdots +a_{1,n}x_n = b_1\\a{2,1}x_1+a_{2,2}x_2+\cdots +a_{2,n}x_n = b_2\\\cdots \\a{m,1}x_1+a_{m,2}x_2+\cdots +a_{m,n}x_n=b_m$.  Oder noch unübersichtlicher $\sum^n_{j=1} a_{i,j}x_j = b_i$ für $1\leq i\leq m$.\\
-(2) $(L_b)$ hat stehts die \underline{triviale Lösung} $0\in \mathbb{K}^m$.  Inhomogene Gleichungen müssen nicht unbedingt lesbar sein: $0x=1$.\\
-\subsubsection{Satz(Superpositionsprinzip)}
+(1) Ausgeschrieben lautet $(L_b)$:\\$a_{1,1}x_1+a_{1,2}x_2+\cdots +a_{1,n}x_n = b_1\\a{2,1}x_1+a_{2,2}x_2+\cdots +a_{2,n}x_n = b_2\\\cdots \\a{m,1}x_1+a_{m,2}x_2+\cdots +a_{m,n}x_n=b_m$.\\Oder noch unübersichtlicher $\sum^n_{j=1} a_{i,j}x_j = b_i$ für $1\leq i\leq m$.\\
+(2) $(L_b)$ hat stehts die \underline{triviale Lösung} $0\in \mathbb{K}^m$.  Inhomogene Gleichungen müssen nicht unbedingt lösbar sein: $0x=1$.\\
+\subsubsection{Satz (Superpositionsprinzip)}
 Es seien $x,y \in \mathbb{K}^n$ Lösungen von ($L_0$).  Dann ist auch $\alpha x+\beta y$ eine Lösung von ($L_0$), d.h. $\alpha x+\beta y\in L_0$ für alle $\alpha ,\beta \in \mathbb{K}$. \\
 Beweis: Übung.
 \subsubsection{Satz}
@@ -189,14 +189,19 @@ Ist $\hat{x}\in\mathbb{K}^n$ eine Lösung von ($L_b$) so gilt $L_b=\hat{x}+L_0$.
 Beweis: Übung.
 Nun: Explizite Lösung von ($L_b$)!\\
 Besonders einfach, falls $A\in\mathbb{K}^{m\times n}$ diagonal ist gilt nämlich $a_{i,i}\not=0,1\leq i\leq n$, so besitzt ($L_b$) die eindeutige Lösung $x\in\mathbb{K}^n$ mit Elementen $X_1=\dfrac{b_i}{a_{i,i}}$ für $1\leq 1\leq n$ ist dagegen $d_{i,i}=0$ für ein $1\leq i\leq n$, so besitzt ($L_b$) unendlich viele Lösungen für $b_i=0$ und anderenfalls keine Lösung.\\
-\underline{Allgemeinere Klasse}: Ein $A\in \mathbb{K}^{m\times n}$ ist in \underline{Zeilen-Stufen-Form} (ZSF) falls in jeder Zeile gilt:\\
-(1) Beginnt sie mit $k$ Nullen, so stehen unter diesen Nullen lediglich weitere Nullen.\\
-(2) Unter dem ersten Element $\not= 0$ stehen nur Nullen.\\
+\underline{Allgemeinere Klasse}: Ein $A\in \mathbb{K}^{m\times n}$ ist in \underline{Zeilen-Stufen-Form} (ZSF) falls in jeder Zeile gilt:
+\begin{enumerate}
+\item[(1)] Beginnt sie mit $k$ Nullen, so stehen unter diesen Nullen lediglich weitere Nullen.\\
+\item[(2)] Unter dem ersten Element $\not= 0$ stehen nur Nullen.\\
+\end{enumerate}
 Bei \underline{strenger ZSF } muss zusätzlich gelten:
-(3) Über dem ersten Element $\not= 0$ stehen nur Nullen\\
+\begin{enumerate}
+\item[(3)] Über jedem ersten Element $\not= 0$ stehen nur Nullen\\
+\end{enumerate}
 \subsubsection{Beispiel}
-(1) Obere Dreiecksmatrizen sind in ZSF, Diagonalmatrizen sogar in strenger ZSF.\\
-(2) Bezeichnet $*$ ein Element $\not= 0$, so gilt:
+\begin{enumerate}
+\item[(1)] Obere Dreiecksmatrizen sind in ZSF, Diagonalmatrizen sogar in strenger ZSF.\\
+\item[(2)] Bezeichnet $*$ ein Element $\not= 0$, so gilt:
 \begin{itemize}
 \item $\left(\begin{array}{ccc}* & * & *\\ * & * & *\\ 0 & 0 & *\end{array}\right)$,
 $\left(\begin{array}{ccc}0 & * & *\\ 0 & * & *\\ 0 & * & *\end{array}\right)$,
@@ -205,6 +210,7 @@ sind nicht in ZSF.
 \item $\left(\begin{array}{cccc}* & * & * & *\\ 0 & * & * & *\\ 0 & 0 & 0 & *\end{array}\right)$ ist in ZSF (aber nicht strenger ZSF).
 \item $\left(\begin{array}{cccc}* & * & 0 & 0\\ 0 & 0 & * & 0\\ 0 & 0 & 0 & 0\end{array}\right)$ ist in strenger ZSF
 \end{itemize}
+\end{enumerate}
 \subsubsection{Beispiel (Rückwärts-Substitution)}
 Die inhomogene lineare Gleichung $(1.4b)\begin{cases}x_1+2x_2+3x_3+4x_4=1,\\ x_2+2x_3+3x_4=1,\\x_3+2x_4=1\end{cases}$ hat die Koeffizientenmatrix bzw. Inhomogenität $A=\left(\begin{array}{cccc}1 & 2 & 3 & 4 \\ 0 & 1 & 2 & 3\\ 0 & 0 & 1 & 2\end{array}\right), b=\left(\begin{array}{c}1\\ 1\\ 1\\\end{array}\right)$\\
 \underline{Rückwärtssubstitution}: Aus der letzten Gleichung $x_3+2x_4=1$ sieht man, dass $x_4=t$ frei gewählt wenden kann, $t\in \mathbb{K}$.  Dies liefert $x_3=1-2t$.  Die bekannten variablen $x_3,x_4$ können in die zweite Gleichung von ($1.4b$) eingesetzt werden, also $x_2 = 1-2x_3-3x_4=t-1$ und analog liefert die erste Gleichung $x_1=1-2x_2-3x_3-4x_4=0$.  Die Lösungsmenge von ($1.4b$) ist also:\[L_b=\left\{\left(\begin{array}{c}0\\ t-1\\ 1-2t\\ t\end{array}\right)\in \mathbb{K}^4:t\in\mathbb{K}\right\} = \left(\begin{array}{c}0\\ -1\\ 1\\ 0\end{array}\right)+\mathbb{K}\left(\begin{array}{c}0\\ 1\\ -2 \\1\end{array}\right)\]
@@ -213,9 +219,9 @@ Die Lösungsmenge $L_b$ von ($L_b$) ändert sich nicht, wenn folgende Operatione
 \item Vertauschen von Gleichungen
 \item Multiplikation von Gleichungen mit $\alpha \in \mathbb{K}\\\{0\}$
 \item Addition des $\alpha$-fachen der $k$-ten Gleichung zur $j$-ten.\\
-Diese sind \underline{elementare Zeilentransformationen.}
+Diese sind \underline{elementare Zeilentransformationen}.
 \end{itemize}
-ZIEL: Transformiere $A$ bzw. ($L_b$) auf ZSF mittels elementare Zeilentransformationen.  Systematisch: Gauß Algorithmus.\\
+ZIEL: Transformiere $A$ bzw. ($L_b$) auf ZSF mittels elementarer Zeilentransformationen.  Systematisch: Gauß Algorithmus.\\
 Zu seiner Beschreibung gehen wir davon aus, dass die erste Spalte von $A$ von $0$ verschieden ist (anderenfalls sind $x_1,\cdots ,x_n$ umzunummerieren).  Ohne Sonderfälle zu berücksichtigen gilt:
 \begin{enumerate}
 \item Ordne die Gleichungen in ($1.4a$) so an, dass $a_m\not= 0$.  In der gängigen Notation schreibt man nun ($1.4b$) als $\begin{array}{cccc|c}a_{1,1} & a_{1,2} & \cdots & a_{1,n} & b_1\\a_{2,1} & a_{2,2} & \cdots & a_{2,n} & b_2\\\vdots & \vdots & \ddots &\vdots &\vdots \\a_{m,1} & a_{m,2} & \cdots & a_{m,n} & b_m\end{array}$
@@ -232,7 +238,7 @@ Damit ist ($1.4d$) äquivalent zu $\begin{cases}x_1+2x_2+3x_3=0\\ x_2+2x_3=0\end
 Rückwärts-Substitution: Wähle $x_3=t$ mit $t\in\mathbb{K}$ und es folgt $x_2=-2x_3=-2t,x_1=-2x_2+3x_3=t$.  Die Lösungsmenge von ($1.4d$) ergibt sich zu:
 \[ L_0=\left\{\left(\begin{array}{c}1\\ -2\\ 1\end{array}\right) \in \mathbb{K}^3:t\in\mathbb{K}\right\} = \mathbb{K}\left(\begin{array}{c}1\\ -2\\ 1\end{array}\right)\]
 \subsubsection{Satz}
-Hat ($L_0$) weniger Gleichungen als Unbekannte, dass heißt $m<n$, so besitzt sie unendlich viele Lösungen.
+Hat ($L_0$) weniger Gleichungen als Unbekannte, also $m<n$, so besitzt sie unendlich viele Lösungen.
 \underline{Beweis}:
 \renewcommand{\labelenumi}{\Roman{enumi}.}
 \begin{enumerate}
@@ -240,7 +246,7 @@ Hat ($L_0$) weniger Gleichungen als Unbekannte, dass heißt $m<n$, so besitzt si
 \item Da ($L_0$) nach Schritt (I) eine Lösung $x\not= 0$ besitzt ist nach dem superpositionsprinzip aus Satz 1.4.3 auch jeder $tx,t\in \mathbb{K}$, eine Lösung \#.
 \end{enumerate}
 \subsubsection{Satz}
-Besitzt ($L_b$) genauso viele Gleichungen wie Unbekannte, d.h. $m=n$, so gilt:
+Besitzt ($L_b$) genauso viele Gleichungen wie Unbekannte, also $m=n$, so gilt:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item Ist $L_0=\{0\}$, so besitzt ($L_b$) genau eine Lösung.
