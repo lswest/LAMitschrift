@@ -3,15 +3,18 @@
 Bezeichnet $M\not=\emptyset$ eine Menge und $F(M)$ die Menge aller Selbstabbildungen auf $M$, so kann die Komposition $\circ$ als Abbildung $\circ : F(M)\times F(M) \rightarrow F(M)$ interpretiert werden - man spricht von einer \underline{Verknüpfung}.
 \subsubsection{Definition (Gruppe)}
 Eine \underline{Gruppe} $(G,\cdot)$ ist eine nichtleer Menge $\mathbb{G}$ mit einer Veknüpfung $\cdot:\mathbb{G}\times\mathbb{G} \rightarrow \mathbb{G}$ mit den Eigenschaften:
-$(G_1) \cdot$ ist \underline{Assoziativ}, d.h. $a\cdot(b\cdot c)=(a\cdot b)\cdot c$ für $a,b,c\in \mathbb{G}$\\
-$(G_2)$ es existiert ein \underline{neutrales Element} $e\in\mathbb{G}$ mit $a\cdot e=a=e\cdot a$ für $a\in\mathbb{G}$\\
-$(G_3)$ zu jedem $a\in\mathbb{G}$ existiert ein \underline{inverses Element} $a^{-1}\in \mathbb{G}$ mit $a\cdot a^{-1}=a^{-1}\cdot a=e$ für $a\in \mathbb{G}$\\
-Bei einer kommutativen oder Abel'scher Gruppe gilt ferner $(G_4) a\cdot b=b\cdot a$ für alle $a,b\in \mathbb{G}$.  Für eine \underline{Halbgruppe} müssen nur $(G_1)$ und $(G_2)$ gelten.
+\begin{enumerate}
+\item[$(G_1)$] $\cdot$ ist \underline{Assoziativ}, d.h. $a\cdot(b\cdot c)=(a\cdot b)\cdot c$ für $a,b,c\in \mathbb{G}$\\
+\item[$(G_2)$] es existiert ein \underline{neutrales Element} $e\in\mathbb{G}$ mit $a\cdot e=a=e\cdot a$ für $a\in\mathbb{G}$\\
+\item[$(G_3)$] zu jedem $a\in\mathbb{G}$ existiert ein \underline{inverses Element} $a^{-1}\in \mathbb{G}$ mit $a\cdot a^{-1}=a^{-1}\cdot a=e$ für $a\in \mathbb{G}$ \end{enumerate}\\
+Bei einer kommutativen oder Abel'schen Gruppe gilt ferner
+\begin{enumerate}\item[$(G_4)$] $a\cdot b=b\cdot a$ für alle $a,b\in \mathbb{G}$.\end{enumerate}
+Für eine \underline{Halbgruppe} müssen nur $(G_1)$ und $(G_2)$ gelten.
 \subsubsection{Bemerkung}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
 \item Das neutrale Element $e\in\mathbb{G}$ ist eindeutig: In der Tat, bezeichnen $e_1,e_2\in\mathbb{G}$ zwei neutrale Elemente, so folgt nach $(G_2)$ ist: $e_2=e_1\cdot e_2$ und $e_1\cdot e_2=e_1$, also $e_1=e_2$
-\item Zu gegebenem $a\in\mathbb{G}$ ist auch das inverse Element $a^{-1}\in\mathbb{G}$ eindeutig.  Für inverse Element $a_1^{-1},a_2^{-1}$ von $a$ gilt nämlich
+\item Zu gegebenem $a\in\mathbb{G}$ ist auch das inverse Element $a^{-1}\in\mathbb{G}$ eindeutig.  Für inverse Elemente $a_1^{-1},a_2^{-1}$ von $a$ gilt nämlich
 \[a_1^{-1}\stackrel{(G_2)}{=}a_1^{-1}\cdot e\stackrel{(G_3)}{=}a_1^{-1}\cdot(a\cdot a_2^{-1})\stackrel{(G_1)}{=}(a_1^{-1}\cdot a)\cdot a_2^{-1}\stackrel{(G_3)}{=}e\cdot a_2^{-1}\stackrel{(G_2)}{=}a_2^{-1}\]
 \item Entsprechend $e=e^{-1}$, $a=(a^{-1})^{-1}$
 \end{enumerate}
@@ -37,8 +40,8 @@ und entsprechend $(a\cdot b)\cdot(b^{-1}\cdot a^{-1})=e$.  Die erste Implikation
 \[b\stackrel{(G_2)}{=}e\cdot b\stackrel{(G_3)}{=}(a^{-1}\cdot a)\cdot b\stackrel{(G_1)}{=}a^{-1}+(a\cdot b)=a^{-1}\cdot(a\cdot c)\stackrel{(G_1)}{=}(a^{-1}\cdot a)\cdot c\stackrel{(G_3)}{=}e\cdot c\stackrel{(G_2)}{=}c\]
 Die verbleibende Implikation sei den Leser überlassen.
 \subsubsection{Definition (Körper)}
-Ein \underline{Körper} $(\mathbb{K},+,\cdot )$ ist eine Menge $\mathbb{K}$ mit mindestens zwei Elementen versehen.\\Mit den \underline{arithmetischen Operationen} $+: \mathbb{K}\times\mathbb{K}\rightarrow \mathbb{K}$ (\underline{Addition}) und $\cdot : \mathbb{K}\times\mathbb{K}\rightarrow \mathbb{K}$(\underline{Multiplikation}).\\
-$(\mathbb{K}_1) (\mathbb{K},+)$ ist eine kommutative Gruppe mit neutralem Element $0$ und den zu $\alpha\in\mathbb{K}$ inversen Element $-\alpha$, d.h. für alle $\alpha ,\beta ,\gamma\in\mathbb{K}$ gilt:\\
+Ein \underline{Körper} $(\mathbb{K},+,\cdot )$ ist eine Menge $\mathbb{K}$ mit mindestens zwei Elementen versehen, mit den \underline{arithmetischen Operationen} $+: \mathbb{K}\times\mathbb{K}\rightarrow \mathbb{K}$ (\underline{Addition}) und $\cdot : \mathbb{K}\times\mathbb{K}\rightarrow \mathbb{K}$(\underline{Multiplikation}).\\
+$(\mathbb{K}_1) (\mathbb{K},+)$ ist eine kommutative Gruppe mit neutralem Element $0$ und dem zu $\alpha\in\mathbb{K}$ inversen Element $-\alpha$, d.h. für alle $\alpha ,\beta ,\gamma\in\mathbb{K}$ gilt:\\
 \begin{align*}
 (\mathbb{K}_1^1) & \alpha +(\beta + \gamma )= (\alpha + \beta)+\gamma \\
 (\mathbb{K}_1^2) & \alpha + 0 = 0 + \alpha = \alpha \\
@@ -56,7 +59,7 @@ $(\mathbb{K}_1) (\mathbb{K},+)$ ist eine kommutative Gruppe mit neutralem Elemen
 \subsubsection{Beispiel}
 $\mathbb{Q},\mathbb{R},\mathbb{C}$ sind Körper bzgl. $+,\cdot$
 \subsubsection{Beispiel (Restklassenkörper modulo $p$)}
-Mit einer gegebenen Primzahl $p\in\mathbb{N}$ definieren wir die Mengen $\mathbb{Z}_p := \{0,\cdots ,p\}$.  Dann gibt für beliebige $\alpha ,\beta \in \mathbb{Z}_p$ eindeutige Zahlen $m,n\in\mathbb{Z}$ und $k,l\in\mathbb{Z}_p$ derart, dass 
+Mit einer gegebenen \underline{Primzahl} $p\in\mathbb{N}$ definieren wir die Mengen $\mathbb{Z}_p := \{0,\cdots ,p\}$.  Dann gibt es für beliebige $\alpha ,\beta \in \mathbb{Z}_p$ eindeutige Zahlen $m,n\in\mathbb{Z}$ und $k,l\in\mathbb{Z}_p$ derart, dass 
 \[\alpha + \beta = m\cdot p+k\]
 \[\alpha\cdot\beta = np+l \text{ Divison mit Rest.}\]
 \[\text{Addition: }\alpha+_p \beta := k\]
@@ -99,14 +102,16 @@ Es sei $\mathbb{K}$ ein Körper.  Ein Vektorraum oder linearer Raum $(X,+,\cdot 
 \end{align*}
 Die Elemente aus $\mathbb{K}$ heißen Skalare und $X$ heißen Vektoren.
 \end{enumerate}
-Konventionen: $\alpha x := \alpha\cdot x$  $x-y:=x+(-y)$
+Konventionen: $\alpha x := \alpha\cdot x \quad x-y:=x+(-y)$
 \subsubsection{Beispiel}
-Es sei ($\mathbb{K},+,\cdot $) ein Körper.\\
-($0$) Der triviale Raum $\{0\}$ der nur die $0$ enthält.\\
-($1$) Weiter ist $\mathbb{K}$ ein Vektorraum über sich selbst.\\
-($2$) Die Menge aller $m\times n$-Matrizen $\mathbb{K}^{m\times n}$ ist ein linearer Raum über $\mathbb{K}$ bezüglich\\
-($1.3b$) $\alpha A := \alpha A = (\alpha a_{i,j})_{\substack{1\leq i\leq m\\1\leq j\leq n}}$\\
-($1.3c$) $A+B := (\alpha _{i,j}+\beta _{i,j})_{\substack{1\leq i\leq m\\1\leq j\leq n}}$\\
+Es sei ($\mathbb{K},+,\cdot $) ein Körper.
+\begin{enumerate}
+\item[($0$)] Der triviale Raum $\{0\}$ der nur die $0$ enthält.
+\item[($1$)] Weiter ist $\mathbb{K}$ ein Vektorraum über sich selbst.
+\item[($2$)] Die Menge aller $m\times n$-Matrizen $\mathbb{K}^{m\times n}$ ist ein linearer Raum über $\mathbb{K}$ bezüglich
+\item[($1.3b$)] $\alpha A := \alpha A = (\alpha a_{i,j})_{\substack{1\leq i\leq m\\1\leq j\leq n}}$
+\item[($1.3c$)] $A+B := (\alpha _{i,j}+\beta _{i,j})_{\substack{1\leq i\leq m\\1\leq j\leq n}}$
+\end{enumerate}
 Ein $n$-Tupel ($x_1,\cdots ,x_n$)$\in \mathbb{K}^{1\times n}$ bezeichnen wir als Zeilenvektor und eine $m$-Spalte ($1.3a$) als Spaltenvektor.
 \subsubsection{Beispiel}
 Es sei $p\in\mathbb{N}$ eine Primzahl und $n\in\mathbb{N}$.  Dann sind die $n$-Spalten $\mathbb{Z}_p^n$ in $\mathbb{Z}_p$ mit den komponentenweisen Addition $+_p$ und skalaren Multiplikation $\cdot_p$ ein linearer Raum über $\mathbb{Z}_p$.\\
@@ -125,10 +130,10 @@ Die Menge $F(\omega ,X)$ wird als Funktionenraum bezeichnet.  $\omega\in\mathbb{
 \subsubsection{Korollar}
 Ist $(X,+,\cdot )$ ein linearer Raum über $\mathbb{K}$ so gilt für alle Skalare $\alpha ,\beta \in\mathbb{K}$ und Vektoren $x,y\in X$:
 \begin{align*}
-(a)& 0_{\mathbb{K}} \cdot x = \alpha \cdot 0_x = 0_x\\
-(b)& \text{Falls }\alpha x = 0_x\text{, so folgt } \alpha = 0\in\mathbb{K} \text{ oder } x\in 0 \in X \\
-(c)& (-\alpha )x = \alpha (-\alpha )=-(\alpha x)\\
-(d)& \alpha (x-y) = \alpha x - \alpha y \text{ und } (\alpha - \beta )x = \alpha x - \beta x
+(a)\quad& 0_{\mathbb{K}} \cdot x = \alpha \cdot 0_x = 0_x\\
+(b)\quad& \text{Falls }\alpha x = 0_x\text{, so folgt } \alpha = 0\in\mathbb{K} \text{ oder } x\in 0 \in X \\
+(c)\quad& (-\alpha )x = \alpha (-\alpha )=-(\alpha x)\\
+(d)\quad& \alpha (x-y) = \alpha x - \alpha y \text{ und } (\alpha - \beta )x = \alpha x - \beta x
 \end{align*}
 Beweis: Es sei $\alpha \in \mathbb{K}$ und $x\in X$:
 \renewcommand{\labelenumi}{(\alph{enumi})}
@@ -142,7 +147,7 @@ Eine nicht leere Teilmenge $Y \subseteq X$ eines linearen Raumes $(X,+,\cdot)$ �
 \subsubsection{Bemerkung}
 Jeder lineare Raum x hat die trivialen Unterräume $\{0\}$ und X.
 \subsubsection{Beispiel (Stetige und stetig-differenzierbare Funktion)}
-Es sei $I\subseteq \mathbb{R}$ ein Inervall. Die Menge der stetigen Funktionen $C(I,\mathbb{R}^n)$ auf $I$ mit Bildern in $\mathbb{R}^n$ ist ein Unterraum von $F(I,\mathbb{R})$. Ebenso sind stetig differenzierbare Funktionen $C^1(I,\mathbb{R})$ ein Unterraum von $C(I,\mathbb{R})$ und $F(I,\mathbb{R}^n)$
+Es sei $I\subseteq \mathbb{R}$ ein Intervall. Die Menge der stetigen Funktionen $C(I,\mathbb{R}^n)$ auf $I$ mit Bildern in $\mathbb{R}^n$ ist ein Unterraum von $F(I,\mathbb{R})$. Ebenso sind stetig differenzierbare Funktionen $C^1(I,\mathbb{R})$ ein Unterraum von $C(I,\mathbb{R})$ und $F(I,\mathbb{R}^n)$
 \subsubsection{Beispiel (Polynome)}
 Mit gegebenem Körper $\mathbb{K}$ definieren wir den Raum der Polynome (über $\mathbb{K}$) durch \\$P(\mathbb{K}) := \{p\in F(\mathbb{K},\mathbb{K}) \exists n\in\mathbb{N}_0: \exists a_0, ..., a_n \in \mathbb{K} : p(t)=\sum^{n}_{l=0} a_l \cdot t^l\}$;\\
 seine Elemente heißen Polynome und die $a_k$ deren Koeffizienten. Dann ist $P(\mathbb{K})$ ein Unterraum von $F(\mathbb{K},\mathbb{K})$.\\
