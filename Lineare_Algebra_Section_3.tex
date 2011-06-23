@@ -112,3 +112,60 @@ ist ein Isomorphismus.  Es gilt das Inverse des Transponieren ist das Transponie
 \item $l_{0,0}=\{(\alpha _k)_{k\in \mathbb{N}_0}:\exists n_0\ \forall n\geq n_0\ \alpha _n=0\}$ bezeichnet die Menge aller Folgen, die schließlich $0$ sind.\\
 $l_{0,0}$ ist Isomorph zum Raum der Polynome $P(\mathbb{K})$ via den Isomorphismus $T\cdot C P(\mathbb{K})\rightarrow l_{0,0}$; $p\mapsto (\alpha _0,\cdots ,\alpha _n,0,\cdots, 0,\cdots ): p=\sum_{k=0}^n\alpha _kt^k$
 \end{enumerate}
+\subsubsection{Lemma}
+Für $T\in L(X,Y)$ ist mit $\mathcal{S}\subseteq X$ auch $T\mathcal{S}$ linear abhängig (in $Y$).
+\subsubsection{Satz}
+Es sei $T\in GL(X,Y)$.  Eine Menge $\mathcal{S}\subseteq X$ ist genau dann linear abhängig, wenn $T\mathcal{S}\subseteq Y$ linear abhängig ist.
+\subsubsection{Bemerkung}
+Als logische Kontraposition erhalten wir, dass Isomorphismen linear unabhängige Mengen (oder Basen) auf ebensolche abbilden.\\
+\underline{Beweis}:
+\begin{itemize}
+\item $(\Rightarrow )$ Folgt aus Lemma 3.2.5
+\item $(\Leftarrow )$ Nun sei $T\mathcal{S}\subseteq Y$ linear abhängig.  Wegen $T\in GL(X,Y)$ ist auch $T^{-1}(T\mathcal{S})$ nach Lemma 3.2.5 linear abhängig.
+\end{itemize}
+\subsubsection{Proposition}
+Jeder $n$-dimensionale lineare Raum ist isomorph zu $\mathbb{K}^n,\ n\in\mathbb{N}_0$.\\
+\underline{Beweis}: Es sei $X$ ein linearer Raum mit $m:=$dim$X$ und der Basis $\mathcal{X}=\{x_1,\cdots ,x_n\}$.  Wir definieren $T:\mathbb{K}^n\rightarrow X,\ \begin{pmatrix}\xi _1\\ \vdots \\ \xi _n\end{pmatrix}\mapsto \sum_{k=1}^n\xi _k x_k$.  Aufgrund der linearen Unabhängigkeit von $\mathcal{X}$ ist $N(T)=\{0\}$, nach Satz 2.1.10(a) ist $T$ dann injektiv.  Da $\mathcal{X}$ ein EZS ist, muss $T$ auch surjektiv sein.
+\subsubsection{Satz}
+Endlich dimensionale lineare Räume $X,Y$ sind genau dann isomorph, wenn dim$X=$dim$Y$.\\
+\underline{Beweis}
+\begin{itemize}
+\item $(\Leftarrow )$ Es sei $n:=$dim$X=$dim$Y$.  Nach Proposition 3.2.8 existieren Isomorphismen $\Phi :X\rightarrow\mathbb{K}^n,\Psi :Y\rightarrow \mathbb{K}$, womit $\Psi ^{-1} \circ \Phi \in GL(X,Y)$ ein Isomorphismus ist.
+\item ($\Rightarrow$) Sei $T\in GL(X,Y)$, $\mathcal{X}=\{x_1,\cdots ,x_n\}$.  Dann ist $y_i:=Tx_i,\ 1\leq i¸leq n$ nach Satz 3.2.6 Basis von $Y$.
+\end{itemize}
+\subsubsection{Satz}
+Für jedes $T\in L(X,Y)$ zwischen linearen Räumen $X,Y$ mit dim$X=$dim$Y$ sind äquivalent:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $T$ ist ein Isomorphismus (d.h. $T\in GL(X,Y))$
+\item $T$ ist injektiv
+\item $T$ ist surjektiv
+\end{enumerate}
+\underline{Beweis}: Es ist nachzuweisen, dass Surjektivität und Injektivität äquivalent sind.  Es sei $T\in L(X,Y)$ injektiv.  Wegen Satz 3.1.10(a) ist dies äquivalent zu $N(T)=\{0\}$.  Mit dem Dimensionssatz 3.1.12 ist dann dim$R(T)$=dim$X-$dim$N(T)=$dim$Y$ und $T$ ist genau dann injektiv, wenn dim$R(T)$=dim$Y$, d.h. $R(T)=Y$ gilt.  Aufgrund von Satz 3.1.10(b) folgt die Behauptung.
+\subsection{Lineare Abbildungen und Matrizen}
+$X,Y$ lineare Räume, $\mathcal{X}=\{x_1,\cdots ,x_n\},\ \mathcal{Y}:=\{y_1,\cdots ,y_m\}$.  Wir folgen aus Satz 3.1.14, dass eine lineare Abbildung $T\in L(X,Y)$ durch die Bilder $Tx_i$ der Basisvektoren von $X$ bestimmt ist.  Sind etwa:\\
+\[(3.3a)\ Tx_i = \sum_{j=1}^m a_{i,j} y_j\text{ für }1\leq i\leq n\]
+und $x=\sum_{k=1}^n\xi _k x_k$ mit $Tx=\sum_{y=1}^m \eta _i y_i$, so resultiert $Tx=T(\sum_{k=1}^n\xi _k x_k)=\sum_{k=1}^n \xi _k Tx_k \stackrel{3.3a}{=} \sum_{k=1}^n\xi _k\sum_{j=1}^ma_{k,j}y_i=\sum_{i=1}(\sum_{k=1}a_{i,k}\xi_k)y_i$.  Für die Koordinaten $\eta _i,\cdots ,\eta _m\in\mathbb{K}$ von $Tx$ bzgl. $\mathcal{Y}$ erhalten wir:\\
+\[(3.3b)\ \eta _i=\sum_{k=1}^na_{i,k}\xi _k\text{ für }1\leq i\leq m\]
+\subsubsection{Satz (darstellende Matrix)}
+Jedes $T\in L(X,Y)$ wird eindeutig durch eine Matrix $T_\mathcal{X}^\mathcal{Y}\in\mathbb{K}^{m\times n}$ beschreiben, in deren $k-$ter Spalte gerade die Koordinaten von $Tx_k$ bzgl der Basis $\mathcal{Y}$ stehen.  Man nennt $T_\mathcal{X}^\mathcal{Y}$ die $T$ darstellende Matrix in den Basen $\mathcal{X}$ und $\mathcal{Y}$; im Fall $X=Y$ und $\mathcal{X}=\mathcal{Y}$ schreiben wir $T_\mathcal{X}:=T^\mathcal{X}_\mathcal{X}$.
+\subsubsection{Bemerkung}
+Wir versehen $X=\mathbb{K}^n$ und $Y=\mathbb{K}^m$ mit Standardbasen $\mathcal{E}_n$ bzw. $\mathcal{E}_m$ aus Beispiel 2.4.3.  Für jede Abbildung $T\in L(\mathbb{K}^n,\mathbb{K}^m)$ mit darstellender Matrix \[T^{\mathcal{E}_m}_{\mathcal{E}_n}\text{ gilt dann }T=T_{T_{\mathcal{E}_n}^{\mathcal{E}_m}}\text{ (Erinnerung }T_Ax=Ax)\]
+\subsubsection{Beispiel (Polynome)}
+Es sei $n\in \mathbb{N}$ und $X=P_n(\mathbb{R})$ ausgestattet mit der monomialen Basis $\mathcal{M}_n:=\{m_0,\cdots ,m_n\}$ aus Beispiel 2.4.4.  Als lineare Abbildung betrachten wir die Ableitung $D:P_n(\mathbb{R})\rightarrow P_n(\mathbb{R})$ mit den Bildern
+\[D_{m_0}=0,\ D_{m_k}=km_{k-1}\text{ für alle }k\in \mathbb{N}\]
+und erhalten aus Satz 3.3.1 die darstellende Matrix
+\[ D_{\mathcal{M}_n}=\begin{pmatrix}0 & 1 & 0 & 0 &\cdots &0\\ 0 & 0& 2 & 0 &\cdots &0\\ 0& 0& 0& 3&\cdots &0\\ \vdots \\ 0 & 0& 0 &0 & \cdots & n-1\\ 0 & 0& 0 &0 & \cdots & 0\end{pmatrix}\]
+\subsubsection{Proposition}
+Zu jedem $A\in K^{m\times n}$ gibt es ein $T\in L(X,Y)$ mit $A=T_\mathcal{X}^\mathcal{Y}$.\\
+\underline{Beweis}: Es sei $A\in \mathbb{K}^{m\times n}$.  Zu beliebigen $x\in X$ finden wir $\xi _i,\cdots ,\xi _n\in\mathbb{K}$ mit $x=\sum_{k=1}^n \xi _kx_k$.  Die gesuchte Abbildung $T\in L(X,Y)$ ist dann
+\[Tx:=\sum_{i=1}^m\left(\sum_{j=1}^na_{i,j}x_j\right)y_i\]
+\subsubsection{Korollar}
+Für endlich dimensionale Räume $X,Y$ sind $L(X,Y)$ und $\mathbb{K}^{\mathrm{dim}Y\times \mathrm{dim}X}$ isomorph.  Insbesondere ist dim$L(X,Y)=$dim$X\cdot$dim$Y$.\\
+\underline{Beweis}: Es sei $m=$dim$Y$,$n=$dim$X$.  Wir verwenden die lineare Abbildung $\Phi :L(X,Y)\rightarrow \mathbb{K}^{\mathrm{dim}Y\times \mathrm{dim}X}$,$\Phi (T)=T_\mathcal{X}^\mathcal{Y}$ die in Proposition 3.3.4 konstruiert wurde.
+\subsubsection{Satz}
+Es sei $Z$ ein weiterer linearer Raum mit Basis $\mathcal{Z}$.  Für $T\in L(X,Y),\ S\in L(Y,Z)$ ist
+\[ (S\circ T)_\mathcal{X}^\mathcal{Z}=S_\mathcal{Y}^\mathcal{Z}T_\mathcal{X}^\mathcal{Y}\]
+\subsubsection{Bemerkung}
+Für $A\in\mathbb{K}^{l\times m},\ B\in\mathbb{K}^{m\times n}$ gilt
+\[(3.3c)\ T_A\circ T_b=T_{AB}\]
