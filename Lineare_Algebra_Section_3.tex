@@ -145,7 +145,7 @@ Für jedes $T\in L(X,Y)$ zwischen linearen Räumen $X,Y$ mit dim$X=$dim$Y$ sind 
 \subsection{Lineare Abbildungen und Matrizen}
 $X,Y$ lineare Räume, $\mathcal{X}=\{x_1,\cdots ,x_n\},\ \mathcal{Y}:=\{y_1,\cdots ,y_m\}$.  Wir folgen aus Satz 3.1.14, dass eine lineare Abbildung $T\in L(X,Y)$ durch die Bilder $Tx_i$ der Basisvektoren von $X$ bestimmt ist.  Sind etwa:\\
 \[(3.3a)\ Tx_i = \sum_{j=1}^m a_{i,j} y_j\text{ für }1\leq i\leq n\]
-und $x=\sum_{k=1}^n\xi _k x_k$ mit $Tx=\sum_{y=1}^m \eta _i y_i$, so resultiert $Tx=T(\sum_{k=1}^n\xi _k x_k)=\sum_{k=1}^n \xi _k Tx_k \stackrel{3.3a}{=} \sum_{k=1}^n\xi _k\sum_{j=1}^ma_{k,j}y_i=\sum_{i=1}(\sum_{k=1}a_{i,k}\xi_k)y_i$.  Für die Koordinaten $\eta _i,\cdots ,\eta _m\in\mathbb{K}$ von $Tx$ bzgl. $\mathcal{Y}$ erhalten wir:\\
+und $x=\sum_{k=1}^n\xi _k x_k$ mit $Tx=\sum_{y=1}^m \eta _i y_i$, so resultiert $Tx=T(\sum_{k=1}^n\xi _k x_k)=\sum_{k=1}^n \xi _k Tx_k \stackrel{3.3a}{=} \sum_{k=1}^n\xi _k\sum_{j=1}^ma_{k,j}y_i=\sum_{j=1}^m(\sum_{k=1}^na_{i,k}\xi_k)y_i$.  Für die Koordinaten $\eta _i,\cdots ,\eta _m\in\mathbb{K}$ von $Tx$ bzgl. $\mathcal{Y}$ erhalten wir:\\
 \[(3.3b)\ \eta _i=\sum_{k=1}^na_{i,k}\xi _k\text{ für }1\leq i\leq m\]
 \subsubsection{Satz (darstellende Matrix)}
 Jedes $T\in L(X,Y)$ wird eindeutig durch eine Matrix $T_\mathcal{X}^\mathcal{Y}\in\mathbb{K}^{m\times n}$ beschreiben, in deren $k-$ter Spalte gerade die Koordinaten von $Tx_k$ bzgl der Basis $\mathcal{Y}$ stehen.  Man nennt $T_\mathcal{X}^\mathcal{Y}$ die $T$ darstellende Matrix in den Basen $\mathcal{X}$ und $\mathcal{Y}$; im Fall $X=Y$ und $\mathcal{X}=\mathcal{Y}$ schreiben wir $T_\mathcal{X}:=T^\mathcal{X}_\mathcal{X}$.
@@ -169,3 +169,62 @@ Es sei $Z$ ein weiterer linearer Raum mit Basis $\mathcal{Z}$.  Für $T\in L(X,Y
 \subsubsection{Bemerkung}
 Für $A\in\mathbb{K}^{l\times m},\ B\in\mathbb{K}^{m\times n}$ gilt
 \[(3.3c)\ T_A\circ T_b=T_{AB}\]
+\addtocounter{subsubsection}{-6}
+\subsubsection{Die Abbildung $T_A$}
+In diesem Abschnitt sei $A\in\mathbb{K}^{m\times n}$ und $T_A\in L(\mathbb{K}^n,\mathbb{K}^m)$ mit $T_Ax:=Ax$.
+\addtocounter{subsubsection}{5}
+\subsubsection{Satz}
+Die Ränge von $A\in\mathbb{K}^{m\times n}$ und $T_A\in L(\mathbb{K}^n,\mathbb{K}^m)$ stimmen überein: rk$T_A=$rk$A$.
+\subsubsection{Bemerkung}
+Mit den Spalten $a_1,\cdots c_n\in \mathbb{K}^m$ von $A$ gilt $R(T_A)=$span$\{a_1,\cdots ,a_n\}$, weshalb insbesondere $R(T_A)$ und der Spaltenraum von $A$ gleiche Dimension haben.  Andererseits war rk$A$ nach Def. 2.6.1 die Dimension des Zeilenraumes von $A$.  Daher wird Satz 3.3.8 auch formuliert als: "`Spaltenrang=Zeilenrang"'.\\
+\underline{Beweis}: Zunächst merken wir an, dass $N(T_A)$ mit dem Lösungsraum $L_0\subseteq \mathbb{K}^n$ einer homogenen Gleichung $(L_0)$ übereinstimmt.  Nach Proposition 2.6.3 gilt also dim$N(T)=n-$rk$A$ Andererseits liefert der Dimensionssatz 3.1.12, dass $n=\mathrm{dim}N(T_A)+\mathrm{dim}N(T_A)=\mathrm{dim}N(T_A)+\mathrm{rk}T_A$ und folglich $\mathrm{rk}T_A=\mathrm{rk}A$.\\
+Nun sei $A\in\mathbb{K}^{n\times n}$ quadratisch mit rk$A=n$.  Dies ist mit Satz 3.2.10 äquivalent dazu, dass $T_A\in L(\mathbb{K}^n)$ ein Isomorphismus ist.  Wir interessieren uns nun für die simultane Lösbarkeit von
+$Ax=e;\text{ für alle } ^\leq i\leq n$ welche wir mittels der augmentierten Matrix($A,e_1,\cdots e_n)=(A,I_n)\in \mathbb{K}^{n\times (2n)}$ notieren.  Vermöge des Gauß-Verfahrens lässt sich $(A,I_n)$ auf die Form $(I_n,B)$ mit einem $B\in\mathbb{K}^{n\times n}$ bringen; nach Konstruktion ist $A\cdot B=I_n$.
+\subsubsection{Definition (inverse Matrix)}
+Eine Matrix $A\in\mathbb{K}^{n\times n}$ heißt \underline{invertierbar}, falls ein $B\in\mathbb{K}^{n\times n}$ mit der Eigenschaft $A\cdot B=I_n$ existiert.  Man nennt $B$ die \underline{Inverse} von $A$ und schreibt $A^{-1}:=B$.
+\subsubsection{Beispiel}
+Wir wollen die Matrix $A:=\begin{pmatrix}1&2&3\\2&3&4\\3&4&6\end{pmatrix}$ invertieren.  Nach obigen Schema
+\[\begin{array}{ccc|ccc}1&2&3&1&0&0\\2&3&4&0&1&0\\3&4&6&0&0&1\end{array}\Leftrightarrow \begin{array}{ccc|ccc}1&2&3&1&0&0\\0&1&2&2&-1&0\\0&2&3&3&0&-1\end{array}\Leftrightarrow \begin{array}{ccc|ccc}1&2&3&1&0&0\\0&1&2&2&-1&0\\0&0&1&1&-2&1\end{array}\Leftrightarrow \begin{array}{ccc|ccc}1&2&0&-2&6&-3\\0&1&0&0&3&-2\\0&0&1&1&-2&1\end{array}\]
+\[\Leftrightarrow \begin{array}{ccc|ccc}1&0&0&-2&0&1\\0&1&0&0&3&-2\\0&0&1&1&-2&1\end{array}\]
+und erhalten $A^{-1}=\begin{pmatrix}-2&0&1\\0&3&-2\\1&-2&1\end{pmatrix}$.\\
+Eine testweise Multiplikation ergibt $AA^{-1}=A^{-1}A=I_3$.
+\subsubsection{Korollar}
+Die inverse Matrix $A^{-1}\in\mathbb{K}^{n\times m}$ ist eindeutig bestimmt mit $A^{-1}A=I_n$.  Ferner ist $A$ genau dann invertierbar, wenn $T_A\in GL(\mathbb{K}^n)$ ist.
+\subsubsection{Definition (regulär, singulär)}
+Eine Matrix $A\in\mathbb{K}^{n\times n}$ heißt \underline{regulär}, falls rk$A=n$ gilt, andernfalls nennen wir sie \underline{singulär}.
+\subsubsection{Satz (Charakterisierung regulärer Matrizen)}
+Folgende Aussagen sind äquivalent für jedes $A\in\mathbb{K}^{n\times n}$
+\begin{enumerate}
+\item $T_A\in GL(\mathbb{K}^n)$
+\item A ist regulär
+\item Die Zeilen von $A$ sind linear unabhängig
+\item Die Spalten von $A$ sind linear unabhängig
+\item Die homogene Gleichung ($L_0$) hat nur die triviale Lösung
+\item Für jedes $b\in\mathbb{K}^n$ ist ($L_0$) eindeutig lösbar.
+\end{enumerate}
+\underline{Beweis}: Die Äquivalenz von (b) und (c) ist Definition 3.3.13.  Aufgrund von Satz 3.3.8 und Bemerkung 3.3.9 sind auch (c) und (d) gleichwertig.\\
+(d) $\Rightarrow$ (e) resultiert aus Definition 2.3.6 der linearen Unabhängigkeit.\\
+(e) $\Rightarrow$ (f) ergibt sich aus Satz 1.4.9(a).\\
+(f) $\Rightarrow$ (a) Nach unserer Voraussetzung (f) ist $T_A^{-1}(\{b\})$ für jedes $b\in \mathbb{K}^n$ einpunktig.  Also ist $T_A\in L(\mathbb{K}^n)$ bijektiv.\\
+(a) $\Rightarrow$ (b) Übung!\\
+Zum Abschluss des Unterabschnittes beschäftigen wir uns mit linear inhomogenen Gleichungen: Ihre \underline{augmentierte Koeffizientenmatrix} $(A,b)\in\mathbb{K}^{m\times (n+1)}$ definieren wir durch
+\[(A,b)=\begin{pmatrix}a_{1,1}& \cdots &a_{1,n} & b_1\\ \vdots & & \vdots & \vdots\\ a_{m,1}&\cdots &a_{m,n}&b_m\end{pmatrix}\]
+\subsubsection{Satz}
+Es sei $b\in\mathbb{K}^m$.  Eine inhomogene Gleichung $(L_b)$ hat genau dann eine Lösung, wenn gilt
+\[\mathrm{rk}A=\mathrm{rk}(A,b)\]
+\underline{Beweis}: Übungsaufgabe.
+\addtocounter{subsubsection}{-13}
+\subsubsection{Basiswechsel}
+Auf einem endlich dimensionalen Raum $X$ seien die Basen $\mathcal{X}:=\{x_1,\cdots ,x_n\}$ und $\mathcal{X}':=\{x'_1,\cdots ,x'_n\}$ gegeben.  Wie verhält sich die Darstellungsmatrix von $T\in L(X)$ wenn man von $\mathcal{X}$ auf die Basis $\mathcal{X}'$ übergeht?
+\begin{itemize}
+\item Zunächst lassen sich die Elemente von $\mathcal{X}'$ darstellen durch die Elemente von $\mathcal{X}$
+\[(3.3e)\ X'_j=\sum _{i=1}^ns_{ij}x_i\text{ für alle } 1\leq j\leq n\]
+Hieraus wird die sogenannte \underline{Basiswechselmatrix} $S=(s_{ij})_{1\leq i,j\leq n}$ gebildet, welche den Übergang von $\mathcal{X}$ nach $\mathcal{X}'$ liefert:
+\begin{center}
+Spalten von S = Koordinatenvektoren der "`neuen"' Basisvektoren
+\end{center}
+\item Umgekehrt lassen sich die $x_j$ durch die $x'_i$ ausdrücken.  Aus $x_j=\sum _{i=1}^ns_{ij}x'_i$ erhalten wir $x_j=\sum _{i=1}^ns_{ij}(\sum _{k=1}^n s_{ki}x_k)=\sum _{k=1}(\sum _{i=1}^n s_{ki}s'_{ij})x_k$. Der Ausdruck in der letzten Klammer ist genau das $(k,j)$-te Element von $SS'$.  Wegen der linearen Unabhängigkeit von $\mathcal{X}$ folgern wir, dass $SS'=I_n$ und somit $S'=S^{-1}$ sein muss.  Schließlich definiert man auch jede invertierbare Matrix $S$ einen Basiswechsel gemäß $(3.3e)$ bzw. $x'_j=Sx_j$.
+\end{itemize}
+\addtocounter{subsubsection}{12}
+\subsubsection{Satz}
+Ist $S\in \mathbb{K}^{n\times n}$ die Basiswechselmatrix zwischen $\mathcal{X}$ und $\mathcal{X}'$, so gilt $T_{\mathcal{X}'}=S^{-1}T_\mathcal{X}S$, für alle $T\in L(X)$.
