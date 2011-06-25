@@ -145,7 +145,7 @@ Für jedes $T\in L(X,Y)$ zwischen linearen Räumen $X,Y$ mit dim$X=$dim$Y$ sind 
 \subsection{Lineare Abbildungen und Matrizen}
 $X,Y$ lineare Räume, $\mathcal{X}=\{x_1,\cdots ,x_n\},\ \mathcal{Y}:=\{y_1,\cdots ,y_m\}$.  Wir folgen aus Satz 3.1.14, dass eine lineare Abbildung $T\in L(X,Y)$ durch die Bilder $Tx_i$ der Basisvektoren von $X$ bestimmt ist.  Sind etwa:\\
 \[(3.3a)\ Tx_i = \sum_{j=1}^m a_{i,j} y_j\text{ für }1\leq i\leq n\]
-und $x=\sum_{k=1}^n\xi _k x_k$ mit $Tx=\sum_{y=1}^m \eta _i y_i$, so resultiert $Tx=T(\sum_{k=1}^n\xi _k x_k)=\sum_{k=1}^n \xi _k Tx_k \stackrel{3.3a}{=} \sum_{k=1}^n\xi _k\sum_{j=1}^ma_{k,j}y_i=\sum_{j=1}^m(\sum_{k=1}^na_{i,k}\xi_k)y_i$.  Für die Koordinaten $\eta _i,\cdots ,\eta _m\in\mathbb{K}$ von $Tx$ bzgl. $\mathcal{Y}$ erhalten wir:\\
+und $x=\sum_{k=1}^n\xi _k x_k$ mit $Tx=\sum_{j=1}^m \eta _j y_j$, so resultiert $Tx=T(\sum_{k=1}^n\xi _k x_k)=\sum_{k=1}^n \xi _k Tx_k \stackrel{3.3a}{=} \sum_{k=1}^n\xi _k\sum_{j=1}^ma_{k,j}y_j=\sum_{i=1}^m(\sum_{k=1}^na_{i,k}\xi_k)y_i$.  Für die Koordinaten $\eta _i,\cdots ,\eta _m\in\mathbb{K}$ von $Tx$ bzgl. $\mathcal{Y}$ erhalten wir:\\
 \[(3.3b)\ \eta _i=\sum_{k=1}^na_{i,k}\xi _k\text{ für }1\leq i\leq m\]
 \subsubsection{Satz (darstellende Matrix)}
 Jedes $T\in L(X,Y)$ wird eindeutig durch eine Matrix $T_\mathcal{X}^\mathcal{Y}\in\mathbb{K}^{m\times n}$ beschreiben, in deren $k-$ter Spalte gerade die Koordinaten von $Tx_k$ bzgl der Basis $\mathcal{Y}$ stehen.  Man nennt $T_\mathcal{X}^\mathcal{Y}$ die $T$ darstellende Matrix in den Basen $\mathcal{X}$ und $\mathcal{Y}$; im Fall $X=Y$ und $\mathcal{X}=\mathcal{Y}$ schreiben wir $T_\mathcal{X}:=T^\mathcal{X}_\mathcal{X}$.
