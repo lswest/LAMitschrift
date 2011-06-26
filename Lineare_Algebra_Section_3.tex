@@ -58,7 +58,7 @@ Für jedes $T\in L(X,Y)$ gilt:
 \item Bei der Differenziation $D:C^1([a,b],\mathbb{R})\rightarrow C([a,b],\mathbb{R})$ aus Beispiel 3.1.6 (2) besteht der Kern $N(D)$ aus allen konstanten Funktionen.  Für das Bild $R(D)$ erhalten wir dagegen $C([a,b],\mathbb{R})$, denn für ein beliebiges $v\in C([a,b],\mathbb{R})$ gilt nach dem Hauptsatz der Differential- und Integralrechnung $Du=v$ mit $u(t):=v(a)+\int_a^t v(s)ds$.  Damit ist $D$ nicht injektiv, aber surjektiv.
 \end{enumerate}
 \subsubsection{Satz (Dimensionssatz)}
-\label{3.1.12}
+\label{dimension}
 Für jede $T\in L(X,Y)$ mit dim$X<\infty$ gilt dim$N(T)+$dim$R(T)=$dim$X$.\\
 \underline{Beweis}: Es sei $\{x_1,\cdots ,x_m\}$ eine Basis von $N(T)$ und $\{y_1,\cdots ,y_n\}$ eine Basis von $R(T)$.  Wir wählen $\hat{x}_1,\cdots ,\hat{x}_n \in X$ derart, dass $T\hat{x}_i=y_i,y\leq i\leq n$ gilt und weisen nach, dass $\mathcal{X}:=\{x_1,\cdots ,x_m,\hat{x}_1,\cdots ,\hat{x}_n\}$ eine Basis von $X$ ist.
 \renewcommand{\labelenumi}{(\roman{enumi})}
@@ -69,7 +69,7 @@ Für jede $T\in L(X,Y)$ mit dim$X<\infty$ gilt dim$N(T)+$dim$R(T)=$dim$X$.\\
 \subsubsection{Korollar}
 Sei $T\in L(X,Y)$ ist $\{x_1,\cdots ,x_n\}$ eine Basis von $N(T)$ und $\{x_1,\cdots ,x_n,x_{n+1},\cdots ,x_d\}$ eine Basis von $X$ mit $n<d$.  Das Bild $R(T)$ hat folgende Basis:
 \[\{Tx_{n+1},\cdots ,Tx_d\}\]
-\underline{Beweis}:  Sei $d=$dim$X$,$n=$dim$N(T)$.  Nach Satz \ref{3.1.12} gilt:
+\underline{Beweis}:  Sei $d=$dim$X$,$n=$dim$N(T)$.  Nach \hyperref[dimension]{Dimensionssatz \ref*{dimension}} gilt:
 dim$R(T)=d-n$.  Wir suchen $d-n$ linear unabhängige Vektoren in $R(T)$.  Die Vektoren $\{Tx_{n+1},\cdots ,Tx_d\}$ sind $d-n$ Vektoren in $R(T)$.  Wir zeigen , dass diese linear unabhängig sind. Hierzu gehen wir indirekt vor.  Wir nehmen an, dass $\{Tx_{n+1},\cdots ,Tx_d\}$ linear abhängig sind.\\
 $\Rightarrow$ Es existiert ein Index $j^*,n<j^*\leq d$, so dass $Tx_{j^*}=\sum_{\substack{j=n+1\\ j\not= j^*}}^d \eta _jTx_j$.  Das heißt $\sum_{j=n+1}^d \eta _jTx_j=0$ mit $\eta _{j^*}=-1 \circledast\circledast$.  Aus der Linearität von $T$ folgt: $T(\sum_{j=n+1}^d \eta _jx_j)=0$, d.h. $\sum_{j=n+1}^d \eta _jx_j \in N(T)$.  Weil $\{ x_1,\cdots ,x_n\}$ Basis von $N(T)$ ist gilt: $\sum_{j=n+1}^d\eta _jx_j=\sum_{j=1}^n\eta _jx_j$ für geeignete $n_1,\cdots ,n_n\in\mathbb{K}$, also: $\sum_{j=1}^n\eta _jx_j-\sum_{j=n+1}^d\eta _jx_j=0 \circledast$\\
 Weil nach Voraussetzung $x_1,\cdots x_d$ Basis von $X$ ist, folgt aus $\circledast$, dass $\eta _j=0\ \forall 1\leq j\leq d$ (Definition der linearen Unabhängigkeit).  Das ist ein Widerspruch zu $\circledast\circledast$.  Das heißt $\{Tx_{n+1},\cdots ,Tx_d\}$ sind linear unabhängig.
@@ -142,7 +142,7 @@ Für jedes $T\in L(X,Y)$ zwischen linearen Räumen $X,Y$ mit dim$X=$dim$Y$ sind 
 \item $T$ ist injektiv
 \item $T$ ist surjektiv
 \end{enumerate}
-\underline{Beweis}: Es ist nachzuweisen, dass Surjektivität und Injektivität äquivalent sind.  Es sei $T\in L(X,Y)$ injektiv.  Wegen Satz 3.1.10(a) ist dies äquivalent zu $N(T)=\{0\}$.  Mit dem Dimensionssatz \ref{3.1.12} ist dann dim$R(T)$=dim$X-$dim$N(T)=$dim$Y$ und $T$ ist genau dann injektiv, wenn dim$R(T)$=dim$Y$, d.h. $R(T)=Y$ gilt.  Aufgrund von Satz 3.1.10(b) folgt die Behauptung.
+\underline{Beweis}: Es ist nachzuweisen, dass Surjektivität und Injektivität äquivalent sind.  Es sei $T\in L(X,Y)$ injektiv.  Wegen Satz 3.1.10(a) ist dies äquivalent zu $N(T)=\{0\}$.  Mit dem  \hyperref[dimension]{Dimensionssatz\ref*{dimension}} ist dann dim$R(T)$=dim$X-$dim$N(T)=$dim$Y$ und $T$ ist genau dann injektiv, wenn dim$R(T)$=dim$Y$, d.h. $R(T)=Y$ gilt.  Aufgrund von Satz 3.1.10(b) folgt die Behauptung.
 \subsection{Lineare Abbildungen und Matrizen}
 $X,Y$ lineare Räume, $\mathcal{X}=\{x_1,\cdots ,x_n\},\ \mathcal{Y}:=\{y_1,\cdots ,y_m\}$.  Wir folgern aus Satz 3.1.14, dass eine lineare Abbildung $T\in L(X,Y)$ durch die Bilder $Tx_i$ der Basisvektoren von $X$ bestimmt ist.  Sind etwa:\\
 \[(3.3a)\ Tx_i = \sum_{j=1}^m a_{i,j} y_j\text{ für }1\leq i\leq n\]
