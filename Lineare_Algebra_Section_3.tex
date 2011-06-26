@@ -29,7 +29,7 @@ Die wichtigsten linearen Abbildungen dieser Vorlesung sind von der Form $T_A:\ma
 \subsubsection{Beispiel (Vorwärts-Shift)}
 Es sei $X$ ein linearer Raum und $\mathbb{I}\in\{\mathbb{N}_0,\mathbb{Z}\}$.  Bezeichnet dann $l(\mathbb{I})$ den linearen Raum aller Folgen $F(\mathbb{I},X)$, so ist der durch $(S\phi )_k:=\phi _{k+1}$ definierte \underline{Vorwärts-Shift} eine Abbildung $S\in L(l(\mathbb{I}))$.
 \subsubsection{Definition (Kern, Bild, Rang)}
-Ist $T\in L(X,Y)$, so bezeichnet $N(T):=\{x\in X:Tx=0\}$ den \underline{Kern}, $R(T):=TX$ das \underline{Bild} und rk$T:=$dim$R(T)$ den \underline{Rang} von $T$.  Eine Verbindung des Begriffes "`Rang einer Matrix"' (Def. 2.6.1) und Def 3.1.8 und in Satz 3.3.8 hergestellt.
+Ist $T\in L(X,Y)$, so bezeichnet $N(T):=\{x\in X:Tx=0\}$ den \underline{Kern}, $R(T):=TX$ das \underline{Bild} und rk$T:=$dim$R(T)$ den \underline{Rang} von $T$.  Eine Verbindung des Begriffes "`Rang einer Matrix"' (Def. 2.6.1) und Def 3.1.8 wird in Satz 3.3.8 hergestellt.
 \subsubsection{Proposition}
 Für jedes $T\in L(X,Y)$ ist der Kern $N(T)$ ein Unterraum von $X$.\\
 Beweis: Übungsaufgabe.
@@ -58,15 +58,15 @@ Für jedes $T\in L(X,Y)$ gilt:
 \item Bei der Differenziation $D:C^1([a,b],\mathbb{R})\rightarrow C([a,b],\mathbb{R})$ aus Beispiel 3.1.6 (2) besteht der Kern $N(D)$ aus allen konstanten Funktionen.  Für das Bild $R(D)$ erhalten wir dagegen $C([a,b],\mathbb{R})$, denn für ein beliebiges $v\in C([a,b],\mathbb{R})$ gilt nach dem Hauptsatz der Differential- und Integralrechnung $Du=v$ mit $u(t):=v(a)+\int_a^t v(s)ds$.  Damit ist $D$ nicht injektiv, aber surjektiv.
 \end{enumerate}
 \subsubsection{Satz (Dimensionssatz)}
-Für jede $T\in L(X,Y)$ mit dim$X=\infty$ gilt dim$N(T)+$dim$R(T)=$dim$X$.\\
-\underline{Beweis}: Es sei $\{x_1,\cdots ,x_m\}$ eine Basis von $N(T)$ und $\{y_1,\cdots ,y_n\}$ eine Basis von $R(T)$.  Wir wählen $\hat{x}_1,\cdots ,\hat{x}_n \in X$ damit, dass $T\hat{x}_i=y_i,y\leq i\leq n$ gilt und weisen nach, dass $\mathcal{X}:=\{x_1,\cdots ,x_m,\hat{x}_1,\cdots ,\hat{x}_n\}$ eine Basis von $X$ ist.
+Für jede $T\in L(X,Y)$ mit dim$X<\infty$ gilt dim$N(T)+$dim$R(T)=$dim$X$.\\
+\underline{Beweis}: Es sei $\{x_1,\cdots ,x_m\}$ eine Basis von $N(T)$ und $\{y_1,\cdots ,y_n\}$ eine Basis von $R(T)$.  Wir wählen $\hat{x}_1,\cdots ,\hat{x}_n \in X$ derart, dass $T\hat{x}_i=y_i,y\leq i\leq n$ gilt und weisen nach, dass $\mathcal{X}:=\{x_1,\cdots ,x_m,\hat{x}_1,\cdots ,\hat{x}_n\}$ eine Basis von $X$ ist.
 \renewcommand{\labelenumi}{(\roman{enumi})}
 \begin{enumerate}
 \item \underline{$\mathcal{X}$ ist linear unabhängig}: dim$N(T)$+dim$R(T)$=dim$X$
 \item \underline{$\mathcal{X}$ ist ein EZS}: dim$m$+dim$n$=dim$X$
 \end{enumerate}
 \subsubsection{Korollar}
-Sei $T\in L(X,Y)$ ist $\{x_1,\cdots ,x_n\}$ eine Basis von $N(T)$ und $\{x_1,\cdots ,x_n,x_{n-1},\cdots ,x_d\}$ eine Basis von $X$ mit $n<d$.  Das Bild $R(T)$ hat folgende Basis:
+Sei $T\in L(X,Y)$ ist $\{x_1,\cdots ,x_n\}$ eine Basis von $N(T)$ und $\{x_1,\cdots ,x_n,x_{n+1},\cdots ,x_d\}$ eine Basis von $X$ mit $n<d$.  Das Bild $R(T)$ hat folgende Basis:
 \[\{Tx_{n+1},\cdots ,Tx_d\}\]
 \underline{Beweis}:  Sei $d=$dim$X$,$n=$dim$N(T)$.  Nach Satz 3.1.12 gilt:
 dim$R(T)=d-n$.  Wir suchen $d-n$ linear unabhängige Vektoren in $R(T)$.  Die Vektoren $\{Tx_{n+1},\cdots ,Tx_d\}$ sind $d-n$ Vektoren in $R(T)$.  Wir zeigen , dass diese linear unabhängig sind. Hierzu gehen wir indirekt vor.  Wir nehmen an, dass $\{Tx_{n+1},\cdots ,Tx_d\}$ linear abhängig sind.\\
@@ -84,7 +84,7 @@ Für gegebenes $x=\sum_{k=1}^n\xi _kx_k,\ \xi _k\in \mathbb{K}\ \forall 1\leq k\
 \underline{Beweis} (Satz 3.1.14):
 \begin{enumerate}
 \item Sei $Tx_i=Sx_i;\ \forall 1\leq i\leq n$.  Sei $x\in X$ mit $x=\sum_{i=1}^n\xi _ix_i,\ 1\leq i\leq n\ \xi _i \in \mathbb{K}$.
-\[Tx=\sum_{i=1}^n \xi _iTx_i=\sum_{i=1}^n \xi _i Sx_i=S(\sum_{i=1}^n\xi _i x_i=Sx\].
+\[Tx=\sum_{i=1}^n \xi _iTx_i=\sum_{i=1}^n \xi _i Sx_i=S(\sum_{i=1}^n\xi _i x_i)=Sx\].
 \item Wir definieren $T$ wie folgt.  Der Vektor $x$ habe die Darstellung $x=\sum_{i=1}^n \xi _ix_i$ $\xi _i\in\mathbb{K}$.  Wir definieren $Tx:=\sum_{i=1}^n \xi _i \hat{y}_i$.  Dann gilt $Tx_j=\sum_{j=1}^n \xi _{i,j} \hat{y}_i=\hat{y}_j$.  Zeige noch: $T$ ist linear.  Sei $z\in X$ dargestellt als $z=\sum_{i=1}^n\beta _ix_i$ und $\lambda \in \mathbb{K}$.\\
 \underline{zeige}: $T(x+ z)=T(x)+ T(z)$ und $T(\lambda x)=\lambda T(x)$
 \[T(x+z)=T(\sum_{i=1}^n \xi _i x_i +\sum_{i=1}^n \beta _ix_i) = T(\sum_{i=1}^n (\xi _i+\beta _i)x_i)\stackrel{def.}{=} \sum_{i=1}^n(\xi _i+\beta _i)\hat{y}_i=\sum_{i=1}^n\xi _I\hat{y}_i+\sum_{i=1}^n \beta _i \hat{y}_i=Tx+Tz\]
@@ -131,7 +131,7 @@ Endlich dimensionale lineare Räume $X,Y$ sind genau dann isomorph, wenn dim$X=$
 \underline{Beweis}
 \begin{itemize}
 \item $(\Leftarrow )$ Es sei $n:=$dim$X=$dim$Y$.  Nach Proposition 3.2.8 existieren Isomorphismen $\Phi :X\rightarrow\mathbb{K}^n,\Psi :Y\rightarrow \mathbb{K}$, womit $\Psi ^{-1} \circ \Phi \in GL(X,Y)$ ein Isomorphismus ist.
-\item ($\Rightarrow$) Sei $T\in GL(X,Y)$, $\mathcal{X}=\{x_1,\cdots ,x_n\}$.  Dann ist $y_i:=Tx_i,\ 1\leq i¸leq n$ nach Satz 3.2.6 Basis von $Y$.
+\item ($\Rightarrow$) Sei $T\in GL(X,Y)$, $\mathcal{X}=\{x_1,\cdots ,x_n\}$.  Dann ist $y_i:=Tx_i,\ 1\leq i\leq n$ nach Satz 3.2.6 Basis von $Y$.
 \end{itemize}
 \subsubsection{Satz}
 Für jedes $T\in L(X,Y)$ zwischen linearen Räumen $X,Y$ mit dim$X=$dim$Y$ sind äquivalent:
@@ -143,9 +143,9 @@ Für jedes $T\in L(X,Y)$ zwischen linearen Räumen $X,Y$ mit dim$X=$dim$Y$ sind 
 \end{enumerate}
 \underline{Beweis}: Es ist nachzuweisen, dass Surjektivität und Injektivität äquivalent sind.  Es sei $T\in L(X,Y)$ injektiv.  Wegen Satz 3.1.10(a) ist dies äquivalent zu $N(T)=\{0\}$.  Mit dem Dimensionssatz 3.1.12 ist dann dim$R(T)$=dim$X-$dim$N(T)=$dim$Y$ und $T$ ist genau dann injektiv, wenn dim$R(T)$=dim$Y$, d.h. $R(T)=Y$ gilt.  Aufgrund von Satz 3.1.10(b) folgt die Behauptung.
 \subsection{Lineare Abbildungen und Matrizen}
-$X,Y$ lineare Räume, $\mathcal{X}=\{x_1,\cdots ,x_n\},\ \mathcal{Y}:=\{y_1,\cdots ,y_m\}$.  Wir folgen aus Satz 3.1.14, dass eine lineare Abbildung $T\in L(X,Y)$ durch die Bilder $Tx_i$ der Basisvektoren von $X$ bestimmt ist.  Sind etwa:\\
+$X,Y$ lineare Räume, $\mathcal{X}=\{x_1,\cdots ,x_n\},\ \mathcal{Y}:=\{y_1,\cdots ,y_m\}$.  Wir folgern aus Satz 3.1.14, dass eine lineare Abbildung $T\in L(X,Y)$ durch die Bilder $Tx_i$ der Basisvektoren von $X$ bestimmt ist.  Sind etwa:\\
 \[(3.3a)\ Tx_i = \sum_{j=1}^m a_{i,j} y_j\text{ für }1\leq i\leq n\]
-und $x=\sum_{k=1}^n\xi _k x_k$ mit $Tx=\sum_{y=1}^m \eta _i y_i$, so resultiert $Tx=T(\sum_{k=1}^n\xi _k x_k)=\sum_{k=1}^n \xi _k Tx_k \stackrel{3.3a}{=} \sum_{k=1}^n\xi _k\sum_{j=1}^ma_{k,j}y_i=\sum_{j=1}^m(\sum_{k=1}^na_{i,k}\xi_k)y_i$.  Für die Koordinaten $\eta _i,\cdots ,\eta _m\in\mathbb{K}$ von $Tx$ bzgl. $\mathcal{Y}$ erhalten wir:\\
+und $x=\sum_{k=1}^n\xi _k x_k$ mit $Tx=\sum_{j=1}^m \eta _j y_j$, so resultiert $Tx=T(\sum_{k=1}^n\xi _k x_k)=\sum_{k=1}^n \xi _k Tx_k \stackrel{3.3a}{=} \sum_{k=1}^n\xi _k\sum_{j=1}^ma_{k,j}y_j=\sum_{i=1}^m(\sum_{k=1}^na_{i,k}\xi_k)y_i$.  Für die Koordinaten $\eta _i,\cdots ,\eta _m\in\mathbb{K}$ von $Tx$ bzgl. $\mathcal{Y}$ erhalten wir:\\
 \[(3.3b)\ \eta _i=\sum_{k=1}^na_{i,k}\xi _k\text{ für }1\leq i\leq m\]
 \subsubsection{Satz (darstellende Matrix)}
 Jedes $T\in L(X,Y)$ wird eindeutig durch eine Matrix $T_\mathcal{X}^\mathcal{Y}\in\mathbb{K}^{m\times n}$ beschreiben, in deren $k-$ter Spalte gerade die Koordinaten von $Tx_k$ bzgl der Basis $\mathcal{Y}$ stehen.  Man nennt $T_\mathcal{X}^\mathcal{Y}$ die $T$ darstellende Matrix in den Basen $\mathcal{X}$ und $\mathcal{Y}$; im Fall $X=Y$ und $\mathcal{X}=\mathcal{Y}$ schreiben wir $T_\mathcal{X}:=T^\mathcal{X}_\mathcal{X}$.
@@ -177,9 +177,13 @@ In diesem Abschnitt sei $A\in\mathbb{K}^{m\times n}$ und $T_A\in L(\mathbb{K}^n,
 Die Ränge von $A\in\mathbb{K}^{m\times n}$ und $T_A\in L(\mathbb{K}^n,\mathbb{K}^m)$ stimmen überein: rk$T_A=$rk$A$.
 \subsubsection{Bemerkung}
 Mit den Spalten $a_1,\cdots a_n\in \mathbb{K}^m$ von $A$ gilt $R(T_A)=$span$\{a_1,\cdots ,a_n\}$, weshalb insbesondere $R(T_A)$ und der Spaltenraum von $A$ gleiche Dimension haben.  Andererseits war rk$A$ nach Def. 2.6.1 die Dimension des Zeilenraumes von $A$.  Daher wird Satz 3.3.8 auch formuliert als: "`Spaltenrang=Zeilenrang"'.\\
+<<<<<<< HEAD
 \underline{Beweis}: Zunächst merken wir an, dass $N(T_A)$ mit dem Lösungsraum $L_0\subseteq \mathbb{K}^n$ einer homogenen Gleichung $(L_0)$ übereinstimmt.  Nach Proposition 2.6.3 gilt also dim$N(T)=n-$rk$A$ Andererseits liefert der Dimensionssatz 3.1.12, dass $n=\mathrm{dim}N(T_A)+\mathrm{dim}N(T_A)=\mathrm{dim}N(T_A)+\mathrm{rk}T_A$ und folglich $\mathrm{rk}T_A=\mathrm{rk}A$.\\
+=======
+\underline{Beweis}: Zunächst merken wir an, dass $N(T_A)$ mit dem Lösungsraum $L_0\subseteq \mathbb{K}^n$ einer homogenen Gleichung $(L_0)$ übereinstimmt.  Nach Proposition 2.6.3 gilt also dim$N(T)=n-$rk$A$ Andererseits liefert der Dimensionssatz 3.1.12, dass $n=\mathrm{dim}N(T_A)+\mathrm{dim}N(T_A)=\mathrm{dim}N(T_A)+\mathrm{rk}T_A$ und folglich $\mathrm{rk}T_A=\mathrm{rk}A$.\\\\
+>>>>>>> 51ea795a42fc6e28c725341cf0c711e3e7a99854
 Nun sei $A\in\mathbb{K}^{n\times n}$ quadratisch mit rk$A=n$.  Dies ist mit Satz 3.2.10 äquivalent dazu, dass $T_A\in L(\mathbb{K}^n)$ ein Isomorphismus ist.  Wir interessieren uns nun für die simultane Lösbarkeit von
-$Ax=e;\text{ für alle } ^\leq i\leq n$ welche wir mittels der augmentierten Matrix($A,e_1,\cdots e_n)=(A,I_n)\in \mathbb{K}^{n\times (2n)}$ notieren.  Vermöge des Gauß-Verfahrens lässt sich $(A,I_n)$ auf die Form $(I_n,B)$ mit einem $B\in\mathbb{K}^{n\times n}$ bringen; nach Konstruktion ist $A\cdot B=I_n$.
+$Ax=e;\text{ für alle } 1\leq i\leq n$ welche wir mittels der augmentierten Matrix ($A,e_1,\cdots e_n)=(A,I_n)\in \mathbb{K}^{n\times (2n)}$ notieren.  Vermöge des Gauß-Verfahrens lässt sich $(A,I_n)$ auf die Form $(I_n,B)$ mit einem $B\in\mathbb{K}^{n\times n}$ bringen; nach Konstruktion ist $A\cdot B=I_n$.
 \subsubsection{Definition (inverse Matrix)}
 Eine Matrix $A\in\mathbb{K}^{n\times n}$ heißt \underline{invertierbar}, falls ein $B\in\mathbb{K}^{n\times n}$ mit der Eigenschaft $A\cdot B=I_n$ existiert.  Man nennt $B$ die \underline{Inverse} von $A$ und schreibt $A^{-1}:=B$.
 \subsubsection{Beispiel}
