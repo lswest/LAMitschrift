@@ -153,7 +153,7 @@ Jedes $T\in L(X,Y)$ wird eindeutig durch eine Matrix $T_\mathcal{X}^\mathcal{Y}\
 \subsubsection{Bemerkung}
 Wir versehen $X=\mathbb{K}^n$ und $Y=\mathbb{K}^m$ mit Standardbasen $\mathcal{E}_n$ bzw. $\mathcal{E}_m$ aus Beispiel 2.4.3.  Für jede Abbildung $T\in L(\mathbb{K}^n,\mathbb{K}^m)$ mit darstellender Matrix \[T^{\mathcal{E}_m}_{\mathcal{E}_n}\text{ gilt dann }T=T_{T_{\mathcal{E}_n}^{\mathcal{E}_m}}\text{ (Erinnerung }T_Ax=Ax)\]
 \subsubsection{Beispiel (Polynome)}
-Es sei $n\in \mathbb{N}$ und $X=P_n(\mathbb{R})$ ausgestattet mit der monomialen Basis $\mathcal{M}_n:=\{m_0,\cdots ,m_n\}$ aus Beispiel 2.4.4.  Als lineare Abbildung betrachten wir die Ableitung $D:P_n(\mathbb{R})\rightarrow P_n(\mathbb{R})$ mit den Bildern
+Es sei $n\in \mathbb{N}$ und $X=P_n(\mathbb{R})$ ausgestattet mit der monomialen Basis $\mathcal{M}_n:=\{m_0,\cdots ,m_n\}$ aus \hyperref[2.4.4]{Beispiel \ref*{2.4.4}}.  Als lineare Abbildung betrachten wir die Ableitung $D:P_n(\mathbb{R})\rightarrow P_n(\mathbb{R})$ mit den Bildern
 \[D_{m_0}=0,\ D_{m_k}=km_{k-1}\text{ für alle }k\in \mathbb{N}\]
 und erhalten aus Satz 3.3.1 die darstellende Matrix
 \[ D_{\mathcal{M}_n}=\begin{pmatrix}0 & 1 & 0 & 0 &\cdots &0\\ 0 & 0& 2 & 0 &\cdots &0\\ 0& 0& 0& 3&\cdots &0\\ \vdots \\ 0 & 0& 0 &0 & \cdots & n-1\\ 0 & 0& 0 &0 & \cdots & 0\end{pmatrix}\]
@@ -178,7 +178,7 @@ In diesem Abschnitt sei $A\in\mathbb{K}^{m\times n}$ und $T_A\in L(\mathbb{K}^n,
 Die Ränge von $A\in\mathbb{K}^{m\times n}$ und $T_A\in L(\mathbb{K}^n,\mathbb{K}^m)$ stimmen überein: rk$T_A=$rk$A$.
 \subsubsection{Bemerkung}
 Mit den Spalten $a_1,\cdots a_n\in \mathbb{K}^m$ von $A$ gilt $R(T_A)=$span$\{a_1,\cdots ,a_n\}$, weshalb insbesondere $R(T_A)$ und der Spaltenraum von $A$ gleiche Dimension haben.  Andererseits war rk$A$ nach Def. 2.6.1 die Dimension des Zeilenraumes von $A$.  Daher wird Satz 3.3.8 auch formuliert als: "`Spaltenrang=Zeilenrang"'.\\
-\underline{Beweis}: Zunächst merken wir an, dass $N(T_A)$ mit dem Lösungsraum $L_0\subseteq \mathbb{K}^n$ einer homogenen Gleichung $(L_0)$ übereinstimmt.  Nach Proposition 2.6.3 gilt also dim$N(T)=n-$rk$A$ Andererseits liefert der Dimensionssatz \ref{3.1.12}, dass $n=\mathrm{dim}N(T_A)+\mathrm{dim}N(T_A)=\mathrm{dim}N(T_A)+\mathrm{rk}T_A$ und folglich $\mathrm{rk}T_A=\mathrm{rk}A$.\\\\
+\underline{Beweis}: Zunächst merken wir an, dass $N(T_A)$ mit dem Lösungsraum $L_0\subseteq \mathbb{K}^n$ einer homogenen Gleichung $(L_0)$ übereinstimmt.  Nach Proposition 2.6.3 gilt also dim$N(T)=n-$rk$A$ Andererseits liefert der \hyperref[dimension]{Dimensionssatz \ref*{dimension}}, dass $n=\mathrm{dim}N(T_A)+\mathrm{dim}N(T_A)=\mathrm{dim}N(T_A)+\mathrm{rk}T_A$ und folglich $\mathrm{rk}T_A=\mathrm{rk}A$.\\\\
 Nun sei $A\in\mathbb{K}^{n\times n}$ quadratisch mit rk$A=n$.  Dies ist mit Satz 3.2.10 äquivalent dazu, dass $T_A\in L(\mathbb{K}^n)$ ein Isomorphismus ist.  Wir interessieren uns nun für die simultane Lösbarkeit von
 $Ax=e;\text{ für alle } 1\leq i\leq n$ welche wir mittels der augmentierten Matrix ($A,e_1,\cdots e_n)=(A,I_n)\in \mathbb{K}^{n\times (2n)}$ notieren.  Vermöge des Gauß-Verfahrens lässt sich $(A,I_n)$ auf die Form $(I_n,B)$ mit einem $B\in\mathbb{K}^{n\times n}$ bringen; nach Konstruktion ist $A\cdot B=I_n$.
 \subsubsection{Definition (inverse Matrix)}
