@@ -126,7 +126,7 @@ Insbesondere für $\mathbb{Z}_2^2$
 
 \[\begin{array}{c|cccc}\cdot _2 & \begin{pmatrix}0\\ 0\end{pmatrix} & \begin{pmatrix} 1 \\ 0 \end{pmatrix} & \begin{pmatrix}0 \\ 1\end{pmatrix} & \begin{pmatrix}1\\ 1\end{pmatrix} \\ \hline \\ 0 &\begin{pmatrix}0 \\ 0\end{pmatrix} &\begin{pmatrix}0\\ 0\end{pmatrix} &\begin{pmatrix}0\\ 0\end{pmatrix} & \begin{pmatrix}0\\ 0\end{pmatrix} \\ 1 &\begin{pmatrix}0 \\ 0\end{pmatrix} &\begin{pmatrix}1\\ 0\end{pmatrix} &\begin{pmatrix}0\\ 1\end{pmatrix} & \begin{pmatrix}1\\ 1\end{pmatrix}\end{array}\]
 \subsubsection{Beispiel (Lösungsmengen)}
-Mit Satz $1.4.3$ ist $L_0$ einer homogenen Gleichung ein Vektorraum über $\mathbb{K}$.  Die Lösungsmenge $L_b$ inhomogener Systeme ist kein linearer Raum über $\mathbb{K}$.
+Mit \hyperref[superposition]{Satz 1.4.3} ist \hyperref[L0]{$L_0$} einer homogenen Gleichung ein Vektorraum über $\mathbb{K}$.  Die Lösungsmenge \hyperref[Lb]{$L_b$} inhomogener Systeme ist kein linearer Raum über $\mathbb{K}$.
 \subsubsection{Beispiel (Funktionsräume)}
 Es sei $\omega \not= \emptyset$ und $X$ ein linearer Raum über $\mathbb{K}$.  Dann ist $F(\omega ,X):=\{ u:\omega \rightarrow X\}$ ein Vektorraum über $\mathbb{K}$ mit punktweise definierten arithmetischen Operationen $(a+v)(t) := u(t)+v(t),\ (\alpha u)(t):= \alpha u(t)$ für alle $t\in\omega ,\alpha \in\mathbb{K}$.\\
 Die Menge $F(\omega ,X)$ wird als Funktionenraum bezeichnet.  $\omega\in\mathbb{N},\ \omega\in\mathbb{Z}$, dann bezeichnen wir $F(\omega ,X)$ als Folgenraum.
@@ -202,6 +202,7 @@ $(\supseteq )$ Also Linearkombination von Vektoren aus $\mathcal{S}$ liegt $x$ a
 Demnach ist span$\mathcal{S}$ derjenige Unterraum welcher $\mathcal{S}$ und $\{x\}$ enthält.\\
 Damit folgt aus \hyperref[2.3.4]{Prop \ref*{2.3.4}}, dass span($\mathcal{S}\cup\{x\}$)=span$\mathcal{S}$.
 \subsubsection{Definition (lineare Unabhängigkeit)}
+\label{unabhaengig}
 Eine endliche Menge $\{x_1,\cdots ,x_n\}$ von Vektoren aus $X$ heißt linear unabhängig falls gilt:
 \[\sum^n_{k=1} \xi _k x_k = 0 \Rightarrow \xi _k =0 \forall n=1,n\]
 Griechische Buchstaben:
@@ -248,7 +249,7 @@ gilt in obiger Terminologie $A=I_m$.  Also besitzt $Ax=0$ nur die triviale Lösu
 \[x_1\begin{pmatrix}1\\ 2\\ 3\end{pmatrix}, x_2=\begin{pmatrix}4\\ 5\\ 6\end{pmatrix}, x_3=\begin{pmatrix}7\\ 8\\ \lambda \end{pmatrix}\]
 in $\mathbb{R}^3$ zu untersuchen, betrachten wir die Gleichung $(2.3b)$ mit
 \[A=\begin{pmatrix}1 & 4 & 7\\2 & 5 & 8\\ 3 & 6 & \lambda\end{pmatrix}\]
-und lösen sie mit dem in Beispiel 1.4.6 beschriebenen Schema:
+und lösen sie mit dem in \hyperref[reverse]{Beispiel \ref*{reverse}} beschriebenen Schema:
 \[\begin{array}{ccc|c}1 & 4 & 7 & 0\\ 2 & 5 & 6 & 0\\ 3 & 6 & \lambda&0 \end{array}\begin{matrix}\\ 2I-II\\ 3I-II\end{matrix} \Rightarrow \begin{array}{ccc|c}1 & 4 & 7 & 0\\ 0 & 3 & 6 & 0\\ 0 & 6 & 21 - \lambda & 0 \end{array}\begin{matrix}\\ :3\\ III-2II\end{matrix} \Leftrightarrow \begin{array}{ccc|c}1 & 4 & 7 & 0\\ 0 & 1 & 2 & 0\\ 0 & 0 & 9 - \lambda & 0 \end{array}\begin{matrix}\\ :3\\ III-2II\end{matrix}\]
 Also hat $Ax=0$ für $\lambda \not= 9$ nur die triviale Lösung (lineare Unabhängigkeit von $\{x_1,x_2,x_3\}$ und für $\lambda = 9$ nichttriviale Lösungen (lineare Abhängigkeit).
 \end{enumerate}
@@ -262,6 +263,7 @@ Eine Menge $\mathcal{X}$ mit $X=$span$\mathcal{X}$ wird Erzeugendessystem (EZS) 
 \subsubsection{Beispiel}
 Die Basis von $\{0\}$ ist die leere Menge.
 \subsubsection{Beispiel (Standardbasis)}
+\label{standardbasis}
 Die mittels der kanonischen Einheitsvektoren aus \hyperref[2.3.10]{Beispiel \ref*{2.3.10}} (1) gebildete Menge $\mathcal{E}_m:=\{e_1,\cdots ,e_m\}$ ist eine Basis von $\mathbb{K}^m$, die sogenannte Standardbasis, damit ist $\mathbb{K}^m$ endlich erzeugt.
 \subsubsection{Beispiel (Polynome)}
 \label{2.4.4}
@@ -348,11 +350,13 @@ Ergänze eine Basis von $Y_1$ zu einer Basis von $X$ gemäß \hyperref[2.4.9]{Pr
 Es sei $\mathbb{K}$ ein Körper und $A\in\mathbb{K}^{m\times n}$ mit den $n$ Spalten und den $m$ Zeilen.  Die $n$ Spalten seien $a_1,\cdots ,a_n\in \mathbb{K}^m$ und $a^1,\cdots ,a^m\in \mathbb{K}^{1\times n}$ die Zeilen von $A$.  Man bezeichnet den Unterraum span$\{a_k\}_{1\leq k\leq n}\subseteq \mathbb{K}^m$ als Spaltenraum und span$\{a^1,\cdots ,a^m\}\subseteq \mathbb{K}^{1\times n}$ als \underline{Zeilenraum} von $A$.
 \[A=\begin{pmatrix}a^1\\ \vdots \\ a^m\end{pmatrix} = (a_1,\cdots ,a_n)\]
 \subsubsection{Definition (Rang einer Matrix)}
+\label{Mrang}
 Der \underline{Rang} (rk$A$) einer Matrix $A\in\mathbb{K}^{m\times n}$ ist die Dimension ihres Zeilenraumes.
 \subsubsection{Bemerkung}
 $0\leq$rk$A\leq m$
 \[(L_0) Ax=0\]
 \subsubsection{Proposition}
+\label{2.6.3}
 Der Lösungsraum $L_0\subseteq\mathbb{K}^n$ von ($L_0$) erfüllt dim$L_0=n-$rk$A$.\\
 \underline{Beweis}:\\
 Wir können o.B.d.A (ohne Beschränkung der Allgemeinheit) annehmen, dass $A\in\mathbb{K}^{m\times n}$ in strenger Zeilen-Stufen-Form ist.  Es sei $r$ die Anzahl der Zeilen von $A$, welche mindestens ein Element $\not=\ 0$ besitzen - dies ist der Rang von $A$.  Für $1\leq i\leq r$ sei $j_i$ derjenige Spaltenindex, in welcher das erste Element $\not=\ 0$ der $i$-ten Zeile steht.  Weiter seien $k_1,\cdots ,k_{n-r}$ diejenigen Element von $\{1,\cdots ,n\}$, welche nicht in $\{j_1,\cdots ,j_r\}$ sind.  Dann gilt 

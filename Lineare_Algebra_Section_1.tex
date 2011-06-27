@@ -11,25 +11,29 @@
 \subsubsection{Definition (Relation)}
 Gegeben sein Mengen $X$ und $Y$.  Eine Teilmenge des kartesisches Produkt $X\times Y=\{(x,y):x\in X, y\in Y\}$ heißt \underline{Relation} ($R$) zwischen $X$ und $Y$; im Fall $X=Y$ spricht man von einer Relation auf $X$.  Ferner: $R^{-1}_1=\{(y,x)\in Y \in X: (x,y)\in R\}$ heißt \underline{Umkehrrelation}.
 \subsubsection{Beispiel}
+\label{1.1.2}
 Die Menge $R_0=\{(x,y)\in X\in Y: y \mathrm{\ ist\ Hauptstadt\ von\ } x$ ist eine Relation zwischen der Menge $X$ aller Länder und $Y$ aller Städte. \\
 \begin{center}
 \includegraphics[scale=0.4]{1-1-2.jpg}
 \end{center}
 \subsubsection{Beispiel}
+\label{1.1.3}
 Mit den Mengen $X=\mathbb{R}$ $Y=[0,\infty)$ ist $R_1=\{(x,\left| x\right|) \in X\times Y, X\in X\}$ ist eine Relation mit der Umkehrrelation $R^{-1}=\{(\left| x\right|,x):x\in X\}$.\\
 \begin{center}
 \includegraphics[scale=0.4]{1-1-3.jpg}
 \end{center}
 \subsubsection{Beispiel}
+\label{1.1.4}
 Mit den Mengen $X=Y=\mathbb{R}$ ist $R_2=\{(x,y)\in X\times Y:x \leq y\}$
 eine Relation $R^{-1}_{2}={(y,x):x\leq y}$ \\
  \begin{center}
 \includegraphics[scale=0.4]{1-1-4.jpg}
 \end{center}
 \subsubsection{Beispiel}
+\label{1.1.5}
 Die Menge $R_3=\{(x,y)\in C\times C:x\ \mathrm{und\ } y \mathrm{\ haben\ gleichen\ Hersteller}\}$ ist eine Relation auf der Menge aller Computer $C$.
 \subsubsection{Beschreibung (Gerichtete Graphen)}
-Relation $R$ auf endlichen Mengen $X$ können alternative wie folgt dargestellt werden.  Man repr\"{a}sen\-tiert die Elemente von $X$ als Punkte in der Ebene (\underline{Knoten}) und verbindet $x,y\in X$ genau dann durch einen Pfeil (\underline{gerichtete Kante}), wenn $(x,y)\in R$.  Das paar $(X,R)$ heißt \underline{gerichteter Graph} oder \underline{Digraph}, z.B. $X=\{a,b,c\}$ $R=\{(a,b),(b,c),(c,d)\}$.\\
+Relation $R$ auf endlichen Mengen $X$ können alternative wie folgt dargestellt werden.  Man repräsen\-tiert die Elemente von $X$ als Punkte in der Ebene (\underline{Knoten}) und verbindet $x,y\in X$ genau dann durch einen Pfeil (\underline{gerichtete Kante}), wenn $(x,y)\in R$.  Das paar $(X,R)$ heißt \underline{gerichteter Graph} oder \underline{Digraph}, z.B. $X=\{a,b,c\}$ $R=\{(a,b),(b,c),(c,d)\}$.\\
 \begin{center}
 \includegraphics[scale=0.4]{1-1-6.jpg}
 \end{center}
@@ -39,20 +43,21 @@ Eine Relation $R$ auf X heißt \\
 \underline{transitiv} $\Leftrightarrow (x,y)\in R \Rightarrow (x,z) \in R$ für alle $x,y,z\in X$\\
 \underline{symmetrisch} $\Leftrightarrow (x,y)\in R$ für alle $x,y\in X$
 \subsubsection{Beispiel}
-Die Relation $R_2$ aus Beispiel 1.1.4 ist reflexiv, transitiv, aber nicht Symmetrisch.  Die Relation $R_3$ aus Beispiel 1.1.5 ist reflexiv, transitiv und symmetrisch.
-\subsubsection{Definition (\"{A}quivalenzrelation)}
-Eine Relation $A$ auf eine Menge $X$ heißt eine \underline{\"{A}quivalenzrelation}, falls sie reflexiv, transitiv und symmetrisch ist.  F\"{u}r ein Paar $(x,y)\in A$  Schreiben wir $x\mathtt{\sim} y$ und nennen $x$ und $y$ \"{a}quivalent.
+\label{gerichtete}
+Die Relation $R_2$ aus \hyperref[1.1.4]{Beispiel \ref*{1.1.4}} ist reflexiv, transitiv, aber nicht Symmetrisch.  Die Relation $R_3$ aus \hyperref[1.1.5]{Beispiel \ref*{1.1.5}} ist reflexiv, transitiv und symmetrisch.
+\subsubsection{Definition (Äquivalenzrelation)}
+Eine Relation $A$ auf eine Menge $X$ heißt eine \underline{Äquivalenzrelation}, falls sie reflexiv, transitiv und symmetrisch ist.  Für ein Paar $(x,y)\in A$  Schreiben wir $x\mathtt{\sim} y$ und nennen $x$ und $y$ äquivalent.
 \subsubsection{Beispiel}
 \begin{enumerate}
-\item Sei $X$ eine beliebige Menge.  Dann ist $\{(x,y)\in X\times X:x=y\}$ eine \"{A}quivalenzrelation (\underline{Identit\"{a}tsrelation}).
-\item Ebenso ist das ganze Produkt $X\times X$ eine \"{A}quivalenzrelation (\underline{Allrelation}).
-\item Die Relation $R_3$ aus Beispiel 1.1.5 ist eine \"{A}quivalenzrelation.  Mit ihr lassen sich Computer nach ihrem Hersteller klassifizieren.
-F\"{u}r jedes $[x]:=\{y\in X:x \mathtt{\sim} y\}$ die von $X$ erzeugte \underline{\"{A}quivalenzklasse} und ein Element $y\in [x]$ heißt \underline{Repr\"{a}sentant} von $[x]$.
+\item Sei $X$ eine beliebige Menge.  Dann ist $\{(x,y)\in X\times X:x=y\}$ eine Äquivalenzrelation (\underline{Identitätsrelation}).
+\item Ebenso ist das ganze Produkt $X\times X$ eine Äquivalenzrelation (\underline{Allrelation}).
+\item Die Relation $R_3$ aus \hyperref[1.1.5]{Beispiel \ref*{1.1.5}} ist eine Äquivalenzrelation.  Mit ihr lassen sich Computer nach ihrem Hersteller klassifizieren.
+Für jedes $[x]:=\{y\in X:x \mathtt{\sim} y\}$ die von $X$ erzeugte \underline{Äquivalenzklasse} und ein Element $y\in [x]$ heißt \underline{Repräsentant} von $[x]$.
 \end{enumerate}
 \subsubsection{Beispiel}
 \begin{enumerate}
-\item F\"{u}r die Identit\"{a}tsrelation ist $[x]=\{x\}$ für alle $x\in X$.  Die Allrelation besitzt genau eine \"{A}quivalenzklasse $[x]=X$.
-\item Im Beispiel 1.1.5 sind die \"{A}quivalenzklassen die Menge aller Hersteller.
+\item Für die Identitätsrelation ist $[x]=\{x\}$ für alle $x\in X$.  Die Allrelation besitzt genau eine Äquivalenzklasse $[x]=X$.
+\item Im \hyperref[1.1.5]{Beispiel \ref*{1.1.5}} sind die Äquivalenzklassen die Menge aller Hersteller.
 \end{enumerate}
 
 \subsection{Abbildungen}
@@ -61,12 +66,12 @@ $F\subseteq D\times B$.\\
 \includegraphics[scale=0.4]{1-2.jpg}
 \end{center}
 \subsubsection{Definition (Abbildungen, Funktion)}
-Eine Relation F zwischen zwei nichtleeren Mengen $D$ und $B$ heißt \underline{Abbildung} oder \underline{Funktion} von $D$ nach $B$, falls f\"{u}r alle $x\in D$ gilt.\\
+Eine Relation F zwischen zwei nichtleeren Mengen $D$ und $B$ heißt \underline{Abbildung} oder \underline{Funktion} von $D$ nach $B$, falls für alle $x\in D$ gilt.\\
 1) Es existiert ein $y\in B$ mit $(x,y) \in F$\\
 2) Mit $y_1,y_2\in B$ folgt aus $(x,y_1) \in F$ und $(x,y_2)\in F$, dass $y_1=y_2$.\\
 Die Menge $D$ heißt \underline{Definitionsbereich}  und $B$ \underline{Bildbereich} von $F$.  Im Fall $D=B$ spricht man von einer \underline{Abbildung auf $D$} oder um einer \underline{Selbstabbildung auf $D$}.
 \subsubsection{Bemerkung}
-Veranschaulicht man Funktionen auf (endlichen) Mengen $D$ als gerichtete Graphen (Beispiel 1.1.6), so geht von jedem Knoten genau eine Kante ab.
+Veranschaulicht man Funktionen auf (endlichen) Mengen $D$ als gerichtete Graphen (\hyperref[gerichtete]{Beschreibung \ref*{gerichtete}}), so geht von jedem Knoten genau eine Kante ab.
 Anstelle der Notation $F \subseteq D \times B,\ (x,y)\in F$ schreibt man auch $f:D\rightarrow B, x\mapsto f(x)$ oder $y:=f(x)$
 Mit einer weiteren nichtleeren Menge $C$ und einer Abbildung $g:B\rightarrow C$ ist die \underline{Verknüpfung (Komposition)} von $g$ und $f$ definiert als $g\circ f: D\rightarrow C, (g\circ f)(x):=g(f(x))$.  Im Fall von Abbildungen $f,g$ auf $D$ gilt i.A. $f\circ g\not = g\circ f$.
 Statt einzelner Punkte $x\in D$ kann man auch Mengen $X\subseteq D$ abbilden: $f(X):=\{y\in B:$ es gibt ein $x\in X$ mit $y=f(x)\}$.  $f(X)$ heißt \underline{Bild} von $X$ unter $f$.  Das \underline{Urbild} einer Menge $Y\subseteq B$ ist definiert durch $f^{-1}(Y):=\{x\in D\ f(x)\in Y\}$.  Eine Abbildung $f:D\rightarrow B$ heißt \\
@@ -78,26 +83,28 @@ Eine Abbildung $f:D\rightarrow B$ ist genau dann bijektiv, wenn sie injektiv und
 \includegraphics[scale=0.4]{1-2-2.jpg}
 \end{center}
 \subsubsection{Beispiel (identische Abbildung)}
+\label{identische}
 Die \underline{identische Abbildung} auf eine Menge $D\not = \emptyset$ ist $id_D:D\rightarrow D,id_D(x):=x$. Sie ist bijektiv.
 \subsubsection*{Beispiel}
-Die Relation $R_0$ aus Beispiel 1.1.2 zwischen $X=\{Land\}$ und $Y=\{Stadt\}$ ist eine Funktion $r_o :X\rightarrow Y$ $r_0(Land):=$ Hauptstadt vom Land.  Ihr Bild ist $r_0(X)=\{$Hauptst\"{a}dte$\}$ und die Urbilder lauten:
+Die Relation $R_0$ aus \hyperref[1.1.2]{Beispiel \ref*{1.1.2}} zwischen $X=\{Land\}$ und $Y=\{Stadt\}$ ist eine Funktion $r_o :X\rightarrow Y$ $r_0(Land):=$ Hauptstadt vom Land.  Ihr Bild ist $r_0(X)=\{$Hauptstädte$\}$ und die Urbilder lauten:
 \[r_0^{-1}(\{s\}) = \begin{cases}
 \emptyset & \text{falls $s$ keine Hauptstadt},\\
 \{l\}& \text{falls $s$ Hauptstadt von $l$}.
 \end{cases}\]
-Folglich ist $r_0$ injektiv, aber nicht surjektiv.  Betrachtet man die Menge aller Haupst\"{a}dte als Bildbereich von $r_0$, so ist diese Abbildung auch surjektiv.
+Folglich ist $r_0$ injektiv, aber nicht surjektiv.  Betrachtet man die Menge aller Haupstädte als Bildbereich von $r_0$, so ist diese Abbildung auch surjektiv.
 \subsubsection{Beispiel}
-Die Relation $R_1$ zwischen $\mathbb{R}$ und $[0,\infty )$ aus Beispiel 1.1.3 ist eine Abbildung und lässt sich schreiben als $r_1:\mathbb{R}\rightarrow [0,\infty ),\ r_1(x):=\left|x\right|$
-F\"{u}r sie gilt $r_1(\mathbb{R}):=[0,\infty )$ und $r_1^{-1}(\{y\})=\{-y,y\}$ f\"{u}r alle $y\in [0,\infty )$.  Also ist $r_1:\mathbb{R}\rightarrow [0,\infty )$ surjektiv, aber nicht injektiv.  Betrachten wir $r_1$ mit ganz $\mathbb{R}$ als Bildbereich, so gilt $r_1^{-1}(\{y\})=\emptyset$ f\"{u}r $y<0$ und dann ist $r_1$ nicht mehr surjektiv.
+Die Relation $R_1$ zwischen $\mathbb{R}$ und $[0,\infty )$ aus \hyperref[1.1.3]{Beispiel \ref*{1.1.3}} ist eine Abbildung und lässt sich schreiben als $r_1:\mathbb{R}\rightarrow [0,\infty ),\ r_1(x):=\left|x\right|$
+Für sie gilt $r_1(\mathbb{R}):=[0,\infty )$ und $r_1^{-1}(\{y\})=\{-y,y\}$ für alle $y\in [0,\infty )$.  Also ist $r_1:\mathbb{R}\rightarrow [0,\infty )$ surjektiv, aber nicht injektiv.  Betrachten wir $r_1$ mit ganz $\mathbb{R}$ als Bildbereich, so gilt $r_1^{-1}(\{y\})=\emptyset$ für $y<0$ und dann ist $r_1$ nicht mehr surjektiv.
 \subsubsection{Beispiel (ASCII-Code)}
+\label{ascii}
 Der ASCII-Code zur Codierung alpha-numerischer Zeichen ist gegeben durch eine bijektive Abbildung $f:\{0,1,\cdots ,255\text{ bzw. $127$}\}\rightarrow \{$Zeichen$\}$.\\
-Einfache Beispiele (etwa Beispiel 1.2.5) zeigen, dass die Umkehrrelation $F^{-1}$ einer Abbildung $F\subseteq D\times B$ bzw. $f:D\rightarrow B$ nicht unbedingt eine Abbildung ist.
+Einfache Beispiele (etwa \hyperref[ascii]{Beispiel \ref*{ascii}}) zeigen, dass die Umkehrrelation $F^{-1}$ einer Abbildung $F\subseteq D\times B$ bzw. $f:D\rightarrow B$ nicht unbedingt eine Abbildung ist.
 \subsubsection{Definition (Umkehrabbildung)}
-Eine Abbildung $f:D\rightarrow B$ heißt \underline{umkehrbar}, falls ihre Umkehrrelation $F^{-1}$ wieder eine Abbildung ist.  F\"{u}r letztere schreibt man $f^{-1}:B\rightarrow D$ und nennt sie \underline{Umkehrabbildung} von $f$.
+Eine Abbildung $f:D\rightarrow B$ heißt \underline{umkehrbar}, falls ihre Umkehrrelation $F^{-1}$ wieder eine Abbildung ist.  Für letztere schreibt man $f^{-1}:B\rightarrow D$ und nennt sie \underline{Umkehrabbildung} von $f$.
 \subsubsection{Bemerkung}
 Mit einer umkehrbaren Abbildung $f:D\rightarrow B$ ist auch ihre Umkehrfunktion $f^{-1}:B\rightarrow D$ umkehrbar mit $f^{-1}\circ f = id_D$ und $f\circ f^{-1}=id_B$.
 \subsubsection{Korollar}
-Eine Abbildung $f:D\rightarrow B$ ist genau dann umkehrbar, wenn $f$ bijektiv ist.  F\"{u}r umgekehrtes $f$ existiert die Umkehrfunktion nur auf $f(D)$. \\
+Eine Abbildung $f:D\rightarrow B$ ist genau dann umkehrbar, wenn $f$ bijektiv ist.  Für umgekehrtes $f$ existiert die Umkehrfunktion nur auf $f(D)$. \\
 \underline{Beweis}: Hausaufgabe
 \subsection{Matrizen}
 Wir führen kurz die komplexen Zahlen $\mathbb{C}$ ein.  Darunter versteht man alle Paare $z=(x,y)$ reeller Zahlen $x,y\in \mathbb{R}$ mit der \underline{Addition}: \[z_1+z_2=(x_1+x_2,y_1+y_2)\] und der \underline{Multiplikation}: \[z_1\cdot z_2:=z_1z_2=(x_1x_2-y_1y_2,x_1y_2+x_2y_1)\] wobei $z_1=(x_1,y_1),z_2=(x_2,y_2)$ \\
@@ -113,7 +120,7 @@ Wobei $x$ der Realteil ($Rez=x$) ist und $y$ der Imaginärteil ($Imz=y$).\\
 Im Folgenden stehe $\mathbb{K}$ für eine der drei Mengen $\mathbb{Q}$ (rationalen Zahlen), $\mathbb{R}$ (reelle Zahlen) oder $\mathbb{C}$.
 \subsubsection{Definition (Matrix)}
 Eine $m\times m$-Matrize ist ein rechteckiges Schema von Zahlen $a_{ij}\in \mathbb{K}$ der Form \[A=(a_{i,j}) 1\leq i\leq m,1\leq j\leq m =\left( \begin{array}{cccc}a_{1,1}& a_{1,2}& \cdots & a_{1,m}\\ a_{2,1}& a_{2,2}& \cdots & a_{2,m} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m,1}& a_{m,2}& \cdots & a_{m,m}\end{array}\right) \]
-Der erste Index $i\in\{1,\cdots ,m\}$ nummeriert die $m$ \underline{Zeilen}, der zweite Index $j\in \{1,\cdots ,m\}$ die $m$ Spalten der Matrix $A$, das \underline{Element} $a_{ij}\in \mathbb{K}$ steht daher in der $i$-ten Zeile und der $j$-ten Spalte.  F\"{u}r die Menge aller solchen Matrizen schreiben wir $\mathbb{K}^{m\times m}$. Für eine \underline{quadratische Matrix} A gilt $m = n$ und die $a_{i,i}$ heißen \underline{Diagonalelement}.
+Der erste Index $i\in\{1,\cdots ,m\}$ nummeriert die $m$ \underline{Zeilen}, der zweite Index $j\in \{1,\cdots ,m\}$ die $m$ Spalten der Matrix $A$, das \underline{Element} $a_{ij}\in \mathbb{K}$ steht daher in der $i$-ten Zeile und der $j$-ten Spalte.  Für die Menge aller solchen Matrizen schreiben wir $\mathbb{K}^{m\times m}$. Für eine \underline{quadratische Matrix} A gilt $m = n$ und die $a_{i,i}$ heißen \underline{Diagonalelement}.
 \[A'=\left( \begin{array}{ccc}a_{1,1}& \cdots & a_{1,n}\\\vdots & \ddots & \vdots\\a_{m,1}& \cdots & a_{m,n}\end{array}\right)\]
 \subsubsection{Beispiel ($n$ Tupeln, $m$-Spalten)}
 Ein \underline{$n$-Tupel} $x=(x_1,\cdots ,x_n)$ von Zahlen $X$ aus $\mathbb{K}$ wird als $1\times m$-Matrix interpretiert.  Eine \underline{$m$-Spalte} $x=\left(\begin{array}{c}x_1\\\vdots \\x_m\end{array}\right)$
@@ -145,7 +152,7 @@ $\left(\begin{array}{cc}6 & 7 \\ 8 & 9\end{array}\right)\left(\begin{array}{ccc}
 Im RGB-Farbmodell werden Farben durch Tupel $(r,g,b)$ reeller Zahlen $r,g,b\in \mathbb{R}$ beschreiben: $(1,0,0)$ = rot, $(0,0,1)$ blau, $(1,1,0)$ gelb.  Alternativ: $YIQ$-Modell $(y,i,q)$. \\
 Umrechnung $\left(\begin{array}{c}y\\i\\q\end{array}\right)=\left(\begin{array}{ccc}0.3 & 0.6 & 0.1\\ 0.6 & -0.3 & -0.3\\ 0.2 & -0.5 & 0.3\end{array}\right) \left(\begin{array}{c}r\\g\\b\end{array}\right)$.
 \subsubsection{Beispiel (Inzedenzmatrix)}
-Gerichtete Graphen ohne Schleifen (kein Knoten wird durch eine Kante mit sich selbst verbunden, siehe Bemerkung 1.1.6) mit den Knoten ${\hat{1},\cdots, \hat{m}}$ mit den Knoten ${1,\cdots ,m}$ lassen sich durch eine sogenannte \underline{Inzedenzmatrix} $A\in \mathbb{K}^{m\times n}$ beschreiben mit
+Gerichtete Graphen ohne Schleifen (kein Knoten wird durch eine Kante mit sich selbst verbunden, siehe \hyperref[gerichtete]{Beschreibung \ref*{gerichtete}}) mit den Knoten ${\hat{1},\cdots, \hat{m}}$ mit den Knoten ${1,\cdots ,m}$ lassen sich durch eine sogenannte \underline{Inzedenzmatrix} $A\in \mathbb{K}^{m\times n}$ beschreiben mit
 \[a_{i,j}=\begin{cases}1,\text{ Von Knoten }\hat{1}\text{ geht die Kante }j\text{ aus.}\\ -1,\text{ ein Knoten }\hat{1}\text{ mündet die Kante }j\\0,\text{ Knoten }\hat{1}\text{ und Kante }j\text{ berühren sich nicht.}\end{cases}\]. 
 \begin{tikzpicture}[node distance=2cm, auto]
 \node (1) {$\hat{1}$};
@@ -177,18 +184,20 @@ Für Zahlen $\alpha \in \mathbb{K}$ und Matrizen $A\in \mathbb{K}^{m\times n},B\
 Beweis: Übung.
 \subsection{Lineare Gleichungen}
 \subsubsection{Definition (lineare Gleichung)}
-Es seien $A\in \mathbb{K}^{m\times n}$ und $b\in \mathbb{K}^{m}$.  Dann bezeichnet man $(L_b)\ Ax=b$ als lineares \underline{Gleichungssystem} mit $m$ Gleichungen für die $n$ unbekannten $x_m\in \mathbb{K}$ oder kurz also \underline{lineare Gleichung} in $\mathbb{K}^m$.  $A$ heißt \underline{Koeffizientenmatrix} und $b$ \underline{Inhomogenität} von $(L_b)$.  Im Fall $b\not= 0$ nennt man $(L_b)$ \underline{inhomogen} und erhält andernfalls die \underline{homogene Gleichung}: $(L_0)\ Ax=0$.  Eine Lösung von $(L_b)$ ist ein Element $x\in \mathbb{K}^m$ mit $Ax=b$ und $L_b:=\{ x\in \mathbb{K}^m:Ax=b\}$ steht für die \underline{Lösungsmenge} von $(L_b)$.
+Es seien $A\in \mathbb{K}^{m\times n}$ und $b\in \mathbb{K}^{m}$.  Dann bezeichnet man $\label{Lb}(L_b)\ Ax=b$ als lineares \underline{Gleichungssystem} mit $m$ Gleichungen für die $n$ unbekannten $x_m\in \mathbb{K}$ oder kurz also \underline{lineare Gleichung} in $\mathbb{K}^m$.  $A$ heißt \underline{Koeffizientenmatrix} und $b$ \underline{Inhomogenität} von (\hyperref[Lb]{$L_b$}).  Im Fall $b\not= 0$ nennt man (\hyperref[Lb]{$L_b$}) \underline{inhomogen} und erhält andernfalls die \underline{homogene Gleichung}: $\label{L0}(L_0)\ Ax=0$.  Eine Lösung von (\hyperref[Lb]{$L_b$}) ist ein Element $x\in \mathbb{K}^m$ mit $Ax=b$ und $L_b:=\{ x\in \mathbb{K}^m:Ax=b\}$ steht für die \underline{Lösungsmenge} von (\hyperref[Lb]{$L_b$}).
 \subsubsection{Bemerkung}
 (1) Ausgeschrieben lautet $(L_b)$:\\$a_{1,1}x_1+a_{1,2}x_2+\cdots +a_{1,n}x_n = b_1\\a{2,1}x_1+a_{2,2}x_2+\cdots +a_{2,n}x_n = b_2\\\cdots \\a{m,1}x_1+a_{m,2}x_2+\cdots +a_{m,n}x_n=b_m$.\\Oder noch unübersichtlicher $\sum^n_{j=1} a_{i,j}x_j = b_i$ für $1\leq i\leq m$.\\
 (2) $(L_b)$ hat stehts die \underline{triviale Lösung} $0\in \mathbb{K}^m$.  Inhomogene Gleichungen müssen nicht unbedingt lösbar sein: $0x=1$.\\
 \subsubsection{Satz (Superpositionsprinzip)}
-Es seien $x,y \in \mathbb{K}^n$ Lösungen von ($L_0$).  Dann ist auch $\alpha x+\beta y$ eine Lösung von ($L_0$), d.h. $\alpha x+\beta y\in L_0$ für alle $\alpha ,\beta \in \mathbb{K}$. \\
+\label{superposition}
+Es seien $x,y \in \mathbb{K}^n$ Lösungen von (\hyperref[L0]{$L_0$}).  Dann ist auch $\alpha x+\beta y$ eine Lösung von (\hyperref[L0]{$L_0$}), d.h. $\alpha x+\beta y\in L_0$ für alle $\alpha ,\beta \in \mathbb{K}$. \\
 Beweis: Übung.
 \subsubsection{Satz}
-Ist $\hat{x}\in\mathbb{K}^n$ eine Lösung von ($L_b$) so gilt $L_b=\hat{x}+L_0$.  Hierbei: Für gegebene $x\in\mathbb{K}^n,A\subseteq \mathbb{K}^n$ ist $x+A:=\{y\in \mathbb{K}^n:\text{ es gibt ein }a\in A\text{ mit } y=x+a\}$\\
+\label{1.4.4}
+Ist $\hat{x}\in\mathbb{K}^n$ eine Lösung von (\hyperref[Lb]{$L_b$}) so gilt $L_b=\hat{x}+L_0$.  Hierbei: Für gegebene $x\in\mathbb{K}^n,A\subseteq \mathbb{K}^n$ ist $x+A:=\{y\in \mathbb{K}^n:\text{ es gibt ein }a\in A\text{ mit } y=x+a\}$\\
 Beweis: Übung.
-Nun: Explizite Lösung von ($L_b$)!\\
-Besonders einfach, falls $A\in\mathbb{K}^{m\times n}$ diagonal ist gilt nämlich $a_{i,i}\not=0,1\leq i\leq n$, so besitzt ($L_b$) die eindeutige Lösung $x\in\mathbb{K}^n$ mit Elementen $X_1=\dfrac{b_i}{a_{i,i}}$ für $1\leq 1\leq n$ ist dagegen $d_{i,i}=0$ für ein $1\leq i\leq n$, so besitzt ($L_b$) unendlich viele Lösungen für $b_i=0$ und anderenfalls keine Lösung.\\
+Nun: Explizite Lösung von (\hyperref[Lb]{$L_b$})!\\
+Besonders einfach, falls $A\in\mathbb{K}^{m\times n}$ diagonal ist gilt nämlich $a_{i,i}\not=0,1\leq i\leq n$, so besitzt (\hyperref[Lb]{$L_b$}) die eindeutige Lösung $x\in\mathbb{K}^n$ mit Elementen $X_1=\dfrac{b_i}{a_{i,i}}$ für $1\leq 1\leq n$ ist dagegen $d_{i,i}=0$ für ein $1\leq i\leq n$, so besitzt (\hyperref[Lb]{$L_b$}) unendlich viele Lösungen für $b_i=0$ und anderenfalls keine Lösung.\\
 \underline{Allgemeinere Klasse}: Ein $A\in \mathbb{K}^{m\times n}$ ist in \underline{Zeilen-Stufen-Form} (ZSF) falls in jeder Zeile gilt:
 \begin{enumerate}
 \item[(1)] Beginnt sie mit $k$ Nullen, so stehen unter diesen Nullen lediglich weitere Nullen.\\
@@ -212,19 +221,21 @@ sind nicht in ZSF.
 \end{itemize}
 \end{enumerate}
 \subsubsection{Beispiel (Rückwärts-Substitution)}
-Die inhomogene lineare Gleichung $(1.4b)\begin{cases}x_1+2x_2+3x_3+4x_4=1,\\ x_2+2x_3+3x_4=1,\\x_3+2x_4=1\end{cases}$ hat die Koeffizientenmatrix bzw. Inhomogenität $A=\left(\begin{array}{cccc}1 & 2 & 3 & 4 \\ 0 & 1 & 2 & 3\\ 0 & 0 & 1 & 2\end{array}\right), b=\left(\begin{array}{c}1\\ 1\\ 1\\\end{array}\right)$\\
-\underline{Rückwärtssubstitution}: Aus der letzten Gleichung $x_3+2x_4=1$ sieht man, dass $x_4=t$ frei gewählt wenden kann, $t\in \mathbb{K}$.  Dies liefert $x_3=1-2t$.  Die bekannten variablen $x_3,x_4$ können in die zweite Gleichung von ($1.4b$) eingesetzt werden, also $x_2 = 1-2x_3-3x_4=t-1$ und analog liefert die erste Gleichung $x_1=1-2x_2-3x_3-4x_4=0$.  Die Lösungsmenge von ($1.4b$) ist also:\[L_b=\left\{\left(\begin{array}{c}0\\ t-1\\ 1-2t\\ t\end{array}\right)\in \mathbb{K}^4:t\in\mathbb{K}\right\} = \left(\begin{array}{c}0\\ -1\\ 1\\ 0\end{array}\right)+\mathbb{K}\left(\begin{array}{c}0\\ 1\\ -2 \\1\end{array}\right)\]
-Die Lösungsmenge $L_b$ von ($L_b$) ändert sich nicht, wenn folgende Operationen auf ($1.4b$) angewandt werden:
+\label{reverse}
+Die inhomogene lineare Gleichung
+$\label{1.4b}(1.4b)\begin{cases}x_1+2x_2+3x_3+4x_4=1,\\ x_2+2x_3+3x_4=1,\\x_3+2x_4=1\end{cases}$ hat die Koeffizientenmatrix bzw. Inhomogenität $A=\left(\begin{array}{cccc}1 & 2 & 3 & 4 \\ 0 & 1 & 2 & 3\\ 0 & 0 & 1 & 2\end{array}\right), b=\left(\begin{array}{c}1\\ 1\\ 1\\\end{array}\right)$\\
+\underline{Rückwärtssubstitution}: Aus der letzten Gleichung $x_3+2x_4=1$ sieht man, dass $x_4=t$ frei gewählt wenden kann, $t\in \mathbb{K}$.  Dies liefert $x_3=1-2t$.  Die bekannten variablen $x_3,x_4$ können in die zweite Gleichung von (\hyperref[1.4b]{$1.4b$}) eingesetzt werden, also $x_2 = 1-2x_3-3x_4=t-1$ und analog liefert die erste Gleichung $x_1=1-2x_2-3x_3-4x_4=0$.  Die Lösungsmenge von ($1.4b$) ist also:\[L_b=\left\{\left(\begin{array}{c}0\\ t-1\\ 1-2t\\ t\end{array}\right)\in \mathbb{K}^4:t\in\mathbb{K}\right\} = \left(\begin{array}{c}0\\ -1\\ 1\\ 0\end{array}\right)+\mathbb{K}\left(\begin{array}{c}0\\ 1\\ -2 \\1\end{array}\right)\]
+Die Lösungsmenge $L_b$ von (\hyperref[Lb]{$L_b$}) ändert sich nicht, wenn folgende Operationen auf (\hyperref[1.4b]{$1.4b$}) angewandt werden:
 \begin{itemize}
 \item Vertauschen von Gleichungen
 \item Multiplikation von Gleichungen mit $\alpha \in \mathbb{K}\\\{0\}$
 \item Addition des $\alpha$-fachen der $k$-ten Gleichung zur $j$-ten.\\
 Diese sind \underline{elementare Zeilentransformationen}.
 \end{itemize}
-ZIEL: Transformiere $A$ bzw. ($L_b$) auf ZSF mittels elementarer Zeilentransformationen.  Systematisch: Gauß Algorithmus.\\
+ZIEL: Transformiere $A$ bzw. (\hyperref[Lb]{$L_b$}) auf ZSF mittels elementarer Zeilentransformationen.  Systematisch: Gauß Algorithmus.\\
 Zu seiner Beschreibung gehen wir davon aus, dass die erste Spalte von $A$ von $0$ verschieden ist (anderenfalls sind $x_1,\cdots ,x_n$ umzunummerieren).  Ohne Sonderfälle zu berücksichtigen gilt:
 \begin{enumerate}
-\item Ordne die Gleichungen in ($1.4a$) so an, dass $a_m\not= 0$.  In der gängigen Notation schreibt man nun ($1.4b$) als $\begin{array}{cccc|c}a_{1,1} & a_{1,2} & \cdots & a_{1,n} & b_1\\a_{2,1} & a_{2,2} & \cdots & a_{2,n} & b_2\\\vdots & \vdots & \ddots &\vdots &\vdots \\a_{m,1} & a_{m,2} & \cdots & a_{m,n} & b_m\end{array}$
+\item Ordne die Gleichungen in ($1.4a$) so an, dass $a_m\not= 0$.  In der gängigen Notation schreibt man nun (\hyperref[1.4b]{$1.4b$}) als $\begin{array}{cccc|c}a_{1,1} & a_{1,2} & \cdots & a_{1,n} & b_1\\a_{2,1} & a_{2,2} & \cdots & a_{2,n} & b_2\\\vdots & \vdots & \ddots &\vdots &\vdots \\a_{m,1} & a_{m,2} & \cdots & a_{m,n} & b_m\end{array}$
 \item Subtrahiere von der $i$-ten Gleichung, $2\leq i\leq m$ in ($1.4a$) das $\dfrac{a_{i,1}}{a_{1,1}}$-fache der ersten Gleichung: 
 \[\begin{array}{cccc|c}a_{1,1} & a_{1,2} & \cdots & a_{1,n} & b_1\\0 & a_{2,2}^{(1)} & \cdots & a_{2,n}^{(1)} & b_2^{(1)}\\ \vdots &\vdots &\ddots &\vdots &\vdots \\0 & a_{m,2}^{(2)} & \cdots & a_{m,n}^{(1)} & b_m^{(1)}\end{array} \begin{cases}a_{1,1}x_1+\cdots + a_{1,n}x_n=b_1 \\ A^{(1)}x^{(1)} = b^{(1)}\end{cases}\]
 mit $A^{(1)}\in\mathbb{K}^{(m-1)\times (n-1)},b\in \mathbb{K}^{m-1}$.
@@ -232,36 +243,37 @@ mit $A^{(1)}\in\mathbb{K}^{(m-1)\times (n-1)},b\in \mathbb{K}^{m-1}$.
 \item Löse das resultierende System durch Rückwärts-Substitution.
 \end{enumerate}
 \subsubsection{Beispiel}
-Als Kurzschreibweise für \[(1.4d)\begin{cases}x_1+2x_2+3x_3=0\\ 4x_1+5x_2+6x_3=0\\ 7x_1+8x_2+9x_3=0\end{cases}\]
+Als Kurzschreibweise für \[\label{1.4d}(1.4d)\begin{cases}x_1+2x_2+3x_3=0\\ 4x_1+5x_2+6x_3=0\\ 7x_1+8x_2+9x_3=0\end{cases}\]
 \[\begin{array}{ccc|c}1 & 2 & 3 & 0\\ 4 & 5 & 6 & 0\\ 7 & 8 & 9 & 0\end{array} \begin{array}{c} \\ II - 4I\\ II-7I\end{array} \Leftrightarrow \begin{array}{ccc|c}1 & 2 & 3 & 0\\ 0 & -3 & -6 & 0\\ 0 & -6 & -12 & 0\end{array} \begin{array}{c} \\ (-\frac{1}{3})\\ III-2II\end{array} \Leftrightarrow \begin{array}{ccc|c}1 & 2 & 3 & 0\\ 0 & 1 & 2 & 0\\ 0 & 0 & 0 & 0\end{array}\]
-Damit ist ($1.4d$) äquivalent zu $\begin{cases}x_1+2x_2+3x_3=0\\ x_2+2x_3=0\end{cases}$\\
-Rückwärts-Substitution: Wähle $x_3=t$ mit $t\in\mathbb{K}$ und es folgt $x_2=-2x_3=-2t,x_1=-2x_2+3x_3=t$.  Die Lösungsmenge von ($1.4d$) ergibt sich zu:
+Damit ist (\hyperref[1.4d]{$1.4d$}) äquivalent zu $\begin{cases}x_1+2x_2+3x_3=0\\ x_2+2x_3=0\end{cases}$\\
+Rückwärts-Substitution: Wähle $x_3=t$ mit $t\in\mathbb{K}$ und es folgt $x_2=-2x_3=-2t,x_1=-2x_2+3x_3=t$.  Die Lösungsmenge von (\hyperref[1.4d]{$1.4d$}) ergibt sich zu:
 \[ L_0=\left\{\left(\begin{array}{c}1\\ -2\\ 1\end{array}\right) \in \mathbb{K}^3:t\in\mathbb{K}\right\} = \mathbb{K}\left(\begin{array}{c}1\\ -2\\ 1\end{array}\right)\]
 \subsubsection{Satz}
 \label{1.4.8}
-Hat ($L_0$) weniger Gleichungen als Unbekannte, also $m<n$, so besitzt sie unendlich viele Lösungen.
+Hat (\hyperref[L0]{$L_0$}) weniger Gleichungen als Unbekannte, also $m<n$, so besitzt sie unendlich viele Lösungen.
 \underline{Beweis}:
 \renewcommand{\labelenumi}{\Roman{enumi}.}
 \begin{enumerate}
-\item Man zeigt (*) ($L_0$) hat eine nichttriviale Lösung.
-\item Da ($L_0$) nach Schritt (I) eine Lösung $x\not= 0$ besitzt ist nach dem superpositionsprinzip aus Satz 1.4.3 auch jeder $tx,t\in \mathbb{K}$, eine Lösung \#.
+\item Man zeigt (*) (\hyperref[L0]{$L_0$}) hat eine nichttriviale Lösung.
+\item Da (\hyperref[L0]{$L_0$}) nach Schritt (I) eine Lösung $x\not= 0$ besitzt ist nach dem superpositionsprinzip aus \hyperref[superposition]{Satz \ref*{superposition}} auch jeder $tx,t\in \mathbb{K}$, eine Lösung \#.
 \end{enumerate}
 \subsubsection{Satz}
-Besitzt ($L_b$) genauso viele Gleichungen wie Unbekannte, also $m=n$, so gilt:
+\label{1.4.9}
+Besitzt (\hyperref[Lb]{$L_b$}) genauso viele Gleichungen wie Unbekannte, also $m=n$, so gilt:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
-\item Ist $L_0=\{0\}$, so besitzt ($L_b$) genau eine Lösung.
-\item Besitzt ($L_0$) eine nichttriviale Lösung, so existieren entweder keine oder unendlich viele verschiedene Lösungen von ($L_b$)
+\item Ist $L_0=\{0\}$, so besitzt (\hyperref[Lb]{$L_b$}) genau eine Lösung.
+\item Besitzt (\hyperref[L0]{$L_0$}) eine nichttriviale Lösung, so existieren entweder keine oder unendlich viele verschiedene Lösungen von (\hyperref[Lb]{$L_b$})
 \end{enumerate}
 \underline{Beweis}:
 \begin{enumerate}
 \item Wie gehen mittels vollständiger Induktion vor.\\
-Für $n=1$ gilt die Behauptung offenbar.  Im Induktionsschritt gelte (a) für $n-1$.  Da ($L_0$) nur die triviale Lösung hat gilt $A\not= 0$.  Durch Umnummerieren erreichen wir $a_{1,1}\not= 0$.  Dann wird zur $i$-ten Gleichung, $2\leq i$, in ($1.4a$) das $-\frac{a_{i,1}}{a_{1,1}}$-fache der ersten Gleichung addiert:
+Für $n=1$ gilt die Behauptung offenbar.  Im Induktionsschritt gelte (a) für $n-1$.  Da (\hyperref[L0]{$L_0$}) nur die triviale Lösung hat gilt $A\not= 0$.  Durch Umnummerieren erreichen wir $a_{1,1}\not= 0$.  Dann wird zur $i$-ten Gleichung, $2\leq i$, in ($1.4a$) das $-\frac{a_{i,1}}{a_{1,1}}$-fache der ersten Gleichung addiert:
 \[(1.4f)\begin{cases}a_{1,1}x_1+\cdots +a_{1,n}x_n = b_1\\ A^*=\left[\begin{array}{c}x_2\\ \cdots \\ x_n\end{array}\right]= b^*\end{cases} \text{ mit }A^*\in \mathbb{K}^{(n-1)\times (m-1)}, b^*\in \mathbb{K}^{n-1} \]
 Beweis: \\
 Wir wissen:
 \begin{enumerate}
-\item Die homogene Gleichung $A^*x^* = 0$ hat nur die triviale Lösung, denn sonst hätte ($L_0$) eine nicht triviale Lösung.  Das Teilsystem $A^*x^* = b^*$ besitzt nach Induktionsannahme genau eine Lösung $x^*$ mit Elementen $x_2,\cdots ,x_m$.  Durch Einsetzten in die erste Gleichung in ($1.4f$) folgt ein eindeutiger Wert $x_1$ und die Lösung von ($L_b$) in eindeutiger Weise.
-\item Es sei $\hat{x}$ eine Lösung von ($L_b$) und $x$ eine nichttriviale Lösung von ($L_o$).  Dann liefern die Sätze $1.4.3$ und $1.4.4$, dass $\hat{x}+\alpha x$ die Gleichung löst für jedes $\alpha \in \mathbb{K}$.  In diesem Fall hat ($L_b$) unendlich viele Lösungen.  Die einzige verbleibende Möglichkeit ist, dass ($L_b$) keine Lösung besitzt.
+\item Die homogene Gleichung $A^*x^* = 0$ hat nur die triviale Lösung, denn sonst hätte (\hyperref[L0]{$L_0$}) eine nicht triviale Lösung.  Das Teilsystem $A^*x^* = b^*$ besitzt nach Induktionsannahme genau eine Lösung $x^*$ mit Elementen $x_2,\cdots ,x_m$.  Durch Einsetzten in die erste Gleichung in ($1.4f$) folgt ein eindeutiger Wert $x_1$ und die Lösung von (\hyperref[Lb]{$L_b$}) in eindeutiger Weise.
+\item Es sei $\hat{x}$ eine Lösung von (\hyperref[Lb]{$L_b$}) und $x$ eine nichttriviale Lösung von ($L_o$).  Dann liefern die Sätze \hyperref[superposition]{\ref*{superposition}} und \hyperref[1.4.4]{\ref*{1.4.4}}, dass $\hat{x}+\alpha x$ die Gleichung löst für jedes $\alpha \in \mathbb{K}$.  In diesem Fall hat (\hyperref[Lb]{$L_b$}) unendlich viele Lösungen.  Die einzige verbleibende Möglichkeit ist, dass (\hyperref[Lb]{$L_b$}) keine Lösung besitzt.
 \end{enumerate}
 \end{enumerate}

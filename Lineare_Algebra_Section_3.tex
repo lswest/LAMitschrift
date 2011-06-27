@@ -13,12 +13,14 @@ Für lineare Abbildungen schreibt man $Tx:=T(x)$.
 \item Die Menge $L(X,Y)$ ist ein Unterraum von $F(X,Y)$; wir kürzen ferner ab $L(X):=L(X,X)$.  Ist $Z$ ein weiterer linearer Raum und $T\in L(X,Y),S\in L(Y,Z)$, so ist auch die Komposition $S\circ T:X\rightarrow Z$ linear. $(L(X),\circ )$ ist eine Halbgruppe mit neutralem Element $id_x$.
 \end{enumerate}
 \subsubsection{Beispiel}
-Die \underline{Nullabbildung} $0:X\rightarrow Y,\ 0x:=0\in Y$ ist linear, wie auch die identische Abbildung $id_x:X\rightarrow X$ aus Beispiel 1.2.3
+Die \underline{Nullabbildung} $0:X\rightarrow Y,\ 0x:=0\in Y$ ist linear, wie auch die identische Abbildung $id_x:X\rightarrow X$ aus \hyperref[identische]{Beispiel \ref*{identische}}
 \subsubsection{Beispiel (affine Abbildungen)}
 Eine Abbildung von $S:X\rightarrow Y$ heißt \underline{affin}, falls es $T\in L(X,Y)$ und $y\in Y$ derart gibt, dass $S(x)=Tx+y$.  $S$ ist genau dann linear , falls $y=0$.
 \subsubsection{Beispiel (die Abbildung $T_A$)}
+\label{3.1.5}
 Die wichtigsten linearen Abbildungen dieser Vorlesung sind von der Form $T_A:\mathbb{K}^n\rightarrow \mathbb{K}^m,\ T_Ax=Ax$ mit $A\in\mathbb{K}^{m\times n}$.  Auch die Abbildung $\mathbb{K}^{m\times n}\rightarrow L(\mathbb{K}^n,\mathbb{K}^m),\ A\mapsto T_A$ ist linear.
 \subsubsection{Beispiel}
+\label{3.1.6}
 \begin{enumerate}
 \item Es sei $\Omega \not= \emptyset$ eine Menge und $x\in \Omega$.  Dann ist die \underline{Auswertung} $ev_x: F(\Omega ,X)\rightarrow X,\ ev_x(u):=u(x)$ linear.
 \item Es sei $I\subseteq \mathbb{R}$ ein Intervall.  Dann ist die \underline{Differenziation} $D:C^1(I,\mathbb{R})\rightarrow C(I,\mathbb{R}),\ Du:=u'$ linear.
@@ -29,11 +31,13 @@ Die wichtigsten linearen Abbildungen dieser Vorlesung sind von der Form $T_A:\ma
 \subsubsection{Beispiel (Vorwärts-Shift)}
 Es sei $X$ ein linearer Raum und $\mathbb{I}\in\{\mathbb{N}_0,\mathbb{Z}\}$.  Bezeichnet dann $l(\mathbb{I})$ den linearen Raum aller Folgen $F(\mathbb{I},X)$, so ist der durch $(S\phi )_k:=\phi _{k+1}$ definierte \underline{Vorwärts-Shift} eine Abbildung $S\in L(l(\mathbb{I}))$.
 \subsubsection{Definition (Kern, Bild, Rang)}
-Ist $T\in L(X,Y)$, so bezeichnet $N(T):=\{x\in X:Tx=0\}$ den \underline{Kern}, $R(T):=TX$ das \underline{Bild} und rk$T:=$dim$R(T)$ den \underline{Rang} von $T$.  Eine Verbindung des Begriffes "`Rang einer Matrix"' (Def. 2.6.1) und Def 3.1.8 wird in Satz 3.3.8 hergestellt.
+\label{KBR}
+Ist $T\in L(X,Y)$, so bezeichnet $N(T):=\{x\in X:Tx=0\}$ den \underline{Kern}, $R(T):=TX$ das \underline{Bild} und rk$T:=$dim$R(T)$ den \underline{Rang} von $T$.  Eine Verbindung des Begriffes "`Rang einer Matrix"' (\hyperref[Mrang]{Definition \ref*{Mrang}}) und \hyperref[KBR]{Definition \ref*{KBR}} wird in \hyperref[3.3.8]{Satz \ref*{3.3.8}} hergestellt.
 \subsubsection{Proposition}
 Für jedes $T\in L(X,Y)$ ist der Kern $N(T)$ ein Unterraum von $X$.\\
 Beweis: Übungsaufgabe.
 \subsubsection{Satz}
+\label{3.1.10}
 Für jedes $T\in L(X,Y)$ gilt:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
@@ -48,14 +52,14 @@ Für jedes $T\in L(X,Y)$ gilt:
 \subsubsection{Beispiel}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
-\item Die Auswertung $ev_x:F(\Omega ,X)\rightarrow X$ aus Beispiel 3.1.6 (1) hat den Kern $N(ev_x):=\{m\in F(\Omega ,X):u(x)=0\}$ und das Bild $R(ev_x)=X$, ein Urbild zu einem beliebigen $y\in X$ ist gerade die konstante $u(x)\equiv y$ auf $\Omega$.
+\item Die Auswertung $ev_x:F(\Omega ,X)\rightarrow X$ aus \hyperref[3.1.6]{Beispiel \ref*{3.1.6} (1)} hat den Kern $N(ev_x):=\{m\in F(\Omega ,X):u(x)=0\}$ und das Bild $R(ev_x)=X$, ein Urbild zu einem beliebigen $y\in X$ ist gerade die konstante $u(x)\equiv y$ auf $\Omega$.
 \item Für die Nullabbildung $0\in L(X,Y)$ ist $N(0)=X$ und $R(0)=\{0\}$, für $X\not= \{0\}$ ist $0$ nicht injektiv.  Für $Y\not= \{0\}$ ist $0$ nicht surjektiv.
-\item Mit einer Matrix $A\in \mathbb{K}^{m\times n}$ ist $T_A\in L(\mathbb{K}^n,\mathbb{K}^m)$ aus Beispiel 3.1.5 genau dann
+\item Mit einer Matrix $A\in \mathbb{K}^{m\times n}$ ist $T_A\in L(\mathbb{K}^n,\mathbb{K}^m)$ aus \hyperref[3.1.5]{Beispiel \ref*{3.1.5}} genau dann
 \begin{itemize}
 \item \underline{injektiv}, wenn die linear homogene Gleichung ($L_0$) nur die triviale Lösung hat.
 \item \underline{surjektiv}, wenn es für jede Inhomogenität $b\in\mathbb{K}^m$ mindestens eine Lösung $x\in\mathbb{K}^n$ von ($L_b$) gibt.
 \end{itemize}
-\item Bei der Differenziation $D:C^1([a,b],\mathbb{R})\rightarrow C([a,b],\mathbb{R})$ aus Beispiel 3.1.6 (2) besteht der Kern $N(D)$ aus allen konstanten Funktionen.  Für das Bild $R(D)$ erhalten wir dagegen $C([a,b],\mathbb{R})$, denn für ein beliebiges $v\in C([a,b],\mathbb{R})$ gilt nach dem Hauptsatz der Differential- und Integralrechnung $Du=v$ mit $u(t):=v(a)+\int_a^t v(s)ds$.  Damit ist $D$ nicht injektiv, aber surjektiv.
+\item Bei der Differenziation $D:C^1([a,b],\mathbb{R})\rightarrow C([a,b],\mathbb{R})$ aus \hyperref[3.1.6]{Beispiel \ref*{3.1.6} (2)} besteht der Kern $N(D)$ aus allen konstanten Funktionen.  Für das Bild $R(D)$ erhalten wir dagegen $C([a,b],\mathbb{R})$, denn für ein beliebiges $v\in C([a,b],\mathbb{R})$ gilt nach dem Hauptsatz der Differential- und Integralrechnung $Du=v$ mit $u(t):=v(a)+\int_a^t v(s)ds$.  Damit ist $D$ nicht injektiv, aber surjektiv.
 \end{enumerate}
 \subsubsection{Satz (Dimensionssatz)}
 \label{dimension}
@@ -74,6 +78,7 @@ dim$R(T)=d-n$.  Wir suchen $d-n$ linear unabhängige Vektoren in $R(T)$.  Die Ve
 $\Rightarrow$ Es existiert ein Index $j^*,n<j^*\leq d$, so dass $Tx_{j^*}=\sum_{\substack{j=n+1\\ j\not= j^*}}^d \eta _jTx_j$.  Das heißt $\sum_{j=n+1}^d \eta _jTx_j=0$ mit $\eta _{j^*}=-1 \circledast\circledast$.  Aus der Linearität von $T$ folgt: $T(\sum_{j=n+1}^d \eta _jx_j)=0$, d.h. $\sum_{j=n+1}^d \eta _jx_j \in N(T)$.  Weil $\{ x_1,\cdots ,x_n\}$ Basis von $N(T)$ ist gilt: $\sum_{j=n+1}^d\eta _jx_j=\sum_{j=1}^n\eta _jx_j$ für geeignete $n_1,\cdots ,n_n\in\mathbb{K}$, also: $\sum_{j=1}^n\eta _jx_j-\sum_{j=n+1}^d\eta _jx_j=0 \circledast$\\
 Weil nach Voraussetzung $x_1,\cdots x_d$ Basis von $X$ ist, folgt aus $\circledast$, dass $\eta _j=0\ \forall 1\leq j\leq d$ (Definition der linearen Unabhängigkeit).  Das ist ein Widerspruch zu $\circledast\circledast$.  Das heißt $\{Tx_{n+1},\cdots ,Tx_d\}$ sind linear unabhängig.
 \subsubsection{Satz (Prinzip der linearen Fortsetzung)}
+\label{lfortsetzung}
 Sei $\{x_1,\cdots ,x_n\}$ ein Basis von $X$ und $\{\hat{y}_1,\cdots ,\hat{y}_n\} \in Y$.
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
@@ -82,7 +87,7 @@ Sei $\{x_1,\cdots ,x_n\}$ ein Basis von $X$ und $\{\hat{y}_1,\cdots ,\hat{y}_n\}
 \end{enumerate}
 \subsubsection{Bemerkung}
 Für gegebenes $x=\sum_{k=1}^n\xi _kx_k,\ \xi _k\in \mathbb{K}\ \forall 1\leq k\leq n$, gilt $Tx=T(\sum_{k=1}^n\xi _kx_k)\stackrel{3.1a}{=}\sum_{k=1}^n\xi _k Tx_k$.  Kenntnis der Koeffizienten $\xi _k$ und der Werte $Tx_i,1\leq i\leq n$ erlaubt uns den Wert von $Tx$ zu bestimmen.\\
-\underline{Beweis} (Satz 3.1.14):
+\underline{Beweis} (\hyperref[lfortsetzung]{Satz \ref*{lfortsetzung}}):
 \begin{enumerate}
 \item Sei $Tx_i=Sx_i;\ \forall 1\leq i\leq n$.  Sei $x\in X$ mit $x=\sum_{i=1}^n\xi _ix_i,\ 1\leq i\leq n\ \xi _i \in \mathbb{K}$.
 \[Tx=\sum_{i=1}^n \xi _iTx_i=\sum_{i=1}^n \xi _i Sx_i=S(\sum_{i=1}^n\xi _i x_i)=Sx\].
@@ -114,27 +119,31 @@ ist ein Isomorphismus.  Es gilt das Inverse des Transponieren ist das Transponie
 $l_{0,0}$ ist Isomorph zum Raum der Polynome $P(\mathbb{K})$ via den Isomorphismus $T\cdot C P(\mathbb{K})\rightarrow l_{0,0}$; $p\mapsto (\alpha _0,\cdots ,\alpha _n,0,\cdots, 0,\cdots ): p=\sum_{k=0}^n\alpha _kt^k$
 \end{enumerate}
 \subsubsection{Lemma}
+\label{3.2.5}
 Für $T\in L(X,Y)$ ist mit $\mathcal{S}\subseteq X$ auch $T\mathcal{S}$ linear abhängig (in $Y$).
 \subsubsection{Satz}
+\label{3.2.6}
 Es sei $T\in GL(X,Y)$.  Eine Menge $\mathcal{S}\subseteq X$ ist genau dann linear abhängig, wenn $T\mathcal{S}\subseteq Y$ linear abhängig ist.
 \subsubsection{Bemerkung}
 Als logische Kontraposition erhalten wir, dass Isomorphismen linear unabhängige Mengen (oder Basen) auf ebensolche abbilden.\\
 \underline{Beweis}:
 \begin{itemize}
-\item $(\Rightarrow )$ Folgt aus Lemma 3.2.5
-\item $(\Leftarrow )$ Nun sei $T\mathcal{S}\subseteq Y$ linear abhängig.  Wegen $T\in GL(X,Y)$ ist auch $T^{-1}(T\mathcal{S})$ nach Lemma 3.2.5 linear abhängig.
+\item $(\Rightarrow )$ Folgt aus \hyperref[3.2.5]{Lemma \ref*{3.2.5}}
+\item $(\Leftarrow )$ Nun sei $T\mathcal{S}\subseteq Y$ linear abhängig.  Wegen $T\in GL(X,Y)$ ist auch $T^{-1}(T\mathcal{S})$ nach \hyperref[3.2.5]{Lemma \ref*{3.2.5}} linear abhängig.
 \end{itemize}
 \subsubsection{Proposition}
+\label{3.2.8}
 Jeder $n$-dimensionale lineare Raum ist isomorph zu $\mathbb{K}^n,\ n\in\mathbb{N}_0$.\\
-\underline{Beweis}: Es sei $X$ ein linearer Raum mit $m:=$dim$X$ und der Basis $\mathcal{X}=\{x_1,\cdots ,x_n\}$.  Wir definieren $T:\mathbb{K}^n\rightarrow X,\ \begin{pmatrix}\xi _1\\ \vdots \\ \xi _n\end{pmatrix}\mapsto \sum_{k=1}^n\xi _k x_k$.  Aufgrund der linearen Unabhängigkeit von $\mathcal{X}$ ist $N(T)=\{0\}$, nach Satz 2.1.10(a) ist $T$ dann injektiv.  Da $\mathcal{X}$ ein EZS ist, muss $T$ auch surjektiv sein.
+\underline{Beweis}: Es sei $X$ ein linearer Raum mit $m:=$dim$X$ und der Basis $\mathcal{X}=\{x_1,\cdots ,x_n\}$.  Wir definieren $T:\mathbb{K}^n\rightarrow X,\ \begin{pmatrix}\xi _1\\ \vdots \\ \xi _n\end{pmatrix}\mapsto \sum_{k=1}^n\xi _k x_k$.  Aufgrund der linearen Unabhängigkeit von $\mathcal{X}$ ist $N(T)=\{0\}$, nach \hyperref[3.1.10]{Satz \ref*{3.1.10}(a)} ist $T$ dann injektiv.  Da $\mathcal{X}$ ein EZS ist, muss $T$ auch surjektiv sein.
 \subsubsection{Satz}
 Endlich dimensionale lineare Räume $X,Y$ sind genau dann isomorph, wenn dim$X=$dim$Y$.\\
 \underline{Beweis}
 \begin{itemize}
-\item $(\Leftarrow )$ Es sei $n:=$dim$X=$dim$Y$.  Nach Proposition 3.2.8 existieren Isomorphismen $\Phi :X\rightarrow\mathbb{K}^n,\Psi :Y\rightarrow \mathbb{K}$, womit $\Psi ^{-1} \circ \Phi \in GL(X,Y)$ ein Isomorphismus ist.
-\item ($\Rightarrow$) Sei $T\in GL(X,Y)$, $\mathcal{X}=\{x_1,\cdots ,x_n\}$.  Dann ist $y_i:=Tx_i,\ 1\leq i\leq n$ nach Satz 3.2.6 Basis von $Y$.
+\item $(\Leftarrow )$ Es sei $n:=$dim$X=$dim$Y$.  Nach \hyperref[3.2.8]{Proposition \ref*{3.2.8}} existieren Isomorphismen $\Phi :X\rightarrow\mathbb{K}^n,\Psi :Y\rightarrow \mathbb{K}$, womit $\Psi ^{-1} \circ \Phi \in GL(X,Y)$ ein Isomorphismus ist.
+\item ($\Rightarrow$) Sei $T\in GL(X,Y)$, $\mathcal{X}=\{x_1,\cdots ,x_n\}$.  Dann ist $y_i:=Tx_i,\ 1\leq i\leq n$ nach \hyperref[3.2.6]{Satz \ref*{3.2.6}} Basis von $Y$.
 \end{itemize}
 \subsubsection{Satz}
+\label{3.2.10}
 Für jedes $T\in L(X,Y)$ zwischen linearen Räumen $X,Y$ mit dim$X=$dim$Y$ sind äquivalent:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
@@ -142,28 +151,30 @@ Für jedes $T\in L(X,Y)$ zwischen linearen Räumen $X,Y$ mit dim$X=$dim$Y$ sind 
 \item $T$ ist injektiv
 \item $T$ ist surjektiv
 \end{enumerate}
-\underline{Beweis}: Es ist nachzuweisen, dass Surjektivität und Injektivität äquivalent sind.  Es sei $T\in L(X,Y)$ injektiv.  Wegen Satz 3.1.10(a) ist dies äquivalent zu $N(T)=\{0\}$.  Mit dem  \hyperref[dimension]{Dimensionssatz\ref*{dimension}} ist dann dim$R(T)$=dim$X-$dim$N(T)=$dim$Y$ und $T$ ist genau dann injektiv, wenn dim$R(T)$=dim$Y$, d.h. $R(T)=Y$ gilt.  Aufgrund von Satz 3.1.10(b) folgt die Behauptung.
+\underline{Beweis}: Es ist nachzuweisen, dass Surjektivität und Injektivität äquivalent sind.  Es sei $T\in L(X,Y)$ injektiv.  Wegen \hyperref[3.1.10]{Satz \ref*{3.1.10}(a)} ist dies äquivalent zu $N(T)=\{0\}$.  Mit dem  \hyperref[dimension]{Dimensionssatz\ref*{dimension}} ist dann dim$R(T)$=dim$X-$dim$N(T)=$dim$Y$ und $T$ ist genau dann injektiv, wenn dim$R(T)$=dim$Y$, d.h. $R(T)=Y$ gilt.  Aufgrund von \hyperref[3.1.10]{Satz \ref*{3.1.10}(b)} folgt die Behauptung.
 \subsection{Lineare Abbildungen und Matrizen}
-$X,Y$ lineare Räume, $\mathcal{X}=\{x_1,\cdots ,x_n\},\ \mathcal{Y}:=\{y_1,\cdots ,y_m\}$.  Wir folgern aus Satz 3.1.14, dass eine lineare Abbildung $T\in L(X,Y)$ durch die Bilder $Tx_i$ der Basisvektoren von $X$ bestimmt ist.  Sind etwa:\\
+$X,Y$ lineare Räume, $\mathcal{X}=\{x_1,\cdots ,x_n\},\ \mathcal{Y}:=\{y_1,\cdots ,y_m\}$.  Wir folgern aus \hyperref[lfortsetzung]{Satz \ref*{lfortsetzung}}, dass eine lineare Abbildung $T\in L(X,Y)$ durch die Bilder $Tx_i$ der Basisvektoren von $X$ bestimmt ist.  Sind etwa:\\
 \[(3.3a)\ Tx_i = \sum_{j=1}^m a_{i,j} y_j\text{ für }1\leq i\leq n\]
 und $x=\sum_{k=1}^n\xi _k x_k$ mit $Tx=\sum_{j=1}^m \eta _j y_j$, so resultiert $Tx=T(\sum_{k=1}^n\xi _k x_k)=\sum_{k=1}^n \xi _k Tx_k \stackrel{3.3a}{=} \sum_{k=1}^n\xi _k\sum_{j=1}^ma_{k,j}y_j=\sum_{i=1}^m(\sum_{k=1}^na_{i,k}\xi_k)y_i$.  Für die Koordinaten $\eta _i,\cdots ,\eta _m\in\mathbb{K}$ von $Tx$ bzgl. $\mathcal{Y}$ erhalten wir:\\
 \[(3.3b)\ \eta _i=\sum_{k=1}^na_{i,k}\xi _k\text{ für }1\leq i\leq m\]
 \subsubsection{Satz (darstellende Matrix)}
+\label{Mdarstellend}
 Jedes $T\in L(X,Y)$ wird eindeutig durch eine Matrix $T_\mathcal{X}^\mathcal{Y}\in\mathbb{K}^{m\times n}$ beschreiben, in deren $k-$ter Spalte gerade die Koordinaten von $Tx_k$ bzgl der Basis $\mathcal{Y}$ stehen.  Man nennt $T_\mathcal{X}^\mathcal{Y}$ die $T$ darstellende Matrix in den Basen $\mathcal{X}$ und $\mathcal{Y}$; im Fall $X=Y$ und $\mathcal{X}=\mathcal{Y}$ schreiben wir $T_\mathcal{X}:=T^\mathcal{X}_\mathcal{X}$.
 \subsubsection{Bemerkung}
-Wir versehen $X=\mathbb{K}^n$ und $Y=\mathbb{K}^m$ mit Standardbasen $\mathcal{E}_n$ bzw. $\mathcal{E}_m$ aus Beispiel 2.4.3.  Für jede Abbildung $T\in L(\mathbb{K}^n,\mathbb{K}^m)$ mit darstellender Matrix \[T^{\mathcal{E}_m}_{\mathcal{E}_n}\text{ gilt dann }T=T_{T_{\mathcal{E}_n}^{\mathcal{E}_m}}\text{ (Erinnerung }T_Ax=Ax)\]
+Wir versehen $X=\mathbb{K}^n$ und $Y=\mathbb{K}^m$ mit Standardbasen $\mathcal{E}_n$ bzw. $\mathcal{E}_m$ aus \hyperref[standardbasis]{Beispiel \ref*{standardbasis}}.  Für jede Abbildung $T\in L(\mathbb{K}^n,\mathbb{K}^m)$ mit darstellender Matrix \[T^{\mathcal{E}_m}_{\mathcal{E}_n}\text{ gilt dann }T=T_{T_{\mathcal{E}_n}^{\mathcal{E}_m}}\text{ (Erinnerung }T_Ax=Ax)\]
 \subsubsection{Beispiel (Polynome)}
 Es sei $n\in \mathbb{N}$ und $X=P_n(\mathbb{R})$ ausgestattet mit der monomialen Basis $\mathcal{M}_n:=\{m_0,\cdots ,m_n\}$ aus \hyperref[2.4.4]{Beispiel \ref*{2.4.4}}.  Als lineare Abbildung betrachten wir die Ableitung $D:P_n(\mathbb{R})\rightarrow P_n(\mathbb{R})$ mit den Bildern
 \[D_{m_0}=0,\ D_{m_k}=km_{k-1}\text{ für alle }k\in \mathbb{N}\]
-und erhalten aus Satz 3.3.1 die darstellende Matrix
+und erhalten aus \hyperref[Mdarstellend]{Satz \ref*{Mdarstellend}} die darstellende Matrix
 \[ D_{\mathcal{M}_n}=\begin{pmatrix}0 & 1 & 0 & 0 &\cdots &0\\ 0 & 0& 2 & 0 &\cdots &0\\ 0& 0& 0& 3&\cdots &0\\ \vdots \\ 0 & 0& 0 &0 & \cdots & n-1\\ 0 & 0& 0 &0 & \cdots & 0\end{pmatrix}\]
 \subsubsection{Proposition}
+\label{3.3.4}
 Zu jedem $A\in K^{m\times n}$ gibt es ein $T\in L(X,Y)$ mit $A=T_\mathcal{X}^\mathcal{Y}$.\\
 \underline{Beweis}: Es sei $A\in \mathbb{K}^{m\times n}$.  Zu beliebigen $x\in X$ finden wir $\xi _i,\cdots ,\xi _n\in\mathbb{K}$ mit $x=\sum_{k=1}^n \xi _kx_k$.  Die gesuchte Abbildung $T\in L(X,Y)$ ist dann
 \[Tx:=\sum_{i=1}^m\left(\sum_{j=1}^na_{i,j}\xi _j\right)y_i\]
 \subsubsection{Korollar}
 Für endlich dimensionale Räume $X,Y$ sind $L(X,Y)$ und $\mathbb{K}^{\mathrm{dim}Y\times \mathrm{dim}X}$ isomorph.  Insbesondere ist dim$L(X,Y)=$dim$X\cdot$dim$Y$.\\
-\underline{Beweis}: Es sei $m=$dim$Y$,$n=$dim$X$.  Wir verwenden die lineare Abbildung $\Phi :L(X,Y)\rightarrow \mathbb{K}^{\mathrm{dim}Y\times \mathrm{dim}X}$,$\Phi (T)=T_\mathcal{X}^\mathcal{Y}$ die in Proposition 3.3.4 konstruiert wurde.
+\underline{Beweis}: Es sei $m=$dim$Y$,$n=$dim$X$.  Wir verwenden die lineare Abbildung $\Phi :L(X,Y)\rightarrow \mathbb{K}^{\mathrm{dim}Y\times \mathrm{dim}X}$,$\Phi (T)=T_\mathcal{X}^\mathcal{Y}$ die in \hyperref[3.3.4]{Proposition \ref*{3.3.4}} konstruiert wurde.
 \subsubsection{Satz}
 Es sei $Z$ ein weiterer linearer Raum mit Basis $\mathcal{Z}$.  Für $T\in L(X,Y),\ S\in L(Y,Z)$ ist
 \[ (S\circ T)_\mathcal{X}^\mathcal{Z}=S_\mathcal{Y}^\mathcal{Z}T_\mathcal{X}^\mathcal{Y}\]
@@ -172,14 +183,17 @@ Für $A\in\mathbb{K}^{l\times m},\ B\in\mathbb{K}^{m\times n}$ gilt
 \[(3.3c)\ T_A\circ T_b=T_{AB}\]
 \addtocounter{subsubsection}{-6}
 \subsubsection{Die Abbildung $T_A$}
+\label{TA}
 In diesem Abschnitt sei $A\in\mathbb{K}^{m\times n}$ und $T_A\in L(\mathbb{K}^n,\mathbb{K}^m)$ mit $T_Ax:=Ax$.
 \addtocounter{subsubsection}{5}
 \subsubsection{Satz}
+\label{3.3.8}
 Die Ränge von $A\in\mathbb{K}^{m\times n}$ und $T_A\in L(\mathbb{K}^n,\mathbb{K}^m)$ stimmen überein: rk$T_A=$rk$A$.
 \subsubsection{Bemerkung}
-Mit den Spalten $a_1,\cdots a_n\in \mathbb{K}^m$ von $A$ gilt $R(T_A)=$span$\{a_1,\cdots ,a_n\}$, weshalb insbesondere $R(T_A)$ und der Spaltenraum von $A$ gleiche Dimension haben.  Andererseits war rk$A$ nach Def. 2.6.1 die Dimension des Zeilenraumes von $A$.  Daher wird Satz 3.3.8 auch formuliert als: "`Spaltenrang=Zeilenrang"'.\\
-\underline{Beweis}: Zunächst merken wir an, dass $N(T_A)$ mit dem Lösungsraum $L_0\subseteq \mathbb{K}^n$ einer homogenen Gleichung $(L_0)$ übereinstimmt.  Nach Proposition 2.6.3 gilt also dim$N(T)=n-$rk$A$ Andererseits liefert der \hyperref[dimension]{Dimensionssatz \ref*{dimension}}, dass $n=\mathrm{dim}N(T_A)+\mathrm{dim}N(T_A)=\mathrm{dim}N(T_A)+\mathrm{rk}T_A$ und folglich $\mathrm{rk}T_A=\mathrm{rk}A$.\\\\
-Nun sei $A\in\mathbb{K}^{n\times n}$ quadratisch mit rk$A=n$.  Dies ist mit Satz 3.2.10 äquivalent dazu, dass $T_A\in L(\mathbb{K}^n)$ ein Isomorphismus ist.  Wir interessieren uns nun für die simultane Lösbarkeit von
+\label{3.3.9}
+Mit den Spalten $a_1,\cdots a_n\in \mathbb{K}^m$ von $A$ gilt $R(T_A)=$span$\{a_1,\cdots ,a_n\}$, weshalb insbesondere $R(T_A)$ und der Spaltenraum von $A$ gleiche Dimension haben.  Andererseits war rk$A$ nach \hyperref[Mrang]{Definition \ref*{Mrang}} die Dimension des Zeilenraumes von $A$.  Daher wird \hyperref[3.3.8]{Satz \ref*{3.3.8}} auch formuliert als: "`Spaltenrang=Zeilenrang"'.\\
+\underline{Beweis}: Zunächst merken wir an, dass $N(T_A)$ mit dem Lösungsraum $L_0\subseteq \mathbb{K}^n$ einer homogenen Gleichung $(L_0)$ übereinstimmt.  Nach \hyperref[2.6.3]{Proposition \ref*{2.6.3}} gilt also dim$N(T)=n-$rk$A$ Andererseits liefert der \hyperref[dimension]{Dimensionssatz \ref*{dimension}}, dass $n=\mathrm{dim}N(T_A)+\mathrm{dim}N(T_A)=\mathrm{dim}N(T_A)+\mathrm{rk}T_A$ und folglich $\mathrm{rk}T_A=\mathrm{rk}A$.\\\\
+Nun sei $A\in\mathbb{K}^{n\times n}$ quadratisch mit rk$A=n$.  Dies ist mit \hyperref[3.2.10]{Satz \ref*{3.2.10}} äquivalent dazu, dass $T_A\in L(\mathbb{K}^n)$ ein Isomorphismus ist.  Wir interessieren uns nun für die simultane Lösbarkeit von
 $Ax=e;\text{ für alle } 1\leq i\leq n$ welche wir mittels der augmentierten Matrix ($A,e_1,\cdots e_n)=(A,I_n)\in \mathbb{K}^{n\times (2n)}$ notieren.  Vermöge des Gauß-Verfahrens lässt sich $(A,I_n)$ auf die Form $(I_n,B)$ mit einem $B\in\mathbb{K}^{n\times n}$ bringen; nach Konstruktion ist $A\cdot B=I_n$.
 \subsubsection{Definition (inverse Matrix)}
 Eine Matrix $A\in\mathbb{K}^{n\times n}$ heißt \underline{invertierbar}, falls ein $B\in\mathbb{K}^{n\times n}$ mit der Eigenschaft $A\cdot B=I_n$ existiert.  Man nennt $B$ die \underline{Inverse} von $A$ und schreibt $A^{-1}:=B$.
@@ -192,6 +206,7 @@ Eine testweise Multiplikation ergibt $AA^{-1}=A^{-1}A=I_3$.
 \subsubsection{Korollar}
 Die inverse Matrix $A^{-1}\in\mathbb{K}^{n\times m}$ ist eindeutig bestimmt mit $A^{-1}A=I_n$.  Ferner ist $A$ genau dann invertierbar, wenn $T_A\in GL(\mathbb{K}^n)$ ist.
 \subsubsection{Definition (regulär, singulär)}
+\label{regulaer}
 Eine Matrix $A\in\mathbb{K}^{n\times n}$ heißt \underline{regulär}, falls rk$A=n$ gilt, andernfalls nennen wir sie \underline{singulär}.
 \subsubsection{Satz (Charakterisierung regulärer Matrizen)}
 Folgende Aussagen sind äquivalent für jedes $A\in\mathbb{K}^{n\times n}$
@@ -203,9 +218,9 @@ Folgende Aussagen sind äquivalent für jedes $A\in\mathbb{K}^{n\times n}$
 \item Die homogene Gleichung ($L_0$) hat nur die triviale Lösung
 \item Für jedes $b\in\mathbb{K}^n$ ist ($L_0$) eindeutig lösbar.
 \end{enumerate}
-\underline{Beweis}: Die Äquivalenz von (b) und (c) ist Definition 3.3.13.  Aufgrund von Satz 3.3.8 und Bemerkung 3.3.9 sind auch (c) und (d) gleichwertig.\\
-(d) $\Rightarrow$ (e) resultiert aus Definition 2.3.6 der linearen Unabhängigkeit.\\
-(e) $\Rightarrow$ (f) ergibt sich aus Satz 1.4.9(a).\\
+\underline{Beweis}: Die Äquivalenz von (b) und (c) ist \hyperref[regulaer]{Definition \ref*{regulaer}}.  Aufgrund von \hyperref[3.3.8]{Satz \ref*{3.3.8}} und \hyperref[3.3.9]{Bemerkung \ref*{3.3.9}} sind auch (c) und (d) gleichwertig.\\
+(d) $\Rightarrow$ (e) resultiert aus \hyperref[unabhaengig]{Definition \ref*{unabhaengig}} der linearen Unabhängigkeit.\\
+(e) $\Rightarrow$ (f) ergibt sich aus \hyperref[1.4.9]{Satz \ref*{1.4.9}(a)}.\\
 (f) $\Rightarrow$ (a) Nach unserer Voraussetzung (f) ist $T_A^{-1}(\{b\})$ für jedes $b\in \mathbb{K}^n$ einpunktig.  Also ist $T_A\in L(\mathbb{K}^n)$ bijektiv.\\
 (a) $\Rightarrow$ (b) Übung!\\
 Zum Abschluss des Unterabschnittes beschäftigen wir uns mit linear inhomogenen Gleichungen: Ihre \underline{augmentierte Koeffizientenmatrix} $(A,b)\in\mathbb{K}^{m\times (n+1)}$ definieren wir durch
