@@ -11,6 +11,7 @@ Bei einer kommutativen oder Abel schen Gruppe gilt ferner
 \begin{enumerate}\item[$(G_4)$] $a\cdot b=b\cdot a$ für alle $a,b\in \mathbb{G}$.\end{enumerate}
 Für eine \underline{Halbgruppe} müssen nur $(G_1)$ und $(G_2)$ gelten.
 \subsubsection{Bemerkung}
+\label{2.1.2}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
 \item Das neutrale Element $e\in\mathbb{G}$ ist eindeutig: In der Tat, bezeichnen $e_1,e_2\in\mathbb{G}$ zwei neutrale Elemente, so folgt nach $(G_2)$ ist: $e_2=e_1\cdot e_2$ und $e_1\cdot e_2=e_1$, also $e_1=e_2$
@@ -32,6 +33,7 @@ Es sei $p\geq 2$ eine ganze Zahl und $\mathbb{Z}_p:=\{0,\cdots ,p-1\}$.  Für be
 \subsubsection{Beispiel (symmetrische Gruppe)}
 Es sei $M$ eine nichtleere Menge und $S(M)$ bezeichnet alle bijektiven Selbstabbildungen $f:M\rightarrow M$.  Dann ist die \underline{symmetrischen Gruppe} $(S(M),\circ )$ eine i.A. nicht-kommutative Gruppe mit id$_m$ als neutralem Element und $f^{-1}:M\rightarrow M$ als inversen Element zu $f$.  Im Fall $M=\{1,\cdots ,n\}$ schreiben wir $S_n:=S(\{1,\cdots ,n\})$.  Die Menge aller nicht-notwendig bijektiven Selbstabbildungen $F(M)$ ist dagegen eine Halbgruppe bezüglich $\circ$.
 \subsubsection{Korollar (Rechnen in Gruppen)}
+\label{RechnenInGruppen}
 Für alle $a,b,c\in\mathbb{G}$ gilt $(a\cdot b)^{-1}=b^{-1}\cdot a^{-1}$, wie auch $a\cdot b=a\cdot c\Rightarrow b=c,a\cdot b=e\Rightarrow a=b^{-1}$.\\
 Beweis:\\
 Es seien $a,b,c\in\mathbb{G}$.  Wir zeigen zunächst, dass $b^{-1}\cdot a^{-1}$ das inverse Element von $a\cdot b$ ist.  Dazu 
@@ -81,15 +83,16 @@ Es gilt $1\not=0$, da die Annahme $1=0$ folgenden Widerspruch impliziert: Da $\m
 \[\alpha \stackrel{(\mathbb{K}_2^2)}{=} \alpha \cdot 1 = \alpha \cdot 0 \stackrel{(2.1b)}{=} 0\]
 Daher ist der Restklassenkörper modulo $2\ \mathbb{Z}_2$ der kleinste Körper.
 \subsubsection{Beweis}
-Wähle ein $\alpha ,\beta ,\gamma \in\mathbb{K}$. Es gilt $0\cdot \alpha \stackrel{(\mathbb{K}_1^2)}{=} (0+0)\cdot \alpha \stackrel{(\mathbb{K})}{=} 0\alpha + 0\alpha$ mittels Korollar 2.1.8 ($+,a=b=0$ und $c=0$) folgt $0\cdot \alpha = 0$, kommutativ liefert $\alpha 0 = 0$. Aus dieser Behauptung resultiert 
+Wähle ein $\alpha ,\beta ,\gamma \in\mathbb{K}$. Es gilt $0\cdot \alpha \stackrel{(\mathbb{K}_1^2)}{=} (0+0)\cdot \alpha \stackrel{(\mathbb{K})}{=} 0\alpha + 0\alpha$ mittels \hyperref[RechnenInGruppen]{Korollar \ref*{RechnenInGruppen}} ($+,a=b=0$ und $c=0$) folgt $0\cdot \alpha = 0$, kommutativ liefert $\alpha 0 = 0$. Aus dieser Behauptung resultiert
 \[(-\beta )\alpha +\beta\alpha \stackrel{(\mathbb{K}_3)}{=} (-\beta + \beta)\alpha = 0\cdot \alpha = 0\]
-mit Korollar 2.1.8 ($+,a=(-\beta )\alpha ,b=\beta\alpha$).  Dies liefert $-(\beta\alpha )=(-\beta )\alpha$ und $\beta (-\alpha )=-(\beta\alpha )$.  Die Beziehung $(-1)\alpha = -\alpha $ resultiert aus dem eben gezeigten $\beta = 1$ und 
+mit \hyperref[RechnenInGruppen]{Korollar \ref*{RechnenInGruppen}} ($+,a=(-\beta )\alpha ,b=\beta\alpha$).  Dies liefert $-(\beta\alpha )=(-\beta )\alpha$ und $\beta (-\alpha )=-(\beta\alpha )$.  Die Beziehung $(-1)\alpha = -\alpha $ resultiert aus dem eben gezeigten $\beta = 1$ und
 \[(-1)\alpha = 1\cdot (-\alpha ) \stackrel{\mathbb{K}_2^2)}{=} -\alpha .\]
-$2.1c$ ergibt sich mit Bemerkung $2.1.2(3)$ aus 
+$2.1c$ ergibt sich mit \hyperref[2.1.2]{Bemerkung \ref*{2.1.2}}$(3)$ aus
 \[(-\alpha ) (-\beta )\stackrel{2.1b}{=}-(\alpha (-\beta )) \stackrel{2.1b}{=} -(-(\alpha\beta )) = \alpha\beta =0 \]
 Annahme: $\alpha \not=0$ und $\beta\not=0$ dann $1\stackrel{\mathbb{K}_2^3)}{=}\frac{1}{\beta} \cdot \frac{1}{\alpha} \cdot \alpha\cdot\beta \stackrel{2.1b}{=} 0$
 \subsection{Vektorräume}
 \subsubsection{Definition (linearer Raum, Vektorraum)}
+\label{Vektorraum}
 Es sei $\mathbb{K}$ ein Körper.  Ein Vektorraum oder linearer Raum $(X,+,\cdot )$ (über $\mathbb{K}$) ist eine nichtleere Menge $X$ mit arithmetische Operationen:
 \begin{enumerate}
 \item Addition $+:\ X\times X\rightarrow X$ derart, dass $(X,+)$ eine kommutative Gruppe mit neutralem Element $0$ oder Nullvektor.
@@ -138,7 +141,7 @@ Ist $(X,+,\cdot )$ ein linearer Raum über $\mathbb{K}$ so gilt für alle Skalar
 Beweis: Es sei $\alpha \in \mathbb{K}$ und $x\in X$:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
-\item Es gilt $0_{\mathbb{K}} x = (0_{\mathbb{K}}+0_{\mathbb{K}})x = 0_{\mathbb{K}}x + 0_{\mathbb{K}}x$ wegen $V_2$. Nach Definition 2.2.1 (a) existiert zum Vektor $z:=0_{\mathbb{K}} x$ ein Vektor $-z$ mit $0\cdot x + (-z)=0_X$ und wir erhalten $0_X=0\cdot x + (-z) = (0\cdot x + 0\cdot x)+(-z) = 0\cdot x +(0\cdot x + (-z)) = 0\cdot x + 0_x = 0+x$ und die Beziehung $\alpha \cdot 0 = 0$ folge analog.
+\item Es gilt $0_{\mathbb{K}} x = (0_{\mathbb{K}}+0_{\mathbb{K}})x = 0_{\mathbb{K}}x + 0_{\mathbb{K}}x$ wegen $V_2$. Nach \hyperref[Vektorraum]{Definition \ref*{Vektorraum}} (a) existiert zum Vektor $z:=0_{\mathbb{K}} x$ ein Vektor $-z$ mit $0\cdot x + (-z)=0_X$ und wir erhalten $0_X=0\cdot x + (-z) = (0\cdot x + 0\cdot x)+(-z) = 0\cdot x +(0\cdot x + (-z)) = 0\cdot x + 0_x = 0+x$ und die Beziehung $\alpha \cdot 0 = 0$ folge analog.
 \item (b) Es gelte $\alpha x = 0$ mit $\alpha \neq 0$ und wir zeigen $x=0_x$ $\alpha \neq 0$ existiert $\frac{1}{\alpha}$. Nach (a) folgt ${\frac{1}{\alpha}} (\alpha \cdot x) = \frac{1}{\alpha} \cdot 0=0$ und andererseits $\frac{1}{\alpha} (\alpha x) = (\frac{1}{\alpha} \cdot \alpha) \cdot x=1\cdot x = x$
 \item , (d)
 \end{enumerate}
@@ -182,11 +185,13 @@ $\mathbb{K}=\mathbb{R}$: $e_1=\begin{pmatrix}1\\0\end{pmatrix}$, $e_2=\begin{pma
 $span\ \{x_1,x_2\}$ wenn $x_1=\begin{pmatrix}1\\1\end{pmatrix}$ und $x_2=\begin{pmatrix}1\\-1\end{pmatrix}$ aber\\
 $y_1=\begin{pmatrix}1\\1\end{pmatrix}$ und $y_2=\begin{pmatrix}2\\2\end{pmatrix}$ dann $span\ \{y_1,y_2\} = \mathbb{R} \begin{pmatrix}1\\1\end{pmatrix} \in \mathbb{R}^2$ 
 \subsubsection{Beispiel (Monome)}
+\label{Monome}
 Polynome $m_n(l):=t^n$, $n\in\mathbb{N}_0$ heißen Monome. Dann lassen sich die Polynome als lineare Hülle der Monome darstellen, d.h. $span\ \{m_n\}_{n\in\mathbb{N}_0}=P(\mathbb{K})$ insbesondere ist\\
 $span\ \{m_0,...,m_n\}=P_n(\mathbb{K}^n)$\\
 $span\ \{m_{2n}\}_{n\in\mathbb{N}_0}=\{p\in P(\mathbb{K}):p(t)=p(-t) \text{ auf } \mathbb{K}\}$\\
 $span\ \{m_{2n-1}\}_{n\in\mathbb{N}_0}=\{p\in P(\mathbb{K}):p(t)=-p(-t) \text{ auf } \mathbb{K}\}$
-\subsubsection{Beispiel}
+\subsubsection{Proposition}
+\label{2.3.4}
 Es sei $\mathcal{S}\in X$ nicht leer. Dann ist die lineare Hülle der kleinste $\mathcal{S}$ umfassende Unterraum von $X$\\
 \paragraph{Beweis:} $x,y\in \mathcal{S}$ ist $\alpha x+\beta y$, $\alpha,\beta\in\mathbb{K}$ in $span\ \mathcal{S}$. Also ist $span\ \mathcal{S}$ Unterraum von $X$. $span\ \mathcal{S}$ enthält die Vektoren aus $\mathcal{S}$ und damit ist $\mathcal{S}\subseteq span\ \mathcal{S}$, $Y\subseteq X$ ein Unterraum von $X$ mit $x\in Y$ für sämtliche $x\in\mathcal{S}$. Dann liegen sämtliche Linearkombinationen von Vektoren aus $\mathcal{S}$ in $Y$. Also ist $span\ \mathcal{S}$ in $Y$ enthalten.
 \subsubsection{Korollar}
@@ -195,7 +200,7 @@ Ist $x$ eine Linearkombination von Vektoren aus $\mathcal{S}\subseteq X$, so gil
 $(\subseteq )$ Es ist klar dass span$\mathcal{S}\subseteq$span($\mathcal{S}\cup\{x\}$)\\
 $(\supseteq )$ Also Linearkombination von Vektoren aus $\mathcal{S}$ liegt $x$ auch in span$\mathcal{S}$.\\
 Demnach ist span$\mathcal{S}$ derjenige Unterraum welcher $\mathcal{S}$ und $\{x\}$ enthält.\\
-Damit folgt aus Prop 2.3.4, dass span($\mathcal{S}\cup\{x\}$)=span$\mathcal{S}$.
+Damit folgt aus \hyperref[2.3.4]{Prop \ref*{2.3.4}}, dass span($\mathcal{S}\cup\{x\}$)=span$\mathcal{S}$.
 \subsubsection{Definition (lineare Unabhängigkeit)}
 Eine endliche Menge $\{x_1,\cdots ,x_n\}$ von Vektoren aus $X$ heißt linear unabhängig falls gilt:
 \[\sum^n_{k=1} \xi _k x_k = 0 \Rightarrow \xi _k =0 \forall n=1,n\]
@@ -231,8 +236,9 @@ Es sei $\mathcal{S}\subseteq X$ nichtleer und $x,x_1,\cdots ,x_n \in X$
 \end{enumerate}
 In $X=\mathbb{K}^m$ gilt: Es sei $\mathcal{S}=\{a_1,\cdots ,a_n\}\subseteq \mathbb{K}^m$.  Mit der $m\times n$-Matrize $A:= (a_1,\cdots ,a_n)$ ist die Beziehung $\sum^n_{k=1} \xi _k a_k =0$ (vgl. ($2.3a$)) äquivalent zu:
 \[ (2.3b) Ax=0, x\begin{pmatrix}\xi _1 \\ \vdots \\ \xi_n\end{pmatrix}\]
-Demzufolge ist $\mathcal{S}$ genau dann linear unabhängig, wenn $Ax=0$ nur die triviale Lösung hat.  Aus Satz 1.4.8 (in Verbindung mit Blatt 5, Aufg. 1) erhalten wir daher, dass mehr als $m$ Vektoren stets linear abhängig sind.
+Demzufolge ist $\mathcal{S}$ genau dann linear unabhängig, wenn $Ax=0$ nur die triviale Lösung hat.  Aus \hyperref[1.4.8]{Satz \ref*{1.4.8}} (in Verbindung mit Blatt 5, Aufg. 1) erhalten wir daher, dass mehr als $m$ Vektoren stets linear abhängig sind.
 \subsubsection{Beispiel}
+\label{2.3.10}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
 \item Für die \underline{kanonischen Einheitsvektoren} in $\mathbb{K}^m$
@@ -256,13 +262,15 @@ Eine Menge $\mathcal{X}$ mit $X=$span$\mathcal{X}$ wird Erzeugendessystem (EZS) 
 \subsubsection{Beispiel}
 Die Basis von $\{0\}$ ist die leere Menge.
 \subsubsection{Beispiel (Standardbasis)}
-Die mittels der kanonischen Einheitsvektoren aus Beispiel 2.3.10 (1) gebildete Menge $\mathcal{E}_m:=\{e_1,\cdots ,e_m\}$ ist eine Basis von $\mathbb{K}^m$, die sogenannte Standardbasis, damit ist $\mathbb{K}^m$ endlich erzeugt.
+Die mittels der kanonischen Einheitsvektoren aus \hyperref[2.3.10]{Beispiel \ref*{2.3.10}} (1) gebildete Menge $\mathcal{E}_m:=\{e_1,\cdots ,e_m\}$ ist eine Basis von $\mathbb{K}^m$, die sogenannte Standardbasis, damit ist $\mathbb{K}^m$ endlich erzeugt.
 \subsubsection{Beispiel (Polynome)}
-Für $\mathbb{K}=\mathbb{R}$ oder $\mathbb{K}=\mathbb{C}$ sind $\mathcal{M}_n:=\{m_0,\cdots m_n\}$ aus Beispiel 2.3.3 eine Basis der Polynome $\mathcal{P}_n(\mathbb{K})$ von maximalem Grad $n$.  Ebenso ist $\{m_n\}_{n\in\mathbb{N}_0}$ eine Basis von $\mathcal{P}(\mathbb{K})$.  Somit ist jedes $\mathcal{P}_n(\mathbb{K})$ endlich erzeugt, $\mathcal{P}(\mathbb{K})$ dagegen nicht.
+\label{2.4.4}
+Für $\mathbb{K}=\mathbb{R}$ oder $\mathbb{K}=\mathbb{C}$ sind $\mathcal{M}_n:=\{m_0,\cdots m_n\}$ aus \hyperref[Monome]{Beispiel \ref*{Monome}} eine Basis der Polynome $\mathcal{P}_n(\mathbb{K})$ von maximalem Grad $n$.  Ebenso ist $\{m_n\}_{n\in\mathbb{N}_0}$ eine Basis von $\mathcal{P}(\mathbb{K})$.  Somit ist jedes $\mathcal{P}_n(\mathbb{K})$ endlich erzeugt, $\mathcal{P}(\mathbb{K})$ dagegen nicht.
 \subsubsection{Lemma}
 Es sei $\mathcal{S}\subseteq X$ linear unabhängig.  Gilt dann $x\not\in$span$\mathcal{S}$, so ist auch $\mathcal{S}\cup\{x\}$ linear unabhängig. \\
 \underline{Beweis}:  Es ist nachzuweisen, dass jede endliche Teilmenge von $\mathcal{S}\cup\{x\}$ linear unabhängig ist.  Dazu sei $\{x_1,\cdots x_n,x\}$ eine solche Menge und $\sum_{k=1}^n \xi _k x_k +\eta x=0$ eine Darstellung der Null.  Wäre $\eta \not= 0$, so könnte man $x$ als Linearkombination der $x_1,\cdots ,x_n$ darstellen, dies widerspricht $x\not\in$span$\mathcal{S}$.  Also gilt $\eta = 0$.  Da aber $\{x_1,\cdots ,x_n\}$ linear unabhängig ist, folgt $\xi _1 = \cdots = \xi _n = 0$.  In trivialer Weise: ist $X$ ein EZS von $X$.  Unser Interesse besteht aber gerade in "`kleinen"' EZSen.
 \subsubsection{Satz}
+\label{2.4.6}
 Mit nicht leerem $\mathcal{X}\subseteq X$ sind äquivalent:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
@@ -272,20 +280,24 @@ Mit nicht leerem $\mathcal{X}\subseteq X$ sind äquivalent:
 \item $\mathcal{X}$ ist ein \underline{minimales EZS}, d.h. keine echte Teilmenge von $\mathcal{X}$ ist ein EZS.
 \end{enumerate}
 \subsubsection{Bemerkung (Koordinaten)}
-Besitzt $x\in X$ bzgl. der Basis $\mathcal{X}:=\{x_1,\cdots ,x_n\}$ die nach Satz 2.4.6 (b) eindeutige Darstellung $x=\sum_{k=1}^n \xi _k x_k$ mit Koeffizienten $\xi _k \in \mathbb{K}$ so bezeichnet man das $n$-tupel ($\xi _1,\cdots ,\xi _n$) also \underline{Koordinaten} von $x$ (bzgl. $\mathcal{X}$).  Von nun an sei $X$ endlich erzeugt.
+Besitzt $x\in X$ bzgl. der Basis $\mathcal{X}:=\{x_1,\cdots ,x_n\}$ die nach \hyperref[2.4.6]{Satz \ref*{2.4.6}} (b) eindeutige Darstellung $x=\sum_{k=1}^n \xi _k x_k$ mit Koeffizienten $\xi _k \in \mathbb{K}$ so bezeichnet man das $n$-tupel ($\xi _1,\cdots ,\xi _n$) also \underline{Koordinaten} von $x$ (bzgl. $\mathcal{X}$).  Von nun an sei $X$ endlich erzeugt.
 \subsubsection{Satz}
+\label{2.4.8}
 Jedes endliche EZS eines Vektorraumes enthält eine Basis.  Insbesondere hat jeder endlich erzeugte lineare Raum eine Basis.\\
 \underline{Beweis}:
-Es sei $\mathcal{X}$ ein endliches EZS.  Ist $\mathcal{X}$ keine Basis, so kann $\mathcal{X}$ nicht minimal sein und es existiert eine echte Teilmenge $\mathcal{X}^1 \stackrel{\subset}{\not=} \mathcal{X}$, die ebenfalls ein EZS ist.  Ist wiederum $\mathcal{X}^1$ keine Basis, so existiert erneut eine echte Teilmenge $\mathcal{X}^2 \stackrel{\subset}{\not=} \mathcal{X}^1$, die $X$ erzeugt.  Durch Iteration erhält man eine echt absteigende Folge von Teilmengen $\cdots \subsetneqq \mathcal{X}^2 \subsetneqq \mathcal{X}^1 \subsetneqq \mathcal{X}$.  Diese Folge bricht nach endlich vielen schritten ab, da $\mathcal{X}$ endlich ist, d.h. es gibt ein minimales $\mathcal{X}^k$.  Dieses $\mathcal{X}^k$ ist nach Satz 2.4.6 eine Basis von $X$.
+Es sei $\mathcal{X}$ ein endliches EZS.  Ist $\mathcal{X}$ keine Basis, so kann $\mathcal{X}$ nicht minimal sein und es existiert eine echte Teilmenge $\mathcal{X}^1 \stackrel{\subset}{\not=} \mathcal{X}$, die ebenfalls ein EZS ist.  Ist wiederum $\mathcal{X}^1$ keine Basis, so existiert erneut eine echte Teilmenge $\mathcal{X}^2 \stackrel{\subset}{\not=} \mathcal{X}^1$, die $X$ erzeugt.  Durch Iteration erhält man eine echt absteigende Folge von Teilmengen $\cdots \subsetneqq \mathcal{X}^2 \subsetneqq \mathcal{X}^1 \subsetneqq \mathcal{X}$.  Diese Folge bricht nach endlich vielen schritten ab, da $\mathcal{X}$ endlich ist, d.h. es gibt ein minimales $\mathcal{X}^k$.  Dieses $\mathcal{X}^k$ ist nach Satz \hyperref[2.4.6]{Satz \ref*{2.4.6}} eine Basis von $X$.
 \subsubsection{Proposition}
+\label{2.4.9}
 Ist $X$ endlich erzeugbar und $\mathcal{S}\subseteq X$ linear unabhängig, so existiert eine Basis von $X$, welche $\mathcal{S}$ als Teilmenge enthält.
 \subsubsection{Lemma (Austauschsatz von Steinitz)}
+\label{Austauschsatz}
 Ist $\{x_1,\cdots x_p\}$ linear unabhängig und $\{y_1,\cdots ,y_n\}$ ein EZS von $X$, so gilt $p\leq n$ und nach einer Umnummerierung der $y_k$ ist $\{x_1,\cdots ,x_p,y_{p+1},\cdots ,y_n\}$ ein EZS von $X$.
 \subsubsection{Satz (Dimension)}
+\label{2.4.11}
 Falls $X$ eine Basis von $n$ Elementen besitzt, enthält jede Basis von $X$ genau $n$ Elemente.  Wir bezeichnen $n$ als \underline{Dimension} von $X$ und schreiben $n=$dim$X$.
 \subsubsection{Bemerkung}
 Ein linearer Raum $X$ heißt \underline{unendlich-dimensional} (symbolisch dim$X=\infty$) falls er kein endlichen EZS besitzt, anderenfalls heißt er endlich-dimensional.\\
-\underline{Beweis}: Es seien $\{x_1,\cdots ,x_n\}$ und auch $\{y_1,\cdots ,y_m\}$ Basen von $X$.  Mit Lemma 2.4.10 folgt dann $n\leq m$, wie auch $m\leq n$, und somit $m=n$.
+\underline{Beweis}: Es seien $\{x_1,\cdots ,x_n\}$ und auch $\{y_1,\cdots ,y_m\}$ Basen von $X$.  Mit \hyperref[Austauschsatz]{Lemma \ref*{Austauschsatz}} folgt dann $n\leq m$, wie auch $m\leq n$, und somit $m=n$.
 \subsubsection{Beispiel}
 Für die bislang betrachteten Räume ist dim$\mathbb{K}^n=n$, dim$\mathbb{K}^{m\times n}=m\cdot n$, dim$\mathcal{P}_n(\mathbb{R})=n+1$ und dim$\mathcal{P}(\mathbb{R})=$dim$C^1(\mathbb{R},\mathbb{R})=$dim$C(\mathbb{R},\mathbb{R})=$dim$F(\mathbb{R},\mathbb{R})=\infty$.
 \subsubsection{Beispiel}
@@ -300,10 +312,10 @@ In linearen Räumen $X$ mit $n:=$dim$X$ gilt:
 \end{enumerate}
 \underline{Beweis}: 
 \begin{enumerate}
-\item jedes EZS enthält laut Satz 2.4.8 eine Basis.  Für jedes aus weniger als $n$ Vektoren bestehenden EZS gäbe es dann auch eine Basis mit Weniger als $n$ Elementen.  Dies widerspricht Satz 2.4.11.
-\item Laut Proposition 2.4.9 ist jede linear unabhängige Menge Teil einer Basis.  Somit hätte man mit einer linear unabhängigen Familie von mehr als $n$ Vektoren auch eine Basis mit mehr als $n$ Elementen - im Widerspruch zu 2.4.11.
-\item Ein EZS enthält wegen Satz 2.4.8 eine Basis und ist wegen Satz 2.4.11 bereits eine solche.
-\item Mit Proposition 2.4.9 ist eine linear unabhängige Familie Teilmenge einer Basis und mit Satz 2.4.11 eine Basis.
+\item jedes EZS enthält laut \hyperref[2.4.8]{Satz \ref*{2.4.8}} eine Basis.  Für jedes aus weniger als $n$ Vektoren bestehenden EZS gäbe es dann auch eine Basis mit Weniger als $n$ Elementen.  Dies widerspricht \hyperref[2.4.11]{Satz \ref*{2.4.11}}.
+\item Laut \hyperref[2.4.9]{Proposition \ref*{2.4.9}} ist jede linear unabhängige Menge Teil einer Basis.  Somit hätte man mit einer linear unabhängigen Familie von mehr als $n$ Vektoren auch eine Basis mit mehr als $n$ Elementen - im Widerspruch zu \hyperref[2.4.11]{Satz \ref*{2.4.11}}.
+\item Ein EZS enthält wegen \hyperref[2.4.8]{Satz \ref*{2.4.8}} eine Basis und ist wegen \hyperref[2.4.11]{Satz \ref*{2.4.11}} bereits eine solche.
+\item Mit \hyperref[2.4.9]{Proposition \ref*{2.4.9}} ist eine linear unabhängige Familie Teilmenge einer Basis und mit \hyperref[2.4.11]{Satz~\ref*{2.4.11}} eine Basis.
 \end{enumerate}
 \subsubsection{Korollar}
 Für jeden Unterraum $Y$ eines endlich-dimensionalen Raumes $X$ ist dim$Y\leq$dim$X$, Gleichheit gilt genau für $X=Y$.
@@ -331,7 +343,7 @@ Es seien $Y_1,Y_2\subseteq X$ Unterräume.  Es ist $X=Y_1\oplus Y_2$ genau dann,
 \subsubsection{Satz}
 Jeder Unterraum eines endlich dimensionalen linearen Raumes hat ein Komplement.\\
 \underline{Beweis}(-skizze):\\
-Ergänze eine Basis von $Y_1$ zu einer Basis von $X$ gemäß Proposition 2.4.9.
+Ergänze eine Basis von $Y_1$ zu einer Basis von $X$ gemäß \hyperref[2.4.9]{Proposition \ref*{2.4.9}}.
 \subsection{Anwendung: Matrizen und lineare Gleichungen}
 Es sei $\mathbb{K}$ ein Körper und $A\in\mathbb{K}^{m\times n}$ mit den $n$ Spalten und den $m$ Zeilen.  Die $n$ Spalten seien $a_1,\cdots ,a_n\in \mathbb{K}^m$ und $a^1,\cdots ,a^m\in \mathbb{K}^{1\times n}$ die Zeilen von $A$.  Man bezeichnet den Unterraum span$\{a_k\}_{1\leq k\leq n}\subseteq \mathbb{K}^m$ als Spaltenraum und span$\{a^1,\cdots ,a^m\}\subseteq \mathbb{K}^{1\times n}$ als \underline{Zeilenraum} von $A$.
 \[A=\begin{pmatrix}a^1\\ \vdots \\ a^m\end{pmatrix} = (a_1,\cdots ,a_n)\]
