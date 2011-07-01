@@ -6,37 +6,37 @@ Wir beginnen mit einem Exkurs über Permutationen.  Dazu sei $(S_n,\circ )$ die 
 oder als $n-$Tupel ($\sigma (1),\cdots ,\sigma (n)$).  Weil $\sigma$ bijektiv ist, kommt jede Zahl $j\in\{1,\cdots ,n\}$ genau einmal in $(\sigma (1),\cdots ,\sigma (n))$ vor; ferner gibt es genau $n!$ solche Permutationen.
 \subsubsection{Definition (Signum)}
 Es sei $\sigma \in S_n$ und $s(\sigma )$ bezeichnet die Anzahle der Paare $(i,j)\in\mathbb{N}^2$ mit $1\leq i<j\leq n$ und $\sigma (i) > \sigma (j)$.  Dann ist das \underline{Signum} einer Permutation $\sigma$ definiert durch
-\[\mathrm{sgn}\sigma := (-1)^{s(\sigma )}\]
+\[\mathrm{sgn~}\sigma := (-1)^{s(\sigma )}\]
 \subsubsection{Beispiel}
 \label{4.1.2}
-Für die identische Permutation id$=(1,2,\cdots ,n)$ gilt $s(\sigma )=0$ und folglich sgnid$=1$.  Weiter erhält man 
+Für die identische Permutation id$=(1,2,\cdots ,n)$ gilt $s(\sigma )=0$ und folglich sgn~id$=1$.  Weiter erhält man
 \begin{align*}
-\sigma &=(2,1,3,4,\cdots ,n),\ s(\sigma ),\ \mathrm{sgn}\sigma =-1\\
-\sigma &=(n,n-1,\cdots ,2, 1),\ s(\sigma )=\frac{(n-1)n}{2},\mathrm{sgn}\sigma =(-1)^{s(\sigma )}
+\sigma &=(2,1,3,4,\cdots ,n),\ s(\sigma ),\ \mathrm{sgn~}\sigma =-1\\
+\sigma &=(n,n-1,\cdots ,2, 1),\ s(\sigma )=\frac{(n-1)n}{2},\mathrm{sgn~}\sigma =(-1)^{s(\sigma )}
 \end{align*}
 \subsubsection{Proposition}
-Für alle $\sigma ,\tau \in S_n$ gilt sgn$\sigma \circ \tau =$ sgn$\sigma\cdot$sgn$\tau$.
+Für alle $\sigma ,\tau \in S_n$ gilt sgn~$\sigma \circ \tau =$ sgn~$\sigma\cdot$sgn~$\tau$.
 \subsubsection{Bemerkung}
-Mittels \hyperref[4.1.2]{Beispiel \ref*{4.1.2}} ist $1=$sgnid$=$sgn$\sigma \circ \sigma ^{-1}$ und damit erhalten wir
-\[\label{4.1a} (4.1.a)\ \mathrm{sgn}\sigma ^{-1}=\mathrm{sgn}\sigma\text{ für alle }\sigma \in S_n\]
+Mittels \hyperref[4.1.2]{Beispiel \ref*{4.1.2}} ist $1=$sgn~id$=$sgn~$\sigma \circ \sigma ^{-1}$ und damit erhalten wir
+\[\label{4.1a} (4.1.a)\ \mathrm{sgn~}\sigma ^{-1}=\mathrm{sgn~}\sigma\text{ für alle }\sigma \in S_n\]
 \underline{Beweis}: Es seien $\sigma ,\tau \in S_n$ und $x_1,\cdots ,x_n\in\mathbb{Q}$ paarweise verschieden.  Dann sind auch $y_i:=x_{\sigma (i)}$ mit $1\leq i\leq n$ paarweise verschieden.
 \renewcommand{\labelenumi}{(\Roman{enumi})}
 \begin{enumerate}
 \item Zunächst gilt die Identität
-\[\label{4.1b} (4.1b)\ \mathrm{sgn}\sigma =\prod _{1 \leq i<j \leq n} \frac{x_{\sigma (i)}-x_{\sigma (j)}}{x_i -x_j}\]
+\[\label{4.1b} (4.1b)\ \mathrm{sgn~}\sigma =\prod _{1 \leq i<j \leq n} \frac{x_{\sigma (i)}-x_{\sigma (j)}}{x_i -x_j}\]
 denn Zähler und Nenner des Produkts stimmen bis auf ihr Vorzeichen überein.  Im Zähler tritt ein Faktor $x_k -x_l$ mit $k>l$ genau $s(\sigma )$-mal auf, während dies im Nenner nicht vorkommt.
 \item Aufgrund von \hyperref[4.1b]{$4.1b$} erhalten wir
-\[\mathrm{sgn}\tau =\prod _{1\leq i<j\leq n} \frac{y_{\tau (i)} -y_{\tau (j)}}{y_i - y_j}=\prod _{1\leq i<j\leq n} \frac{x_{\sigma \circ \tau (i)}-x_{\sigma \circ \tau (j)}}{x_{\sigma (i)}-x_{\sigma (j)}}\]
+\[\mathrm{sgn~}\tau =\prod _{1\leq i<j\leq n} \frac{y_{\tau (i)} -y_{\tau (j)}}{y_i - y_j}=\prod _{1\leq i<j\leq n} \frac{x_{\sigma \circ \tau (i)}-x_{\sigma \circ \tau (j)}}{x_{\sigma (i)}-x_{\sigma (j)}}\]
 \end{enumerate}
 und folglich resultiert die Behauptung aus
 \begin{align*}
-\mathrm{sgn} \sigma\circ\tau &\stackrel{(4.1b)}{=} \prod _{1\leq i<j\leq n}\frac{x_{\sigma \circ \tau (i)}-x_{\sigma\circ\tau (j)}}{x_i -x_j}\\
-&= \left(\prod _{1\leq i<j\leq n} \frac{x_{\sigma\circ\tau (i)}-x_{\sigma\circ\tau (j)}}{x_{\sigma (i)}-x_{\sigma (j)}}\right) \left(\frac{x_{\sigma (i)}-x_{\sigma (j)}}{x_i-x_j}\right)\\
-&= \mathrm{sgn}\tau \cdot \mathrm{sgn}\sigma
+\mathrm{sgn~} \sigma\circ\tau &\stackrel{(4.1b)}{=} \prod _{1\leq i<j\leq n}\frac{x_{\sigma \circ \tau (i)}-x_{\sigma\circ\tau (j)}}{x_i -x_j}\\
+&= \left(\prod _{1\leq i<j\leq n} \frac{x_{\sigma\circ\tau (i)}-x_{\sigma\circ\tau (j)}}{x_{\sigma (i)}-x_{\sigma (j)}}\right) \left(\prod _{1\leq i<j\leq n}\frac{x_{\sigma (i)}-x_{\sigma (j)}}{x_i-x_j}\right)\\
+&= \mathrm{sgn~}\tau \cdot \mathrm{sgn~}\sigma
 \end{align*}
 \subsubsection{Definition (Determinante)}
 Die durch det:$\mathbb{K}^{n\times n}\rightarrow \mathbb{K}$
-\[\label{4.1c}(4.1c)\ \mathrm{det}A:=\sum _{\sigma\in S_n} \mathrm{sgn}\sigma \prod _{i=1}^na_{i\sigma (i)}\]
+\[\label{4.1c}(4.1c)\ \mathrm{det}A:=\sum _{\sigma\in S_n} \mathrm{sgn~}\sigma \prod _{i=1}^na_{i\sigma (i)}\]
 \subsubsection{Bemerkung}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
@@ -61,19 +61,19 @@ Für alle $A,B\in\mathbb{K}^{n\times n}$ gilt
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item det$A=$det$A^T$
-\item Entsteht $B$ durch eine Permutation $\sigma \in S_n$ der Spalten von $A$ (d.h. ist formal $B=(a_{\sigma (1)}\,a_{\sigma (2)},\cdots ,a_{\sigma (n)})$), oder der Zeilen von $A$ $\left(\text{d.h. formal} B=\begin{pmatrix}a^{\sigma (1)}\\ \vdots \\ a^{\sigma (n)}\end{pmatrix}\right)$, so gilt der$B=$sgn$\sigma$det$A$
+\item Entsteht $B$ durch eine Permutation $\sigma \in S_n$ der Spalten von $A$ (d.h. ist formal $B=(a_{\sigma (1)}\,a_{\sigma (2)},\cdots ,a_{\sigma (n)})$), oder der Zeilen von $A$ $\left(\text{d.h. formal }B=\begin{pmatrix}a^{\sigma (1)}\\ \vdots \\ a^{\sigma (n)}\end{pmatrix}\right)$, so gilt der$B=$sgn~$\sigma$det$A$
 \item Falls zwei Spalten der Zeilen von $A$ übereinstimmen, so ist det$A=0$.
 \end{enumerate}
 \underline{Beweis}: Es seien $A,B\in\mathbb{K}^{n\times n}$
 \begin{enumerate}
 \item Durch direktes Nachrechnen und \hyperref[4.1a]{$4.1a$} folgt 
 \begin{align*}
-\mathrm{det}A^T&\stackrel{(4,1c)}{=}\sum _{\sigma\in S_n}\mathrm{sgn}\sigma \prod _{i=1}^n a_{\sigma (i)i}\\
-&=\sum _{\sigma \in S_n} \mathrm{sgn}\sigma ^{-1}\prod _{j=1}^n a_{j\sigma ^{-1}(j)}\\
+\mathrm{det}A^T&\stackrel{(4,1c)}{=}\sum _{\sigma\in S_n}\mathrm{sgn~}\sigma \prod _{i=1}^n a_{\sigma (i)i}\\
+&=\sum _{\sigma \in S_n} \mathrm{sgn~}\sigma ^{-1}\prod _{j=1}^n a_{j\sigma ^{-1}(j)}\\
 &= \mathrm{det}A
 \end{align*}
 \item folgt ähnlich und (c) ist etwas involvierter.
 \end{enumerate}
 Eine zentrale Eigenschaft von Determinanten ist ihre Multiplikativität.  Allerdings ist sie in Dimensionen $n>1$ nicht additiv: Beispiel det$(I_n+I_n)=2^n$, aber det$I_n=1$.
-\subsubsection{Satz (Multiplikativität der Determinante}
+\subsubsection{Satz (Multiplikativität der Determinante)}
 Es gilt $\label{4.1d}(4.1d)$det$(AB)=$det$A\cdot$det$B$ für alle $A,B\in\mathbb{K}^{n\times n}$.
