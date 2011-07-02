@@ -204,7 +204,7 @@ Wir wollen die Matrix $A:=\begin{pmatrix}1&2&3\\2&3&4\\3&4&6\end{pmatrix}$ inver
 und erhalten $A^{-1}=\begin{pmatrix}-2&0&1\\0&3&-2\\1&-2&1\end{pmatrix}$.\\
 Eine testweise Multiplikation ergibt $AA^{-1}=A^{-1}A=I_3$.
 \subsubsection{Korollar}
-Die inverse Matrix $A^{-1}\in\mathbb{K}^{n\times m}$ ist eindeutig bestimmt mit $A^{-1}A=I_n$.  Ferner ist $A$ genau dann invertierbar, wenn $T_A\in GL(\mathbb{K}^n)$ ist.
+Die inverse Matrix $A^{-1}\in\mathbb{K}^{n\times n}$ ist eindeutig bestimmt mit $A^{-1}A=I_n$.  Ferner ist $A$ genau dann invertierbar, wenn $T_A\in GL(\mathbb{K}^n)$ ist.
 \subsubsection{Definition (regulär, singulär)}
 \label{regulaer}
 Eine Matrix $A\in\mathbb{K}^{n\times n}$ heißt \underline{regulär}, falls rk$A=n$ gilt, andernfalls nennen wir sie \underline{singulär}.
@@ -239,7 +239,7 @@ Hieraus wird die sogenannte \underline{Basiswechselmatrix} $S=(s_{ij})_{1\leq i,
 \begin{center}
 Spalten von S = Koordinatenvektoren der "`neuen"' Basisvektoren
 \end{center}
-\item Umgekehrt lassen sich die $x_j$ durch die $x'_i$ ausdrücken.  Aus $x_j=\sum _{i=1}^ns_{ij}x'_i$ erhalten wir $x_j=\sum _{i=1}^ns_{ij}(\sum _{k=1}^n s_{ki}x_k)=\sum _{k=1}(\sum _{i=1}^n s_{ki}s'_{ij})x_k$. Der Ausdruck in der letzten Klammer ist genau das $(k,j)$-te Element von $SS'$.  Wegen der linearen Unabhängigkeit von $\mathcal{X}$ folgern wir, dass $SS'=I_n$ und somit $S'=S^{-1}$ sein muss.  Schließlich definiert man auch jede invertierbare Matrix $S$ einen Basiswechsel gemäß $(3.3e)$ bzw. $x'_j=Sx_j$.
+\item Umgekehrt lassen sich die $x_j$ durch die $x'_i$ ausdrücken.  Aus $x_j=\sum _{i=1}^ns_{ij}x'_i$ erhalten wir $x_j=\sum _{i=1}^ns_{ij}(\sum _{k=1}^n s_{ki}x_k)=\sum _{k=1}^n(\sum _{i=1}^n s_{ki}s'_{ij})x_k$. Der Ausdruck in der letzten Klammer ist genau das $(k,j)$-te Element von $SS'$.  Wegen der linearen Unabhängigkeit von $\mathcal{X}$ folgern wir, dass $SS'=I_n$ und somit $S'=S^{-1}$ sein muss.  Schließlich definiert man auch jede invertierbare Matrix $S$ einen Basiswechsel gemäß $(3.3e)$ bzw. $x'_j=Sx_j$.
 \end{itemize}
 \addtocounter{subsubsection}{12}
 \subsubsection{Satz}
