@@ -36,7 +36,7 @@ und folglich resultiert die Behauptung aus
 \end{align*}
 \subsubsection{Definition (Determinante)}
 Die durch det:$\mathbb{K}^{n\times n}\rightarrow \mathbb{K}$
-\[\label{4.1c}(4.1c)\ \mathrm{det}A:=\sum _{\sigma\in S_n} \mathrm{sgn~}\sigma \prod _{i=1}^na_{i\sigma (i)}\]
+\[\phantomsection\label{4.1c}(4.1c)\ \mathrm{det}A:=\sum _{\sigma\in S_n} \mathrm{sgn~}\sigma \prod _{i=1}^na_{i\sigma (i)}\]
 \subsubsection{Bemerkung}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
@@ -76,4 +76,79 @@ Für alle $A,B\in\mathbb{K}^{n\times n}$ gilt
 \end{enumerate}
 Eine zentrale Eigenschaft von Determinanten ist ihre Multiplikativität.  Allerdings ist sie in Dimensionen $n>1$ nicht additiv: Beispiel det$(I_n+I_n)=2^n$, aber det$I_n=1$.
 \subsubsection{Satz (Multiplikativität der Determinante)}
-Es gilt $\label{4.1d}(4.1d)$det$(AB)=$det$A\cdot$det$B$ für alle $A,B\in\mathbb{K}^{n\times n}$.
+\label{4.1.10}
+Es gilt \[\phantomsection\label{4.1d}(4.1d)\mathrm{det}(AB)=\mathrm{det}A\cdot\mathrm{det}B\text{ für alle }A,B\in\mathbb{K}^{n\times n}.\]
+Zusätzlich zu Satz 3.3.14: Charakterisierung regulärer Matrizen: 
+\subsubsection{Satz (Regularität und die Determinante}
+\label{4.1.11}
+Eine Matrix $A\in\mathbb{K}^{n\times n}$ ist genau dann regulär, wenn det$A\not= 0$.  Dann gilt
+\[\phantomsection\label{4.1e}(4.1e)\ \mathrm{det}A^{-1}=\frac{1}{\mathrm{det}A}\]
+\subsubsection{Korollar}
+\label{4.1.12}
+Für ähnliche Matrizen $A,B\in\mathbb{K}^{n\times n}$ ist det$A=$det$B$.
+\subsubsection{Bemerkung}
+Es sei $X$ ein linearer Raum, mit dim$X<\infty$.  Auf Basis von \hyperref[4.1.12]{Korollar \ref{4.1.12}} lässt sich auch die \underline{Determinante} det$:L(X)\rightarrow \mathbb{K}$ einer linearen Abbildung $T\in L(X)$.  Mit ihrer darstellenden Matrix $T_\mathcal{X}$ ist
+\[\mathrm{det}T:=\mathrm{det}T_\mathcal{X}\]
+Hierbei ist det$T$ unabhängig von der Basis $\mathcal{X}$, denn nach \hyperref[3.3.16]{Satz \ref{3.3.16}} sind alle darstellenden Matrizen ähnlich und haben gleiche Determinante.\\
+\underline{Beweis}:  Mit $A,B\in\mathbb{K}^{n\times n}$ und einer regulären Matrix $S\in\mathbb{K}^{n\times n}$ mit $B=S^{-1}AS$ gilt aufgrund von \hyperref[4.1.10]{Satz \ref{4.1.10}} und \hyperref[4.1.11]{Satz \ref{4.1.11}}
+\[\mathrm{det}B=\mathrm{det}S^{-1}AS\stackrel{\hyperref[4.1d]{(4.1d)}}{=}\mathrm{det}S^{-1}\mathrm{det}A\mathrm{det}S=\mathrm{det}A\]
+Problem mit der Leibniz \hyperref[4.1c]{(4.1c)}: Sehr aufwändig!\\
+Lösung: Zu gegebenem $A\in\mathbb{K}^{n\times n}$ und $1\leq k,l\leq n$ sei $A_{kl}:=(a_{ij})_{\substack{1\leq i\leq n, i\not=k\\ 1\leq j\leq n, i\not=l}}\in\mathbb{K}^{(n-1)\times n(-1)}$ diejenige Matrix, welche aus $A$ durch Streichen der $k-$ten Zeile und der $l-ten$ Spalte entsteht.
+\subsubsection{Proposition (Entwicklung von det)}
+Es sei $A\in\mathbb{K}^{n\times n}$.  Für alle Indizen $k,l\in\{1,\cdots ,n\}$ gilt dann:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item die \underline{Entwicklung nach der $k-$ten Zeile}
+\[\mathrm{det}A=\sum _{i=1}^n (-1)^{k+j}a_{kj}\mathrm{det}A_{kj}\]
+\item die \underline{Entwicklung nach der $l-$ten Spalte}
+\[\mathrm{det}A=\sum _{i=1}^n (-1)^{i+l}a_{il}\mathrm{det}A_{il}\]
+\end{enumerate}
+\subsubsection{Beispiel}
+Durch Entwicklung nach der ersten Zeile erhalten wir:
+\begin{align*}
+\mathrm{det}\begin{pmatrix}0 & 1 & 2\\ 3 & 4 & 5\\ 6 & 7 & 8\end{pmatrix}&=0\mathrm{det}\begin{pmatrix}4 & 5\\ 7 & 8\end{pmatrix}+(-1)\mathrm{det}\begin{pmatrix}3 & 5\\ 6 & 8\end{pmatrix}+2\mathrm{det}\begin{pmatrix}3 & 4\\ 6 & 7\end{pmatrix}\\
+&=0
+\end{align*}
+Entwicklung nach der ersten Spalte liefert entsprechend:
+\begin{align*}
+\mathrm{det}\begin{pmatrix}0 & 1 & 2\\ 3 & 4 & 5\\ 6 & 7 & 8\end{pmatrix}&=0\mathrm{det}\begin{pmatrix}4 & 5\\ 7 & 8\end{pmatrix}+(-1)3\mathrm{det}\begin{pmatrix}1 & 2\\ 7 & 8\end{pmatrix}+6\mathrm{det}\begin{pmatrix}1 & 2\\ 4 & 5\end{pmatrix}\\
+&=0
+\end{align*}
+\subsubsection{Beispiel (Dreiecksmatrizen)}
+Ist $A\in\mathbb{K}^{n\times n}$ eine Dreiecksmatrix, so gilt det$A=\prod _{i=1}^n a_{ii}$.
+\subsubsection{Proposition (Inverse und det)}
+Ist $A\in\mathbb{K}^{n\times n}$ regulär.
+\[A^{-1}=\frac{1}{\mathrm{det}A}\left( (-1)^{i+j}\mathrm{det}A_{ij}\right)_{1\leq i,j\leq n}\]
+\subsubsection{Beispiel}
+In $\mathbb{K}^{2\times 2}$ gilt
+\[\begin{pmatrix}a_{11} & a_{12}\\ a_{21} & a_{22}\end{pmatrix}^{-1}=\frac{1}{a_{11}a_{22}-a_{21}a_{12}}\begin{pmatrix}a_{22} & -a_{12}\\ -a_{21} & a_{11}\end{pmatrix}\]
+\underline{Beweis}: Mittels der Matrix $B:=((-1)^{i+j}\mathrm{det}A_{ij})_{1\leq i,j\leq n}$ erhalten wir durch Nachrechnen $AB=BA=\mathrm{det}A\cdot I_n$.  Wegen \hyperref[3.3.12]{Korollar \ref{3.3.12}} ist (det$A)^{-1}B$ die Inverse von $A$.
+\subsection{Eigenwerte und Eigenvektoren}
+Es sei $X$ ein linearer Raum über $\mathbb{K}$.\\
+\underline{Ziel}: Finde zu $T\in L(X)$ eine Basis $\mathcal{X}$ von $X$ derart, dass $T_\mathcal{X}\in\mathbb{K}^{n\times n}$ möglichst "`einfach"' ist.  Hilfreich sind hierbei diejenigen Vektoren, welche von $T$ auf ein Vielfaches abgebildet werden.
+\subsubsection{Definition (Eigenwert, Eigenvektor und Eigenraum)}
+Existiert zu $T\in L(X)$ ein Skalar $\lambda\in\mathbb{K}$ und ein Vektor $x\in X\setminus \{0 \}$ mit
+\[\phantomsection\label{4.2a}(4.2a)\ Tx=\lambda x\]
+So nennt man $x$ den zum \underline{Eigenwert} $\lambda$ gehörigen \underline{Eigenvektor} von $T$.  Der Kern $E_\lambda := N(T-\lambda \mathrm{id}x)$ und \underline{Eigenraum} von $T$ und dessen Dimension die \underline{geometrische Vielfachheit} von $\lambda$ genannt.  Das \underline{Spektrum} $\sigma (T)\subseteq \mathbb{K}$ ist die Menge aller Eigenwerte.
+\subsubsection{Bemerkung}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\begin{enumerate}
+\item Eine Abbildung $T\in L(X)$ besitzt genau dann einen nichttrivialen Kern, falls $0\in \sigma (T)$ gilt.  Im Fall dim$X < \infty$ ist $T$ genau dann invertierbar, wenn $0\not\in\sigma (T)$.
+\item Für jedes $\lambda \in \sigma (T)$ ist der zugehörige Eigenraum $E_\lambda$ \underline{invariant} bezüglich $T$, d.h.
+\[x\in E_\lambda \Rightarrow Tx\in E_\lambda\]
+Ist insbesondere $m:=$dim$E_\lambda<\infty$, so besitzt $S:=T\mid _{E_\lambda} \in L(E_\lambda)$ bezüglich jeder Basis $\mathcal{X}$ von $E_\lambda$ die Darstellung $S_\mathcal{X}=\mathrm{diag}(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{m\times m}$.
+\item Mit $A\in\mathbb{K}^{n\times n}$ besteht das Spektrum $\sigma (T_A)$ aus allen $\lambda\in\mathbb{K}$ derart, dass der Lösungsraum der homogenen Gleichung $[A-\lambda I_n]x=0$ nichttrivial ist; letzterer stimmt mit $E_\lambda$ überein.
+\end{enumerate}
+\subsubsection{Beispiel}
+\begin{enumerate}
+\item Mit der Nullabbildung $0\in L(X)$ gilt $\stackrel{\in L(X)}{0}x=\stackrel{\in X}{0}$ für alle $x\in X$.  Folglich ist $\sigma (0) = \{0\}$, jedes $x\not=0$ ist Eigenvektor und $E_0=X$.  Für die Identität id$x$ gilt $\sigma (\mathrm{id}x)=\{1\}$ und $E_1=X$.
+\item Wir betrachten die von $A=\begin{pmatrix}1 & 2\\ 2 & 1\end{pmatrix}$ induzierte Abbildung $T_A\in L(\mathbb{R}^2)$:
+\begin{itemize}
+\item Wegen $T_A\begin{pmatrix}-1\\ 1\end{pmatrix}=-1\begin{pmatrix}-1\\ 1\end{pmatrix}$ ist $-1$ ein Eigenwert, $\begin{pmatrix}-1\\ 1\end{pmatrix}$ zugehörigen Eigenvektor und $E_{-1}=\mathbb{R}\begin{pmatrix}-1\\ 1\end{pmatrix}$ Eigenraum zu $-1$; also hat $-1$ die geometrische Vielfachheit $1$.
+\item Aufgrund von $T_A\begin{pmatrix}1\\ 1\end{pmatrix}=3\begin{pmatrix}1\\ 1\end{pmatrix}$ ist ferner $3$ ein Eigenwert $\begin{pmatrix}1\\ 1\end{pmatrix}$ zugehöriger Eigenvektor und $E_3=\mathbb{R}\begin{pmatrix}1\\ 1\end{pmatrix}$.  Geometrische Vielfachheit ist $1$.
+\end{itemize}
+\end{enumerate}
+\subsubsection{Beispiel (Shift-Operator)}
+Auf dem Folgenraum $X:=F(\mathbb{Z},\mathbb{K})$ betrachten wir den Vorwärts-Shift $(Tx)_k :=x_{k+1},\ T\in L(X)$.  Im Fall $\lambda \not= 0$ gilt die Eigenwert - Eigenvektor - Beziehung \hyperref[4.2a]{$(4.2a)$} genau dann, wenn
+\[[x_{k+1}=(Tx)_k=\lambda x_k],\text{ für alle } k\in\mathbb{Z}\]
+dies ist wiederum für jede Folge $x^\lambda \in X,\ x_k^\lambda =\lambda ^k$ erfüllt.  Im Fall $\lambda = 0$ gibt es dagegen keine Folge $X\not= 0$, welche \hyperref[4.2a]{$(4.2a)$} erfüllt.  Daher besitzt der Shift-Operator $T$ das Spektrum $\sigma (T)=\mathbb{K}\setminus \{0\}$ und $x^\lambda$ ist ein zu $\lambda \in \sigma (T)$ gehöriger Eigenvektor.  Aufgrund von $E_\lambda =span\{x^\lambda\}$ besitzt jedes $\lambda$ die geometrische Vielfachheit $1$.

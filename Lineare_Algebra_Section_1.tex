@@ -184,7 +184,7 @@ Für Zahlen $\alpha \in \mathbb{K}$ und Matrizen $A\in \mathbb{K}^{m\times n},B\
 Beweis: Übung.
 \subsection{Lineare Gleichungen}
 \subsubsection{Definition (lineare Gleichung)}
-Es seien $A\in \mathbb{K}^{m\times n}$ und $b\in \mathbb{K}^{m}$.  Dann bezeichnet man $\label{Lb}(L_b)\ Ax=b$ als lineares \underline{Gleichungssystem} mit $m$ Gleichungen für die $n$ unbekannten $x_m\in \mathbb{K}$ oder kurz also \underline{lineare Gleichung} in $\mathbb{K}^m$.  $A$ heißt \underline{Koeffizientenmatrix} und $b$ \underline{Inhomogenität} von (\hyperref[Lb]{$L_b$}).  Im Fall $b\not= 0$ nennt man (\hyperref[Lb]{$L_b$}) \underline{inhomogen} und erhält andernfalls die \underline{homogene Gleichung}: $\label{L0}(L_0)\ Ax=0$.  Eine Lösung von (\hyperref[Lb]{$L_b$}) ist ein Element $x\in \mathbb{K}^m$ mit $Ax=b$ und $L_b:=\{ x\in \mathbb{K}^m:Ax=b\}$ steht für die \underline{Lösungsmenge} von (\hyperref[Lb]{$L_b$}).
+Es seien $A\in \mathbb{K}^{m\times n}$ und $b\in \mathbb{K}^{m}$.  Dann bezeichnet man $\phantomsection\label{Lb}(L_b)\ Ax=b$ als lineares \underline{Gleichungssystem} mit $m$ Gleichungen für die $n$ unbekannten $x_m\in \mathbb{K}$ oder kurz also \underline{lineare Gleichung} in $\mathbb{K}^m$.  $A$ heißt \underline{Koeffizientenmatrix} und $b$ \underline{Inhomogenität} von (\hyperref[Lb]{$L_b$}).  Im Fall $b\not= 0$ nennt man (\hyperref[Lb]{$L_b$}) \underline{inhomogen} und erhält andernfalls die \underline{homogene Gleichung}: $\phantomsection\label{L0}(L_0)\ Ax=0$.  Eine Lösung von (\hyperref[Lb]{$L_b$}) ist ein Element $x\in \mathbb{K}^m$ mit $Ax=b$ und $L_b:=\{ x\in \mathbb{K}^m:Ax=b\}$ steht für die \underline{Lösungsmenge} von (\hyperref[Lb]{$L_b$}).
 \subsubsection{Bemerkung}
 (1) Ausgeschrieben lautet $(L_b)$:\\$a_{1,1}x_1+a_{1,2}x_2+\cdots +a_{1,n}x_n = b_1\\a{2,1}x_1+a_{2,2}x_2+\cdots +a_{2,n}x_n = b_2\\\cdots \\a{m,1}x_1+a_{m,2}x_2+\cdots +a_{m,n}x_n=b_m$.\\Oder noch unübersichtlicher $\sum^n_{j=1} a_{i,j}x_j = b_i$ für $1\leq i\leq m$.\\
 (2) $(L_b)$ hat stehts die \underline{triviale Lösung} $0\in \mathbb{K}^m$.  Inhomogene Gleichungen müssen nicht unbedingt lösbar sein: $0x=1$.\\
@@ -223,7 +223,7 @@ sind nicht in ZSF.
 \subsubsection{Beispiel (Rückwärts-Substitution)}
 \label{reverse}
 Die inhomogene lineare Gleichung
-$\label{1.4b}(1.4b)\begin{cases}x_1+2x_2+3x_3+4x_4=1,\\ x_2+2x_3+3x_4=1,\\x_3+2x_4=1\end{cases}$ hat die Koeffizientenmatrix bzw. Inhomogenität $A=\left(\begin{array}{cccc}1 & 2 & 3 & 4 \\ 0 & 1 & 2 & 3\\ 0 & 0 & 1 & 2\end{array}\right), b=\left(\begin{array}{c}1\\ 1\\ 1\\\end{array}\right)$\\
+$\phantomsection\label{1.4b}(1.4b)\begin{cases}x_1+2x_2+3x_3+4x_4=1,\\ x_2+2x_3+3x_4=1,\\x_3+2x_4=1\end{cases}$ hat die Koeffizientenmatrix bzw. Inhomogenität $A=\left(\begin{array}{cccc}1 & 2 & 3 & 4 \\ 0 & 1 & 2 & 3\\ 0 & 0 & 1 & 2\end{array}\right), b=\left(\begin{array}{c}1\\ 1\\ 1\\\end{array}\right)$\\
 \underline{Rückwärtssubstitution}: Aus der letzten Gleichung $x_3+2x_4=1$ sieht man, dass $x_4=t$ frei gewählt wenden kann, $t\in \mathbb{K}$.  Dies liefert $x_3=1-2t$.  Die bekannten variablen $x_3,x_4$ können in die zweite Gleichung von (\hyperref[1.4b]{$1.4b$}) eingesetzt werden, also $x_2 = 1-2x_3-3x_4=t-1$ und analog liefert die erste Gleichung $x_1=1-2x_2-3x_3-4x_4=0$.  Die Lösungsmenge von ($1.4b$) ist also:\[L_b=\left\{\left(\begin{array}{c}0\\ t-1\\ 1-2t\\ t\end{array}\right)\in \mathbb{K}^4:t\in\mathbb{K}\right\} = \left(\begin{array}{c}0\\ -1\\ 1\\ 0\end{array}\right)+\mathbb{K}\left(\begin{array}{c}0\\ 1\\ -2 \\1\end{array}\right)\]
 Die Lösungsmenge $L_b$ von (\hyperref[Lb]{$L_b$}) ändert sich nicht, wenn folgende Operationen auf (\hyperref[1.4b]{$1.4b$}) angewandt werden:
 \begin{itemize}
@@ -243,7 +243,7 @@ mit $A^{(1)}\in\mathbb{K}^{(m-1)\times (n-1)},b\in \mathbb{K}^{m-1}$.
 \item Löse das resultierende System durch Rückwärts-Substitution.
 \end{enumerate}
 \subsubsection{Beispiel}
-Als Kurzschreibweise für \[\label{1.4d}(1.4d)\begin{cases}x_1+2x_2+3x_3=0\\ 4x_1+5x_2+6x_3=0\\ 7x_1+8x_2+9x_3=0\end{cases}\]
+Als Kurzschreibweise für \[\phantomsection\label{1.4d}(1.4d)\begin{cases}x_1+2x_2+3x_3=0\\ 4x_1+5x_2+6x_3=0\\ 7x_1+8x_2+9x_3=0\end{cases}\]
 \[\begin{array}{ccc|c}1 & 2 & 3 & 0\\ 4 & 5 & 6 & 0\\ 7 & 8 & 9 & 0\end{array} \begin{array}{c} \\ II - 4I\\ II-7I\end{array} \Leftrightarrow \begin{array}{ccc|c}1 & 2 & 3 & 0\\ 0 & -3 & -6 & 0\\ 0 & -6 & -12 & 0\end{array} \begin{array}{c} \\ (-\frac{1}{3})\\ III-2II\end{array} \Leftrightarrow \begin{array}{ccc|c}1 & 2 & 3 & 0\\ 0 & 1 & 2 & 0\\ 0 & 0 & 0 & 0\end{array}\]
 Damit ist (\hyperref[1.4d]{$1.4d$}) äquivalent zu $\begin{cases}x_1+2x_2+3x_3=0\\ x_2+2x_3=0\end{cases}$\\
 Rückwärts-Substitution: Wähle $x_3=t$ mit $t\in\mathbb{K}$ und es folgt $x_2=-2x_3=-2t,x_1=-2x_2+3x_3=t$.  Die Lösungsmenge von (\hyperref[1.4d]{$1.4d$}) ergibt sich zu:
