@@ -3,7 +3,7 @@ Es seien $X,Y$ lineare Räume über dem selben Körper $\mathbb{K}$.
 \subsection{Grundlagen}
 \subsubsection{Definition (lineare Abbildung)}
 Eine \underline{lineare Abbildung} $T: X\rightarrow Y$ erfüllt die Eigenschaft
-\[(3.1a)\ T(\alpha _1x_1+\alpha _2x_2)=\alpha _1Tx_1+\alpha _2Tx_2\]
+\[\phantomsection\label{3.1a}(3.1a)\ T(\alpha _1x_1+\alpha _2x_2)=\alpha _1Tx_1+\alpha _2Tx_2\]
 für alle $\alpha _1,\alpha _2\in\mathbb{K},x_1,x_2\in X$.  Für die Menge aller solchen linearen Abbildungen schreiben wir $L(X,Y)$.\\
 Für lineare Abbildungen schreibt man $Tx:=T(x)$.
 \subsubsection{Bemerkung}
@@ -86,7 +86,7 @@ Sei $\{x_1,\cdots ,x_n\}$ ein Basis von $X$ und $\{\hat{y}_1,\cdots ,\hat{y}_n\}
 \item Es existiert genau eine lineare Abbildung $T\in L(X,Y)$ mit $Tx_i=\hat{y}_i,\ \forall 1\leq i\leq n$
 \end{enumerate}
 \subsubsection{Bemerkung}
-Für gegebenes $x=\sum_{k=1}^n\xi _kx_k,\ \xi _k\in \mathbb{K}\ \forall 1\leq k\leq n$, gilt $Tx=T(\sum_{k=1}^n\xi _kx_k)\stackrel{3.1a}{=}\sum_{k=1}^n\xi _k Tx_k$.  Kenntnis der Koeffizienten $\xi _k$ und der Werte $Tx_i,1\leq i\leq n$ erlaubt uns den Wert von $Tx$ zu bestimmen.\\
+Für gegebenes $x=\sum_{k=1}^n\xi _kx_k,\ \xi _k\in \mathbb{K}\ \forall 1\leq k\leq n$, gilt $Tx=T(\sum_{k=1}^n\xi _kx_k)\stackrel{\hyperref[3.1a]{(3.1a)}}{=}\sum_{k=1}^n\xi _k Tx_k$.  Kenntnis der Koeffizienten $\xi _k$ und der Werte $Tx_i,1\leq i\leq n$ erlaubt uns den Wert von $Tx$ zu bestimmen.\\
 \underline{Beweis} (\hyperref[lfortsetzung]{Satz \ref*{lfortsetzung}}):
 \begin{enumerate}
 \item Sei $Tx_i=Sx_i;\ \forall 1\leq i\leq n$.  Sei $x\in X$ mit $x=\sum_{i=1}^n\xi _ix_i,\ 1\leq i\leq n\ \xi _i \in \mathbb{K}$.
@@ -232,6 +232,7 @@ Es sei $b\in\mathbb{K}^m$.  Eine inhomogene Gleichung $(L_b)$ hat genau dann ein
 \underline{Beweis}: Übungsaufgabe.
 \addtocounter{subsubsection}{-13}
 \subsubsection{Basiswechsel}
+\label{basiswechsel}
 Auf einem endlich dimensionalen Raum $X$ seien die Basen $\mathcal{X}:=\{x_1,\cdots ,x_n\}$ und $\mathcal{X}':=\{x'_1,\cdots ,x'_n\}$ gegeben.  Wie verhält sich die Darstellungsmatrix von $T\in L(X)$ wenn man von $\mathcal{X}$ auf die Basis $\mathcal{X}'$ übergeht?
 \begin{itemize}
 \item Zunächst lassen sich die Elemente von $\mathcal{X}'$ darstellen durch die Elemente von $\mathcal{X}$
