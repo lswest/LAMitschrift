@@ -123,7 +123,7 @@ Ist $A\in\mathbb{K}^{n\times n}$ regulär.
 \subsubsection{Beispiel}
 In $\mathbb{K}^{2\times 2}$ gilt
 \[\begin{pmatrix}a_{11} & a_{12}\\ a_{21} & a_{22}\end{pmatrix}^{-1}=\frac{1}{a_{11}a_{22}-a_{21}a_{12}}\begin{pmatrix}a_{22} & -a_{12}\\ -a_{21} & a_{11}\end{pmatrix}\]
-\underline{Beweis}: Mittels der Matrix $B:=((-1)^{i+j}\mathrm{det}A_{ij})_{1\leq i,j\leq n}$ erhalten wir durch Nachrechnen $AB=BA=\mathrm{det}A\cdot I_n$.  Wegen \hyperref[3.3.12]{Korollar \ref{3.3.12}} ist (det$A)^{-1}B$ die Inverse von $A$.
+\underline{Beweis}: Mittels der Matrix $B:=((-1)^{i+j}\mathrm{det}A_{ji})_{1\leq i,j\leq n}$ erhalten wir durch Nachrechnen $AB=BA=\mathrm{det}A\cdot I_n$.  Wegen \hyperref[3.3.12]{Korollar \ref{3.3.12}} ist (det$A)^{-1}B$ die Inverse von $A$.
 \subsection{Eigenwerte und Eigenvektoren}
 Es sei $X$ ein linearer Raum über $\mathbb{K}$.\\
 \underline{Ziel}: Finde zu $T\in L(X)$ eine Basis $\mathcal{X}$ von $X$ derart, dass $T_\mathcal{X}\in\mathbb{K}^{n\times n}$ möglichst "`einfach"' ist.  Hilfreich sind hierbei diejenigen Vektoren, welche von $T$ auf ein Vielfaches abgebildet werden.
