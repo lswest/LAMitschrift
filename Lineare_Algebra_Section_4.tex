@@ -168,7 +168,7 @@ Ist $n=$dim$X<\infty$, so gilt:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item $T$ hat höchstens $n$ verschiedene Eigenwerte.
-\item Besitzt $T$ genau $n$ verschiedene Eigenwerte $\lambda _i$ mit zugehörigen Eigenvektoren $x_i$, so ist $\mathcal{X}:=\{x_1,\cdots ,x_m\}$ eine Basis von $X$ und $T_\mathcal{X}=diag(\lambda _1,\cdots ,\lambda _n)$.
+\item Besitzt $T$ genau $n$ verschiedene Eigenwerte $\lambda _i$ mit zugehörigen Eigenvektoren $x_i$, so ist $\mathcal{X}:=\{x_1,\cdots ,x_n\}$ eine Basis von $X$ und $T_\mathcal{X}=diag(\lambda _1,\cdots ,\lambda _n)$.
 \end{enumerate}
 \underline{Beweis}:
 \begin{enumerate}
@@ -189,21 +189,21 @@ Es seien $A\in\mathbb{K}^{n\times n}$ und die induzierte Abbildung $T_A\in L(\ma
 \item Im Fall $X=\mathbb{K}^n$ bezeichnet man $\chi _{T_A}$ auch als charakteristisches Polynom von $A$.
 \item Die \underline{Spur} von $A$ ist definiert durch (vgl. Aufgabe)
 \[trA=\sum _{i=1}^n a_{ii}\]
-und mit $\chi _{T_A}(t)=c_nt+\cdots +c_1t+c_0$ gilt $c_n=(-1)$, $c_{n-1}=(-1)^{n-1}trA$, $c_0=$det$A$.
+und mit $\chi _{T_A}(t)=c_nt^n+\cdots +c_1t+c_0$ gilt $c_n=(-1)^n$, $c_{n-1}=(-1)^{n-1}trA$, $c_0=$det$A$.
 \end{enumerate}
 Man sagt ein Polynom $\chi \in P_n(\mathbb{K})$ \underline{zerfällt in Linearfaktoren} falls es Koeffizienten $\mu \in \mathbb{K},\ \lambda _1,\cdots ,\lambda _n\in\mathbb{K}$ gibt, mit
 \[\phantomsection\label{4.3a}(4.3a)\chi (t) =\mu \prod _{i=1}^n (t-\lambda _i)\text{ auf } \mathbb{K}\]
-Die Werte $\lambda _i$ sind dann die Nullstellen von $\chi$, ihre \underline{Vielfachheit} gibt an, wie oft der \underline{Linearfaktor} $t-\lambda _i$ in \hyperref[4.3a]{$(4.3a)$} vorkommt.
+Die Werte $\lambda _i$ sind dann die Nullstellen von $\chi$, ihre \underline{algebraische Vielfachheit} gibt an, wie oft der \underline{Linearfaktor} $t-\lambda _i$ in \hyperref[4.3a]{$(4.3a)$} vorkommt.
 \subsubsection{Satz}
-Für jedes $T\in L(X)$ gibt $\sigma (T)=\chi _T^{-1}(\{0\})$, und die Vielfachheit von $\lambda \in \sigma (T)$ heißte \underline{algebraische Vielfachheit} des Eigenwerts $\lambda$.\\
+Für jedes $T\in L(X)$ gilt $\sigma (T)=\chi _T^{-1}(\{0\})$, und die Vielfachheit von $\lambda \in \sigma (T)$ heißt \underline{algebraische Vielfachheit} des Eigenwerts $\lambda$.\\
 \underline{Beweis}: Mittels \hyperref[4.2.1]{Definition \ref{4.2.1}} gelten die Äquivalenzen
 \[\lambda \not\in \sigma (T)\Leftrightarrow E_\lambda = N(T-\lambda \mathrm{id}\ x)=\{0\}\Leftrightarrow[T_\mathcal{X}-\lambda I_n]x=0\text{ hat nur die triviale Lösung.}\]
-\[\Leftrightarrow T_\mathcal{X}-\lambda I_n\text{ ist reguläre \hyperref[3.3.14]{Satz \ref{3.3.14}}}\]
+\[\Leftrightarrow T_\mathcal{X}-\lambda I_n\text{ ist regulär (\hyperref[3.3.14]{Satz \ref{3.3.14}})}\]
 \[\Leftrightarrow \chi _T(\lambda)=\mathrm{det}(T_\mathcal{X}-\lambda I_n)\not= 0\text{ nach \hyperref[4.1.11]{Satz \ref{4.1.11}}}\]
 \subsubsection{Beispiel}
-Es seien $\alpha \in [0,2\pi ),\ A=\begin{pmatrix}cos \alpha & sin \alpha\\ sin\alpha & cos\alpha \end{pmatrix}$
+Es seien $\alpha \in [0,2\pi ),\ A=\begin{pmatrix}cos \alpha & -sin \alpha\\ sin\alpha & cos\alpha \end{pmatrix}$
 \begin{enumerate}
-\item Über dem Körper $\mathbb{K}=\mathbb{R}$ betrachten wir $T=T_A\in L(\mathbb{R}^2)$.  Sie hat das charakteristisches Polynom $\chi _T(t)=t^2-2cos\alpha \cdot t+1$.  Für $\alpha =0$ ist $\sigma (T)=\{1\}$ und für $\alpha = \pi$ gilt $\sigma (T)=\{-1\}$.  Die Eigenwerte sind doppelte Nullstellen von $\chi _T$ und damit von algebraischer Vielfachheit $2$.  Ansonsten besitzt $\chi _T$ für $\alpha \not\in \{0,\pi\}$ keine reellen Nullstellen, d.h. $\sigma (T)=\emptyset$.
+\item Über dem Körper $\mathbb{K}=\mathbb{R}$ betrachten wir $T=T_A\in L(\mathbb{R}^2)$.  Sie hat das charakteristische Polynom $\chi _T(t)=t^2-2cos\alpha \cdot t+1$.  Für $\alpha =0$ ist $\sigma (T)=\{1\}$ und für $\alpha = \pi$ gilt $\sigma (T)=\{-1\}$.  Die Eigenwerte sind doppelte Nullstellen von $\chi _T$ und damit von algebraischer Vielfachheit $2$.  Ansonsten besitzt $\chi _T$ für $\alpha \not\in \{0,\pi\}$ keine reellen Nullstellen, d.h. $\sigma (T)=\emptyset$.
 \item Mit $\mathbb{K}=\mathbb{C}$ besitzt $T=T_A\in L(\mathbb{C}^2)$ für alle $\alpha$ das Spektrum
 \[\sigma (T)=\{cos\alpha -i\sqrt{1-cos^2\alpha }, cos\alpha +i\sqrt{1-cos^2\alpha }\}.\]
 Seine Elemente haben für $\alpha\not\in \{0,\pi \}$ die algebraische Vielfachheit $1$.
@@ -219,7 +219,7 @@ Ist $\mathbb{K}$ algebraisch abgeschlossen, so hat jedes $T\in L(X)$ einen Eigen
 \subsubsection{Satz}
 Die geometrische Vielfachheit jedes Eigenwertes ist kleiner oder gleich seiner algebraischen Vielfachheit.\\
 \underline{Beweis}: Es sei $T\in L(X)$ und $\lambda \in \sigma (T)$ mit $m:=$dim$E_\lambda$.  Dann existieren $m$ linear unabhängige Eigenvektoren von $T$ in $E_\lambda$.  Wählt man diese als ersten Teil einer Basis $\mathcal{X}$ von $X$, so gilt (vgl. \hyperref[4.2.2]{Bemerkung \ref{4.2.2}(2)})
-\[T_mathcal{X} =\begin{pmatrix}\Lambda & B\\ 0 & C\end{pmatrix}, \Lambda=diag(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{m\times m},\ B\in\mathbb{K}^{m\times (m-n)},\ C\in\mathbb{K}^{(n-m)\times (n-m)}\]
+\[T_\mathcal{X} =\begin{pmatrix}\Lambda & B\\ 0 & C\end{pmatrix}, \Lambda=diag(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{m\times m},\ B\in\mathbb{K}^{m\times (m-n)},\ C\in\mathbb{K}^{(n-m)\times (n-m)}\]
 und wir erhalten nach \hyperref[4.1.14]{Satz \ref{4.1.14}}, dass
 \[\chi _T(t)=(\lambda -t)^m \mathrm{det}(C-tI_{n-m})\]
 Daher ist die algebraische Vielfachheit von $\lambda$ mindestens $m$.
