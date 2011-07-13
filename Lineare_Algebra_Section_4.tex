@@ -41,7 +41,7 @@ Die durch det:$\mathbb{K}^{n\times n}\rightarrow \mathbb{K}$
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
 \item \hyperref[4.1c]{$(4.1c)$} heißt auch \underline{Leibniz-Formel}
-\item Es gilt die Beziehung $\mathrm{det}(\alpha A)=\alpha ^n\cdot\mathrm{det}~A$ für alle $\alpha\in\mathbb{K},A\in\mathbb{K}^{n\times n}$, folglich ist die Determinante für $n\geq 2$ nicht linear.
+\item Es gilt die Beziehung $\mathrm{det}(\alpha A)=\alpha ^n\cdot\mathrm{det}A$ für alle $\alpha\in\mathbb{K},A\in\mathbb{K}^{n\times n}$, folglich ist die Determinante für $n\geq 2$ nicht linear.
 \end{enumerate}
 \subsubsection{Beispiel}
 Wir erhalten det$0=0$ und det$I_n=1$
@@ -61,7 +61,8 @@ Für alle $A,B\in\mathbb{K}^{n\times n}$ gilt
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item det$A=$det$A^T$
-\item Entsteht $B$ durch eine Permutation $\sigma \in S_n$ der Spalten von $A$ (d.h. ist formal $B=(a_{\sigma (1)}\,a_{\sigma (2)},\cdots ,a_{\sigma (n)})$), oder der Zeilen von $A$ $\left(\text{d.h. formal }B=\begin{pmatrix}a^{\sigma (1)}\\ \vdots \\ a^{\sigma (n)}\end{pmatrix}\right)$, \\so gilt det$B=$sgn~$\sigma$det$A$
+\item Entsteht $B$ durch eine Permutation $\sigma \in S_n$ der Spalten von $A$ (d.h. ist formal $B=(a_{\sigma (1)}\,a_{\sigma (2)},\cdots ,a_{\sigma (n)})$), oder der Zeilen von $A$ $\left(\text{d.h. formal }B=\begin{pmatrix}a^{\sigma (1)}\\ \vdots \\ a^{\sigma (n)}\end{pmatrix}\right)$,\\
+so gilt det$B=$sgn~$\sigma$det$A$
 \item Falls zwei Spalten der Zeilen von $A$ übereinstimmen, so ist det$A=0$.
 \end{enumerate}
 \underline{Beweis}: Es seien $A,B\in\mathbb{K}^{n\times n}$
@@ -156,6 +157,7 @@ Auf dem Folgenraum $X:=F(\mathbb{Z},\mathbb{K})$ betrachten wir den Vorwärts-Sh
 \[[x_{k+1}=(Tx)_k=\lambda x_k],\text{ für alle } k\in\mathbb{Z}\]
 dies ist wiederum für jede Folge $x^\lambda \in X,\ x_k^\lambda =\lambda ^k$ erfüllt.  Im Fall $\lambda = 0$ gibt es dagegen keine Folge $X\not= 0$, welche \hyperref[4.2a]{$(4.2a)$} erfüllt.  Daher besitzt der Shift-Operator $T$ das Spektrum $\sigma (T)=\mathbb{K}\setminus \{0\}$ und $x^\lambda$ ist ein zu $\lambda \in \sigma (T)$ gehöriger Eigenvektor.  Aufgrund von $E_\lambda =span\{x^\lambda\}$ besitzt jedes $\lambda$ die geometrische Vielfachheit $1$.
 \subsubsection{Proposition}
+\label{4.2.5}
 Sind $\lambda _i,\ 1\leq i\leq m$, paarweise verschiedene Eigenwerte von $T\in L(X)$ mit zugehörigen Eigenvektoren $x_i\in X$, so ist $\{x_1,\cdots ,x_m\}$ linear unabhängig.\\
 \underline{Beweis}: Induktion über $m$: Im Fall $m=1$ ist wegen $x_1\not=0$ nichts zu zeigen.  Es gelte nun die Aussage für $m$ und wir machen den Ansatz 
 \[\phantomsection\label{4.2b}(4.2b)\sum _{i=1}^{m+1}\xi _i x_i=0\text{ mit } \xi _1,\cdots ,\xi _{m+1}\in\mathbb{K}\]
@@ -217,9 +219,70 @@ Ist $\mathbb{K}$ algebraisch abgeschlossen, so hat jedes $T\in L(X)$ einen Eigen
 \item $\mathbb{Q}$ ist nicht algebraisch abgeschlossen (z.B. $t^2-2$).
 \end{enumerate}
 \subsubsection{Satz}
+\label{4.3.7}
 Die geometrische Vielfachheit jedes Eigenwertes ist kleiner oder gleich seiner algebraischen Vielfachheit.\\
 \underline{Beweis}: Es sei $T\in L(X)$ und $\lambda \in \sigma (T)$ mit $m:=$dim$E_\lambda$.  Dann existieren $m$ linear unabhängige Eigenvektoren von $T$ in $E_\lambda$.  Wählt man diese als ersten Teil einer Basis $\mathcal{X}$ von $X$, so gilt (vgl. \hyperref[4.2.2]{Bemerkung \ref{4.2.2}(2)})
 \[T_\mathcal{X} =\begin{pmatrix}\Lambda & B\\ 0 & C\end{pmatrix}, \Lambda=diag(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{n\times m},\ B\in\mathbb{K}^{m\times (m-n)},\ C\in\mathbb{K}^{(n-m)\times (n-m)}\]
 und wir erhalten nach \hyperref[4.1.14]{Satz \ref{4.1.14}}, dass
 \[\chi _T(t)=(\lambda -t)^m \mathrm{det}(C-tI_{n-m})\]
 Daher ist die algebraische Vielfachheit von $\lambda$ mindestens $m$.
+\subsection{Diagonalisierung und Trigonalisierung}
+Wir betrachten $n-$dimensionale linearer Räume $X$ mit $n<\infty$.
+\subsubsection{Definition (diagonalisierbar, trigonalisierbar)}
+Eine Abbildung $T\in L(X)$ heißt
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item \underline{diagonalisierbar} falls eine Basis $\mathcal{X}$ von $X$ existiert, in der $T_\mathcal{X}$ eine Diagonalmatrix ist.
+\item \underline{trigonalisierbar}, falls eine Basis $\mathcal{X}$ von $X$ existiert, in der $T_\mathcal{X}$ obere Dreiecksform besitzt.
+\end{enumerate}
+\subsubsection{Bemerkung}
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+\begin{enumerate}
+\item Entsprechend wird eine Matrix $A\in \mathbb{K}^{n\times n}$ \underline{diagonalisierbar (triagonalisierbar)} genannt, falls $T_A\in L(\mathbb{K}^n)$ diese entsprechende Eigenschaft besitzt, bzw. ähnlich zu einer Diagonalmatrix (obere Dreiecksmatrix) ist.
+\item Mit oberen Dreiecksmatrizen zu arbeiten ist reine Konvention und keine mathematische Notwendigkeit.
+\end{enumerate}
+\subsubsection{Satz (Charakterisierung von Diagonalisierbarkeit)}
+\label{4.4.3}
+Eine Abbildung $T\in L(X)$ ist genau dann Diagonalisierbar, wenn gilt:
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item Ihr charakteristisches Polynom zerfällt in Linearfaktoren.
+\item Die geometrische Vielfachheit jedes Eigenwertes stimmt mit seiner algebraische Vielfachheit überein.
+\end{enumerate}
+\underline{Beweis}:
+Wir zeigen zwei Richtungen:
+\renewcommand{\labelitemi}{}
+\begin{itemize}
+\item ($\Rightarrow$) Es sei $T\in L(X)$ diagonalisierbar und $\mathcal{X}$ eine Basis von $X$ derart, dass \[T_\mathcal{X}=diag(a_1,\cdots ,a_n)\text{ mit }a_1,\cdots ,a_n\in\mathbb{K}.\]  Das charakteristisches Polynom ergibt sich daher zu 
+\[\phantomsection\label{4.4a}(4.4a)\ \chi _T=\prod _{k=1}^n (a_k -t)\left[=\mathrm{det}(T_\mathcal{X}-tI_n)=\mathrm{det}\begin{pmatrix}a_1^{-t} & \ & \ \\ \ & \ddots & \ \\ \ & \ & a_n^{-t}\end{pmatrix}\right]\]
+und zerfällt offenbar in Linearfaktoren.  Nach \hyperref[4.3.7]{Satz \ref{4.3.7}} bleibt also nachzuweisen, dass die geometrische Vielfachheit eines $\lambda \in \sigma (T)$ mindestens gleich seiner algebraischen Vielfachheit ist.  Bezeichnet die Algebraische Vielfachheit von $\lambda$, so kommt der Linearfaktoren $\lambda -t$ genau $r-$mal in \hyperref[4.4a]{$(4.4a)$} vor, d.h. $r$ Diagonalelemente von $T_\mathcal{X}$ sind gleich $\lambda$.  Damit werden $r$ Elemente der Basis $\mathcal{X}$ auf ihr $\lambda -$faches abgebildet und folglich ist dim$E_\lambda \geq r$
+\item ($\Leftarrow$) Umgekehrt zerfalle $\chi _T$ in Linearfaktoren, es gelte die Bedingung (ii) und es sei $\sigma (T)=\{\lambda _1,\cdots \lambda _m\}$ mit paarweise verschiedenen Eigenwerten $\lambda _i,\ 1\leq i\leq m\leq n$.  Zu jedem Eigenraum $E_{\lambda _i}$ wählen wir eine Basis
+\[\mathcal{X}_i=\{x_1^i,\cdots ,x_{r_i}^i\}\text{ mit }1\leq i\leq m,r_1+\cdots r_m=n.\]
+und erhalten somit $n$ Vektoren im Raum $X$.  Wir wollen zeigen, dass diese linear unabhängig sind.  Dazu 
+\[\phantomsection\label{4.4b}(4.4b)\ 0=\sum _{i=1}^m \sum _{j=1}^{r_i}\xi _j^ix_j^i=\sum _{i=1}^m y_i\text{ mit } y_i=\sum _{j=1}^{r_i}\xi _j^i x_j^i\text{ und Koeffizienten }\xi _j^i\]
+Die Invarianz der $E_{\lambda _i}$ zeigt, dass jedes solcher $y_i\in E_{\lambda _i}$ auf sein $\lambda _i$-faches abgebildet wird, also Eigenvektor von $T$ ist.  Mit \hyperref[4.2.5]{Proposition \ref{4.2.5}} liefert dies die lineare Unabhängigkeit von $\{y_1,\cdots ,y_m\}$.  Dann muss aber $0=y_i=\sum _{j=1}^{r_1}\xi _j^ix_j^i,\ 1\leq i\leq m$ gelten, denn andernfalls wäre \hyperref[4.4b]{$(4.4b)$} eine nichttriviale Darstellung der $0$.  Da $\mathcal{X}_i$ Basis ist, folgt $\xi _j^i=0$ und somit sind die $n$ Vektoren aus $\mathcal{X}_1,\cdots ,\mathcal{X}_n$ linear unabhängig, bilden also eine Basis von $X$, in welcher $T_\mathcal{X}$ diagonal ist.
+\end{itemize}
+\subsubsection{Beispiel}
+\numbers
+\begin{enumerate}
+\item Wir betrachten die lineare Abbildung 
+\[T\in L(\mathbb{R}^3),\ Tx=\begin{pmatrix}0 & 1 & -1\\ 3 & 2 & -3 \\ 2 & 2 & -3\end{pmatrix}x\]
+und dem charakteristischen Polynom $\chi _T(t)=t^3+t^2-t-1=(t+1)^2(t-1)$.  Es zerfällt in Linearfaktoren und der Eigenwert $-1$ besitzt die algebraische Vielfachheit $2$.  Der Lösungsraumen der homogenen linearer Gleichung $[T+id]x=0$ lautet
+\[E_{-1}=span\left\{\begin{pmatrix}-1\\ 1\\ 0\end{pmatrix},\begin{pmatrix}1\\ 0\\ 1\end{pmatrix}\right\}\]
+und ist der zugehörige Eigenraum zum Eigenwert$-1$.  Somit hat $-1$ die geometrische Vielfachheit $2$.  Der weitere Eigenwert $1$ ist algebraisch einfach.  Seine geometrische Vielfachheit $1$ ergibt sich aus der Gleichung $[t-id]x=0$, deren Lösungsraum
+\[E_1=span\left\{\begin{pmatrix}1\\ 3\\ 2\end{pmatrix}\right\}\]
+gerade der zum Eigenwert $1$ gehörige Eigenraum ist.  Deshalb garantiert \hyperref[4.4.3]{Satz \ref{4.4.3}} die Diagonalisierbarkeit von $T$.  In der Tat, mit der aus den Eigenvektoren von $T$ gebildeten Basiswechselmatrix $S=\begin{pmatrix}-1 & 1 & 1\\ 1 & 0 & 3 \\ 0 & 1 & 2\end{pmatrix}$ (gebildet von $E_{-1}$ und $E_1$ als Spalten) gibt $S^{-1}TS=\begin{pmatrix}-1 & 0 & 0 \\0 & -1 & 0\\ 0 & 0 & 1\end{pmatrix}$.
+\item Wir betrachten $T\in L(\mathbb{R}^3)$
+\[Tx:=\begin{pmatrix}-2 & 1 & 3\\ 2 & 1 & -1\\ -7 & 2 & 7\end{pmatrix}x\]
+mit dem charakteristischen Polynom $\chi _T(t)=-(t-2)^3$, das in Linearfaktoren zerfällt.  Der Eigenwert 2 von $T$ hat die algebraische Vielfachheit $3$.  Man verifiziert leicht $E_2=N(T-2id)=\mathbb{R}\begin{pmatrix}1\\ 1\\ 1\end{pmatrix}$,
+weshalb die geometrische Vielfachheit $1$ ist.  Also ist $T$ nicht diagonalisierbar.
+\end{enumerate}
+\subsubsection{Satz (Charakterisierung von Trigonalisierbarkeit)}
+\label{4.4.5}
+Eine Abbildung $T\in L(X)$ ist genau dann triangulierbar, wenn ihr charakteristisches Polynom in Linearfaktoren zerfällt.
+\subsubsection{Bemerkung (Jordan-Normalform)}
+Der \hyperref[4.4.5]{Satz \ref{4.4.5}} lässt sich wesentlich präziser fassen - wenn auch mit deutlich aufwändigeren Beweis: zu jedem $T\in L(X)$, deren charakteristisches Polynom in Linearfaktoren zerfällt, existiert eine Basis $\mathcal{X}$ von $X$, so dass die darstellende Matrix $T_\mathcal{X}$ in \underline{Jordan-Normalform} ist.
+\[T_\mathcal{X}=diag(J_1,\cdots ,J_r)\text{ mit } 1\leq i\leq r\]
+Hierbei besitzt jeder \underline{Jordan-Block} die Form 
+\[J_i=\begin{pmatrix}\lambda _i & 1\\ & \lambda _i & 1 \\& & \ddots & 1\\ & & & \lambda _i\end{pmatrix}\in\mathbb{K}^{n_i\times m_i},\ 1\leq i\leq r\]
+mit $\sigma (T) = \{\lambda _1,\cdots ,\lambda _r\}$ und $n_1+\cdots +n_r=n$.

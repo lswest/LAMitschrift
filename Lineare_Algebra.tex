@@ -27,6 +27,10 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \setlength{\headheight}{16pt}
+\newcommand{\alphabet}{\renewcommand{\labelenumi}{(\alph{enumi})}}
+\newcommand{\numbers}{\renewcommand{\labelenumi}{(\arabic{enumi})}}
+\newcommand{\romannum}{\renewcommand{\labelenumi}{(\roman{enumi})}}
+\newcommand{\Romannum}{\renewcommand{\labelenumi}{(\Roman{enumi})}}
 \begin{document}
 \maketitle
 \pagebreak
