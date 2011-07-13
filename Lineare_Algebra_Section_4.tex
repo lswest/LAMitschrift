@@ -11,7 +11,7 @@ Es sei $\sigma \in S_n$ und $s(\sigma )$ bezeichnet die Anzahle der Paare $(i,j)
 \label{4.1.2}
 Für die identische Permutation id$=(1,2,\cdots ,n)$ gilt $s(\sigma )=0$ und folglich sgn~id$=1$.  Weiter erhält man
 \begin{align*}
-\sigma &=(2,1,3,4,\cdots ,n),\ s(\sigma ),\ \mathrm{sgn~}\sigma =-1\\
+\sigma &=(2,1,3,4,\cdots ,n),\ s(\sigma )=1,\ \mathrm{sgn~}\sigma =-1\\
 \sigma &=(n,n-1,\cdots ,2, 1),\ s(\sigma )=\frac{(n-1)n}{2},\mathrm{sgn~}\sigma =(-1)^{s(\sigma )}
 \end{align*}
 \subsubsection{Proposition}
@@ -41,7 +41,7 @@ Die durch det:$\mathbb{K}^{n\times n}\rightarrow \mathbb{K}$
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
 \item \hyperref[4.1c]{$(4.1c)$} heißt auch \underline{Leibniz-Formel}
-\item Es gilt die Beziehung $\alpha ^n$det$A$ für alle $\alpha\in\mathbb{K},A\in\mathbb{K}^{n\times n}$, folglich ist die Determinante für $n\geq 2$ nicht linear.
+\item Es gilt die Beziehung $\mathrm{det}(\alpha A)=\alpha ^n\cdot\mathrm{det}~A$ für alle $\alpha\in\mathbb{K},A\in\mathbb{K}^{n\times n}$, folglich ist die Determinante für $n\geq 2$ nicht linear.
 \end{enumerate}
 \subsubsection{Beispiel}
 Wir erhalten det$0=0$ und det$I_n=1$
@@ -61,7 +61,7 @@ Für alle $A,B\in\mathbb{K}^{n\times n}$ gilt
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item det$A=$det$A^T$
-\item Entsteht $B$ durch eine Permutation $\sigma \in S_n$ der Spalten von $A$ (d.h. ist formal $B=(a_{\sigma (1)}\,a_{\sigma (2)},\cdots ,a_{\sigma (n)})$), oder der Zeilen von $A$ $\left(\text{d.h. formal }B=\begin{pmatrix}a^{\sigma (1)}\\ \vdots \\ a^{\sigma (n)}\end{pmatrix}\right)$, so gilt der$B=$sgn~$\sigma$det$A$
+\item Entsteht $B$ durch eine Permutation $\sigma \in S_n$ der Spalten von $A$ (d.h. ist formal $B=(a_{\sigma (1)}\,a_{\sigma (2)},\cdots ,a_{\sigma (n)})$), oder der Zeilen von $A$ $\left(\text{d.h. formal }B=\begin{pmatrix}a^{\sigma (1)}\\ \vdots \\ a^{\sigma (n)}\end{pmatrix}\right)$, \\so gilt det$B=$sgn~$\sigma$det$A$
 \item Falls zwei Spalten der Zeilen von $A$ übereinstimmen, so ist det$A=0$.
 \end{enumerate}
 \underline{Beweis}: Es seien $A,B\in\mathbb{K}^{n\times n}$
