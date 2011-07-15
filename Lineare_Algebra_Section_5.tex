@@ -1,0 +1,37 @@
+\section{Innere Produkte}
+In diesen Kapitel sei stets $\mathbb{K}=\mathbb{R}$ oder $\mathbb{K}=\mathbb{C}$.  Wir beschränken uns weiter auf reelle oder komplexe lineare Räume $X$.  Insbesondere im Fall $\K = \Co$ erinnern wir an das komplex-konjugierte
+\[\overline{z}=(x,-y)=x-iy\]
+einer komplexen Zahl $z=(x,y)=x+iy$, sowie ihren Betrag $\left|z\right|:=\sqrt{zz}=\sqrt{x^2+y^2}$.  Wir betrachten $\R$ als Teilmenge von $\Co$ und erhalten: $z=\overline{z}\Leftrightarrow z\in \R$.
+\subsection{Skalarprodukte und Orthogonalität}
+\subsubsection{Definition (inneres Produkt)}
+Ein \underline{inneres Produkt} auf $X$ ist eine Abbildung $<\cdot ,\cdot >: X\times X\rightarrow \K$ mit
+\romannum
+\begin{enumerate}
+\item $<\alpha x+\beta y,z>=\alpha <x,z>+\beta <y,z>$ (\underline{Linearität im 1. Argument})
+\item $<x,y>=\overline{<y,x>}$ (\underline{konjugierte Symmetrie})
+\item $<x,x>\geq 0$ und Gleichheit genau für $x=0$ (\underline{positive Definitheit})
+\end{enumerate}
+F+r alle $x,y,z\in X,\ \alpha,\beta \in \K$.  Ein linearer Raum mit innerem Produkt heißt auch \underline{Prä-Hilbert-Raum}.\\
+Statt innerem Produkt sagt man auch \underline{Skalarprodukt}.
+\subsubsection{Bemerkung}
+\numbers
+\begin{enumerate}
+\item Aufgrund der konjugierten Symmetrie ist stets $<x,x>\in \R$, während die positive Definitheit $<x,x>>0$ für $x\not=0$ garantiert.
+\item Ein inneres Produkt ist \underline{Semilinear} im 2. Argument:
+\[\phantomsection\label{5.1a}(5.1a)\ <x,\alpha y+\beta z>=\overline{\alpha }<x,y>+\overline{\beta }<x,z>\text{ für alle } x,y,z \in X,\ \alpha, \beta \in \K\]
+\item Unter einer \underline{Norm} auf $X$ versteht man die Funktion
+\[\|\cdot \| : X\rightarrow \R,\ \|x\| :=\sqrt{<x,x>}\]
+Insbesondere gilt $\|x\|=0\Leftrightarrow x=0$.  Zu jedem $x\not=0$ nennen wir $y:=\frac{1}{\|x\|}x$ den \underline{normierten Vektor} zu $x$, denn $\|y\|=1$.
+\end{enumerate}
+\subsubsection{Bemerkung (Orthogonalität)}
+\begin{enumerate}
+\item Die Elemente $x,y\in X$ heißen \underline{orthogonal}, falls $<x,y>=0$.  Die resultierende Relation 
+\[x \bot y :\Leftrightarrow <x,y>=0\]
+ist symmetrisch aber nicht transitiv.  Wegen $<x,0>=<0,x>=0$ ist $0\in X$ orthogonal zu jedem $x\in X$.
+\item Die Teilmengen $Y_1,Y_2\subseteq X$ heißen \underline{orthogonal}, insofern
+\[<y_1,y_2>=0\text{ für alle }y_1\in Y_1,\ y_2\in Y_2\]
+\end{enumerate}
+\subsubsection{Beispiel (Euklidischer Raum)}
+$\R ^n$ mit $<x,y>:=\sum _{j=1}^n x_jy_,$, $\|x\|=\sqrt{\sum _{j=1}^nx_j^2}$
+\subsubsection{Beispiel (Unitärer Raum)}
+$\Co ^n$ mit $<x,y>=\sum _{j=1}^n x_j \overline{y_j}$, $n=1$, $<i,i>=i\cdot (-1)=1$.
