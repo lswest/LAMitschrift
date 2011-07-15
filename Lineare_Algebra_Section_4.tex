@@ -132,7 +132,7 @@ Es sei $X$ ein linearer Raum über $\mathbb{K}$.\\
 \label{4.2.1}
 Existiert zu $T\in L(X)$ ein Skalar $\lambda\in\mathbb{K}$ und ein Vektor $x\in X\setminus \{0 \}$ mit
 \[\phantomsection\label{4.2a}(4.2a)\ Tx=\lambda x\]
-So nennt man $x$ den zum \underline{Eigenwert} $\lambda$ gehörigen \underline{Eigenvektor} von $T$.  Der Kern $E_\lambda := N(T-\lambda \mathrm{id}x)$ und \underline{Eigenraum} von $T$ und dessen Dimension die \underline{geometrische Vielfachheit} von $\lambda$ genannt.  Das \underline{Spektrum} $\sigma (T)\subseteq \mathbb{K}$ ist die Menge aller Eigenwerte.
+So nennt man $x$ den zum \underline{Eigenwert} $\lambda$ gehörigen \underline{Eigenvektor} von $T$.  Der Kern $E_\lambda := N(T-\lambda \mathrm{id}x)$ wird \underline{Eigenraum} von $T$ und dessen Dimension die \underline{geometrische Vielfachheit} von $\lambda$ genannt.  Das \underline{Spektrum} $\sigma (T)\subseteq \mathbb{K}$ ist die Menge aller Eigenwerte.
 \subsubsection{Bemerkung}
 \label{4.2.2}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
@@ -228,7 +228,7 @@ und wir erhalten nach \hyperref[4.1.14]{Satz \ref{4.1.14}}, dass
 \[\chi _T(t)=(\lambda -t)^m \mathrm{det}(C-tI_{n-m})\]
 Daher ist die algebraische Vielfachheit von $\lambda$ mindestens $m$.
 \subsection{Diagonalisierung und Trigonalisierung}
-Wir betrachten $n-$dimensionale linearer Räume $X$ mit $n<\infty$.
+Wir betrachten $n-$dimensionale lineare Räume $X$ mit $n<\infty$.
 \subsubsection{Definition (diagonalisierbar, trigonalisierbar)}
 Eine Abbildung $T\in L(X)$ heißt
 \renewcommand{\labelenumi}{(\alph{enumi})}
@@ -239,7 +239,7 @@ Eine Abbildung $T\in L(X)$ heißt
 \subsubsection{Bemerkung}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
-\item Entsprechend wird eine Matrix $A\in \mathbb{K}^{n\times n}$ \underline{diagonalisierbar (triagonalisierbar)} genannt, falls $T_A\in L(\mathbb{K}^n)$ diese entsprechende Eigenschaft besitzt, bzw. ähnlich zu einer Diagonalmatrix (obere Dreiecksmatrix) ist.
+\item Entsprechend wird eine Matrix $A\in \mathbb{K}^{n\times n}$ \underline{diagonalisierbar (trigonalisierbar)} genannt, falls $T_A\in L(\mathbb{K}^n)$ diese entsprechende Eigenschaft besitzt, bzw. ähnlich zu einer Diagonalmatrix (obere Dreiecksmatrix) ist.
 \item Mit oberen Dreiecksmatrizen zu arbeiten ist reine Konvention und keine mathematische Notwendigkeit.
 \end{enumerate}
 \subsubsection{Satz (Charakterisierung von Diagonalisierbarkeit)}
@@ -255,9 +255,9 @@ Wir zeigen zwei Richtungen:
 \renewcommand{\labelitemi}{}
 \begin{itemize}
 \item ($\Rightarrow$) Es sei $T\in L(X)$ diagonalisierbar und $\mathcal{X}$ eine Basis von $X$ derart, dass \[T_\mathcal{X}=diag(a_1,\cdots ,a_n)\text{ mit }a_1,\cdots ,a_n\in\mathbb{K}.\]  Das charakteristisches Polynom ergibt sich daher zu 
-\[\phantomsection\label{4.4a}(4.4a)\ \chi _T=\prod _{k=1}^n (a_k -t)\left[=\mathrm{det}(T_\mathcal{X}-tI_n)=\mathrm{det}\begin{pmatrix}a_1^{-t} & \ & \ \\ \ & \ddots & \ \\ \ & \ & a_n^{-t}\end{pmatrix}\right]\]
-und zerfällt offenbar in Linearfaktoren.  Nach \hyperref[4.3.7]{Satz \ref{4.3.7}} bleibt also nachzuweisen, dass die geometrische Vielfachheit eines $\lambda \in \sigma (T)$ mindestens gleich seiner algebraischen Vielfachheit ist.  Bezeichnet die Algebraische Vielfachheit von $\lambda$, so kommt der Linearfaktoren $\lambda -t$ genau $r-$mal in \hyperref[4.4a]{$(4.4a)$} vor, d.h. $r$ Diagonalelemente von $T_\mathcal{X}$ sind gleich $\lambda$.  Damit werden $r$ Elemente der Basis $\mathcal{X}$ auf ihr $\lambda -$faches abgebildet und folglich ist dim$E_\lambda \geq r$
-\item ($\Leftarrow$) Umgekehrt zerfalle $\chi _T$ in Linearfaktoren, es gelte die Bedingung (ii) und es sei $\sigma (T)=\{\lambda _1,\cdots \lambda _m\}$ mit paarweise verschiedenen Eigenwerten $\lambda _i,\ 1\leq i\leq m\leq n$.  Zu jedem Eigenraum $E_{\lambda _i}$ wählen wir eine Basis
+\[\phantomsection\label{4.4a}(4.4a)\ \chi _T=\prod _{k=1}^n (a_k -t)\left[=\mathrm{det}(T_\mathcal{X}-tI_n)=\mathrm{det}\begin{pmatrix}a_1-t & \ & \ \\ \ & \ddots & \ \\ \ & \ & a_n-t\end{pmatrix}\right]\]
+und zerfällt offenbar in Linearfaktoren.  Nach \hyperref[4.3.7]{Satz \ref{4.3.7}} bleibt also nachzuweisen, dass die geometrische Vielfachheit eines $\lambda \in \sigma (T)$ mindestens gleich seiner algebraischen Vielfachheit ist.  Bezeichnet r die Algebraische Vielfachheit von $\lambda$, so kommt der Linearfaktoren $\lambda -t$ genau $r-$mal in \hyperref[4.4a]{$(4.4a)$} vor, d.h. $r$ Diagonalelemente von $T_\mathcal{X}$ sind gleich $\lambda$.  Damit werden $r$ Elemente der Basis $\mathcal{X}$ auf ihr $\lambda -$faches abgebildet und folglich ist dim$E_\lambda \geq r$
+\item ($\Leftarrow$) Umgekehrt zerfalle $\chi _T$ in Linearfaktoren, es gelte die Bedingung (ii) und es sei $\sigma (T)=\{\lambda _1,\cdots,\lambda _m\}$ mit paarweise verschiedenen Eigenwerten $\lambda _i,\ 1\leq i\leq m\leq n$.  Zu jedem Eigenraum $E_{\lambda _i}$ wählen wir eine Basis
 \[\mathcal{X}_i=\{x_1^i,\cdots ,x_{r_i}^i\}\text{ mit }1\leq i\leq m,r_1+\cdots r_m=n.\]
 und erhalten somit $n$ Vektoren im Raum $X$.  Wir wollen zeigen, dass diese linear unabhängig sind.  Dazu 
 \[\phantomsection\label{4.4b}(4.4b)\ 0=\sum _{i=1}^m \sum _{j=1}^{r_i}\xi _j^ix_j^i=\sum _{i=1}^m y_i\text{ mit } y_i=\sum _{j=1}^{r_i}\xi _j^i x_j^i\text{ und Koeffizienten }\xi _j^i\]
