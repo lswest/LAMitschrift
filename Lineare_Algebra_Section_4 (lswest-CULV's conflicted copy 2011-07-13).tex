@@ -11,7 +11,7 @@ Es sei $\sigma \in S_n$ und $s(\sigma )$ bezeichnet die Anzahle der Paare $(i,j)
 \label{4.1.2}
 Für die identische Permutation id$=(1,2,\cdots ,n)$ gilt $s(\sigma )=0$ und folglich sgn~id$=1$.  Weiter erhält man
 \begin{align*}
-\sigma &=(2,1,3,4,\cdots ,n),\ s(\sigma )=1,\ \mathrm{sgn~}\sigma =-1\\
+\sigma &=(2,1,3,4,\cdots ,n),\ s(\sigma ),\ \mathrm{sgn~}\sigma =-1\\
 \sigma &=(n,n-1,\cdots ,2, 1),\ s(\sigma )=\frac{(n-1)n}{2},\mathrm{sgn~}\sigma =(-1)^{s(\sigma )}
 \end{align*}
 \subsubsection{Proposition}
@@ -41,7 +41,7 @@ Die durch det:$\mathbb{K}^{n\times n}\rightarrow \mathbb{K}$
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
 \item \hyperref[4.1c]{$(4.1c)$} heißt auch \underline{Leibniz-Formel}
-\item Es gilt die Beziehung $\mathrm{det}(\alpha A)=\alpha ^n\cdot\mathrm{det}A$ für alle $\alpha\in\mathbb{K},A\in\mathbb{K}^{n\times n}$, folglich ist die Determinante für $n\geq 2$ nicht linear.
+\item Es gilt die Beziehung $\alpha ^n$det$A$ für alle $\alpha\in\mathbb{K},A\in\mathbb{K}^{n\times n}$, folglich ist die Determinante für $n\geq 2$ nicht linear.
 \end{enumerate}
 \subsubsection{Beispiel}
 Wir erhalten det$0=0$ und det$I_n=1$
@@ -61,8 +61,7 @@ Für alle $A,B\in\mathbb{K}^{n\times n}$ gilt
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item det$A=$det$A^T$
-\item Entsteht $B$ durch eine Permutation $\sigma \in S_n$ der Spalten von $A$ (d.h. ist formal $B=(a_{\sigma (1)}\,a_{\sigma (2)},\cdots ,a_{\sigma (n)})$), oder der Zeilen von $A$ $\left(\text{d.h. formal }B=\begin{pmatrix}a^{\sigma (1)}\\ \vdots \\ a^{\sigma (n)}\end{pmatrix}\right)$,\\
-so gilt det$B=$sgn~$\sigma$det$A$
+\item Entsteht $B$ durch eine Permutation $\sigma \in S_n$ der Spalten von $A$ (d.h. ist formal $B=(a_{\sigma (1)}\,a_{\sigma (2)},\cdots ,a_{\sigma (n)})$), oder der Zeilen von $A$ $\left(\text{d.h. formal }B=\begin{pmatrix}a^{\sigma (1)}\\ \vdots \\ a^{\sigma (n)}\end{pmatrix}\right)$, so gilt der$B=$sgn~$\sigma$det$A$
 \item Falls zwei Spalten der Zeilen von $A$ übereinstimmen, so ist det$A=0$.
 \end{enumerate}
 \underline{Beweis}: Es seien $A,B\in\mathbb{K}^{n\times n}$
@@ -203,7 +202,6 @@ Für jedes $T\in L(X)$ gilt $\sigma (T)=\chi _T^{-1}(\{0\})$, und die Vielfachhe
 \[\Leftrightarrow T_\mathcal{X}-\lambda I_n\text{ ist regulär (\hyperref[3.3.14]{Satz \ref{3.3.14}})}\]
 \[\Leftrightarrow \chi _T(\lambda)=\mathrm{det}(T_\mathcal{X}-\lambda I_n)\not= 0\text{ nach \hyperref[4.1.11]{Satz \ref{4.1.11}}}\]
 \subsubsection{Beispiel}
-\label{4.3.4}
 Es seien $\alpha \in [0,2\pi ),\ A=\begin{pmatrix}cos \alpha & -sin \alpha\\ sin\alpha & cos\alpha \end{pmatrix}$
 \begin{enumerate}
 \item Über dem Körper $\mathbb{K}=\mathbb{R}$ betrachten wir $T=T_A\in L(\mathbb{R}^2)$.  Sie hat das charakteristische Polynom $\chi _T(t)=t^2-2cos\alpha \cdot t+1$.  Für $\alpha =0$ ist $\sigma (T)=\{1\}$ und für $\alpha = \pi$ gilt $\sigma (T)=\{-1\}$.  Die Eigenwerte sind doppelte Nullstellen von $\chi _T$ und damit von algebraischer Vielfachheit $2$.  Ansonsten besitzt $\chi _T$ für $\alpha \not\in \{0,\pi\}$ keine reellen Nullstellen, d.h. $\sigma (T)=\emptyset$.
@@ -223,7 +221,7 @@ Ist $\mathbb{K}$ algebraisch abgeschlossen, so hat jedes $T\in L(X)$ einen Eigen
 \label{4.3.7}
 Die geometrische Vielfachheit jedes Eigenwertes ist kleiner oder gleich seiner algebraischen Vielfachheit.\\
 \underline{Beweis}: Es sei $T\in L(X)$ und $\lambda \in \sigma (T)$ mit $m:=$dim$E_\lambda$.  Dann existieren $m$ linear unabhängige Eigenvektoren von $T$ in $E_\lambda$.  Wählt man diese als ersten Teil einer Basis $\mathcal{X}$ von $X$, so gilt (vgl. \hyperref[4.2.2]{Bemerkung \ref{4.2.2}(2)})
-\[T_\mathcal{X} =\begin{pmatrix}\Lambda & B\\ 0 & C\end{pmatrix}, \Lambda=diag(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{n\times m},\ B\in\mathbb{K}^{m\times (m-n)},\ C\in\mathbb{K}^{(n-m)\times (n-m)}\]
+\[T_\mathcal{X} =\begin{pmatrix}\Lambda & B\\ 0 & C\end{pmatrix}, \Lambda=diag(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{m\times m},\ B\in\mathbb{K}^{m\times (m-n)},\ C\in\mathbb{K}^{(n-m)\times (n-m)}\]
 und wir erhalten nach \hyperref[4.1.14]{Satz \ref{4.1.14}}, dass
 \[\chi _T(t)=(\lambda -t)^m \mathrm{det}(C-tI_{n-m})\]
 Daher ist die algebraische Vielfachheit von $\lambda$ mindestens $m$.
@@ -264,7 +262,6 @@ und erhalten somit $n$ Vektoren im Raum $X$.  Wir wollen zeigen, dass diese line
 Die Invarianz der $E_{\lambda _i}$ zeigt, dass jedes solcher $y_i\in E_{\lambda _i}$ auf sein $\lambda _i$-faches abgebildet wird, also Eigenvektor von $T$ ist.  Mit \hyperref[4.2.5]{Proposition \ref{4.2.5}} liefert dies die lineare Unabhängigkeit von $\{y_1,\cdots ,y_m\}$.  Dann muss aber $0=y_i=\sum _{j=1}^{r_1}\xi _j^ix_j^i,\ 1\leq i\leq m$ gelten, denn andernfalls wäre \hyperref[4.4b]{$(4.4b)$} eine nichttriviale Darstellung der $0$.  Da $\mathcal{X}_i$ Basis ist, folgt $\xi _j^i=0$ und somit sind die $n$ Vektoren aus $\mathcal{X}_1,\cdots ,\mathcal{X}_n$ linear unabhängig, bilden also eine Basis von $X$, in welcher $T_\mathcal{X}$ diagonal ist.
 \end{itemize}
 \subsubsection{Beispiel}
-\label{4.4.4}
 \numbers
 \begin{enumerate}
 \item Wir betrachten die lineare Abbildung 
@@ -287,31 +284,4 @@ Der \hyperref[4.4.5]{Satz \ref{4.4.5}} lässt sich wesentlich präziser fassen -
 \[T_\mathcal{X}=diag(J_1,\cdots ,J_r)\text{ mit } 1\leq i\leq r\]
 Hierbei besitzt jeder \underline{Jordan-Block} die Form 
 \[J_i=\begin{pmatrix}\lambda _i & 1\\ & \lambda _i & 1 \\& & \ddots & 1\\ & & & \lambda _i\end{pmatrix}\in\mathbb{K}^{n_i\times m_i},\ 1\leq i\leq r\]
-mit $\sigma (T) = \{\lambda _1,\cdots ,\lambda _r\}$ und $n_1+\cdots +n_r=n$.
-\subsubsection{Beispiel}
-\numbers
-\begin{enumerate}
-\item Mit $\alpha \in [0,2\pi )$ und der aus \hyperref[4.3.4]{Beispiel \ref{4.3.4}} bekannten Matrix:
-\[A:=\begin{pmatrix}cos \alpha & -sin\alpha\\ sin\alpha & cos\alpha\end{pmatrix}\in\mathbb{R}^{2\times 2}\]
-betrachten wir die induzierte lineare Abbildung $T=T_A\in L(\mathbb{R}^2)$.  Ihr charakteristisches Polynom $\chi _T(t):=t^2-2cos(\alpha )t+1$ hat die Diskriminante $4(cos^2\alpha -1)$.  Daher ist $T$ genau für $\alpha \in \{0,\pi \}$ triangulierbar über $\mathbb{R}$.
-\item Weiter betrachten wir die in \hyperref[4.4.4]{Beispiel \ref{4.4.4}(2)} diskutierte Abbildung $T\in L(\mathbb{R}^3)$
-\[Tx:=\begin{pmatrix}-2 & 1 & 3\\ 2 & 1 & -1\\ -7 & 2 & 7\end{pmatrix}X\]
-Da ihr charakteristisches Polynom $\chi _T(t)=(t-2)^3$ in Linearfaktoren zerfällt, ist sie nach \hyperref[4.4.5]{Satz \ref{4.4.5}} triangulierbar.  In der Tat liefert die Matrix $S:=\begin{pmatrix}-3 & -4 & 1\\ -3 & 2 & 0\\ -3 & -7 & 0\end{pmatrix}$ ihre Jordan-Normalform $J=S^{-1}TS=\begin{pmatrix}2 & 1 & 0\\ 0 & 2 & 1\\ 0 & 0 & 2\end{pmatrix}$
-\end{enumerate}
-\subsubsection{Korollar}
-Jede lineare Abbildung $T\in L(X)$ auf einem endlich-dimensionalen Raum $X$ über $\mathbb{C}$ ist triangulierbar.\\
-\underline{Beweis}: Mit dem Fundamentalsatz der Algebra zerfällt jedes Polynom $p\in P(\mathbb{C})$ in Linearfaktoren, also insbesondere $\chi _T$.
-\subsubsection{Korollar}
-Zerfällt $\chi _T$ in Linearfaktoren, so gilt
-\[\mathrm{det}T=\prod _{j=1}^n \lambda _j,\ tr\ T=\sum _{j=1}^n \lambda _j\text{ mit }\sigma (T)=\{\lambda _1,\cdots ,\lambda _n\}.\]
-\underline{Beweis}:  Nach \hyperref[4.4.5]{Satz \ref{4.4.5}} ist $T\in L(X)$ trigonalisierbar und folglich ist jede Darstellung $T_\mathcal{X}$ ähnlich zu einer Dreiecksmatrix $D\in \mathbb{K}^{n\times n}$ vermöge $S$.  Dann folgt mit \hyperref[4.1.12]{Korollar \ref{4.1.12}}, dass det$T=$det$D=\lambda _1,\cdots ,\lambda _n$.  Nach einer Übungsaufgabe ist $trT=trS^{-1}(DS)=tr(DS)S^{-1}=trD=\lambda _1+\cdots +\lambda _n$.\\
-Wir definieren die \underline{Potenzen} $T^k\in L(X),\ k\in\mathbb{N}_0$, einer Abbildung $T\in L(X)$ rekursiv.
-\[T^0:=id\ x,\ T^{k+1}:=T\circ T^k\text{ für }k\in\mathbb{N}_0\]
-und entsprechend für Matrizen $A\in \mathbb{K}^{n\times n}$.  Wegen dim$L(X)=n^2$(\hyperref[3.3.5]{Korollar \ref{3.3.5}}) ist die $(n^2+1)$-elementige Menge $\{T^0, T^1,\cdots ,T^{n^2}\}$ linear abhängig.  Tatsächlich hat sogar $\{T^0,\cdots ,T^n\}$ diese Eigenschaft:
-\subsubsection{Satz (von Cayley-Hamilton)}
-Jede lineare Abbildung $T\in L(X)$ erfüllt ihr charakteristisches Polynom, d.h. formal $\chi _T(T)=0$.
-\subsubsection{Bemerkung}
-\begin{enumerate}
-\item Bezeichnet $\mathcal{X}$ eine Basis von $X$, so gilt für die darstellende Matrix $\chi _T(T_\mathcal{X})=0$
-\item Für jedes $A\in\mathbb{K}^{2\times 2}$ gilt $A^2=(trA)A-(\mathrm{det}A)I_2$
-\end{enumerate}
+mit $\sigma (T) = \{\lambda _1,\cdots ,\lambda _r\}$ und $n_1+\cdots +n_r=n$
