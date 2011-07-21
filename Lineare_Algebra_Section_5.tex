@@ -52,13 +52,13 @@ Es sei $S \subseteq X$. Dann heißt $S^\bot:=\{x\in X:\langle x,y \rangle =0\tex
 \begin{enumerate}
 \item Es ist $\{0\}^\bot=X$ und $X^{\bot}=\{0\}$
 \item Im Raum $X=\R^3$ haben wir in \hyperref[2.5.2]{Beispiel \ref*{2.5.2}} nachgewiesen, dass die Gerade $\tilde{Y}:=\R\begin{pmatrix}1 \\1 \\1\end{pmatrix}$ ein Komplement zur Ebene $Y:=\{x\in X, x_1-x_2+x_3=0\}=\R\begin{pmatrix}1\\1\\0\end{pmatrix}+\R\begin{pmatrix}1\\0\\-1\end{pmatrix}$ ist.
-Betrachtet man $\R^3$ als Euklidischen Raum, so ist $\tilde{Y}$ wegen $\langle \begin{pmatrix}1 \\1 \\1\end{pmatrix},\begin{pmatrix}1 \\1 \\0\end{pmatrix}\rangle=2$ jedoch kein orthogonales Komplement von Y, vielmehr gilt $Y^{\bot}=\R\begin{pmatrix}1 \\-1 \\1\end{pmatrix}$
+Betrachtet man $\R^3$ als Euklidischen Raum, so ist $\tilde{Y}$ wegen $\left\langle \begin{pmatrix}1 \\1 \\1\end{pmatrix},\begin{pmatrix}1 \\1 \\0\end{pmatrix}\right\rangle=2$ jedoch kein orthogonales Komplement von Y, vielmehr gilt $Y^{\bot}=\R\begin{pmatrix}1 \\-1 \\1\end{pmatrix}$
 \end{enumerate}
 \subsubsection{Proposition}
 \label{5.1.9}
-Für jedes $x\subseteq X$ ist $S^{\bot}$ ein Unterraum von $X$ mit $span\ S\cap S^{\bot}=\{0\}$.\\
+Für jedes $S\subseteq X$ ist $S^{\bot}$ ein Unterraum von $X$ mit $(span\ S)\cap S^{\bot}=\{0\}$.\\
 \underline{Beweis}: Es seien $x_1,x_2\in S^{\bot}$ und wir erhalten $\langle \alpha_1 x_1+\alpha_2 x_2,y\rangle=\alpha_1\langle x_1,y\rangle+\alpha_2\langle x_2,y\rangle=0$ für alle $\alpha_1,\alpha_2\in\K$ $y\in S$ dies garantiert $\alpha_1 x_1+\alpha_2 x_2\in S^{\bot}$ und $S^{\bot}$ ist ein linearer Raum.
-Weiter sei $x\in\ S^{\bot}$ und $X\in span~S$, d.h. $x=\sum_{i=1}^n \xi_i x_i$ mit Koeffizienten $\xi_i\in \K$ und $x_i\in S$. Dies impliziert $\langle x,x\rangle=\langle \sum_{i=1}^n \xi_i x_i,x\rangle=\sum_{i=1}^n\xi_i \underbrace{\langle x_i,x\rangle}_{=0\text{ weil }x\in S^{\bot}}=0$ und folglich $x=0$.
+Weiter sei $x\in\ S^{\bot}$ und $x\in span~S$, d.h. $x=\sum_{i=1}^n \xi_i x_i$ mit Koeffizienten $\xi_i\in \K$ und $x_i\in S$. Dies impliziert $\langle x,x\rangle=\langle \sum_{i=1}^n \xi_i x_i,x\rangle=\sum_{i=1}^n\xi_i \underbrace{\langle x_i,x\rangle}_{=0\text{ weil }x\in S^{\bot}}=0$ und folglich $x=0$.
 \subsubsection{Satz}
 Ist $dimX<\infty$ und $Y$ ein Unterraum von $X$, so gilt
 \alphabet
@@ -67,16 +67,16 @@ Ist $dimX<\infty$ und $Y$ ein Unterraum von $X$, so gilt
 \item $(Y^{\bot})^{\bot}=Y$
 \item $dimX=dimY+dimY^{\bot}$
 \end{enumerate}
-\underline{Beweis (a)}: $Y\cap Y^{\bot}=\{0\}$ gilt nach \hyperref[5.1.9]{Proposition \ref*{5.1.9}}. Es bleibt $X=Y\oplus Y^{\bot}$ zu zeigen. Zu jedem $x\in X$ muss es also $y\in X$ und $y^{\bot}\in Y^{\bot}$ mit $x=y+y^{\bot}$ geben. Ist $\{y_1, \dots,y_n\}$ eine Orthonormalbasis von $Y$, so definieren wir
-\[Y:=\sum_{i=1}^m \langle x,y_i\rangle \cdot y_i, Y^{\bot}:=x-y\text{ usw.}\]
+\underline{Beweis (a)}: $Y\cap Y^{\bot}=\{0\}$ gilt nach \hyperref[5.1.9]{Proposition \ref*{5.1.9}}. Es bleibt $X=Y\oplus Y^{\bot}$ zu zeigen. Zu jedem $x\in X$ muss es also $y\in Y$ und $y^{\bot}\in Y^{\bot}$ mit $x=y+y^{\bot}$ geben. Ist $\{y_1, \dots,y_n\}$ eine Orthonormalbasis von $Y$, so definieren wir
+\[y:=\sum_{i=1}^m \langle x,y_i\rangle \cdot y_i,\qquad y^{\bot}:=x-y\text{ usw.}\]
 \subsubsection{Definition (Orthogonal- und Orthonormalbasis)}
 Eine Familie $\mathcal{S} \subseteq X$ heißt
 \alphabet
 \begin{enumerate}
-\item \underline{orthogonal}, falls $\langle x,y\rangle=0$, für alle $x,y\in \mathcal{S}$ $X\neq y$
+\item \underline{orthogonal}, falls $\langle x,y\rangle=0$, für alle $x,y\in \mathcal{S}$ $x\neq y$
 \item \underline{orthonormal}, falls $\langle x,y\rangle=\begin{cases}1,x=y\\0,x\neq y\end{cases}$, für $x,y\in \mathcal{S}$
 \end{enumerate}
-Eine Orthonormal- bzw. Orthonormalbasis von X ist eine orthogonale bzw. orthonormale Basis von X.\\
+Eine Orthogonal- bzw. Orthonormalbasis von X ist eine orthogonale bzw. orthonormale Basis von X.\\
 Jede orthonormale Familie ist auch orthogonal.
 \subsubsection{Beispiel}
 \numbers
@@ -92,8 +92,8 @@ Dann resultiert $0=\langle 0,x_k\rangle=\langle\sum_{j=1}^n\xi_j x_j,x_k\rangle=
 Vorteil von Orthonormalbasen: Koordinaten einfach berechenbar
 \subsubsection{Proposition}
 Ist $\{x_1,\dots,x_n\}$ eine Orthonormalbasis von $X$ so gilt $x=\sum_{j=1}^n \langle x,x_j\rangle x_j$ für alle $x\in X$.\\
-\underline{Beweis}: Da $\{x_1,\dots,x_n\}$ orthonormal ist, gilt $\langle x_j,x_k=\delta_{jk}$ für $1\leq j,k\leq n$. Die Koeffizienten $\xi_j\in\K$ eines beliebigen $x=\sum_{j=1}^n\xi_j x_j$ $\xi_k=\sum_{j=1}^n\xi_k \underbrace{\langle x_j,x_k\rangle}_{\delta_{jk}}=\langle\sum_{j=1}^n\xi_j x_j,x_k\rangle=\langle x,x_k\rangle$\\
-Berechnung von Orthogonal- bzw. Orthonormalbasis aus einer gegebenen Basis: Orthogonalisierungsverfahren von Gran-Schmidth:
+\underline{Beweis}: Da $\{x_1,\dots,x_n\}$ orthonormal ist, gilt $\langle x_j,x_k\rangle=\delta_{jk}$ für $1\leq j,k\leq n$. Die Koeffizienten $\xi_j\in\K$ eines beliebigen $x=\sum_{j=1}^n\xi_j x_j \qquad \xi_k=\sum_{j=1}^n\xi_k \underbrace{\langle x_j,x_k\rangle}_{\delta_{jk}}=\langle\sum_{j=1}^n\xi_j x_j,x_k\rangle=\langle x,x_k\rangle$\\
+Berechnung von Orthogonal- bzw. Orthonormalbasis aus einer gegebenen Basis: Orthogonalisierungsverfahren von Gram-Schmidt:
 
 \numbers
 \begin{enumerate}
