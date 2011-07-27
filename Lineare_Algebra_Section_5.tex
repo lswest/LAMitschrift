@@ -45,7 +45,7 @@ $\Co ^n$ mit $\langle x,y\rangle=\sum _{j=1}^n x_j \overline{y_j}$, $n=1$, $\lan
 \[\phantomsection\label{5.1b}(5.1b)\ \langle x, y\rangle_\omega:=\int_a^b \omega(t)x(t)\overline{y(t)}dt\]
 \includegraphics[scale=0.4]{5-1-6.jpg}
 \end{enumerate}
-\subsubsection{Definition (Orhtogonales Komplement)}
+\subsubsection{Definition (Orthogonales Komplement)}
 Es sei $S \subseteq X$. Dann heißt $S^\bot:=\{x\in X:\langle x,y \rangle =0\text{ für alle }y\in S\}$
  das \underline{orthogonale Komplement} von $S$ (in X)
 \subsubsection{Beispiel}
@@ -61,6 +61,7 @@ Für jedes $S\subseteq X$ ist $S^{\bot}$ ein Unterraum von $X$ mit $(span\ S)\ca
 \underline{Beweis}: Es seien $x_1,x_2\in S^{\bot}$ und wir erhalten $\langle \alpha_1 x_1+\alpha_2 x_2,y\rangle=\alpha_1\langle x_1,y\rangle+\alpha_2\langle x_2,y\rangle=0$ für alle $\alpha_1,\alpha_2\in\K$ $y\in S$ dies garantiert $\alpha_1 x_1+\alpha_2 x_2\in S^{\bot}$ und $S^{\bot}$ ist ein linearer Raum.
 Weiter sei $x\in\ S^{\bot}$ und $x\in span~S$, d.h. $x=\sum_{i=1}^n \xi_i x_i$ mit Koeffizienten $\xi_i\in \K$ und $x_i\in S$. Dies impliziert $\langle x,x\rangle=\langle \sum_{i=1}^n \xi_i x_i,x\rangle=\sum_{i=1}^n\xi_i \underbrace{\langle x_i,x\rangle}_{=0\text{ weil }x\in S^{\bot}}=0$ und folglich $x=0$.
 \subsubsection{Satz}
+\label{5.1.10}
 Ist $dimX<\infty$ und $Y$ ein Unterraum von $X$, so gilt
 \alphabet
 \begin{enumerate}
@@ -149,3 +150,77 @@ Nun seien $T\in L(X)$, $y\in X$.  Wir definieren $S_y\colon X\rightarrow \K$
 \[S_yx\colon =\langle Tx,y\rangle\]
 und es folgt sofort $S_y\in L(X,\K)$.  Bei festem $T$ gibt es nach \hyperref[5.2.1]{Satz \ref{5.2.1}} zu jedem $y\in X$ ein eindeutiges $y_0\in X$ mit $S_yx=\langle x,y_0\rangle$ für alle $x\in X$.  Wir bezeichnen diese Zuordnung $y\mapsto y_0$ mit $T'$ und die entsprechende Abbildung $T' \colon X\rightarrow X$ ist festgelegt durch
 \[\langle Tx,y\rangle = \langle x,T' y\rangle\text{ für alle }x,y\in X\]
+Gegeben $T=L(X)$, $y\in X$.  Wir definieren:
+\[S_yx:=\langle Tx,y\rangle\]
+und mittels \hyperref[3.1a]{$(3.1a)$}, sowie \hyperref[5.1.1]{Definition \ref{5.1.1}$(i)$} folgt sofort $S_y\in L(X,\K)$.  Bei festen $T\in L(X)$ gibt es nach \hyperref[5.2.1]{Satz \ref{5.2.1}} dann ein eindeutig bestimmtes $y_0\in X$mit $S_yx=\langle x,y_0\rangle$.  Wir bezeichnen diese Zuordnung $y\mapsto y_0$ mit $T'$ und die Abbildung $T'\colon X\rightarrow X$ ist festgelegt durch $\langle Tx,y\rangle=\langle x,T'y\rangle$ für alle $x,y\in X$.  Aufgrund von \hyperref[5.1.1]{Definition \ref{5.1.1}} erhalten wir mit beliebigen $x_1,x_2\in X$,$\alpha _1,\alpha _2\in \K$, dass
+\[\langle x,T'(\alpha _1x_1+\alpha _2x_2)\rangle =\langle Tx,\alpha _1x_1+\alpha _2x_2\rangle = \overline{\alpha _1}\langle Tx,x_1\rangle +\overline{\alpha _2}\langle Tx,x_2\rangle=\overline{\alpha _1}\langle x,T'x_1\rangle + \overline{\alpha _2}\langle x,T'x_2\rangle\]
+\[\langle x,\alpha _1T'x_1+\alpha _2T'x_2\rangle\]
+Damit ist $T'\in L(X)$.
+\subsubsection{Definition (adjungierte Abbildung)}
+Die zu $T\in L(X)$ \underline{adjungierte Abbildung} $T'\in L(X)$ ist definiert durch
+\[\phantomsection\label{5.2c}(5.2c)\ \langle Tx,y\rangle = \langle x,T'y\rangle \text{ für alle } x,y\in X\]
+Man beachte, dass $T'$ von konkret auf $X$ verwendete inneren Produkt abhängt.
+\subsubsection{Bemerkung}
+Direkt aus \hyperref[5.2c]{$(5.2c)$} folgt
+\numbers
+\begin{enumerate}
+\item Die Abbildung $\cdot '\colon L(X)\rightarrow L(X)$ ist \underline{semilinear}, d.h.
+\[(\alpha _1T_1+\alpha _2T_2)'=\overline{\alpha _1}T'_1+\overline{\alpha _2}T'_2\text{ für }\alpha _1,\alpha _2\in \K, T_1,T_2\in L(X)\]
+und erfüllt $T''=T$, sowie $(ST)'=T'S'$ für $S,T\in L(X)$
+\item Für $T\in GL(X)$ ist auch $T'\in GL(X)$ mit
+\[(T')^{-1}=(T^{-1})'\]
+\end{enumerate}
+\subsubsection{Beispiel (Transponierte)}
+Es sei $X=\R ^n$ (Euklidisch) ausgestattet mit der Standardbasis $\mathcal{E}_n=\{e_1,\cdots ,e_n\}$ und $A\in \R ^{n\times n}$ die darstellende Matrix von $T\in L(X)$, d.h. $Tx=Ax$ für alle $X\in \R ^n$.  Bezeichnet dann $A'\in \R ^{n\times n}$ die darstellende Matrix von $T'$, so ist
+\[a'_{ij}=\left\langle e_i,\begin{pmatrix}a'_{1j}\\ \vdots \\ a'_{nj}\end{pmatrix}\right\rangle = \langle e_i,T'e_j\rangle\stackrel{\hyperref[5.2c]{(5.2c)}}{=}\langle Te_i,e_j\rangle =\left\langle \begin{pmatrix}a_{1i}\\ \vdots \\ a_{ni}\end{pmatrix},e_j\right\rangle = a_{ij} \text{ für alle }1\leq i,j\leq n.\]
+Folglich ist die adjungierte Abbildung $T'$ in Euklidischen Räumen gerade durch die Transponierte $A'=A^T$ gegeben (vergleiche \hyperref[3.2.3]{Beispiel \ref{3.2.3}}).
+\subsubsection{Beispiel (Hermite'sche)}
+\label{5.2.5}
+Im unitärer Raum $\Co ^n$ mit seiner Standardbasis $\mathcal{E}_n$ ergibt sich entsprechend:
+\[\overline{a'_{ij}}=\left\langle e_i,\begin{pmatrix}a'_{1j}\\ \vdots \\ a'_{nj}\end{pmatrix} e_i,T'e_j\right\rangle \stackrel{\hyperref[5.2c]{(5.2c)}}{=}\langle Te_i,e_j\rangle = \left\langle \begin{pmatrix}a_{1i}\\ \vdots \\ a_{ni}\end{pmatrix},e_j\right\rangle=a_{ji}\text{ für alle } 1\leq i,j\leq n\]
+und folglich $a'_{ij}=\overline{a_{ji}}$.  Für die adjungierte Abbildung in unitären Räumen ist also $A'=A^*$ mit der sogenannten \underline{Hermite'schen}
+\[A^*=\overline{(A^T)}=(\overline{a_{ji}})_{1\leq i,j\leq n}\]
+\subsubsection{Satz}
+Ist dim$X<\infty$ und $T\in L(X)$, so gilt
+\[N(T')=R(T)^\bot\ \ \mathrm{rk}T=\mathrm{rk}T'\]
+\underline{Beweis}: Wir erhalten
+\[N(T')=\{x\in X\colon T'x=0\}=\{x\in X\colon \langle y, T'x\rangle =0\text{ für alle }y\in X\}\]
+\[\stackrel{\hyperref[5.2c]{(5.2c)}}{=}\{x\in X\colon \langle Ty,x\rangle =0\text{ für alle } y\in X\}=R(T)^\bot\]
+Mit \hyperref[5.1.10]{Satz \ref{5.1.10}(c)}, der eben gezeigten Aussage und \hyperref[dimension]{Satz \ref{dimension}}
+\[\mathrm{rk}T=\mathrm{dim}R(T)=\footnotemark\mathrm{dim}X-\mathrm{dim}R(T)^\bot =\mathrm{dim} X-\mathrm{dim}N(T')=\mathrm{dim}R(T')=\mathrm{rk}T'\]
+\footnotetext{gilt wegen: $X=Y\oplus Y^\bot\\ \mathrm{dim}X=\mathrm{dim}Y+\mathrm{dim}Y^\bot$}
+\subsection{Sebstadjungierte Abbildungen}
+Wieder sei $X$ ein linearer Raum mit inneren Produkt $\langle \cdot ,\cdots \rangle$
+\subsubsection{Definition (Selbstadjungiert)}
+Eine Abbildung $T\in L(X)$ heißt \underline{selbstadjungiert}, falls gilt $T=T'$, d.h.
+\[\phantomsection\label{5.3a}(5.3a)\langle Tx,y\rangle =\langle x,Ty\rangle \text{ für alle }x,y\in X\]
+\subsubsection{Beispiel (Euklidischer Raum)}
+Auf dem Euklidischen Raum $\R ^n$ ist eine Abbildung $T\in L(X)$ genau dann selbstadjungiert, falls ihre darstellende Matrix $T_{\mathcal{E}_n}=A$ \underline{symmetrisch} ist, d.h. $A=A^T$
+\[\text{z.B.}\ \begin{pmatrix}1 & 2\\ 2 & 1\end{pmatrix},\begin{pmatrix}1 & 3\\ 3 & 2\end{pmatrix}, \begin{pmatrix}1 & 2\\ 3 & 4\end{pmatrix}\text{ nicht.}\]
+\subsubsection{Beispiel (unitärer Raum)}
+In einem unitären Raum $\Co ^n$ ist $T\in L(\Co ^n)$ dann und nur dann selbstadjungiert, wenn $A=T_{\mathcal{E}_n}$ Hemite'sch ist (vergleiche \hyperref[5.2.5]{Beispiel \ref{5.2.5}}), d.h. $A=A^*$.
+\addtocounter{subsubsection}{1}
+\subsubsection{Satz}
+Es sei dim$X<\infty$.  Ist $T\ni L(X)$ selbstadjungiert, so gilt:
+\alphabet
+\begin{enumerate}
+\item $\sigma (T)\subseteq \R$
+\item Es gibt eine Orthonormalbasis von $X$ aus Eigenvektoren von $T$
+\end{enumerate}
+\subsubsection{Bemerkung}
+Auf Matrizen bezogen besagt dies gerade, dass symmetrische und Hermite'sche Matrizen reelles Spektrum haben und der Raum $\K ^n$ eine Orthonormalbasis aus Eigenvektoren besitzt.
+\underline{Beweis}: 
+\begin{enumerate}
+\item Es sei $\lambda \in \K$ ein Eigenwert von $T$ mit zugehörigen Eigenvektor $x\in X$.  Da $T$ selbstadjungiert ist, gilt
+\[\lambda \langle x,x\rangle = \langle \lambda x,x\rangle \stackrel{\hyperref[4.2a]{(4.2a)}}{=}\langle Tx,x\rangle = \langle x,Tx\rangle \stackrel{\hyperref[4.2a]{(4.2a)}}{=} \langle x,\lambda x\rangle = \overline{\lambda}\langle x,x\rangle\]
+und wegen $x\not=0$ folgt $\lambda =\overline{\lambda}$, also $\lambda \in \R$.
+\item Induktion über $n=$dim$X$.  Für $n=1$ ist nichts nachzuweisen.  Für $n>1$ gilt den Fundamentalsatz der Algebra
+\[\chi _T(t)=\prod _{i=1}^n(\lambda _i-t)\text{ mit }\lambda _i\in \Co\]
+und wegen \hyperref[4.3.3]{Satz \ref{4.3.3}} ist jedes $\lambda _i$ Eigenwert von $T$;
+Aussage (a) garantiert sogar $\lambda _i\in \R$.  Es sei nun $x_1$ ein normierter Eigenvektor zu $\lambda _1$ und $X_1=(span\{x_1\})^\bot$.  Mittels \hyperref[5.1.10]{Satz \ref{5.1.10}(c)} ist dann dim$X_1=n-1$.  Für jedes $x\in X_1$ ist dann
+\[\langle x_1,Tx\rangle \stackrel{\hyperref[5.3a]{(5.3a)}}{=}\langle Tx_1,x\rangle \stackrel{\hyperref[4.2a]{(4.2a)}}{=}\lambda _1\overbrace{\langle x_1,x\rangle}^0=0\]
+d.h. $Tx\in X_1$.  Wir haben damit gezeigt, dass $X_1$ invariant unter $T$ ist.  Damit induziert $T\in L(X)$ eine selbstadjungierte Abbildung $T_1\colon =T\mid _{X_1}\in L(X_1)$.  Nach Induktionsvoraussetzung gilt es eine Orthonormalbasis $\mathcal{X}_1\colon =\{x_2,\cdots ,x_n\}$ von $X_1$ aus nomierten Eigenvektoren $x_i$ von $T$.  Da jeder Eigenvektor von $T_1$ auch Eigenvektor von $T$ ist, muss $\{x_1,x_2,\cdots ,x_n\}$ eine Orthonormalbasis von $X$ sein.
+\end{enumerate}
+\subsubsection{Korollar}
+Jede selbstadjungierte Abbildung ist diagonalisierbar.
+\underline{Beweis}: Wähle Basis aus Eigenvektoren.
