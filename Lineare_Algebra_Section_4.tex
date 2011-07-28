@@ -35,7 +35,7 @@ und folglich resultiert die Behauptung aus
 &= \sgn \tau \cdot \sgn \sigma
 \end{align*}
 \subsubsection{Definition (Determinante)}
-Die durch det:$\mathbb{K}^{n\times n}\rightarrow \mathbb{K}$
+Die durch $\det\colon\mathbb{K}^{n\times n}\rightarrow \mathbb{K}$
 \[\phantomsection\label{4.1c}(4.1c)\ \det A:=\sum _{\sigma\in S_n} \sgn \sigma \prod _{i=1}^na_{i\sigma (i)}\]
 \subsubsection{Bemerkung}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
@@ -63,13 +63,13 @@ Für alle $A,B\in\mathbb{K}^{n\times n}$ gilt
 \item $\det A=\det A^T$
 \item Entsteht $B$ durch eine Permutation $\sigma \in S_n$ der Spalten von $A$ (d.h. ist formal $B=(a_{\sigma (1)}\,a_{\sigma (2)},\cdots ,a_{\sigma (n)})$), oder der Zeilen von $A$ $\left(\text{d.h. formal }B=\begin{pmatrix}a^{\sigma (1)}\\ \vdots \\ a^{\sigma (n)}\end{pmatrix}\right)$,\\
 so gilt $\det B=\sgn \sigma\det A$
-\item Falls zwei Spalten der Zeilen von $A$ übereinstimmen, so ist $\det A=0$.
+\item Falls zwei Spalten oder Zeilen von $A$ übereinstimmen, so ist $\det A=0$.
 \end{enumerate}
 \underline{Beweis}: Es seien $A,B\in\mathbb{K}^{n\times n}$
 \begin{enumerate}
 \item Durch direktes Nachrechnen und \hyperref[4.1a]{$4.1a$} folgt 
 \begin{align*}
-\det A^T&\stackrel{(4,1c)}{=}\sum _{\sigma\in S_n}\sgn \sigma \prod _{i=1}^n a_{\sigma (i)i}\\
+\det A^T&\stackrel{(4.1c)}{=}\sum _{\sigma\in S_n}\sgn \sigma \prod _{i=1}^n a_{\sigma (i)i}\\
 &=\sum _{\sigma \in S_n} \sgn \sigma ^{-1}\prod _{j=1}^n a_{j\sigma ^{-1}(j)}\\
 &= \det A
 \end{align*}
@@ -79,7 +79,7 @@ Eine zentrale Eigenschaft von Determinanten ist ihre Multiplikativität.  Allerd
 \subsubsection{Satz (Multiplikativität der Determinante)}
 \label{4.1.10}
 Es gilt \[\phantomsection\label{4.1d}(4.1d)\det (AB)=\det A\cdot\det B\text{ für alle }A,B\in\mathbb{K}^{n\times n}.\]
-Zusätzlich zu Satz 3.3.14: Charakterisierung regulärer Matrizen: 
+Zusätzlich zu \hyperref[3.3.14]{Satz 3.3.14}: Charakterisierung regulärer Matrizen: 
 \subsubsection{Satz (Regularität und die Determinante)}
 \label{4.1.11}
 Eine Matrix $A\in\mathbb{K}^{n\times n}$ ist genau dann regulär, wenn $\det A\not= 0$.  Dann gilt
@@ -88,16 +88,16 @@ Eine Matrix $A\in\mathbb{K}^{n\times n}$ ist genau dann regulär, wenn $\det A\n
 \label{4.1.12}
 Für ähnliche Matrizen $A,B\in\mathbb{K}^{n\times n}$ ist $\det A=\det B$.
 \subsubsection{Bemerkung}
-Es sei $X$ ein linearer Raum, mit $\dim X<\infty$.  Auf Basis von \hyperref[4.1.12]{Korollar \ref{4.1.12}} lässt sich auch die \underline{Determinante} $\det :L(X)\rightarrow \mathbb{K}$ einer linearen Abbildung $T\in L(X)$.  Mit ihrer darstellenden Matrix $T_\mathcal{X}$ ist
+Es sei $X$ ein linearer Raum, mit $\dim X<\infty$.  Auf Basis von \hyperref[4.1.12]{Korollar \ref{4.1.12}} lässt sich auch die \underline{Determinante} $\det\colon L(X)\rightarrow \mathbb{K}$ einer linearen Abbildung $T\in L(X)$.  Mit ihrer darstellenden Matrix $T_\mathcal{X}$ ist
 \[\det T:=\det T_\mathcal{X}\]
 Hierbei ist $\det T$ unabhängig von der Basis $\mathcal{X}$, denn nach \hyperref[3.3.16]{Satz \ref{3.3.16}} sind alle darstellenden Matrizen ähnlich und haben gleiche Determinante.\\
 \underline{Beweis}:  Mit $A,B\in\mathbb{K}^{n\times n}$ und einer regulären Matrix $S\in\mathbb{K}^{n\times n}$ mit $B=S^{-1}AS$ gilt aufgrund von \hyperref[4.1.10]{Satz \ref{4.1.10}} und \hyperref[4.1.11]{Satz \ref{4.1.11}}
 \[\det B=\det S^{-1}AS\stackrel{\hyperref[4.1d]{(4.1d)}}{=}\det S^{-1}\det A\det S=\det A\]
 Problem mit der Leibniz \hyperref[4.1c]{(4.1c)}: Sehr aufwändig!\\
-Lösung: Zu gegebenem $A\in\mathbb{K}^{n\times n}$ und $1\leq k,l\leq n$ sei $A_{kl}:=(a_{ij})_{\substack{1\leq i\leq n, i\not=k\\ 1\leq j\leq n, i\not=l}}\in\mathbb{K}^{(n-1)\times n(-1)}$ diejenige Matrix, welche aus $A$ durch Streichen der $k-$ten Zeile und der $l-ten$ Spalte entsteht.
+Lösung: Zu gegebenem $A\in\mathbb{K}^{n\times n}$ und $1\leq k,l\leq n$ sei $A_{kl}:=(a_{ij})_{\substack{1\leq i\leq n, i\not=k\\ 1\leq j\leq n, i\not=l}}\in\mathbb{K}^{(n-1)\times n(-1)}$ diejenige Matrix, welche aus $A$ durch Streichen der $k-$ten Zeile und der $l-$ten Spalte entsteht.
 \subsubsection{Proposition (Entwicklung von det)}
 \label{4.1.14}
-Es sei $A\in\mathbb{K}^{n\times n}$.  Für alle Indizen $k,l\in\{1,\cdots ,n\}$ gilt dann:
+Es sei $A\in\mathbb{K}^{n\times n}$.  Für alle Indizes $k,l\in\{1,\cdots ,n\}$ gilt dann:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item die \underline{Entwicklung nach der $k-$ten Zeile}
@@ -124,7 +124,7 @@ Ist $A\in\mathbb{K}^{n\times n}$ regulär.
 \subsubsection{Beispiel}
 In $\mathbb{K}^{2\times 2}$ gilt
 \[\begin{pmatrix}a_{11} & a_{12}\\ a_{21} & a_{22}\end{pmatrix}^{-1}=\frac{1}{a_{11}a_{22}-a_{21}a_{12}}\begin{pmatrix}a_{22} & -a_{12}\\ -a_{21} & a_{11}\end{pmatrix}\]
-\underline{Beweis}: Mittels der Matrix $B:=((-1)^{i+j}\det A_{ji})_{1\leq i,j\leq n}$ erhalten wir durch Nachrechnen $AB=BA=\det A\cdot I_n$.  Wegen \hyperref[3.3.12]{Korollar \ref{3.3.12}} ist (det$A)^{-1}B$ die Inverse von $A$.
+\underline{Beweis}: Mittels der Matrix $B:=((-1)^{i+j}\det A_{ji})_{1\leq i,j\leq n}$ erhalten wir durch Nachrechnen $AB=BA=\det A\cdot I_n$.  Wegen \hyperref[3.3.12]{Korollar \ref{3.3.12}} ist $(\det A)^{-1}B$ die Inverse von $A$.
 \subsection{Eigenwerte und Eigenvektoren}
 Es sei $X$ ein linearer Raum über $\mathbb{K}$.\\
 \underline{Ziel}: Finde zu $T\in L(X)$ eine Basis $\mathcal{X}$ von $X$ derart, dass $T_\mathcal{X}\in\mathbb{K}^{n\times n}$ möglichst "`einfach"' ist.  Hilfreich sind hierbei diejenigen Vektoren, welche von $T$ auf ein Vielfaches abgebildet werden.
