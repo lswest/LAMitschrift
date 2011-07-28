@@ -6,37 +6,37 @@ Wir beginnen mit einem Exkurs über Permutationen.  Dazu sei $(S_n,\circ )$ die 
 oder als $n-$Tupel ($\sigma (1),\cdots ,\sigma (n)$).  Weil $\sigma$ bijektiv ist, kommt jede Zahl $j\in\{1,\cdots ,n\}$ genau einmal in $(\sigma (1),\cdots ,\sigma (n))$ vor; ferner gibt es genau $n!$ solche Permutationen.
 \subsubsection{Definition (Signum)}
 Es sei $\sigma \in S_n$ und $s(\sigma )$ bezeichnet die Anzahle der Paare $(i,j)\in\mathbb{N}^2$ mit $1\leq i<j\leq n$ und $\sigma (i) > \sigma (j)$.  Dann ist das \underline{Signum} einer Permutation $\sigma$ definiert durch
-\[\mathrm{sgn~}\sigma := (-1)^{s(\sigma )}\]
+\[\sgn \sigma := (-1)^{s(\sigma )}\]
 \subsubsection{Beispiel}
 \label{4.1.2}
-Für die identische Permutation id$=(1,2,\cdots ,n)$ gilt $s(\sigma )=0$ und folglich sgn~id$=1$.  Weiter erhält man
+Für die identische Permutation $\id =(1,2,\cdots ,n)$ gilt $s(\sigma )=0$ und folglich $\sgn \id =1$.  Weiter erhält man
 \begin{align*}
-\sigma &=(2,1,3,4,\cdots ,n),\ s(\sigma )=1,\ \mathrm{sgn~}\sigma =-1\\
-\sigma &=(n,n-1,\cdots ,2, 1),\ s(\sigma )=\frac{(n-1)n}{2},\mathrm{sgn~}\sigma =(-1)^{s(\sigma )}
+\sigma &=(2,1,3,4,\cdots ,n),\ s(\sigma )=1,\ \sgn \sigma =-1\\
+\sigma &=(n,n-1,\cdots ,2, 1),\ s(\sigma )=\frac{(n-1)n}{2},\sgn \sigma =(-1)^{s(\sigma )}
 \end{align*}
 \subsubsection{Proposition}
-Für alle $\sigma ,\tau \in S_n$ gilt sgn~$\sigma \circ \tau =$ sgn~$\sigma\cdot$sgn~$\tau$.
+Für alle $\sigma ,\tau \in S_n$ gilt $\sgn \sigma \circ \tau =\sgn \sigma\cdot\sgn \tau$.
 \subsubsection{Bemerkung}
-Mittels \hyperref[4.1.2]{Beispiel \ref*{4.1.2}} ist $1=$sgn~id$=$sgn~$\sigma \circ \sigma ^{-1}$ und damit erhalten wir
-\[\label{4.1a} (4.1.a)\ \mathrm{sgn~}\sigma ^{-1}=\mathrm{sgn~}\sigma\text{ für alle }\sigma \in S_n\]
+Mittels \hyperref[4.1.2]{Beispiel \ref*{4.1.2}} ist $1=\sgn \id =\sgn \sigma \circ \sigma ^{-1}$ und damit erhalten wir
+\[\label{4.1a} (4.1.a)\ \sgn \sigma ^{-1}=\sgn \sigma\text{ für alle }\sigma \in S_n\]
 \underline{Beweis}: Es seien $\sigma ,\tau \in S_n$ und $x_1,\cdots ,x_n\in\mathbb{Q}$ paarweise verschieden.  Dann sind auch $y_i:=x_{\sigma (i)}$ mit $1\leq i\leq n$ paarweise verschieden.
 \renewcommand{\labelenumi}{(\Roman{enumi})}
 \begin{enumerate}
 \item Zunächst gilt die Identität
-\[\label{4.1b} (4.1b)\ \mathrm{sgn~}\sigma =\prod _{1 \leq i<j \leq n} \frac{x_{\sigma (i)}-x_{\sigma (j)}}{x_i -x_j}\]
+\[\label{4.1b} (4.1b)\ \sgn \sigma =\prod _{1 \leq i<j \leq n} \frac{x_{\sigma (i)}-x_{\sigma (j)}}{x_i -x_j}\]
 denn Zähler und Nenner des Produkts stimmen bis auf ihr Vorzeichen überein.  Im Zähler tritt ein Faktor $x_k -x_l$ mit $k>l$ genau $s(\sigma )$-mal auf, während dies im Nenner nicht vorkommt.
 \item Aufgrund von \hyperref[4.1b]{$4.1b$} erhalten wir
-\[\mathrm{sgn~}\tau =\prod _{1\leq i<j\leq n} \frac{y_{\tau (i)} -y_{\tau (j)}}{y_i - y_j}=\prod _{1\leq i<j\leq n} \frac{x_{\sigma \circ \tau (i)}-x_{\sigma \circ \tau (j)}}{x_{\sigma (i)}-x_{\sigma (j)}}\]
+\[\sgn \tau =\prod _{1\leq i<j\leq n} \frac{y_{\tau (i)} -y_{\tau (j)}}{y_i - y_j}=\prod _{1\leq i<j\leq n} \frac{x_{\sigma \circ \tau (i)}-x_{\sigma \circ \tau (j)}}{x_{\sigma (i)}-x_{\sigma (j)}}\]
 \end{enumerate}
 und folglich resultiert die Behauptung aus
 \begin{align*}
-\mathrm{sgn~} \sigma\circ\tau &\stackrel{(4.1b)}{=} \prod _{1\leq i<j\leq n}\frac{x_{\sigma \circ \tau (i)}-x_{\sigma\circ\tau (j)}}{x_i -x_j}\\
+\sgn  \sigma\circ\tau &\stackrel{(4.1b)}{=} \prod _{1\leq i<j\leq n}\frac{x_{\sigma \circ \tau (i)}-x_{\sigma\circ\tau (j)}}{x_i -x_j}\\
 &= \left(\prod _{1\leq i<j\leq n} \frac{x_{\sigma\circ\tau (i)}-x_{\sigma\circ\tau (j)}}{x_{\sigma (i)}-x_{\sigma (j)}}\right) \left(\prod _{1\leq i<j\leq n}\frac{x_{\sigma (i)}-x_{\sigma (j)}}{x_i-x_j}\right)\\
-&= \mathrm{sgn~}\tau \cdot \mathrm{sgn~}\sigma
+&= \sgn \tau \cdot \sgn \sigma
 \end{align*}
 \subsubsection{Definition (Determinante)}
 Die durch det:$\mathbb{K}^{n\times n}\rightarrow \mathbb{K}$
-\[\phantomsection\label{4.1c}(4.1c)\ \det A:=\sum _{\sigma\in S_n} \mathrm{sgn~}\sigma \prod _{i=1}^na_{i\sigma (i)}\]
+\[\phantomsection\label{4.1c}(4.1c)\ \det A:=\sum _{\sigma\in S_n} \sgn \sigma \prod _{i=1}^na_{i\sigma (i)}\]
 \subsubsection{Bemerkung}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
@@ -62,15 +62,15 @@ Für alle $A,B\in\mathbb{K}^{n\times n}$ gilt
 \begin{enumerate}
 \item $\det A=\det A^T$
 \item Entsteht $B$ durch eine Permutation $\sigma \in S_n$ der Spalten von $A$ (d.h. ist formal $B=(a_{\sigma (1)}\,a_{\sigma (2)},\cdots ,a_{\sigma (n)})$), oder der Zeilen von $A$ $\left(\text{d.h. formal }B=\begin{pmatrix}a^{\sigma (1)}\\ \vdots \\ a^{\sigma (n)}\end{pmatrix}\right)$,\\
-so gilt $\det B=$sgn~$\sigma\det A$
+so gilt $\det B=\sgn \sigma\det A$
 \item Falls zwei Spalten der Zeilen von $A$ übereinstimmen, so ist $\det A=0$.
 \end{enumerate}
 \underline{Beweis}: Es seien $A,B\in\mathbb{K}^{n\times n}$
 \begin{enumerate}
 \item Durch direktes Nachrechnen und \hyperref[4.1a]{$4.1a$} folgt 
 \begin{align*}
-\det A^T&\stackrel{(4,1c)}{=}\sum _{\sigma\in S_n}\mathrm{sgn~}\sigma \prod _{i=1}^n a_{\sigma (i)i}\\
-&=\sum _{\sigma \in S_n} \mathrm{sgn~}\sigma ^{-1}\prod _{j=1}^n a_{j\sigma ^{-1}(j)}\\
+\det A^T&\stackrel{(4,1c)}{=}\sum _{\sigma\in S_n}\sgn \sigma \prod _{i=1}^n a_{\sigma (i)i}\\
+&=\sum _{\sigma \in S_n} \sgn \sigma ^{-1}\prod _{j=1}^n a_{j\sigma ^{-1}(j)}\\
 &= \det A
 \end{align*}
 \item folgt ähnlich und (c) ist etwas involvierter.
@@ -132,7 +132,7 @@ Es sei $X$ ein linearer Raum über $\mathbb{K}$.\\
 \label{4.2.1}
 Existiert zu $T\in L(X)$ ein Skalar $\lambda\in\mathbb{K}$ und ein Vektor $x\in X\setminus \{0 \}$ mit
 \[\phantomsection\label{4.2a}(4.2a)\ Tx=\lambda x\]
-So nennt man $x$ den zum \underline{Eigenwert} $\lambda$ gehörigen \underline{Eigenvektor} von $T$.  Der Kern $E_\lambda := N(T-\lambda \mathrm{id}x)$ wird \underline{Eigenraum} von $T$ und dessen Dimension die \underline{geometrische Vielfachheit} von $\lambda$ genannt.  Das \underline{Spektrum} $\sigma (T)\subseteq \mathbb{K}$ ist die Menge aller Eigenwerte.
+So nennt man $x$ den zum \underline{Eigenwert} $\lambda$ gehörigen \underline{Eigenvektor} von $T$.  Der Kern $E_\lambda := N(T-\lambda \id x)$ wird \underline{Eigenraum} von $T$ und dessen Dimension die \underline{geometrische Vielfachheit} von $\lambda$ genannt.  Das \underline{Spektrum} $\sigma (T)\subseteq \mathbb{K}$ ist die Menge aller Eigenwerte.
 \subsubsection{Bemerkung}
 \label{4.2.2}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
@@ -140,12 +140,12 @@ So nennt man $x$ den zum \underline{Eigenwert} $\lambda$ gehörigen \underline{E
 \item Eine Abbildung $T\in L(X)$ besitzt genau dann einen nichttrivialen Kern, falls $0\in \sigma (T)$ gilt.  Im Fall $\dim X < \infty$ ist $T$ genau dann invertierbar, wenn $0\not\in\sigma (T)$.
 \item Für jedes $\lambda \in \sigma (T)$ ist der zugehörige Eigenraum $E_\lambda$ \underline{invariant} bezüglich $T$, d.h.
 \[x\in E_\lambda \Rightarrow Tx\in E_\lambda\]
-Ist insbesondere $m:=\dim E_\lambda<\infty$, so besitzt $S:=T\mid _{E_\lambda} \in L(E_\lambda)$ bezüglich jeder Basis $\mathcal{X}$ von $E_\lambda$ die Darstellung $S_\mathcal{X}=\mathrm{diag}(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{m\times m}$.
+Ist insbesondere $m:=\dim E_\lambda<\infty$, so besitzt $S:=T\mid _{E_\lambda} \in L(E_\lambda)$ bezüglich jeder Basis $\mathcal{X}$ von $E_\lambda$ die Darstellung $S_\mathcal{X}=\operatorname{diag}(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{m\times m}$.
 \item Mit $A\in\mathbb{K}^{n\times n}$ besteht das Spektrum $\sigma (T_A)$ aus allen $\lambda\in\mathbb{K}$ derart, dass der Lösungsraum der homogenen Gleichung $[A-\lambda I_n]x=0$ nichttrivial ist; letzterer stimmt mit $E_\lambda$ überein.
 \end{enumerate}
 \subsubsection{Beispiel}
 \begin{enumerate}
-\item Mit der Nullabbildung $0\in L(X)$ gilt $\stackrel{\in L(X)}{0}x=\stackrel{\in X}{0}$ für alle $x\in X$.  Folglich ist $\sigma (0) = \{0\}$, jedes $x\not=0$ ist Eigenvektor und $E_0=X$.  Für die Identität id$x$ gilt $\sigma (\mathrm{id}x)=\{1\}$ und $E_1=X$.
+\item Mit der Nullabbildung $0\in L(X)$ gilt $\stackrel{\in L(X)}{0}x=\stackrel{\in X}{0}$ für alle $x\in X$.  Folglich ist $\sigma (0) = \{0\}$, jedes $x\not=0$ ist Eigenvektor und $E_0=X$.  Für die Identität $\id x$ gilt $\sigma (\id x)=\{1\}$ und $E_1=X$.
 \item Wir betrachten die von $A=\begin{pmatrix}1 & 2\\ 2 & 1\end{pmatrix}$ induzierte Abbildung $T_A\in L(\mathbb{R}^2)$:
 \begin{itemize}
 \item Wegen $T_A\begin{pmatrix}-1\\ 1\end{pmatrix}=-1\begin{pmatrix}-1\\ 1\end{pmatrix}$ ist $-1$ ein Eigenwert, $\begin{pmatrix}-1\\ 1\end{pmatrix}$ zugehörigen Eigenvektor und $E_{-1}=\mathbb{R}\begin{pmatrix}-1\\ 1\end{pmatrix}$ Eigenraum zu $-1$; also hat $-1$ die geometrische Vielfachheit $1$.
@@ -200,7 +200,7 @@ Die Werte $\lambda _i$ sind dann die Nullstellen von $\chi$, ihre \underline{alg
 \label{4.3.3}
 Für jedes $T\in L(X)$ gilt $\sigma (T)=\chi _T^{-1}(\{0\})$, und die Vielfachheit von $\lambda \in \sigma (T)$ heißt \underline{algebraische}\\ \underline{Vielfachheit} des Eigenwerts $\lambda$.\\
 \underline{Beweis}: Mittels \hyperref[4.2.1]{Definition \ref{4.2.1}} gelten die Äquivalenzen
-\[\lambda \not\in \sigma (T)\Leftrightarrow E_\lambda = N(T-\lambda \mathrm{id}\ x)=\{0\}\Leftrightarrow[T_\mathcal{X}-\lambda I_n]x=0\text{ hat nur die triviale Lösung.}\]
+\[\lambda \not\in \sigma (T)\Leftrightarrow E_\lambda = N(T-\lambda \id \ x)=\{0\}\Leftrightarrow[T_\mathcal{X}-\lambda I_n]x=0\text{ hat nur die triviale Lösung.}\]
 \[\Leftrightarrow T_\mathcal{X}-\lambda I_n\text{ ist regulär (\hyperref[3.3.14]{Satz \ref{3.3.14}})}\]
 \[\Leftrightarrow \chi _T(\lambda)=\det (T_\mathcal{X}-\lambda I_n)\not= 0\text{ nach \hyperref[4.1.11]{Satz \ref{4.1.11}}}\]
 \subsubsection{Beispiel}
@@ -270,14 +270,14 @@ Die Invarianz der $E_{\lambda _i}$ zeigt, dass jedes solcher $y_i\in E_{\lambda 
 \begin{enumerate}
 \item Wir betrachten die lineare Abbildung 
 \[T\in L(\mathbb{R}^3),\ Tx=\begin{pmatrix}0 & 1 & -1\\ 3 & 2 & -3 \\ 2 & 2 & -3\end{pmatrix}x\]
-und dem charakteristischen Polynom $\chi _T(t)=t^3+t^2-t-1=(t+1)^2(t-1)$.  Es zerfällt in Linearfaktoren und der Eigenwert $-1$ besitzt die algebraische Vielfachheit $2$.  Der Lösungsraum der homogenen linearer Gleichung $[T+id]x=0$ lautet
+und dem charakteristischen Polynom $\chi _T(t)=t^3+t^2-t-1=(t+1)^2(t-1)$.  Es zerfällt in Linearfaktoren und der Eigenwert $-1$ besitzt die algebraische Vielfachheit $2$.  Der Lösungsraum der homogenen linearer Gleichung $[T+\id]x=0$ lautet
 \[E_{-1}=span\left\{\begin{pmatrix}-1\\ 1\\ 0\end{pmatrix},\begin{pmatrix}1\\ 0\\ 1\end{pmatrix}\right\}\]
-und ist der zugehörige Eigenraum zum Eigenwert$-1$.  Somit hat $-1$ die geometrische Vielfachheit $2$.  Der weitere Eigenwert $1$ ist algebraisch einfach.  Seine geometrische Vielfachheit $1$ ergibt sich aus der Gleichung $[T-id]x=0$, deren Lösungsraum
+und ist der zugehörige Eigenraum zum Eigenwert$-1$.  Somit hat $-1$ die geometrische Vielfachheit $2$.  Der weitere Eigenwert $1$ ist algebraisch einfach.  Seine geometrische Vielfachheit $1$ ergibt sich aus der Gleichung $[T-\id]x=0$, deren Lösungsraum
 \[E_1=span\left\{\begin{pmatrix}1\\ 3\\ 2\end{pmatrix}\right\}\]
 gerade der zum Eigenwert $1$ gehörige Eigenraum ist.  Deshalb garantiert \hyperref[4.4.3]{Satz \ref{4.4.3}} die Diagonalisierbarkeit von $T$.  In der Tat, mit der aus den Eigenvektoren von $T$ gebildeten Basiswechselmatrix $S=\begin{pmatrix}-1 & 1 & 1\\ 1 & 0 & 3 \\ 0 & 1 & 2\end{pmatrix}$ (gebildet von $E_{-1}$ und $E_1$ als Spalten) gibt $S^{-1}TS=\begin{pmatrix}-1 & 0 & 0 \\0 & -1 & 0\\ 0 & 0 & 1\end{pmatrix}$.
 \item Wir betrachten $T\in L(\mathbb{R}^3)$
 \[Tx:=\begin{pmatrix}-2 & 1 & 3\\ 2 & 1 & -1\\ -7 & 2 & 7\end{pmatrix}x\]
-mit dem charakteristischen Polynom $\chi _T(t)=-(t-2)^3$, das in Linearfaktoren zerfällt.  Der Eigenwert 2 von $T$ hat die algebraische Vielfachheit $3$.  Man verifiziert leicht $E_2=N(T-2id)=\mathbb{R}\begin{pmatrix}1\\ 1\\ 1\end{pmatrix}$,
+mit dem charakteristischen Polynom $\chi _T(t)=-(t-2)^3$, das in Linearfaktoren zerfällt.  Der Eigenwert 2 von $T$ hat die algebraische Vielfachheit $3$.  Man verifiziert leicht $E_2=N(T-2\id)=\mathbb{R}\begin{pmatrix}1\\ 1\\ 1\end{pmatrix}$,
 weshalb die geometrische Vielfachheit $1$ ist.  Also ist $T$ nicht diagonalisierbar.
 \end{enumerate}
 \subsubsection{Satz (Charakterisierung von Trigonalisierbarkeit)}
@@ -307,7 +307,7 @@ Zerfällt $\chi _T$ in Linearfaktoren, so gilt
 \[\det T=\prod _{j=1}^n \lambda _j,\ tr\ T=\sum _{j=1}^n \lambda _j\text{ mit }\sigma (T)=\{\lambda _1,\cdots ,\lambda _n\}.\]
 \underline{Beweis}:  Nach \hyperref[4.4.5]{Satz \ref{4.4.5}} ist $T\in L(X)$ trigonalisierbar und folglich ist jede Darstellung $T_\mathcal{X}$ ähnlich zu einer Dreiecksmatrix $D\in \mathbb{K}^{n\times n}$ vermöge $S$.  Dann folgt mit \hyperref[4.1.12]{Korollar \ref{4.1.12}}, dass $\det T=\det D=\lambda _1,\cdots ,\lambda _n$.  Nach einer Übungsaufgabe ist $trT=trS^{-1}(DS)=tr(DS)S^{-1}=trD=\lambda _1+\cdots +\lambda _n$.\\
 Wir definieren die \underline{Potenzen} $T^k\in L(X),\ k\in\mathbb{N}_0$, einer Abbildung $T\in L(X)$ rekursiv.
-\[T^0:=id\ x,\ T^{k+1}:=T\circ T^k\text{ für }k\in\mathbb{N}_0\]
+\[T^0:=\id x,\ T^{k+1}:=T\circ T^k\text{ für }k\in\mathbb{N}_0\]
 und entsprechend für Matrizen $A\in \mathbb{K}^{n\times n}$.  Wegen $\dim L(X)=n^2$(\hyperref[3.3.5]{Korollar \ref{3.3.5}}) ist die $(n^2+1)$-elementige Menge $\{T^0, T^1,\cdots ,T^{n^2}\}$ linear abhängig.  Tatsächlich hat sogar $\{T^0,\cdots ,T^n\}$ diese Eigenschaft:
 \subsubsection{Satz (von Cayley-Hamilton)}
 Jede lineare Abbildung $T\in L(X)$ erfüllt ihr charakteristisches Polynom, d.h. formal $\chi _T(T)=0$.
