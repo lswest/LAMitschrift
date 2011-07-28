@@ -88,7 +88,7 @@ Eine Matrix $A\in\mathbb{K}^{n\times n}$ ist genau dann regulär, wenn $\det A\n
 \label{4.1.12}
 Für ähnliche Matrizen $A,B\in\mathbb{K}^{n\times n}$ ist $\det A=\det B$.
 \subsubsection{Bemerkung}
-Es sei $X$ ein linearer Raum, mit dim$X<\infty$.  Auf Basis von \hyperref[4.1.12]{Korollar \ref{4.1.12}} lässt sich auch die \underline{Determinante} $\det :L(X)\rightarrow \mathbb{K}$ einer linearen Abbildung $T\in L(X)$.  Mit ihrer darstellenden Matrix $T_\mathcal{X}$ ist
+Es sei $X$ ein linearer Raum, mit $\dim X<\infty$.  Auf Basis von \hyperref[4.1.12]{Korollar \ref{4.1.12}} lässt sich auch die \underline{Determinante} $\det :L(X)\rightarrow \mathbb{K}$ einer linearen Abbildung $T\in L(X)$.  Mit ihrer darstellenden Matrix $T_\mathcal{X}$ ist
 \[\det T:=\det T_\mathcal{X}\]
 Hierbei ist $\det T$ unabhängig von der Basis $\mathcal{X}$, denn nach \hyperref[3.3.16]{Satz \ref{3.3.16}} sind alle darstellenden Matrizen ähnlich und haben gleiche Determinante.\\
 \underline{Beweis}:  Mit $A,B\in\mathbb{K}^{n\times n}$ und einer regulären Matrix $S\in\mathbb{K}^{n\times n}$ mit $B=S^{-1}AS$ gilt aufgrund von \hyperref[4.1.10]{Satz \ref{4.1.10}} und \hyperref[4.1.11]{Satz \ref{4.1.11}}
@@ -137,10 +137,10 @@ So nennt man $x$ den zum \underline{Eigenwert} $\lambda$ gehörigen \underline{E
 \label{4.2.2}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
-\item Eine Abbildung $T\in L(X)$ besitzt genau dann einen nichttrivialen Kern, falls $0\in \sigma (T)$ gilt.  Im Fall dim$X < \infty$ ist $T$ genau dann invertierbar, wenn $0\not\in\sigma (T)$.
+\item Eine Abbildung $T\in L(X)$ besitzt genau dann einen nichttrivialen Kern, falls $0\in \sigma (T)$ gilt.  Im Fall $\dim X < \infty$ ist $T$ genau dann invertierbar, wenn $0\not\in\sigma (T)$.
 \item Für jedes $\lambda \in \sigma (T)$ ist der zugehörige Eigenraum $E_\lambda$ \underline{invariant} bezüglich $T$, d.h.
 \[x\in E_\lambda \Rightarrow Tx\in E_\lambda\]
-Ist insbesondere $m:=$dim$E_\lambda<\infty$, so besitzt $S:=T\mid _{E_\lambda} \in L(E_\lambda)$ bezüglich jeder Basis $\mathcal{X}$ von $E_\lambda$ die Darstellung $S_\mathcal{X}=\mathrm{diag}(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{m\times m}$.
+Ist insbesondere $m:=\dim E_\lambda<\infty$, so besitzt $S:=T\mid _{E_\lambda} \in L(E_\lambda)$ bezüglich jeder Basis $\mathcal{X}$ von $E_\lambda$ die Darstellung $S_\mathcal{X}=\mathrm{diag}(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{m\times m}$.
 \item Mit $A\in\mathbb{K}^{n\times n}$ besteht das Spektrum $\sigma (T_A)$ aus allen $\lambda\in\mathbb{K}$ derart, dass der Lösungsraum der homogenen Gleichung $[A-\lambda I_n]x=0$ nichttrivial ist; letzterer stimmt mit $E_\lambda$ überein.
 \end{enumerate}
 \subsubsection{Beispiel}
@@ -166,7 +166,7 @@ Es resultiert hieraus die Beziehungen
 \[0=\lambda _{m+1}\sum _{i=1}^{m+1}\xi _i x_i = \sum _{i=1}^{m+1} \xi _i \lambda _{m+1} x_i\]
 und durch Subtraktion folgt $0=\sum _{i=1}^m \xi _i (\lambda _i-\lambda _{m+1}) x_i$.  Laut Induktionsannahme ist $\{x_1,\cdots ,x_m\}$ linear unabhängig und damit $\xi _i (\lambda _i -\lambda _{m+1})=0$.  Da die Eigenwerte paarweise verschieden sind, folgt zunächst $\xi _i=0,\ 1\leq i\leq m$.  Mit \hyperref[4.2b]{$(4.2b)$} folgt $\xi _{m+1} x_{m+1}=0$.  Also Eigenvektor ist $x_{m+1}\not=0$ und daher $\xi _{m+1}=0$.
 \subsubsection{Korollar}
-Ist $n=$dim$X<\infty$, so gilt:
+Ist $n=\dim X<\infty$, so gilt:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item $T$ hat höchstens $n$ verschiedene Eigenwerte.
@@ -179,7 +179,7 @@ Ist $n=$dim$X<\infty$, so gilt:
 \end{enumerate}
 \subsection{Das charakteristische Polynom}
 \textbf{Im Folgendem gilt: $\chi =$griechischer Buchstabe "`chi"', und $\mathcal{X}$ ein Skript-$X$\\}
-$X$ sei linearer Raum über $\mathbb{K}$, dim$X=n<\infty$, $\mathcal{X}$ sei Basis.  Dann hat jede $T\in L(X)$ eine darstellende Matrix $T_\mathcal{X}\in \mathbb{K}^{n\times n}$.  Bezeichnet $\mathcal{X}'$ eine weitere Basis von $X$, so folgern wir aus \hyperref[3.3.16]{Satz \ref{3.3.16}} die Existenz einer regulären Basiswechselmatrix $S$ mit $T_{\mathcal{X}'}=S^{-1}T_\mathcal{X}S$ und nach den Sätzen \hyperref[4.1.10]{\ref{4.1.10}}, \hyperref[4.1.11]{\ref{4.1.11}}:
+$X$ sei linearer Raum über $\mathbb{K}$, $\dim X=n<\infty$, $\mathcal{X}$ sei Basis.  Dann hat jede $T\in L(X)$ eine darstellende Matrix $T_\mathcal{X}\in \mathbb{K}^{n\times n}$.  Bezeichnet $\mathcal{X}'$ eine weitere Basis von $X$, so folgern wir aus \hyperref[3.3.16]{Satz \ref{3.3.16}} die Existenz einer regulären Basiswechselmatrix $S$ mit $T_{\mathcal{X}'}=S^{-1}T_\mathcal{X}S$ und nach den Sätzen \hyperref[4.1.10]{\ref{4.1.10}}, \hyperref[4.1.11]{\ref{4.1.11}}:
 \[\det (T_{\mathcal{X}'}-tI_n)=\det (S^{-1}T_\mathcal{X}S-tS^{-1}S)\stackrel{\hyperref[4.1d]{(4.1d)}}{=}\det S^{-1}\det (T_\mathcal{X}-tI_n)\det S\stackrel{\hyperref[4.1e]{(4.1e)}}{=}\det (T_\mathcal{X}-tI_n)\]
 für alle $t\in \mathbb{K}$.  Also hängen die Werte von $t\mapsto \det (T_\mathcal{X}-tI_n)$ nur von $T\in L(X)$ und nicht von $\mathcal{X}$ ab.
 \subsubsection{Definition (charakteristisches Polynom)}
@@ -223,7 +223,7 @@ Ist $\mathbb{K}$ algebraisch abgeschlossen, so hat jedes $T\in L(X)$ einen Eigen
 \subsubsection{Satz}
 \label{4.3.7}
 Die geometrische Vielfachheit jedes Eigenwertes ist kleiner oder gleich seiner algebraischen Vielfachheit.\\
-\underline{Beweis}: Es sei $T\in L(X)$ und $\lambda \in \sigma (T)$ mit $m:=$dim$E_\lambda$.  Dann existieren $m$ linear unabhängige Eigenvektoren von $T$ in $E_\lambda$.  Wählt man diese als ersten Teil einer Basis $\mathcal{X}$ von $X$, so gilt (vgl. \hyperref[4.2.2]{Bemerkung \ref{4.2.2}(2)})
+\underline{Beweis}: Es sei $T\in L(X)$ und $\lambda \in \sigma (T)$ mit $m:=\dim E_\lambda$.  Dann existieren $m$ linear unabhängige Eigenvektoren von $T$ in $E_\lambda$.  Wählt man diese als ersten Teil einer Basis $\mathcal{X}$ von $X$, so gilt (vgl. \hyperref[4.2.2]{Bemerkung \ref{4.2.2}(2)})
 \[T_\mathcal{X} =\begin{pmatrix}\Lambda & B\\ 0 & C\end{pmatrix}, \Lambda=diag(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{n\times m},\ B\in\mathbb{K}^{m\times (m-n)},\ C\in\mathbb{K}^{(n-m)\times (n-m)}\]
 und wir erhalten nach \hyperref[4.1.14]{Satz \ref{4.1.14}}, dass
 \[\chi _T(t)=(\lambda -t)^m \det (C-tI_{n-m})\]
@@ -257,7 +257,7 @@ Wir zeigen zwei Richtungen:
 \begin{itemize}
 \item ($\Rightarrow$) Es sei $T\in L(X)$ diagonalisierbar und $\mathcal{X}$ eine Basis von $X$ derart, dass \[T_\mathcal{X}=diag(a_1,\cdots ,a_n)\text{ mit }a_1,\cdots ,a_n\in\mathbb{K}.\]  Das charakteristisches Polynom ergibt sich daher zu 
 \[\phantomsection\label{4.4a}(4.4a)\ \chi _T=\prod _{k=1}^n (a_k -t)\left[=\det (T_\mathcal{X}-tI_n)=\det \begin{pmatrix}a_1-t & \ & \ \\ \ & \ddots & \ \\ \ & \ & a_n-t\end{pmatrix}\right]\]
-und zerfällt offenbar in Linearfaktoren.  Nach \hyperref[4.3.7]{Satz \ref{4.3.7}} bleibt also nachzuweisen, dass die geometrische Vielfachheit eines $\lambda \in \sigma (T)$ mindestens gleich seiner algebraischen Vielfachheit ist.  Bezeichnet r die Algebraische Vielfachheit von $\lambda$, so kommt der Linearfaktor $\lambda -t$ genau $r-$mal in \hyperref[4.4a]{$(4.4a)$} vor, d.h. $r$ Diagonalelemente von $T_\mathcal{X}$ sind gleich $\lambda$.  Damit werden $r$ Elemente der Basis $\mathcal{X}$ auf ihr $\lambda -$faches abgebildet und folglich ist dim$E_\lambda \geq r$
+und zerfällt offenbar in Linearfaktoren.  Nach \hyperref[4.3.7]{Satz \ref{4.3.7}} bleibt also nachzuweisen, dass die geometrische Vielfachheit eines $\lambda \in \sigma (T)$ mindestens gleich seiner algebraischen Vielfachheit ist.  Bezeichnet r die Algebraische Vielfachheit von $\lambda$, so kommt der Linearfaktor $\lambda -t$ genau $r-$mal in \hyperref[4.4a]{$(4.4a)$} vor, d.h. $r$ Diagonalelemente von $T_\mathcal{X}$ sind gleich $\lambda$.  Damit werden $r$ Elemente der Basis $\mathcal{X}$ auf ihr $\lambda -$faches abgebildet und folglich ist $\dim E_\lambda \geq r$
 \item ($\Leftarrow$) Umgekehrt zerfalle $\chi _T$ in Linearfaktoren, es gelte die Bedingung (ii) und es sei $\sigma (T)=\{\lambda _1,\cdots,\lambda _m\}$ mit paarweise verschiedenen Eigenwerten $\lambda _i,\ 1\leq i\leq m\leq n$.  Zu jedem Eigenraum $E_{\lambda _i}$ wählen wir eine Basis
 \[\mathcal{X}_i=\{x_1^i,\cdots ,x_{r_i}^i\}\text{ mit }1\leq i\leq m,r_1+\cdots r_m=n.\]
 und erhalten somit $n$ Vektoren im Raum $X$.  Wir wollen zeigen, dass diese linear unabhängig sind.  Dazu 
@@ -308,7 +308,7 @@ Zerfällt $\chi _T$ in Linearfaktoren, so gilt
 \underline{Beweis}:  Nach \hyperref[4.4.5]{Satz \ref{4.4.5}} ist $T\in L(X)$ trigonalisierbar und folglich ist jede Darstellung $T_\mathcal{X}$ ähnlich zu einer Dreiecksmatrix $D\in \mathbb{K}^{n\times n}$ vermöge $S$.  Dann folgt mit \hyperref[4.1.12]{Korollar \ref{4.1.12}}, dass $\det T=\det D=\lambda _1,\cdots ,\lambda _n$.  Nach einer Übungsaufgabe ist $trT=trS^{-1}(DS)=tr(DS)S^{-1}=trD=\lambda _1+\cdots +\lambda _n$.\\
 Wir definieren die \underline{Potenzen} $T^k\in L(X),\ k\in\mathbb{N}_0$, einer Abbildung $T\in L(X)$ rekursiv.
 \[T^0:=id\ x,\ T^{k+1}:=T\circ T^k\text{ für }k\in\mathbb{N}_0\]
-und entsprechend für Matrizen $A\in \mathbb{K}^{n\times n}$.  Wegen dim$L(X)=n^2$(\hyperref[3.3.5]{Korollar \ref{3.3.5}}) ist die $(n^2+1)$-elementige Menge $\{T^0, T^1,\cdots ,T^{n^2}\}$ linear abhängig.  Tatsächlich hat sogar $\{T^0,\cdots ,T^n\}$ diese Eigenschaft:
+und entsprechend für Matrizen $A\in \mathbb{K}^{n\times n}$.  Wegen $\dim L(X)=n^2$(\hyperref[3.3.5]{Korollar \ref{3.3.5}}) ist die $(n^2+1)$-elementige Menge $\{T^0, T^1,\cdots ,T^{n^2}\}$ linear abhängig.  Tatsächlich hat sogar $\{T^0,\cdots ,T^n\}$ diese Eigenschaft:
 \subsubsection{Satz (von Cayley-Hamilton)}
 Jede lineare Abbildung $T\in L(X)$ erfüllt ihr charakteristisches Polynom, d.h. formal $\chi _T(T)=0$.
 \subsubsection{Bemerkung}
