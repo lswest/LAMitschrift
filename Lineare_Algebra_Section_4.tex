@@ -212,7 +212,7 @@ Es seien $\alpha \in [0,2\pi ),\ A=\begin{pmatrix}cos \alpha & -sin \alpha\\ sin
 \[\sigma (T)=\{cos\alpha -i\sqrt{1-cos^2\alpha }, cos\alpha +i\sqrt{1-cos^2\alpha }\}.\]
 Seine Elemente haben für $\alpha\not\in \{0,\pi \}$ die algebraische Vielfachheit $1$.
 \end{enumerate}
-Wir nennen einen Körper $\mathbb{K}$ \underline{algebraisch abgeschlossen}, falls jedes Polynom $p\in P(\mathbb{K})$ mit deg$p>0$ mindestens eine Nullstelle hat.
+Wir nennen einen Körper $\mathbb{K}$ \underline{algebraisch abgeschlossen}, falls jedes Polynom $p\in P(\mathbb{K})$ mit $\deg p>0$ mindestens eine Nullstelle hat.
 \subsubsection{Proposition}
 Ist $\mathbb{K}$ algebraisch abgeschlossen, so hat jedes $T\in L(X)$ einen Eigenwert.
 \subsubsection{Beispiel}
@@ -234,7 +234,7 @@ Wir betrachten $n-$dimensionale lineare Räume $X$ mit $n<\infty$.
 Eine Abbildung $T\in L(X)$ heißt
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
-\item \underline{diagonalisierbar} falls eine Basis $\mathcal{X}$ von $X$ existiert, in der $T_\mathcal{X}$ eine Diagonalmatrix ist.
+\item \underline{diagonalisierbar}, falls eine Basis $\mathcal{X}$ von $X$ existiert, in der $T_\mathcal{X}$ eine Diagonalmatrix ist.
 \item \underline{trigonalisierbar}, falls eine Basis $\mathcal{X}$ von $X$ existiert, in der $T_\mathcal{X}$ obere Dreiecksform besitzt.
 \end{enumerate}
 \subsubsection{Bemerkung}
@@ -296,7 +296,7 @@ mit $\sigma (T) = \{\lambda _1,\cdots ,\lambda _r\}$ und $n_1+\cdots +n_r=n$.
 \[A:=\begin{pmatrix}cos \alpha & -sin\alpha\\ sin\alpha & cos\alpha\end{pmatrix}\in\mathbb{R}^{2\times 2}\]
 betrachten wir die induzierte lineare Abbildung $T=T_A\in L(\mathbb{R}^2)$.  Ihr charakteristisches Polynom $\chi _T(t):=t^2-2cos(\alpha )t+1$ hat die Diskriminante $4(cos^2\alpha -1)$.  Daher ist $T$ genau für $\alpha \in \{0,\pi \}$ trigonalisierbar über $\mathbb{R}$.
 \item Weiter betrachten wir die in \hyperref[4.4.4]{Beispiel \ref{4.4.4}(2)} diskutierte Abbildung $T\in L(\mathbb{R}^3)$
-\[Tx:=\begin{pmatrix}-2 & 1 & 3\\ 2 & 1 & -1\\ -7 & 2 & 7\end{pmatrix}X\]
+\[Tx:=\begin{pmatrix}-2 & 1 & 3\\ 2 & 1 & -1\\ -7 & 2 & 7\end{pmatrix}x\]
 Da ihr charakteristisches Polynom $\chi _T(t)=(t-2)^3$ in Linearfaktoren zerfällt, ist sie nach \hyperref[4.4.5]{Satz \ref{4.4.5}} trigonalisierbar.  In der Tat liefert die Matrix $S:=\begin{pmatrix}-3 & -4 & 1\\ -3 & 2 & 0\\ -3 & -7 & 0\end{pmatrix}$ ihre Jordan-Normalform $J=S^{-1}TS=\begin{pmatrix}2 & 1 & 0\\ 0 & 2 & 1\\ 0 & 0 & 2\end{pmatrix}$
 \end{enumerate}
 \subsubsection{Korollar}
