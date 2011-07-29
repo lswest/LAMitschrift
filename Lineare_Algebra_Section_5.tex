@@ -62,12 +62,12 @@ Für jedes $S\subseteq X$ ist $S^{\bot}$ ein Unterraum von $X$ mit $(span\ S)\ca
 Weiter sei $x\in\ S^{\bot}$ und $x\in span~S$, d.h. $x=\sum_{i=1}^n \xi_i x_i$ mit Koeffizienten $\xi_i\in \K$ und $x_i\in S$. Dies impliziert $\langle x,x\rangle=\langle \sum_{i=1}^n \xi_i x_i,x\rangle=\sum_{i=1}^n\xi_i \underbrace{\langle x_i,x\rangle}_{=0\text{ weil }x\in S^{\bot}}=0$ und folglich $x=0$.
 \subsubsection{Satz}
 \label{5.1.10}
-Ist $dimX<\infty$ und $Y$ ein Unterraum von $X$, so gilt
+Ist $\dim X<\infty$ und $Y$ ein Unterraum von $X$, so gilt
 \alphabet
 \begin{enumerate}
 \item $X=Y\oplus Y^{\bot}$
 \item $(Y^{\bot})^{\bot}=Y$
-\item $dimX=dimY+dimY^{\bot}$
+\item $\dim X=\dim Y+\dim Y^{\bot}$
 \end{enumerate}
 \underline{Beweis (a)}: $Y\cap Y^{\bot}=\{0\}$ gilt nach \hyperref[5.1.9]{Proposition \ref*{5.1.9}}. Es bleibt $X=Y\oplus Y^{\bot}$ zu zeigen. Zu jedem $x\in X$ muss es also $y\in Y$ und $y^{\bot}\in Y^{\bot}$ mit $x=y+y^{\bot}$ geben. Ist $\{y_1, \dots,y_n\}$ eine Orthonormalbasis von $Y$, so definieren wir
 \[y:=\sum_{i=1}^m \langle x,y_i\rangle \cdot y_i,\qquad y^{\bot}:=x-y\text{ usw.}\]
@@ -135,7 +135,7 @@ Sei $X$ ein linearer Raum über $\K$ mit innerem Produkt $\langle \cdot ,\cdot\r
 Aufgrund von \hyperref[5.1.1]{Definition \ref{5.1.1}(i)} gilt nämlich $y'(\alpha _1x_1+\alpha _2x_2)=\langle \alpha _1x_1+\alpha _2x_2,y\rangle = \alpha _1\langle x_1,y\rangle +\alpha _2\langle x_2,y\rangle = \alpha _1 y'(x_1)+\alpha _2 y'(x_2)$ für alle $\alpha _1,\alpha _2\in \K ,\ x_1,x_2\in X$, also $y'\in L(X,\K)$
 \subsubsection{Satz (Riesz'scher Darstellungssatz)}
 \label{5.2.1}
-Ist dim$X<\infty$, so gibt es zu jedem Funktional $S\in L(X,\K)$ ein eindeutiges $y\in X$ mit $Sx=\langle x,y\rangle$ für alle $x\in X$, d.h. $S=y'$.\\
+Ist $\dim X<\infty$, so gibt es zu jedem Funktional $S\in L(X,\K)$ ein eindeutiges $y\in X$ mit $Sx=\langle x,y\rangle$ für alle $x\in X$, d.h. $S=y'$.\\
 \underline{Beweis}: Nach \hyperref[5.1.15]{Satz \ref{5.1.15}} gibt es eine Orthonormalbasis $\{x_1,\cdots ,x_n\}$ von $X$.
 \Romannum
 \begin{enumerate}
@@ -181,14 +181,14 @@ Im unitärer Raum $\Co ^n$ mit seiner Standardbasis $\mathcal{E}_n$ ergibt sich 
 und folglich $a'_{ij}=\overline{a_{ji}}$.  Für die adjungierte Abbildung in unitären Räumen ist also $A'=A^*$ mit der sogenannten \underline{Hermite'schen}
 \[A^*=\overline{(A^T)}=(\overline{a_{ji}})_{1\leq i,j\leq n}\]
 \subsubsection{Satz}
-Ist dim$X<\infty$ und $T\in L(X)$, so gilt
+Ist $\dim X<\infty$ und $T\in L(X)$, so gilt
 \[N(T')=R(T)^\bot\ \ \mathrm{rk}T=\mathrm{rk}T'\]
 \underline{Beweis}: Wir erhalten
 \[N(T')=\{x\in X\colon T'x=0\}=\{x\in X\colon \langle y, T'x\rangle =0\text{ für alle }y\in X\}\]
 \[\stackrel{\hyperref[5.2c]{(5.2c)}}{=}\{x\in X\colon \langle Ty,x\rangle =0\text{ für alle } y\in X\}=R(T)^\bot\]
 Mit \hyperref[5.1.10]{Satz \ref{5.1.10}(c)}, der eben gezeigten Aussage und \hyperref[dimension]{Satz \ref{dimension}}
-\[\mathrm{rk}T=\mathrm{dim}R(T)=\footnotemark\mathrm{dim}X-\mathrm{dim}R(T)^\bot =\mathrm{dim} X-\mathrm{dim}N(T')=\mathrm{dim}R(T')=\mathrm{rk}T'\]
-\footnotetext{gilt wegen: $X=Y\oplus Y^\bot\\ \mathrm{dim}X=\mathrm{dim}Y+\mathrm{dim}Y^\bot$}
+\[\mathrm{rk}T=\dim R(T)=\footnotemark\dim X-\dim R(T)^\bot =\dim  X-\dim N(T')=\dim R(T')=\mathrm{rk}T'\]
+\footnotetext{gilt wegen: $X=Y\oplus Y^\bot\\ \dim X=\dim Y+\dim Y^\bot$}
 \subsection{Sebstadjungierte Abbildungen}
 Wieder sei $X$ ein linearer Raum mit inneren Produkt $\langle \cdot ,\cdots \rangle$
 \subsubsection{Definition (Selbstadjungiert)}
@@ -201,7 +201,7 @@ Auf dem Euklidischen Raum $\R ^n$ ist eine Abbildung $T\in L(X)$ genau dann selb
 In einem unitären Raum $\Co ^n$ ist $T\in L(\Co ^n)$ dann und nur dann selbstadjungiert, wenn $A=T_{\mathcal{E}_n}$ Hemite'sch ist (vergleiche \hyperref[5.2.5]{Beispiel \ref{5.2.5}}), d.h. $A=A^*$.
 \addtocounter{subsubsection}{1}
 \subsubsection{Satz}
-Es sei dim$X<\infty$.  Ist $T\ni L(X)$ selbstadjungiert, so gilt:
+Es sei $\dim X<\infty$.  Ist $T\ni L(X)$ selbstadjungiert, so gilt:
 \alphabet
 \begin{enumerate}
 \item $\sigma (T)\subseteq \R$
@@ -214,10 +214,10 @@ Auf Matrizen bezogen besagt dies gerade, dass symmetrische und Hermite'sche Matr
 \item Es sei $\lambda \in \K$ ein Eigenwert von $T$ mit zugehörigen Eigenvektor $x\in X$.  Da $T$ selbstadjungiert ist, gilt
 \[\lambda \langle x,x\rangle = \langle \lambda x,x\rangle \stackrel{\hyperref[4.2a]{(4.2a)}}{=}\langle Tx,x\rangle = \langle x,Tx\rangle \stackrel{\hyperref[4.2a]{(4.2a)}}{=} \langle x,\lambda x\rangle = \overline{\lambda}\langle x,x\rangle\]
 und wegen $x\not=0$ folgt $\lambda =\overline{\lambda}$, also $\lambda \in \R$.
-\item Induktion über $n=$dim$X$.  Für $n=1$ ist nichts nachzuweisen.  Für $n>1$ gilt den Fundamentalsatz der Algebra
+\item Induktion über $n=\dim X$.  Für $n=1$ ist nichts nachzuweisen.  Für $n>1$ gilt den Fundamentalsatz der Algebra
 \[\chi _T(t)=\prod _{i=1}^n(\lambda _i-t)\text{ mit }\lambda _i\in \Co\]
 und wegen \hyperref[4.3.3]{Satz \ref{4.3.3}} ist jedes $\lambda _i$ Eigenwert von $T$;
-Aussage (a) garantiert sogar $\lambda _i\in \R$.  Es sei nun $x_1$ ein normierter Eigenvektor zu $\lambda _1$ und $X_1=(span\{x_1\})^\bot$.  Mittels \hyperref[5.1.10]{Satz \ref{5.1.10}(c)} ist dann dim$X_1=n-1$.  Für jedes $x\in X_1$ ist dann
+Aussage (a) garantiert sogar $\lambda _i\in \R$.  Es sei nun $x_1$ ein normierter Eigenvektor zu $\lambda _1$ und $X_1=(span\{x_1\})^\bot$.  Mittels \hyperref[5.1.10]{Satz \ref{5.1.10}(c)} ist dann $\dim X_1=n-1$.  Für jedes $x\in X_1$ ist dann
 \[\langle x_1,Tx\rangle \stackrel{\hyperref[5.3a]{(5.3a)}}{=}\langle Tx_1,x\rangle \stackrel{\hyperref[4.2a]{(4.2a)}}{=}\lambda _1\overbrace{\langle x_1,x\rangle}^0=0\]
 d.h. $Tx\in X_1$.  Wir haben damit gezeigt, dass $X_1$ invariant unter $T$ ist.  Damit induziert $T\in L(X)$ eine selbstadjungierte Abbildung $T_1\colon =T\mid _{X_1}\in L(X_1)$.  Nach Induktionsvoraussetzung gilt es eine Orthonormalbasis $\mathcal{X}_1\colon =\{x_2,\cdots ,x_n\}$ von $X_1$ aus nomierten Eigenvektoren $x_i$ von $T$.  Da jeder Eigenvektor von $T_1$ auch Eigenvektor von $T$ ist, muss $\{x_1,x_2,\cdots ,x_n\}$ eine Orthonormalbasis von $X$ sein.
 \end{enumerate}

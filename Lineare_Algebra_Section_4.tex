@@ -6,53 +6,53 @@ Wir beginnen mit einem Exkurs über Permutationen.  Dazu sei $(S_n,\circ )$ die 
 oder als $n-$Tupel ($\sigma (1),\cdots ,\sigma (n)$).  Weil $\sigma$ bijektiv ist, kommt jede Zahl $j\in\{1,\cdots ,n\}$ genau einmal in $(\sigma (1),\cdots ,\sigma (n))$ vor; ferner gibt es genau $n!$ solche Permutationen.
 \subsubsection{Definition (Signum)}
 Es sei $\sigma \in S_n$ und $s(\sigma )$ bezeichnet die Anzahle der Paare $(i,j)\in\mathbb{N}^2$ mit $1\leq i<j\leq n$ und $\sigma (i) > \sigma (j)$.  Dann ist das \underline{Signum} einer Permutation $\sigma$ definiert durch
-\[\mathrm{sgn~}\sigma := (-1)^{s(\sigma )}\]
+\[\sgn \sigma := (-1)^{s(\sigma )}\]
 \subsubsection{Beispiel}
 \label{4.1.2}
-Für die identische Permutation id$=(1,2,\cdots ,n)$ gilt $s(\sigma )=0$ und folglich sgn~id$=1$.  Weiter erhält man
+Für die identische Permutation $\id =(1,2,\cdots ,n)$ gilt $s(\sigma )=0$ und folglich $\sgn \id =1$.  Weiter erhält man
 \begin{align*}
-\sigma &=(2,1,3,4,\cdots ,n),\ s(\sigma )=1,\ \mathrm{sgn~}\sigma =-1\\
-\sigma &=(n,n-1,\cdots ,2, 1),\ s(\sigma )=\frac{(n-1)n}{2},\mathrm{sgn~}\sigma =(-1)^{s(\sigma )}
+\sigma &=(2,1,3,4,\cdots ,n),\ s(\sigma )=1,\ \sgn \sigma =-1\\
+\sigma &=(n,n-1,\cdots ,2, 1),\ s(\sigma )=\frac{(n-1)n}{2},\sgn \sigma =(-1)^{s(\sigma )}
 \end{align*}
 \subsubsection{Proposition}
-Für alle $\sigma ,\tau \in S_n$ gilt sgn~$\sigma \circ \tau =$ sgn~$\sigma\cdot$sgn~$\tau$.
+Für alle $\sigma ,\tau \in S_n$ gilt $\sgn \sigma \circ \tau =\sgn \sigma\cdot\sgn \tau$.
 \subsubsection{Bemerkung}
-Mittels \hyperref[4.1.2]{Beispiel \ref*{4.1.2}} ist $1=$sgn~id$=$sgn~$\sigma \circ \sigma ^{-1}$ und damit erhalten wir
-\[\label{4.1a} (4.1.a)\ \mathrm{sgn~}\sigma ^{-1}=\mathrm{sgn~}\sigma\text{ für alle }\sigma \in S_n\]
+Mittels \hyperref[4.1.2]{Beispiel \ref*{4.1.2}} ist $1=\sgn \id =\sgn \sigma \circ \sigma ^{-1}$ und damit erhalten wir
+\[\label{4.1a} (4.1.a)\ \sgn \sigma ^{-1}=\sgn \sigma\text{ für alle }\sigma \in S_n\]
 \underline{Beweis}: Es seien $\sigma ,\tau \in S_n$ und $x_1,\cdots ,x_n\in\mathbb{Q}$ paarweise verschieden.  Dann sind auch $y_i:=x_{\sigma (i)}$ mit $1\leq i\leq n$ paarweise verschieden.
 \renewcommand{\labelenumi}{(\Roman{enumi})}
 \begin{enumerate}
 \item Zunächst gilt die Identität
-\[\label{4.1b} (4.1b)\ \mathrm{sgn~}\sigma =\prod _{1 \leq i<j \leq n} \frac{x_{\sigma (i)}-x_{\sigma (j)}}{x_i -x_j}\]
+\[\label{4.1b} (4.1b)\ \sgn \sigma =\prod _{1 \leq i<j \leq n} \frac{x_{\sigma (i)}-x_{\sigma (j)}}{x_i -x_j}\]
 denn Zähler und Nenner des Produkts stimmen bis auf ihr Vorzeichen überein.  Im Zähler tritt ein Faktor $x_k -x_l$ mit $k>l$ genau $s(\sigma )$-mal auf, während dies im Nenner nicht vorkommt.
 \item Aufgrund von \hyperref[4.1b]{$4.1b$} erhalten wir
-\[\mathrm{sgn~}\tau =\prod _{1\leq i<j\leq n} \frac{y_{\tau (i)} -y_{\tau (j)}}{y_i - y_j}=\prod _{1\leq i<j\leq n} \frac{x_{\sigma \circ \tau (i)}-x_{\sigma \circ \tau (j)}}{x_{\sigma (i)}-x_{\sigma (j)}}\]
+\[\sgn \tau =\prod _{1\leq i<j\leq n} \frac{y_{\tau (i)} -y_{\tau (j)}}{y_i - y_j}=\prod _{1\leq i<j\leq n} \frac{x_{\sigma \circ \tau (i)}-x_{\sigma \circ \tau (j)}}{x_{\sigma (i)}-x_{\sigma (j)}}\]
 \end{enumerate}
 und folglich resultiert die Behauptung aus
 \begin{align*}
-\mathrm{sgn~} \sigma\circ\tau &\stackrel{(4.1b)}{=} \prod _{1\leq i<j\leq n}\frac{x_{\sigma \circ \tau (i)}-x_{\sigma\circ\tau (j)}}{x_i -x_j}\\
+\sgn  \sigma\circ\tau &\stackrel{(4.1b)}{=} \prod _{1\leq i<j\leq n}\frac{x_{\sigma \circ \tau (i)}-x_{\sigma\circ\tau (j)}}{x_i -x_j}\\
 &= \left(\prod _{1\leq i<j\leq n} \frac{x_{\sigma\circ\tau (i)}-x_{\sigma\circ\tau (j)}}{x_{\sigma (i)}-x_{\sigma (j)}}\right) \left(\prod _{1\leq i<j\leq n}\frac{x_{\sigma (i)}-x_{\sigma (j)}}{x_i-x_j}\right)\\
-&= \mathrm{sgn~}\tau \cdot \mathrm{sgn~}\sigma
+&= \sgn \tau \cdot \sgn \sigma
 \end{align*}
 \subsubsection{Definition (Determinante)}
-Die durch det:$\mathbb{K}^{n\times n}\rightarrow \mathbb{K}$
-\[\phantomsection\label{4.1c}(4.1c)\ \mathrm{det}A:=\sum _{\sigma\in S_n} \mathrm{sgn~}\sigma \prod _{i=1}^na_{i\sigma (i)}\]
+Die durch $\det\colon\mathbb{K}^{n\times n}\rightarrow \mathbb{K}$
+\[\phantomsection\label{4.1c}(4.1c)\ \det A:=\sum _{\sigma\in S_n} \sgn \sigma \prod _{i=1}^na_{i\sigma (i)}\]
 \subsubsection{Bemerkung}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
 \item \hyperref[4.1c]{$(4.1c)$} heißt auch \underline{Leibniz-Formel}
-\item Es gilt die Beziehung $\mathrm{det}(\alpha A)=\alpha ^n\cdot\mathrm{det}A$ für alle $\alpha\in\mathbb{K},A\in\mathbb{K}^{n\times n}$, folglich ist die Determinante für $n\geq 2$ nicht linear.
+\item Es gilt die Beziehung $\det(\alpha A)=\alpha ^n\cdot\det A$ für alle $\alpha\in\mathbb{K},A\in\mathbb{K}^{n\times n}$, folglich ist die Determinante für $n\geq 2$ nicht linear.
 \end{enumerate}
 \subsubsection{Beispiel}
-Wir erhalten det$0=0$ und det$I_n=1$
+Wir erhalten $\det0=0$ und $\det I_n=1$
 \subsubsection{Beispiel}
 In Dimensionen $n\leq 3$ kann die Determinante einer Matrix $A\in\mathbb{K}^{n\times n}$ verhältnismäßig einfach berechnet werden.
 \begin{enumerate}
-\item Für $n=1$ gilt det$A=a_{1,1}$
-\item Für $n=2$ ist $S_2=\{(1,2),(2,1)\}$ und wir erhalten det$A=$det$\begin{pmatrix}a_{1,1} & a_{1,2}\\ a_{2,1} & a_{2,2}\end{pmatrix}=a_{1,1}a_{2,2}-a_{2,1}a_{1,2}$
+\item Für $n=1$ gilt $\det A=a_{1,1}$
+\item Für $n=2$ ist $S_2=\{(1,2),(2,1)\}$ und wir erhalten $\det A=\det \begin{pmatrix}a_{1,1} & a_{1,2}\\ a_{2,1} & a_{2,2}\end{pmatrix}=a_{1,1}a_{2,2}-a_{2,1}a_{1,2}$
 \item Für $n=3$ gilt $S_3=\{(1,2,3),(2,3,1),(3,1,2),(2,1,3),(3,2,1),(1,3,2)\}$ wobei die ersten drei Permutationen das Signum $1$ besitzen und die weiteren das Signum $-1$ besitzen.  Dies liefert die  \underline{Regel von Sarrus}
 \begin{align*}
-\mathrm{det}A&=\mathrm{det}\begin{pmatrix}a_{1,1} & a_{1,2} & a_{1,3}\\ a_{2,1} & a_{2,2} & a_{2,3}\\ a_{3,1} & a_{3,2} & a_{3,3}\end{pmatrix} \left|\begin{matrix}a_{1,1} & a_{1,2}\\ a_{2,1} & a_{2,2}\\ a_{3,1} & a_{3,2}\end{matrix} \leftarrow \text{Bildlich dargestellt wie die Regel funktioniert}\right|\\
+\det A&=\det \begin{pmatrix}a_{1,1} & a_{1,2} & a_{1,3}\\ a_{2,1} & a_{2,2} & a_{2,3}\\ a_{3,1} & a_{3,2} & a_{3,3}\end{pmatrix} \left|\begin{matrix}a_{1,1} & a_{1,2}\\ a_{2,1} & a_{2,2}\\ a_{3,1} & a_{3,2}\end{matrix} \leftarrow \text{Bildlich dargestellt wie die Regel funktioniert}\right|\\
 &=a_{1,1}a_{2,2}a_{3,3}+a_{1,2}a_{2,3}a_{3,1}+a_{1,3}a_{2,1}a_{3,2}-a_{1,1}a_{2,3}a_{3,2}-a_{1,2}a_{2,1}a_{3,3}-a_{1,3}a_{2,2}a_{3,1}
 \end{align*}
 \end{enumerate}
@@ -60,71 +60,71 @@ In Dimensionen $n\leq 3$ kann die Determinante einer Matrix $A\in\mathbb{K}^{n\t
 Für alle $A,B\in\mathbb{K}^{n\times n}$ gilt
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
-\item det$A=$det$A^T$
+\item $\det A=\det A^T$
 \item Entsteht $B$ durch eine Permutation $\sigma \in S_n$ der Spalten von $A$ (d.h. ist formal $B=(a_{\sigma (1)}\,a_{\sigma (2)},\cdots ,a_{\sigma (n)})$), oder der Zeilen von $A$ $\left(\text{d.h. formal }B=\begin{pmatrix}a^{\sigma (1)}\\ \vdots \\ a^{\sigma (n)}\end{pmatrix}\right)$,\\
-so gilt det$B=$sgn~$\sigma$det$A$
-\item Falls zwei Spalten der Zeilen von $A$ übereinstimmen, so ist det$A=0$.
+so gilt $\det B=\sgn \sigma\det A$
+\item Falls zwei Spalten oder Zeilen von $A$ übereinstimmen, so ist $\det A=0$.
 \end{enumerate}
 \underline{Beweis}: Es seien $A,B\in\mathbb{K}^{n\times n}$
 \begin{enumerate}
 \item Durch direktes Nachrechnen und \hyperref[4.1a]{$4.1a$} folgt 
 \begin{align*}
-\mathrm{det}A^T&\stackrel{(4,1c)}{=}\sum _{\sigma\in S_n}\mathrm{sgn~}\sigma \prod _{i=1}^n a_{\sigma (i)i}\\
-&=\sum _{\sigma \in S_n} \mathrm{sgn~}\sigma ^{-1}\prod _{j=1}^n a_{j\sigma ^{-1}(j)}\\
-&= \mathrm{det}A
+\det A^T&\stackrel{(4.1c)}{=}\sum _{\sigma\in S_n}\sgn \sigma \prod _{i=1}^n a_{\sigma (i)i}\\
+&=\sum _{\sigma \in S_n} \sgn \sigma ^{-1}\prod _{j=1}^n a_{j\sigma ^{-1}(j)}\\
+&= \det A
 \end{align*}
 \item folgt ähnlich und (c) ist etwas involvierter.
 \end{enumerate}
-Eine zentrale Eigenschaft von Determinanten ist ihre Multiplikativität.  Allerdings ist sie in Dimensionen $n>1$ nicht additiv: Beispiel det$(I_n+I_n)=2^n$, aber det$I_n=1$.
+Eine zentrale Eigenschaft von Determinanten ist ihre Multiplikativität.  Allerdings ist sie in Dimensionen $n>1$ nicht additiv: Beispiel $\det (I_n+I_n)=2^n$, aber $\det I_n=1$.
 \subsubsection{Satz (Multiplikativität der Determinante)}
 \label{4.1.10}
-Es gilt \[\phantomsection\label{4.1d}(4.1d)\mathrm{det}(AB)=\mathrm{det}A\cdot\mathrm{det}B\text{ für alle }A,B\in\mathbb{K}^{n\times n}.\]
-Zusätzlich zu Satz 3.3.14: Charakterisierung regulärer Matrizen: 
+Es gilt \[\phantomsection\label{4.1d}(4.1d)\det (AB)=\det A\cdot\det B\text{ für alle }A,B\in\mathbb{K}^{n\times n}.\]
+Zusätzlich zu \hyperref[3.3.14]{Satz 3.3.14}: Charakterisierung regulärer Matrizen: 
 \subsubsection{Satz (Regularität und die Determinante)}
 \label{4.1.11}
-Eine Matrix $A\in\mathbb{K}^{n\times n}$ ist genau dann regulär, wenn det$A\not= 0$.  Dann gilt
-\[\phantomsection\label{4.1e}(4.1e)\ \mathrm{det}A^{-1}=\frac{1}{\mathrm{det}A}\]
+Eine Matrix $A\in\mathbb{K}^{n\times n}$ ist genau dann regulär, wenn $\det A\not= 0$.  Dann gilt
+\[\phantomsection\label{4.1e}(4.1e)\ \det A^{-1}=\frac{1}{\det A}\]
 \subsubsection{Korollar}
 \label{4.1.12}
-Für ähnliche Matrizen $A,B\in\mathbb{K}^{n\times n}$ ist det$A=$det$B$.
+Für ähnliche Matrizen $A,B\in\mathbb{K}^{n\times n}$ ist $\det A=\det B$.
 \subsubsection{Bemerkung}
-Es sei $X$ ein linearer Raum, mit dim$X<\infty$.  Auf Basis von \hyperref[4.1.12]{Korollar \ref{4.1.12}} lässt sich auch die \underline{Determinante} det$:L(X)\rightarrow \mathbb{K}$ einer linearen Abbildung $T\in L(X)$.  Mit ihrer darstellenden Matrix $T_\mathcal{X}$ ist
-\[\mathrm{det}T:=\mathrm{det}T_\mathcal{X}\]
-Hierbei ist det$T$ unabhängig von der Basis $\mathcal{X}$, denn nach \hyperref[3.3.16]{Satz \ref{3.3.16}} sind alle darstellenden Matrizen ähnlich und haben gleiche Determinante.\\
+Es sei $X$ ein linearer Raum, mit $\dim X<\infty$.  Auf Basis von \hyperref[4.1.12]{Korollar \ref{4.1.12}} lässt sich auch die \underline{Determinante} $\det\colon L(X)\rightarrow \mathbb{K}$ einer linearen Abbildung $T\in L(X)$.  Mit ihrer darstellenden Matrix $T_\mathcal{X}$ ist
+\[\det T:=\det T_\mathcal{X}\]
+Hierbei ist $\det T$ unabhängig von der Basis $\mathcal{X}$, denn nach \hyperref[3.3.16]{Satz \ref{3.3.16}} sind alle darstellenden Matrizen ähnlich und haben gleiche Determinante.\\
 \underline{Beweis}:  Mit $A,B\in\mathbb{K}^{n\times n}$ und einer regulären Matrix $S\in\mathbb{K}^{n\times n}$ mit $B=S^{-1}AS$ gilt aufgrund von \hyperref[4.1.10]{Satz \ref{4.1.10}} und \hyperref[4.1.11]{Satz \ref{4.1.11}}
-\[\mathrm{det}B=\mathrm{det}S^{-1}AS\stackrel{\hyperref[4.1d]{(4.1d)}}{=}\mathrm{det}S^{-1}\mathrm{det}A\mathrm{det}S=\mathrm{det}A\]
+\[\det B=\det S^{-1}AS\stackrel{\hyperref[4.1d]{(4.1d)}}{=}\det S^{-1}\det A\det S=\det A\]
 Problem mit der Leibniz \hyperref[4.1c]{(4.1c)}: Sehr aufwändig!\\
-Lösung: Zu gegebenem $A\in\mathbb{K}^{n\times n}$ und $1\leq k,l\leq n$ sei $A_{kl}:=(a_{ij})_{\substack{1\leq i\leq n, i\not=k\\ 1\leq j\leq n, i\not=l}}\in\mathbb{K}^{(n-1)\times n(-1)}$ diejenige Matrix, welche aus $A$ durch Streichen der $k-$ten Zeile und der $l-ten$ Spalte entsteht.
+Lösung: Zu gegebenem $A\in\mathbb{K}^{n\times n}$ und $1\leq k,l\leq n$ sei $A_{kl}:=(a_{ij})_{\substack{1\leq i\leq n, i\not=k\\ 1\leq j\leq n, i\not=l}}\in\mathbb{K}^{(n-1)\times n(-1)}$ diejenige Matrix, welche aus $A$ durch Streichen der $k-$ten Zeile und der $l-$ten Spalte entsteht.
 \subsubsection{Proposition (Entwicklung von det)}
 \label{4.1.14}
-Es sei $A\in\mathbb{K}^{n\times n}$.  Für alle Indizen $k,l\in\{1,\cdots ,n\}$ gilt dann:
+Es sei $A\in\mathbb{K}^{n\times n}$.  Für alle Indizes $k,l\in\{1,\cdots ,n\}$ gilt dann:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item die \underline{Entwicklung nach der $k-$ten Zeile}
-\[\mathrm{det}A=\sum _{i=1}^n (-1)^{k+j}a_{kj}\mathrm{det}A_{kj}\]
+\[\det A=\sum _{i=1}^n (-1)^{k+j}a_{kj}\det A_{kj}\]
 \item die \underline{Entwicklung nach der $l-$ten Spalte}
-\[\mathrm{det}A=\sum _{i=1}^n (-1)^{i+l}a_{il}\mathrm{det}A_{il}\]
+\[\det A=\sum _{i=1}^n (-1)^{i+l}a_{il}\det A_{il}\]
 \end{enumerate}
 \subsubsection{Beispiel}
 Durch Entwicklung nach der ersten Zeile erhalten wir:
 \begin{align*}
-\mathrm{det}\begin{pmatrix}0 & 1 & 2\\ 3 & 4 & 5\\ 6 & 7 & 8\end{pmatrix}&=0\mathrm{det}\begin{pmatrix}4 & 5\\ 7 & 8\end{pmatrix}+(-1)\mathrm{det}\begin{pmatrix}3 & 5\\ 6 & 8\end{pmatrix}+2\mathrm{det}\begin{pmatrix}3 & 4\\ 6 & 7\end{pmatrix}\\
+\det \begin{pmatrix}0 & 1 & 2\\ 3 & 4 & 5\\ 6 & 7 & 8\end{pmatrix}&=0\det \begin{pmatrix}4 & 5\\ 7 & 8\end{pmatrix}+(-1)\det \begin{pmatrix}3 & 5\\ 6 & 8\end{pmatrix}+2\det \begin{pmatrix}3 & 4\\ 6 & 7\end{pmatrix}\\
 &=0
 \end{align*}
 Entwicklung nach der ersten Spalte liefert entsprechend:
 \begin{align*}
-\mathrm{det}\begin{pmatrix}0 & 1 & 2\\ 3 & 4 & 5\\ 6 & 7 & 8\end{pmatrix}&=0\mathrm{det}\begin{pmatrix}4 & 5\\ 7 & 8\end{pmatrix}+(-1)3\mathrm{det}\begin{pmatrix}1 & 2\\ 7 & 8\end{pmatrix}+6\mathrm{det}\begin{pmatrix}1 & 2\\ 4 & 5\end{pmatrix}\\
+\det \begin{pmatrix}0 & 1 & 2\\ 3 & 4 & 5\\ 6 & 7 & 8\end{pmatrix}&=0\det \begin{pmatrix}4 & 5\\ 7 & 8\end{pmatrix}+(-1)3\det \begin{pmatrix}1 & 2\\ 7 & 8\end{pmatrix}+6\det \begin{pmatrix}1 & 2\\ 4 & 5\end{pmatrix}\\
 &=0
 \end{align*}
 \subsubsection{Beispiel (Dreiecksmatrizen)}
-Ist $A\in\mathbb{K}^{n\times n}$ eine Dreiecksmatrix, so gilt det$A=\prod _{i=1}^n a_{ii}$.
+Ist $A\in\mathbb{K}^{n\times n}$ eine Dreiecksmatrix, so gilt $\det A=\prod _{i=1}^n a_{ii}$.
 \subsubsection{Proposition (Inverse und det)}
 Ist $A\in\mathbb{K}^{n\times n}$ regulär.
-\[A^{-1}=\frac{1}{\mathrm{det}A}\left( (-1)^{i+j}\mathrm{det}A_{ji}\right)_{1\leq j,i\leq n}\]
+\[A^{-1}=\frac{1}{\det A}\left( (-1)^{i+j}\det A_{ji}\right)_{1\leq j,i\leq n}\]
 \subsubsection{Beispiel}
 In $\mathbb{K}^{2\times 2}$ gilt
 \[\begin{pmatrix}a_{11} & a_{12}\\ a_{21} & a_{22}\end{pmatrix}^{-1}=\frac{1}{a_{11}a_{22}-a_{21}a_{12}}\begin{pmatrix}a_{22} & -a_{12}\\ -a_{21} & a_{11}\end{pmatrix}\]
-\underline{Beweis}: Mittels der Matrix $B:=((-1)^{i+j}\mathrm{det}A_{ji})_{1\leq i,j\leq n}$ erhalten wir durch Nachrechnen $AB=BA=\mathrm{det}A\cdot I_n$.  Wegen \hyperref[3.3.12]{Korollar \ref{3.3.12}} ist (det$A)^{-1}B$ die Inverse von $A$.
+\underline{Beweis}: Mittels der Matrix $B:=((-1)^{i+j}\det A_{ji})_{1\leq i,j\leq n}$ erhalten wir durch Nachrechnen $AB=BA=\det A\cdot I_n$.  Wegen \hyperref[3.3.12]{Korollar \ref{3.3.12}} ist $(\det A)^{-1}B$ die Inverse von $A$.
 \subsection{Eigenwerte und Eigenvektoren}
 Es sei $X$ ein linearer Raum über $\mathbb{K}$.\\
 \underline{Ziel}: Finde zu $T\in L(X)$ eine Basis $\mathcal{X}$ von $X$ derart, dass $T_\mathcal{X}\in\mathbb{K}^{n\times n}$ möglichst "`einfach"' ist.  Hilfreich sind hierbei diejenigen Vektoren, welche von $T$ auf ein Vielfaches abgebildet werden.
@@ -132,20 +132,20 @@ Es sei $X$ ein linearer Raum über $\mathbb{K}$.\\
 \label{4.2.1}
 Existiert zu $T\in L(X)$ ein Skalar $\lambda\in\mathbb{K}$ und ein Vektor $x\in X\setminus \{0 \}$ mit
 \[\phantomsection\label{4.2a}(4.2a)\ Tx=\lambda x\]
-So nennt man $x$ den zum \underline{Eigenwert} $\lambda$ gehörigen \underline{Eigenvektor} von $T$.  Der Kern $E_\lambda := N(T-\lambda \mathrm{id}x)$ wird \underline{Eigenraum} von $T$ und dessen Dimension die \underline{geometrische Vielfachheit} von $\lambda$ genannt.  Das \underline{Spektrum} $\sigma (T)\subseteq \mathbb{K}$ ist die Menge aller Eigenwerte.
+So nennt man $x$ den zum \underline{Eigenwert} $\lambda$ gehörigen \underline{Eigenvektor} von $T$.  Der Kern $E_\lambda := N(T-\lambda \id x)$ wird \underline{Eigenraum} von $T$ und dessen Dimension die \underline{geometrische Vielfachheit} von $\lambda$ genannt.  Das \underline{Spektrum} $\sigma (T)\subseteq \mathbb{K}$ ist die Menge aller Eigenwerte.
 \subsubsection{Bemerkung}
 \label{4.2.2}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \begin{enumerate}
-\item Eine Abbildung $T\in L(X)$ besitzt genau dann einen nichttrivialen Kern, falls $0\in \sigma (T)$ gilt.  Im Fall dim$X < \infty$ ist $T$ genau dann invertierbar, wenn $0\not\in\sigma (T)$.
+\item Eine Abbildung $T\in L(X)$ besitzt genau dann einen nichttrivialen Kern, falls $0\in \sigma (T)$ gilt.  Im Fall $\dim X < \infty$ ist $T$ genau dann invertierbar, wenn $0\not\in\sigma (T)$.
 \item Für jedes $\lambda \in \sigma (T)$ ist der zugehörige Eigenraum $E_\lambda$ \underline{invariant} bezüglich $T$, d.h.
 \[x\in E_\lambda \Rightarrow Tx\in E_\lambda\]
-Ist insbesondere $m:=$dim$E_\lambda<\infty$, so besitzt $S:=T\mid _{E_\lambda} \in L(E_\lambda)$ bezüglich jeder Basis $\mathcal{X}$ von $E_\lambda$ die Darstellung $S_\mathcal{X}=\mathrm{diag}(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{m\times m}$.
+Ist insbesondere $m:=\dim E_\lambda<\infty$, so besitzt $S:=T\mid _{E_\lambda} \in L(E_\lambda)$ bezüglich jeder Basis $\mathcal{X}$ von $E_\lambda$ die Darstellung $S_\mathcal{X}=\operatorname{diag}(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{m\times m}$.
 \item Mit $A\in\mathbb{K}^{n\times n}$ besteht das Spektrum $\sigma (T_A)$ aus allen $\lambda\in\mathbb{K}$ derart, dass der Lösungsraum der homogenen Gleichung $[A-\lambda I_n]x=0$ nichttrivial ist; letzterer stimmt mit $E_\lambda$ überein.
 \end{enumerate}
 \subsubsection{Beispiel}
 \begin{enumerate}
-\item Mit der Nullabbildung $0\in L(X)$ gilt $\stackrel{\in L(X)}{0}x=\stackrel{\in X}{0}$ für alle $x\in X$.  Folglich ist $\sigma (0) = \{0\}$, jedes $x\not=0$ ist Eigenvektor und $E_0=X$.  Für die Identität id$x$ gilt $\sigma (\mathrm{id}x)=\{1\}$ und $E_1=X$.
+\item Mit der Nullabbildung $0\in L(X)$ gilt $\stackrel{\in L(X)}{0}x=\stackrel{\in X}{0}$ für alle $x\in X$.  Folglich ist $\sigma (0) = \{0\}$, jedes $x\not=0$ ist Eigenvektor und $E_0=X$.  Für die Identität $\id x$ gilt $\sigma (\id x)=\{1\}$ und $E_1=X$.
 \item Wir betrachten die von $A=\begin{pmatrix}1 & 2\\ 2 & 1\end{pmatrix}$ induzierte Abbildung $T_A\in L(\mathbb{R}^2)$:
 \begin{itemize}
 \item Wegen $T_A\begin{pmatrix}-1\\ 1\end{pmatrix}=-1\begin{pmatrix}-1\\ 1\end{pmatrix}$ ist $-1$ ein Eigenwert, $\begin{pmatrix}-1\\ 1\end{pmatrix}$ zugehörigen Eigenvektor und $E_{-1}=\mathbb{R}\begin{pmatrix}-1\\ 1\end{pmatrix}$ Eigenraum zu $-1$; also hat $-1$ die geometrische Vielfachheit $1$.
@@ -166,7 +166,7 @@ Es resultiert hieraus die Beziehungen
 \[0=\lambda _{m+1}\sum _{i=1}^{m+1}\xi _i x_i = \sum _{i=1}^{m+1} \xi _i \lambda _{m+1} x_i\]
 und durch Subtraktion folgt $0=\sum _{i=1}^m \xi _i (\lambda _i-\lambda _{m+1}) x_i$.  Laut Induktionsannahme ist $\{x_1,\cdots ,x_m\}$ linear unabhängig und damit $\xi _i (\lambda _i -\lambda _{m+1})=0$.  Da die Eigenwerte paarweise verschieden sind, folgt zunächst $\xi _i=0,\ 1\leq i\leq m$.  Mit \hyperref[4.2b]{$(4.2b)$} folgt $\xi _{m+1} x_{m+1}=0$.  Also Eigenvektor ist $x_{m+1}\not=0$ und daher $\xi _{m+1}=0$.
 \subsubsection{Korollar}
-Ist $n=$dim$X<\infty$, so gilt:
+Ist $n=\dim X<\infty$, so gilt:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item $T$ hat höchstens $n$ verschiedene Eigenwerte.
@@ -179,11 +179,11 @@ Ist $n=$dim$X<\infty$, so gilt:
 \end{enumerate}
 \subsection{Das charakteristische Polynom}
 \textbf{Im Folgendem gilt: $\chi =$griechischer Buchstabe "`chi"', und $\mathcal{X}$ ein Skript-$X$\\}
-$X$ sei linearer Raum über $\mathbb{K}$, dim$X=n<\infty$, $\mathcal{X}$ sei Basis.  Dann hat jede $T\in L(X)$ eine darstellende Matrix $T_\mathcal{X}\in \mathbb{K}^{n\times n}$.  Bezeichnet $\mathcal{X}'$ eine weitere Basis von $X$, so folgern wir aus \hyperref[3.3.16]{Satz \ref{3.3.16}} die Existenz einer regulären Basiswechselmatrix $S$ mit $T_{\mathcal{X}'}=S^{-1}T_\mathcal{X}S$ und nach den Sätzen \hyperref[4.1.10]{\ref{4.1.10}}, \hyperref[4.1.11]{\ref{4.1.11}}:
-\[\mathrm{det}(T_{\mathcal{X}'}-tI_n)=\mathrm{det}(S^{-1}T_\mathcal{X}S-tS^{-1}S)\stackrel{\hyperref[4.1d]{(4.1d)}}{=}\mathrm{det}S^{-1}\mathrm{det}(T_\mathcal{X}-tI_n)\mathrm{det}S\stackrel{\hyperref[4.1e]{(4.1e)}}{=}\mathrm{det}(T_\mathcal{X}-tI_n)\]
-für alle $t\in \mathbb{K}$.  Also hängen die Werte von $t\mapsto \mathrm{det}(T_\mathcal{X}-tI_n)$ nur von $T\in L(X)$ und nicht von $\mathcal{X}$ ab.
+$X$ sei linearer Raum über $\mathbb{K}$, $\dim X=n<\infty$, $\mathcal{X}$ sei Basis.  Dann hat jede $T\in L(X)$ eine darstellende Matrix $T_\mathcal{X}\in \mathbb{K}^{n\times n}$.  Bezeichnet $\mathcal{X}'$ eine weitere Basis von $X$, so folgern wir aus \hyperref[3.3.16]{Satz \ref{3.3.16}} die Existenz einer regulären Basiswechselmatrix $S$ mit $T_{\mathcal{X}'}=S^{-1}T_\mathcal{X}S$ und nach den Sätzen \hyperref[4.1.10]{\ref{4.1.10}}, \hyperref[4.1.11]{\ref{4.1.11}}:
+\[\det (T_{\mathcal{X}'}-tI_n)=\det (S^{-1}T_\mathcal{X}S-tS^{-1}S)\stackrel{\hyperref[4.1d]{(4.1d)}}{=}\det S^{-1}\det (T_\mathcal{X}-tI_n)\det S\stackrel{\hyperref[4.1e]{(4.1e)}}{=}\det (T_\mathcal{X}-tI_n)\]
+für alle $t\in \mathbb{K}$.  Also hängen die Werte von $t\mapsto \det (T_\mathcal{X}-tI_n)$ nur von $T\in L(X)$ und nicht von $\mathcal{X}$ ab.
 \subsubsection{Definition (charakteristisches Polynom)}
-Besitzt $T\in L(X)$ eine darstellende Matrix $T_\mathcal{X}\in\mathbb{K}^{n\times n}$, so ist das \underline{charakteristisches Polynom} von T gegeben durch $\chi _T(t)=$det$(T_\mathcal{X}-tI_n)$.
+Besitzt $T\in L(X)$ eine darstellende Matrix $T_\mathcal{X}\in\mathbb{K}^{n\times n}$, so ist das \underline{charakteristisches Polynom} von T gegeben durch $\chi _T(t)=\det (T_\mathcal{X}-tI_n)$.
 \subsubsection{Bemerkung}
 Es seien $A\in\mathbb{K}^{n\times n}$ und die induzierte Abbildung $T_A\in L(\mathbb{K}^n)$ gegeben.
 \renewcommand{\labelenumi}{(\arabic{enumi})}
@@ -191,7 +191,7 @@ Es seien $A\in\mathbb{K}^{n\times n}$ und die induzierte Abbildung $T_A\in L(\ma
 \item Im Fall $X=\mathbb{K}^n$ bezeichnet man $\chi _{T_A}$ auch als charakteristisches Polynom von $A$.
 \item Die \underline{Spur} von $A$ ist definiert durch (vgl. Aufgabe)
 \[trA=\sum _{i=1}^n a_{ii}\]
-und mit $\chi _{T_A}(t)=c_nt^n+\cdots +c_1t+c_0$ gilt $c_n=(-1)^n$, $c_{n-1}=(-1)^{n-1}trA$, $c_0=$det$A$.
+und mit $\chi _{T_A}(t)=c_nt^n+\cdots +c_1t+c_0$ gilt $c_n=(-1)^n$, $c_{n-1}=(-1)^{n-1}trA$, $c_0=\det A$.
 \end{enumerate}
 Man sagt ein Polynom $\chi \in P_n(\mathbb{K})$ \underline{zerfällt in Linearfaktoren} falls es Koeffizienten $\mu \in \mathbb{K},\ \lambda _1,\cdots ,\lambda _n\in\mathbb{K}$ gibt, mit
 \[\phantomsection\label{4.3a}(4.3a)\chi (t) =\mu \prod _{i=1}^n (t-\lambda _i)\text{ auf } \mathbb{K}\]
@@ -200,9 +200,9 @@ Die Werte $\lambda _i$ sind dann die Nullstellen von $\chi$, ihre \underline{alg
 \label{4.3.3}
 Für jedes $T\in L(X)$ gilt $\sigma (T)=\chi _T^{-1}(\{0\})$, und die Vielfachheit von $\lambda \in \sigma (T)$ heißt \underline{algebraische}\\ \underline{Vielfachheit} des Eigenwerts $\lambda$.\\
 \underline{Beweis}: Mittels \hyperref[4.2.1]{Definition \ref{4.2.1}} gelten die Äquivalenzen
-\[\lambda \not\in \sigma (T)\Leftrightarrow E_\lambda = N(T-\lambda \mathrm{id}\ x)=\{0\}\Leftrightarrow[T_\mathcal{X}-\lambda I_n]x=0\text{ hat nur die triviale Lösung.}\]
+\[\lambda \not\in \sigma (T)\Leftrightarrow E_\lambda = N(T-\lambda \id \ x)=\{0\}\Leftrightarrow[T_\mathcal{X}-\lambda I_n]x=0\text{ hat nur die triviale Lösung.}\]
 \[\Leftrightarrow T_\mathcal{X}-\lambda I_n\text{ ist regulär (\hyperref[3.3.14]{Satz \ref{3.3.14}})}\]
-\[\Leftrightarrow \chi _T(\lambda)=\mathrm{det}(T_\mathcal{X}-\lambda I_n)\not= 0\text{ nach \hyperref[4.1.11]{Satz \ref{4.1.11}}}\]
+\[\Leftrightarrow \chi _T(\lambda)=\det (T_\mathcal{X}-\lambda I_n)\not= 0\text{ nach \hyperref[4.1.11]{Satz \ref{4.1.11}}}\]
 \subsubsection{Beispiel}
 \label{4.3.4}
 Es seien $\alpha \in [0,2\pi ),\ A=\begin{pmatrix}cos \alpha & -sin \alpha\\ sin\alpha & cos\alpha \end{pmatrix}$
@@ -223,10 +223,10 @@ Ist $\mathbb{K}$ algebraisch abgeschlossen, so hat jedes $T\in L(X)$ einen Eigen
 \subsubsection{Satz}
 \label{4.3.7}
 Die geometrische Vielfachheit jedes Eigenwertes ist kleiner oder gleich seiner algebraischen Vielfachheit.\\
-\underline{Beweis}: Es sei $T\in L(X)$ und $\lambda \in \sigma (T)$ mit $m:=$dim$E_\lambda$.  Dann existieren $m$ linear unabhängige Eigenvektoren von $T$ in $E_\lambda$.  Wählt man diese als ersten Teil einer Basis $\mathcal{X}$ von $X$, so gilt (vgl. \hyperref[4.2.2]{Bemerkung \ref{4.2.2}(2)})
+\underline{Beweis}: Es sei $T\in L(X)$ und $\lambda \in \sigma (T)$ mit $m:=\dim E_\lambda$.  Dann existieren $m$ linear unabhängige Eigenvektoren von $T$ in $E_\lambda$.  Wählt man diese als ersten Teil einer Basis $\mathcal{X}$ von $X$, so gilt (vgl. \hyperref[4.2.2]{Bemerkung \ref{4.2.2}(2)})
 \[T_\mathcal{X} =\begin{pmatrix}\Lambda & B\\ 0 & C\end{pmatrix}, \Lambda=diag(\lambda ,\cdots ,\lambda )\in\mathbb{K}^{n\times m},\ B\in\mathbb{K}^{m\times (m-n)},\ C\in\mathbb{K}^{(n-m)\times (n-m)}\]
 und wir erhalten nach \hyperref[4.1.14]{Satz \ref{4.1.14}}, dass
-\[\chi _T(t)=(\lambda -t)^m \mathrm{det}(C-tI_{n-m})\]
+\[\chi _T(t)=(\lambda -t)^m \det (C-tI_{n-m})\]
 Daher ist die algebraische Vielfachheit von $\lambda$ mindestens $m$.
 \subsection{Diagonalisierung und Trigonalisierung}
 Wir betrachten $n-$dimensionale lineare Räume $X$ mit $n<\infty$.
@@ -256,8 +256,8 @@ Wir zeigen zwei Richtungen:
 \renewcommand{\labelitemi}{}
 \begin{itemize}
 \item ($\Rightarrow$) Es sei $T\in L(X)$ diagonalisierbar und $\mathcal{X}$ eine Basis von $X$ derart, dass \[T_\mathcal{X}=diag(a_1,\cdots ,a_n)\text{ mit }a_1,\cdots ,a_n\in\mathbb{K}.\]  Das charakteristisches Polynom ergibt sich daher zu 
-\[\phantomsection\label{4.4a}(4.4a)\ \chi _T=\prod _{k=1}^n (a_k -t)\left[=\mathrm{det}(T_\mathcal{X}-tI_n)=\mathrm{det}\begin{pmatrix}a_1-t & \ & \ \\ \ & \ddots & \ \\ \ & \ & a_n-t\end{pmatrix}\right]\]
-und zerfällt offenbar in Linearfaktoren.  Nach \hyperref[4.3.7]{Satz \ref{4.3.7}} bleibt also nachzuweisen, dass die geometrische Vielfachheit eines $\lambda \in \sigma (T)$ mindestens gleich seiner algebraischen Vielfachheit ist.  Bezeichnet r die Algebraische Vielfachheit von $\lambda$, so kommt der Linearfaktor $\lambda -t$ genau $r-$mal in \hyperref[4.4a]{$(4.4a)$} vor, d.h. $r$ Diagonalelemente von $T_\mathcal{X}$ sind gleich $\lambda$.  Damit werden $r$ Elemente der Basis $\mathcal{X}$ auf ihr $\lambda -$faches abgebildet und folglich ist dim$E_\lambda \geq r$
+\[\phantomsection\label{4.4a}(4.4a)\ \chi _T=\prod _{k=1}^n (a_k -t)\left[=\det (T_\mathcal{X}-tI_n)=\det \begin{pmatrix}a_1-t & \ & \ \\ \ & \ddots & \ \\ \ & \ & a_n-t\end{pmatrix}\right]\]
+und zerfällt offenbar in Linearfaktoren.  Nach \hyperref[4.3.7]{Satz \ref{4.3.7}} bleibt also nachzuweisen, dass die geometrische Vielfachheit eines $\lambda \in \sigma (T)$ mindestens gleich seiner algebraischen Vielfachheit ist.  Bezeichnet r die Algebraische Vielfachheit von $\lambda$, so kommt der Linearfaktor $\lambda -t$ genau $r-$mal in \hyperref[4.4a]{$(4.4a)$} vor, d.h. $r$ Diagonalelemente von $T_\mathcal{X}$ sind gleich $\lambda$.  Damit werden $r$ Elemente der Basis $\mathcal{X}$ auf ihr $\lambda -$faches abgebildet und folglich ist $\dim E_\lambda \geq r$
 \item ($\Leftarrow$) Umgekehrt zerfalle $\chi _T$ in Linearfaktoren, es gelte die Bedingung (ii) und es sei $\sigma (T)=\{\lambda _1,\cdots,\lambda _m\}$ mit paarweise verschiedenen Eigenwerten $\lambda _i,\ 1\leq i\leq m\leq n$.  Zu jedem Eigenraum $E_{\lambda _i}$ wählen wir eine Basis
 \[\mathcal{X}_i=\{x_1^i,\cdots ,x_{r_i}^i\}\text{ mit }1\leq i\leq m,r_1+\cdots r_m=n.\]
 und erhalten somit $n$ Vektoren im Raum $X$.  Wir wollen zeigen, dass diese linear unabhängig sind.  Dazu 
@@ -270,14 +270,14 @@ Die Invarianz der $E_{\lambda _i}$ zeigt, dass jedes solcher $y_i\in E_{\lambda 
 \begin{enumerate}
 \item Wir betrachten die lineare Abbildung 
 \[T\in L(\mathbb{R}^3),\ Tx=\begin{pmatrix}0 & 1 & -1\\ 3 & 2 & -3 \\ 2 & 2 & -3\end{pmatrix}x\]
-und dem charakteristischen Polynom $\chi _T(t)=t^3+t^2-t-1=(t+1)^2(t-1)$.  Es zerfällt in Linearfaktoren und der Eigenwert $-1$ besitzt die algebraische Vielfachheit $2$.  Der Lösungsraum der homogenen linearer Gleichung $[T+id]x=0$ lautet
+und dem charakteristischen Polynom $\chi _T(t)=t^3+t^2-t-1=(t+1)^2(t-1)$.  Es zerfällt in Linearfaktoren und der Eigenwert $-1$ besitzt die algebraische Vielfachheit $2$.  Der Lösungsraum der homogenen linearer Gleichung $[T+\id]x=0$ lautet
 \[E_{-1}=span\left\{\begin{pmatrix}-1\\ 1\\ 0\end{pmatrix},\begin{pmatrix}1\\ 0\\ 1\end{pmatrix}\right\}\]
-und ist der zugehörige Eigenraum zum Eigenwert$-1$.  Somit hat $-1$ die geometrische Vielfachheit $2$.  Der weitere Eigenwert $1$ ist algebraisch einfach.  Seine geometrische Vielfachheit $1$ ergibt sich aus der Gleichung $[T-id]x=0$, deren Lösungsraum
+und ist der zugehörige Eigenraum zum Eigenwert$-1$.  Somit hat $-1$ die geometrische Vielfachheit $2$.  Der weitere Eigenwert $1$ ist algebraisch einfach.  Seine geometrische Vielfachheit $1$ ergibt sich aus der Gleichung $[T-\id]x=0$, deren Lösungsraum
 \[E_1=span\left\{\begin{pmatrix}1\\ 3\\ 2\end{pmatrix}\right\}\]
 gerade der zum Eigenwert $1$ gehörige Eigenraum ist.  Deshalb garantiert \hyperref[4.4.3]{Satz \ref{4.4.3}} die Diagonalisierbarkeit von $T$.  In der Tat, mit der aus den Eigenvektoren von $T$ gebildeten Basiswechselmatrix $S=\begin{pmatrix}-1 & 1 & 1\\ 1 & 0 & 3 \\ 0 & 1 & 2\end{pmatrix}$ (gebildet von $E_{-1}$ und $E_1$ als Spalten) gibt $S^{-1}TS=\begin{pmatrix}-1 & 0 & 0 \\0 & -1 & 0\\ 0 & 0 & 1\end{pmatrix}$.
 \item Wir betrachten $T\in L(\mathbb{R}^3)$
 \[Tx:=\begin{pmatrix}-2 & 1 & 3\\ 2 & 1 & -1\\ -7 & 2 & 7\end{pmatrix}x\]
-mit dem charakteristischen Polynom $\chi _T(t)=-(t-2)^3$, das in Linearfaktoren zerfällt.  Der Eigenwert 2 von $T$ hat die algebraische Vielfachheit $3$.  Man verifiziert leicht $E_2=N(T-2id)=\mathbb{R}\begin{pmatrix}1\\ 1\\ 1\end{pmatrix}$,
+mit dem charakteristischen Polynom $\chi _T(t)=-(t-2)^3$, das in Linearfaktoren zerfällt.  Der Eigenwert 2 von $T$ hat die algebraische Vielfachheit $3$.  Man verifiziert leicht $E_2=N(T-2\id)=\mathbb{R}\begin{pmatrix}1\\ 1\\ 1\end{pmatrix}$,
 weshalb die geometrische Vielfachheit $1$ ist.  Also ist $T$ nicht diagonalisierbar.
 \end{enumerate}
 \subsubsection{Satz (Charakterisierung von Trigonalisierbarkeit)}
@@ -304,15 +304,15 @@ Jede lineare Abbildung $T\in L(X)$ auf einem endlich-dimensionalen Raum $X$ übe
 \underline{Beweis}: Mit dem Fundamentalsatz der Algebra zerfällt jedes Polynom $p\in P(\mathbb{C})$ in Linearfaktoren, also insbesondere $\chi _T$.
 \subsubsection{Korollar}
 Zerfällt $\chi _T$ in Linearfaktoren, so gilt
-\[\mathrm{det}T=\prod _{j=1}^n \lambda _j,\ tr\ T=\sum _{j=1}^n \lambda _j\text{ mit }\sigma (T)=\{\lambda _1,\cdots ,\lambda _n\}.\]
-\underline{Beweis}:  Nach \hyperref[4.4.5]{Satz \ref{4.4.5}} ist $T\in L(X)$ trigonalisierbar und folglich ist jede Darstellung $T_\mathcal{X}$ ähnlich zu einer Dreiecksmatrix $D\in \mathbb{K}^{n\times n}$ vermöge $S$.  Dann folgt mit \hyperref[4.1.12]{Korollar \ref{4.1.12}}, dass det$T=$det$D=\lambda _1,\cdots ,\lambda _n$.  Nach einer Übungsaufgabe ist $trT=trS^{-1}(DS)=tr(DS)S^{-1}=trD=\lambda _1+\cdots +\lambda _n$.\\
+\[\det T=\prod _{j=1}^n \lambda _j,\ tr\ T=\sum _{j=1}^n \lambda _j\text{ mit }\sigma (T)=\{\lambda _1,\cdots ,\lambda _n\}.\]
+\underline{Beweis}:  Nach \hyperref[4.4.5]{Satz \ref{4.4.5}} ist $T\in L(X)$ trigonalisierbar und folglich ist jede Darstellung $T_\mathcal{X}$ ähnlich zu einer Dreiecksmatrix $D\in \mathbb{K}^{n\times n}$ vermöge $S$.  Dann folgt mit \hyperref[4.1.12]{Korollar \ref{4.1.12}}, dass $\det T=\det D=\lambda _1,\cdots ,\lambda _n$.  Nach einer Übungsaufgabe ist $trT=trS^{-1}(DS)=tr(DS)S^{-1}=trD=\lambda _1+\cdots +\lambda _n$.\\
 Wir definieren die \underline{Potenzen} $T^k\in L(X),\ k\in\mathbb{N}_0$, einer Abbildung $T\in L(X)$ rekursiv.
-\[T^0:=id\ x,\ T^{k+1}:=T\circ T^k\text{ für }k\in\mathbb{N}_0\]
-und entsprechend für Matrizen $A\in \mathbb{K}^{n\times n}$.  Wegen dim$L(X)=n^2$(\hyperref[3.3.5]{Korollar \ref{3.3.5}}) ist die $(n^2+1)$-elementige Menge $\{T^0, T^1,\cdots ,T^{n^2}\}$ linear abhängig.  Tatsächlich hat sogar $\{T^0,\cdots ,T^n\}$ diese Eigenschaft:
+\[T^0:=\id x,\ T^{k+1}:=T\circ T^k\text{ für }k\in\mathbb{N}_0\]
+und entsprechend für Matrizen $A\in \mathbb{K}^{n\times n}$.  Wegen $\dim L(X)=n^2$(\hyperref[3.3.5]{Korollar \ref{3.3.5}}) ist die $(n^2+1)$-elementige Menge $\{T^0, T^1,\cdots ,T^{n^2}\}$ linear abhängig.  Tatsächlich hat sogar $\{T^0,\cdots ,T^n\}$ diese Eigenschaft:
 \subsubsection{Satz (von Cayley-Hamilton)}
 Jede lineare Abbildung $T\in L(X)$ erfüllt ihr charakteristisches Polynom, d.h. formal $\chi _T(T)=0$.
 \subsubsection{Bemerkung}
 \begin{enumerate}
 \item Bezeichnet $\mathcal{X}$ eine Basis von $X$, so gilt für die darstellende Matrix $\chi _T(T_\mathcal{X})=0$
-\item Für jedes $A\in\mathbb{K}^{2\times 2}$ gilt $A^2=(trA)A-(\mathrm{det}A)I_2$
+\item Für jedes $A\in\mathbb{K}^{2\times 2}$ gilt $A^2=(trA)A-(\det A)I_2$
 \end{enumerate}
