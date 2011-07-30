@@ -57,9 +57,9 @@ Betrachtet man $\R^3$ als Euklidischen Raum, so ist $\tilde{Y}$ wegen $\left\lan
 \end{enumerate}
 \subsubsection{Proposition}
 \label{5.1.9}
-Für jedes $S\subseteq X$ ist $S^{\bot}$ ein Unterraum von $X$ mit $(span\ S)\cap S^{\bot}=\{0\}$.\\
+Für jedes $S\subseteq X$ ist $S^{\bot}$ ein Unterraum von $X$ mit $(\spann S)\cap S^{\bot}=\{0\}$.\\
 \underline{Beweis}: Es seien $x_1,x_2\in S^{\bot}$ und wir erhalten $\langle \alpha_1 x_1+\alpha_2 x_2,y\rangle=\alpha_1\langle x_1,y\rangle+\alpha_2\langle x_2,y\rangle=0$ für alle $\alpha_1,\alpha_2\in\K$ $y\in S$ dies garantiert $\alpha_1 x_1+\alpha_2 x_2\in S^{\bot}$ und $S^{\bot}$ ist ein linearer Raum.
-Weiter sei $x\in\ S^{\bot}$ und $x\in span~S$, d.h. $x=\sum_{i=1}^n \xi_i x_i$ mit Koeffizienten $\xi_i\in \K$ und $x_i\in S$. Dies impliziert $\langle x,x\rangle=\langle \sum_{i=1}^n \xi_i x_i,x\rangle=\sum_{i=1}^n\xi_i \underbrace{\langle x_i,x\rangle}_{=0\text{ weil }x\in S^{\bot}}=0$ und folglich $x=0$.
+Weiter sei $x\in\ S^{\bot}$ und $x\in \spann ~S$, d.h. $x=\sum_{i=1}^n \xi_i x_i$ mit Koeffizienten $\xi_i\in \K$ und $x_i\in S$. Dies impliziert $\langle x,x\rangle=\langle \sum_{i=1}^n \xi_i x_i,x\rangle=\sum_{i=1}^n\xi_i \underbrace{\langle x_i,x\rangle}_{=0\text{ weil }x\in S^{\bot}}=0$ und folglich $x=0$.
 \subsubsection{Satz}
 \label{5.1.10}
 Ist $\dim X<\infty$ und $Y$ ein Unterraum von $X$, so gilt
@@ -217,7 +217,7 @@ und wegen $x\not=0$ folgt $\lambda =\overline{\lambda}$, also $\lambda \in \R$.
 \item Induktion über $n=\dim X$.  Für $n=1$ ist nichts nachzuweisen.  Für $n>1$ gilt den Fundamentalsatz der Algebra
 \[\chi _T(t)=\prod _{i=1}^n(\lambda _i-t)\text{ mit }\lambda _i\in \Co\]
 und wegen \hyperref[4.3.3]{Satz \ref{4.3.3}} ist jedes $\lambda _i$ Eigenwert von $T$;
-Aussage (a) garantiert sogar $\lambda _i\in \R$.  Es sei nun $x_1$ ein normierter Eigenvektor zu $\lambda _1$ und $X_1=(span\{x_1\})^\bot$.  Mittels \hyperref[5.1.10]{Satz \ref{5.1.10}(c)} ist dann $\dim X_1=n-1$.  Für jedes $x\in X_1$ ist dann
+Aussage (a) garantiert sogar $\lambda _i\in \R$.  Es sei nun $x_1$ ein normierter Eigenvektor zu $\lambda _1$ und $X_1=(\spann \{x_1\})^\bot$.  Mittels \hyperref[5.1.10]{Satz \ref{5.1.10}(c)} ist dann $\dim X_1=n-1$.  Für jedes $x\in X_1$ ist dann
 \[\langle x_1,Tx\rangle \stackrel{\hyperref[5.3a]{(5.3a)}}{=}\langle Tx_1,x\rangle \stackrel{\hyperref[4.2a]{(4.2a)}}{=}\lambda _1\overbrace{\langle x_1,x\rangle}^0=0\]
 d.h. $Tx\in X_1$.  Wir haben damit gezeigt, dass $X_1$ invariant unter $T$ ist.  Damit induziert $T\in L(X)$ eine selbstadjungierte Abbildung $T_1\colon =T\mid _{X_1}\in L(X_1)$.  Nach Induktionsvoraussetzung gilt es eine Orthonormalbasis $\mathcal{X}_1\colon =\{x_2,\cdots ,x_n\}$ von $X_1$ aus nomierten Eigenvektoren $x_i$ von $T$.  Da jeder Eigenvektor von $T_1$ auch Eigenvektor von $T$ ist, muss $\{x_1,x_2,\cdots ,x_n\}$ eine Orthonormalbasis von $X$ sein.
 \end{enumerate}
