@@ -41,12 +41,12 @@ $\Co ^n$ mit $\langle x,y\rangle=\sum _{j=1}^n x_j \overline{y_j}$, $n=1$, $\lan
 \numbers
 \begin{enumerate}
 \item Mit sogenannten Gewichten $\omega_1,\dots,\omega_n>0$ ist auch $\langle x,y \rangle_\omega=\sum_{j=1}^n \omega_j x_j \overline{y}_j$ ein inneres Produkt auf $\K^n$ mit induzierter Norm $\|x\|_\omega= \sqrt{\sum_{j=1}^n \omega_j |x_j|^2}$
-\item Mit einer stetigen Gewichtsfunktion $\omega:[a,b]\rightarrow(0,\infty)$, $a<b$ sind auch die stetigen Funktionen $X=C([a,b],\K)$ ein linearer Raum mit innerem Produkt
+\item Mit einer stetigen Gewichtsfunktion $\omega\colon[a,b]\rightarrow(0,\infty)$, $a<b$ sind auch die stetigen Funktionen $X=C([a,b],\K)$ ein linearer Raum mit innerem Produkt
 \[\phantomsection\label{5.1b}(5.1b)\ \langle x, y\rangle_\omega:=\int_a^b \omega(t)x(t)\overline{y(t)}dt\]
 \includegraphics[scale=0.4]{5-1-6.jpg}
 \end{enumerate}
 \subsubsection{Definition (Orthogonales Komplement)}
-Es sei $S \subseteq X$. Dann heißt $S^\bot:=\{x\in X:\langle x,y \rangle =0\text{ für alle }y\in S\}$
+Es sei $S \subseteq X$. Dann heißt $S^\bot:=\{x\in X\colon\langle x,y \rangle =0\text{ für alle }y\in S\}$
  das \underline{orthogonale Komplement} von $S$ (in X)
 \subsubsection{Beispiel}
 \numbers
@@ -86,7 +86,7 @@ Jede orthonormale Familie ist auch orthogonal.
 \begin{enumerate}
 \item Die Standardbasis $\epsilon_n=\{e_1,\dots,e_n\}$ aus \hyperref[standardbasis]{Beispiel \ref*{standardbasis}} ist eine Orthonormalbasis des Euklidischen Raums $\R^n$ wie auch des unitären Raums $\Co^n$.
 \item Die Legendre Polynome $p_n\in P(\R)$, $p_n(t)=\frac{1}{2^n n!} \frac{d^n}{dt^n} (t^2-1)^n$ für $n\in\N_0$ definieren eine orthogonale Familie $\{p_n\}_{n\in\N_0}$ bzgl. dem inneren Produkt (\hyperref[5.1b]{$5.1b$}) aus \hyperref[5.1.6]{Beispiel \ref{5.1.6}(2)} mit $\omega(t)=1$ auf $[-1,1]$
-\item Wir definieren die trigonometrischen Funktionen $c_n,s_n:[-\pi,\pi]\rightarrow\R$, $c_n(t):=cos(nt)$, $s(t):=sin(nt)$ mit $n\in\N_0$. Dann ist $\mathcal{S}:=\{c_n\}_{n\in\N_0} \cup \{s_n\}_{n\in\N}$ eine orthogonale Familie in $C([-\pi,\pi],\R)$ bezüglich (\hyperref[5.1b]{$5.1b$}) mit $\omega(t)=1$ auf $[-\pi,\pi]$.
+\item Wir definieren die trigonometrischen Funktionen $c_n,s_n\colon[-\pi,\pi]\rightarrow\R$, $c_n(t):=cos(nt)$, $s(t):=sin(nt)$ mit $n\in\N_0$. Dann ist $\mathcal{S}:=\{c_n\}_{n\in\N_0} \cup \{s_n\}_{n\in\N}$ eine orthogonale Familie in $C([-\pi,\pi],\R)$ bezüglich (\hyperref[5.1b]{$5.1b$}) mit $\omega(t)=1$ auf $[-\pi,\pi]$.
 \end{enumerate}
 \subsubsection{Proposition}
 Jede orthogonle Familie $\mathcal{S}\subseteq X$ mit $0\notin\mathcal{S}$ ist linear unabhängig.\\
