@@ -114,7 +114,7 @@ so erhalten wir sogar eine orthonormale Familie.
 Jeder endliche-dimensionale lineare Raum mit innerem Produkt hat eine Orthonormalbasis.\\
 \underline{Beweis}: Nach \hyperref[2.4.8]{Satz \ref{2.4.8}} besitzt $X$ eine Basis $\{x_1,\cdots ,x_n\}$.  Auf diese wenden wir obiges Gram-Schmidt-Verfahren an: Es sei $y_1:=x_1$, $y_{k+1}$ für $1\leq k\leq n$ durch \hyperref[5.1c]{$(5.1c)$} gegeben und $\{y_1,\cdots ,y_k\}$ bereits orthogonal.  Wir erhalten dann
 \[\langle y_i,y_{k+1}\rangle \stackrel{\hyperref[5.1c]{(5.1c)}}{=}\left\langle y_i,x_{k+1}-\sum _{j=1}^k\frac{\overline{\langle y_j,x_{k+1}}}{\langle y_j,y_j\rangle}y_j\right\rangle = \langle y_i,x_{k+1}\rangle - \left\langle y_i,\sum _{j=1}^k \frac{\overline{\langle y_j,x_{k+1}}}{\langle y_j,y_j\rangle}y_j\right\rangle\]
-\[\langle y_i,x_{k+1}\rangle -\sum _{j=1}^k\frac{\langle y_j,x_{k+1}\rangle}{\langle y_j,y_j\rangle}\overbrace{\langle y_i,y_j\rangle}^{\delta_{ij}}}\]
+\[\langle y_i,x_{k+1}\rangle -\sum _{j=1}^k\frac{\langle y_j,x_{k+1}\rangle}{\langle y_j,y_j\rangle}\overbrace{\langle y_i,y_j\rangle}^{\delta_{ij}}\]
 \[\langle y_i,x_{k+1}\rangle -\langle y_i,x_{k+1}\rangle = 0\]
 dass $y_i$ für alle $1\leq i\leq k$ orthogonal auf $y_{k+1}$ ist.  Wir haben also induktiv eine orthogonale Familie $\{y_1,\cdots ,y_k,y_{k+1}\}$ erzeugt.  Demnach ist $\{y_1,\cdots y_n\}$ eine Orthogonalbasis von $X$.  Die gesuchte Orthonormalbasis $\{z_1,\cdots ,z_n\}$ ergibt sich aus \hyperref[5.1d]{$(5.1d)$}.
 \subsubsection{Beispiel (Legendre-Polynome)}
@@ -142,7 +142,7 @@ Ist $\dim X<\infty$, so gibt es zu jedem Funktional $S\in L(X,\K)$ ein eindeutig
 \item \underline{Existenz}: Zu beliebig gegebenem $S\in L(X,\K)$ sei
 \[\phantomsection\label{5.2b}(5.2b)\ y\colon = \sum _{i=1}^n \overline{Sx_i}x_i\in X\]
 und es gilt
-\[\langle x_j,y\rangle \stackrel{\hyperref[5.2b]{(5.2b)}}{=} \left\langle x_j,\sum _{i=1}^n\overline{Sx_i}x_i\right\rangle =\sum _{i=1}^n \overline{\overline{Sx_i}}\overbrace{\langle x_j,x_i\rangle}^{S_{ij}}=Sx_j\text{ für }1\leq j\leq n\]
+\[\langle x_j,y\rangle \stackrel{\hyperref[5.2b]{(5.2b)}}{=} \left\langle x_j,\sum _{i=1}^n\overline{Sx_i}x_i\right\rangle =\sum _{i=1}^n \overline{\overline{Sx_i}}\overbrace{\langle x_j,x_i\rangle}^{\delta_{ij}}=Sx_j\text{ für }1\leq j\leq n\]
 Damit stimmen $S$ und $y'$ auf einer Basis von $X$ überein, weshalb \hyperref[lfortsetzung]{Satz \ref{lfortsetzung}(a)} sofort $S=y'$ garantiert.
 \item \underline{Eindeutigkeit}: Um nachzuweisen, dass obiges $y$ aus \hyperref[5.2b]{$(5.2b)$} eindeutig bestimmt ist, erfülle auch $z\in X$ die Beziehung $Sx=\langle x,y\rangle = \langle x,z\rangle $ für alle $x\in X$.  Dies impliziert $\langle x,y-z\rangle = 0$ für alle $x\in X$ und damit $y-z=0$
 \end{enumerate}
@@ -201,7 +201,7 @@ Auf dem Euklidischen Raum $\R ^n$ ist eine Abbildung $T\in L(X)$ genau dann selb
 In einem unitären Raum $\Co ^n$ ist $T\in L(\Co ^n)$ dann und nur dann selbstadjungiert, wenn $A=T_{\mathcal{E}_n}$ Hermite'sch ist (vergleiche \hyperref[5.2.5]{Beispiel \ref{5.2.5}}), d.h. $A=A^*$.
 \addtocounter{subsubsection}{1}
 \subsubsection{Satz}
-Es sei $\dim X<\infty$.  Ist $T\ni L(X)$ selbstadjungiert, so gilt:
+Es sei $\dim X<\infty$.  Ist $T\in L(X)$ selbstadjungiert, so gilt:
 \alphabet
 \begin{enumerate}
 \item $\sigma (T)\subseteq \R$
